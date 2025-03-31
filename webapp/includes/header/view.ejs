@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/header/styles.css"/>
+<header>
+  <div class="strip strip1">
+    <div class="main">
+      <a class="tobar" target="_blank" href="https://www.tobarandualchais.co.uk/?l=<%-uilang%>">
+        <span class="logo"></span><span lang="gd" class="caption">TOBAR AN DUALCHAIS</span>
+      </a>
+      <span class="uilang">
+        <a href="<%=pageUrls["gd"]%>" class="<%=(uilang=="gd" ? "current" : "")%>" lang="gd">Gàidhlig</a>
+        <a href="<%=pageUrls["en"]%>" class="<%=(uilang=="en" ? "current" : "")%>" lang="en">English</a>
+      </span>
+    </div>
+  </div>
+  <div class="strip strip2">
+    <div class="main">
+      <%if(isHomepage){%>
+        <h1 class="title"><a href="/<%=uilang%>/"><%=L("FOSGLADH AN TOBAIR|OPENING THE WELL")%></a></h1>
+      <%} else {%>
+        <div class="title"><a href="/<%=uilang%>/"><%=L("FOSGLADH AN TOBAIR|OPENING THE WELL")%></a></div>
+      <%}%>
+      <span class="identity">
+        <span class="icon user"></span>
+        <span class="caption"><%=L("neo-aithnichte|anonymous")%></span>
+        <span class="icon angle-down"></span>
+      </span>
+    </div>
+  </div>
+
+
+
+
+</header>

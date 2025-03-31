@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/footer/styles.css"/>
+<footer>
+  <div class="main">
+
+    <div class="right">
+      <div class="uilang">
+        <a href="<%=pageUrls["gd"]%>" class="<%=(uilang=="gd" ? "current" : "")%>">Gàidhlig</a>
+        <a href="<%=pageUrls["en"]%>" class="<%=(uilang=="en" ? "current" : "")%>">English</a>
+      </div>
+    </div>
+
+    <div class="left">
+      <div class="title"><%=L("Fosgladh an Tobair|Opening the Well")%></div>
+      <div class="subtitle">
+        <%=L("A’ choimhearsnachd ag ath-sgrìobhadh|Scottish Gaelic community transcription project")%>
+        <span class="divider"></span>
+        <a href="/<%-uilang%>/<%-L("mu-ar-deidhinn|about-us")%>"><%=L("Mu ar deidhinn|About us")%></a>
+      </div>
+      <div class="icons">
+        <a target="_blank" href="https://www.ed.ac.uk/" class="ue">
+          <img src="/footer/ue.png" alt="<%=L("Oilthigh Dhùn Èideann|The University of Edinburgh")%>">
+        </a>
+        <a target="_blank" href="https://www.smo.uhi.ac.uk/" class="smo">
+          <img src="/footer/smo.png" alt="<%=L("Sabhal Mòr Ostaig")%>">
+        </a>
+        <a target="_blank" href="https://www.gov.scot/" class="scotgov">
+          <img src="/footer/scotgov.png" alt="<%=L("Riaghaltas na h-Alba|Scottish Government")%>">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</footer>

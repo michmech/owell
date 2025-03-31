@@ -1,0 +1,21 @@
+span.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  vertical-align: middle;
+  background-color: #333333;
+}
+span.icon.angle-down {
+  mask-image: url(/angle-down.svg);
+  -webkit-mask-image: url(/angle-down.svg);
+}
+span.icon.user {
+  mask-image: url(/user.svg);
+  -webkit-mask-image: url(/user.svg);
+}

@@ -1,0 +1,54 @@
+footer {
+  background-color: #00abce;
+  box-shadow: 0px -1px 0px #bbbbbb;
+  padding: 30px 0px;
+  color: #444444;
+}
+footer > div.main {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+footer div.right {
+  float: right;
+}
+
+footer div.uilang a {
+  color: #dddddd;
+  margin-left: 10px;
+  border-bottom-width: 0px;
+}
+footer div.uilang a:hover {
+  color: #eeeeee;
+}
+footer div.uilang a.current {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom-width: 1px;
+}
+
+footer div.title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+footer div.subtitle {
+  margin-top: 5px;
+}
+footer div.subtitle span.divider {
+  border-left: 1px solid #666666;
+  margin: 0px 10px;
+}
+
+footer div.icons {
+  margin-top: 30px;
+}
+footer div.icons a {
+  border: 0px;
+  margin-right: 20px;
+}
+footer div.icons a img {
+  height: 75px;
+}

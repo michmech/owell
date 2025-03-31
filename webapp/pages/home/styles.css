@@ -1,0 +1,49 @@
+div.mapList > div.list h2 {
+  margin: 0px 0px 1.5em 0px;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+ul.provinces {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  line-height: 2em;
+}
+ul.provinces > li.province {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 1.5em;
+}
+ul.provinces > li.province > span.title {
+  font-weight: bold;
+  color: #666666;
+}
+ul.provinces > li.province > ul.areas {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0.5em;
+}
+ul.provinces > li.province > ul.areas > li.area {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 0.75em;
+  white-space: nowrap;
+}
+ul.provinces > li.province > ul.areas > li.area .icon {
+  color: #5899b8;
+  font-size: 1.25em;
+  margin-right: 0.25em;
+  position: relative;
+  top: 5px;
+}
+
+ul.provinces > li.province > ul.areas > li.area.hi a {
+  color: #02293b;
+}
+ul.provinces > li.province > ul.areas > li.area.hi .icon {
+  color: #02293b;
+}
