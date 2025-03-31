@@ -1,0 +1,37 @@
+c-textarea {
+  position: relative;
+}
+c-textarea textarea {
+  resize: none;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 0px;
+  border-radius: 4px;
+  font: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  background: transparent;
+  color: transparent;
+  caret-color: #000000;
+}
+c-textarea div.backdrop {
+  margin: 0px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 0px;
+  border-radius: 4px;
+  font: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+c-textarea div.backdrop span.timestamp {
+  color: #0280a5;
+}

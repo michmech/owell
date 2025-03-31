@@ -2,6 +2,10 @@
 <html lang="<%=uilang%>">
   <head>
     <%-include("../../includes/headContent/view.ejs", this)%>
+    
+    <link rel="stylesheet" href="/c-textarea.css"/>
+    <script type="module" src="/c-textarea.js"></script>
+
     <link rel="stylesheet" href="/transcribe/styles.css"/>
     <script src="/transcribe/scripts.js"></script>
   </head>
@@ -11,8 +15,9 @@
       
         <h1>Lorem ipsum dolor sit amet</h1>
         <audio controls preload="auto" src="https://www.canuint.ie/sounds/QQTRIN016161c3.mp3"></audio>
-        <textarea spellcheck="false"></textarea>
-        <!-- https://css-tricks.com/creating-an-editable-textarea-that-supports-syntax-highlighted-code/ -->
+        <c-textarea>
+          <textarea spellcheck="false">Tá cuimhne mhór agam air (0:56) ar an ábhar gur tógadh ar an taobh eile den chloí liom é, (1:24) a teacht aníos dó féin agus domsa. Bhí sé blianta ní ba shine ná mé (2:12), ach ar ndóigh, (2:34) gasúr agus glas-stócach thig leofa cuid mhór corraí a dhéanamh.</textarea>
+        </c-textarea>
 
         <aside class="toolbox">
           <div class="speed">
