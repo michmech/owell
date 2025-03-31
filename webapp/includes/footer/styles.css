@@ -15,6 +15,13 @@ footer > div.main {
 footer div.right {
   float: right;
 }
+@media (max-width: 800px) {
+  footer div.right {
+    float: none;
+    margin-left: -10px;
+    margin-bottom: 20px;
+  }
+}
 
 footer div.uilang a {
   color: #dddddd;
@@ -51,4 +58,9 @@ footer div.icons a {
 }
 footer div.icons a img {
   height: 75px;
+}
+@media (max-width: 800px) {
+  footer div.icons a img {
+    height: 50px;
+  }
 }
