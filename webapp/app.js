@@ -37,14 +37,12 @@ function do404(req, res){
 }
 
 //Hook up our endpoints:
-await Promise.all([
-  "./pages/home/server.js",
-  "./pages/sendmail/server.js",
-  "./pages/transcribe/server.js",
-].map(async filename => {
-  const f=(await import(filename)).default;
-  f(app, L, do404, __dirname);
-}));
+import page_home from "./pages/home/server.js";
+  page_home(app, L, do404, __dirname);
+import page_sendmail from "./pages/sendmail/server.js";
+  page_sendmail(app, L, do404, __dirname);
+import page_transcribe from "./pages/transcribe/server.js";
+  page_transcribe(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);
