@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/transcribe/styles.css"/>
+    <script src="/transcribe/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <audio controls preload="auto" src="https://www.canuint.ie/sounds/QQTRIN016161c3.mp3"></audio>
+        <textarea spellcheck="false"></textarea>
+        <!-- https://css-tricks.com/creating-an-editable-textarea-that-supports-syntax-highlighted-code/ -->
+
+        <aside class="toolbox">
+          <div class="speed">
+            <label for="speed">Playback speed <span class="value">1&nbsp;×</span></label>
+            <input id="speed" type="range" min="1" max="8" value="3">
+          </div>
+
+          <ul class="legend">
+            <li>
+              <div class="keys"><span class="key">Ctrl</span> + <span class="key">Space</span></div>
+              <div class="caption">Play/Pause</div>
+            </li>
+            <li>
+              <div class="keys"><span class="key">Ctrl</span> + <span class="key">M</span></div>
+              <div class="caption">Insert a timestamp</div>
+            </li>
+            <li>
+              <div class="keys"><span class="key">Ctrl</span> + <span class="key">L</span></div>
+              <div class="caption">Loop between two timestamps</div>
+            </li>
+            <li>
+              <div class="keys"><span class="key">Ctrl</span> + <span class="key">&lt;</span></div>
+              <div class="keys"><span class="key">Ctrl</span> + <span class="key">&gt;</span></div>
+              <div class="caption">Jump between timestamps</div>
+            </li>
+          </ul>
+          <button class="save">Save</button>
+        </aside>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

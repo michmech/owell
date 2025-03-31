@@ -40,6 +40,7 @@ function do404(req, res){
 await Promise.all([
   "./pages/home/server.js",
   "./pages/sendmail/server.js",
+  "./pages/transcribe/server.js",
 ].map(async filename => {
   const f=(await import(filename)).default;
   f(app, L, do404, __dirname);

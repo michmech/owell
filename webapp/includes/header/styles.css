@@ -104,14 +104,8 @@ header span.identity {
   background-color: #ffffff;
   padding: 6px 15px;
   border-radius: 20px;
-  margin-right: -10px;
   box-shadow: inset 1px 1px 0px #bbbbbb, inset -1px -1px 0px #dddddd;
   cursor: pointer;
-}
-@media (max-width: 1250px) {
-  header span.identity {
-    margin-right: 0px;
-  }
 }
 header span.identity span.icon.user {
   background-color: #999999;
