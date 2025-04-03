@@ -9,24 +9,37 @@ export class CTextarea extends HTMLElement {
   }
 
   connectedCallback(){
-    const h=document.createElement("div");
+    const h=document.createElement("pre");
     h.setAttribute("class", "backdrop");
     h.setAttribute("aria-hidden", "true");
     this.appendChild(h);
     
     const textarea=this.querySelector("textarea");
-    textarea.addEventListener("input", x => {this.hilite()}); 
+    textarea.addEventListener("input", x => {this.#hilite()}); 
+    textarea.addEventListener("scroll", x => {this.#syncScroll()}); 
     
-    this.hilite();
+    this.#hilite();
+    this.#syncScroll();
   }
 
-  hilite(){
+  #syncScroll(){
     const textarea=this.querySelector("textarea");
-    const text=textarea.value;
-    const html=text.replace(/\([0-9]+:[0-9]+\)/g, (s) => {
+    const backdrop=this.querySelector(".backdrop");
+    backdrop.scrollTop=textarea.scrollTop;
+  }
+
+  #hilite(){
+    const textarea=this.querySelector("textarea");
+    let html=textarea.value;
+    //escape angle brackets:
+    html=html.replace(/\</g, "&lt;").replace(/\>/g, "&rt;");
+    //forcefully unignore trailing newline, if present:
+    if(html[html.length-1]=="\n") html+=" ";
+    //hilite timestamps:
+    html=html.replace(/\([0-9]+:[0-9]+\)/g, (s) => {
       return `<span class="timestamp">${s}</span>`;
     })
-    const backdrop=this.querySelector("div.backdrop");
+    const backdrop=this.querySelector(".backdrop");
     backdrop.innerHTML=html;
   }
 }
