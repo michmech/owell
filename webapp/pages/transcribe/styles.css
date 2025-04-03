@@ -14,12 +14,17 @@ audio {
 
 c-textarea {
   display: inline-block;
-  width: 850px;
+  width: calc(100% - 315px);
   height: calc(100vh - 300px);
   margin-top: 15px;
   box-sizing: border-box;
   box-shadow: 0px 0px 5px #666666;
   background-color: #ffffff;
+}
+@media(max-width: 700px){
+  c-textarea {
+    width: 100%;
+  }
 }
 
 aside.toolbox {
@@ -30,6 +35,30 @@ aside.toolbox {
   padding-top: 10px;
   box-sizing: border-box;
   position: relative;
+}
+@media(max-width: 700px){
+  aside.toolbox {
+    float: none;
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding-top: 0px;
+  }
+}
+
+aside.toolbox div.scrollable {
+  padding: 0px 5px 5px 5px;
+  overflow-y: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 4em;
+}
+@media(max-width: 700px){
+  aside.toolbox div.scrollable {
+    display: none;
+  }
 }
 
 aside.toolbox div.speed {
@@ -102,4 +131,11 @@ aside.toolbox button.save:active {
   left: 1px;
   right: -1px;
   bottom: -1px;
+}
+@media(max-width: 700px){
+  aside.toolbox button.save {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+  }
 }

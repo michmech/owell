@@ -20,30 +20,32 @@
         </c-textarea>
 
         <aside class="toolbox">
-          <div class="speed">
-            <label for="speed">Playback speed <span class="value">1&nbsp;×</span></label>
-            <input id="speed" type="range" min="1" max="8" value="3">
+          <div class="scrollable">
+            <div class="speed">
+              <label for="speed">Playback speed <span class="value">1&nbsp;×</span></label>
+              <input id="speed" type="range" min="1" max="8" value="3">
+            </div>
+  
+            <ul class="legend">
+              <li>
+                <div class="keys"><span class="key">Ctrl</span> + <span class="key">Space</span></div>
+                <div class="caption">Play/Pause</div>
+              </li>
+              <li>
+                <div class="keys"><span class="key">Ctrl</span> + <span class="key">M</span></div>
+                <div class="caption">Insert a timestamp</div>
+              </li>
+              <li>
+                <div class="keys"><span class="key">Ctrl</span> + <span class="key">L</span></div>
+                <div class="caption">Loop between two timestamps</div>
+              </li>
+              <li>
+                <div class="keys"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&lt;</span> <span class="key">&gt;</span></div>
+                <div class="caption">Jump between timestamps</div>
+              </li>
+            </ul>
           </div>
 
-          <ul class="legend">
-            <li>
-              <div class="keys"><span class="key">Ctrl</span> + <span class="key">Space</span></div>
-              <div class="caption">Play/Pause</div>
-            </li>
-            <li>
-              <div class="keys"><span class="key">Ctrl</span> + <span class="key">M</span></div>
-              <div class="caption">Insert a timestamp</div>
-            </li>
-            <li>
-              <div class="keys"><span class="key">Ctrl</span> + <span class="key">L</span></div>
-              <div class="caption">Loop between two timestamps</div>
-            </li>
-            <li>
-              <div class="keys"><span class="key">Ctrl</span> + <span class="key">&lt;</span></div>
-              <div class="keys"><span class="key">Ctrl</span> + <span class="key">&gt;</span></div>
-              <div class="caption">Jump between timestamps</div>
-            </li>
-          </ul>
           <button class="save">Save</button>
         </aside>
 
