@@ -19,3 +19,11 @@ span.icon.user {
   mask-image: url(/user.svg);
   -webkit-mask-image: url(/user.svg);
 }
+span.icon.up-right-from-square {
+  mask-image: url(/up-right-from-square.svg);
+  -webkit-mask-image: url(/up-right-from-square.svg);
+}
+span.icon.circle-question {
+  mask-image: url(/circle-question.svg);
+  -webkit-mask-image: url(/circle-question.svg);
+}

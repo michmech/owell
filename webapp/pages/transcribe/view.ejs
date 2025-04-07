@@ -13,10 +13,13 @@
     <%-include("../../includes/header/view.ejs", this)%>
     <main>
       
-        <h1>Lorem ipsum dolor sit amet</h1>
-        <audio controls preload="auto" src="https://www.canuint.ie/sounds/QQTRIN016161c3.mp3"></audio>
+        <div class="title">
+          <h1>Fear a phòs maighdeann-mhara.</h1>
+          <a class="uplink" title="More info at Tobar an Dualchais" target="_blank" href="https://www.tobarandualchais.co.uk/track/1345?l=<%-uilang%>">1345 <span class="icon up-right-from-square"></span></a>
+        </div>
+        <audio controls preload="auto" src="https://www.tobarandualchais.co.uk/source-track/20.500.12734/43118/SOSS_000052_001345.mp4"></audio>
         <c-textarea>
-          <textarea spellcheck="false">Tá cuimhne mhór agam air (0:56) ar an ábhar gur tógadh ar an taobh eile den chloí liom é, (1:24) a teacht aníos dó féin agus domsa. Bhí sé blianta ní ba shine ná mé (2:12), ach ar ndóigh, (2:34) gasúr agus glas-stócach thig leofa cuid mhór corraí a dhéanamh.</textarea>
+          <textarea spellcheck="false">Tha àite teann air Inbhir Nis (0:03) ris an abair iad anns a' Bheurla, Kessock Ferry. (0:06) Mar a theireadh sibh, Aiseag Cheasaig. (0:10) Agus bha duine a' gabhail a cheum sìos air a' chladach, (0:17) agus chunnaic e coltas boireannach na cadal. (0:20) Agus fhuair e grèim oirre, (0:23) agus gu dè a bh' ann ach a' mhaighdeann-mhara. (0:25) Agus thug e dhith an cochall, (0:28) agus dar a bheir iad dhith an cochall, (0:31) mar a tha a' chùis air innse, (0:32) chan eil i nas fheàrr na neach eile sa mhuir. (0:36) 'S thug e dhachaigh i agus phòs iad, agus chuir e an cochall fad...</textarea>
         </c-textarea>
 
         <aside class="toolbox">
@@ -28,25 +31,28 @@
   
             <ul class="legend">
               <li>
+                <div class="caption">Play/Pause/Replay</div>
                 <div class="keys"><span class="key">Ctrl</span> + <span class="key">Space</span></div>
-                <div class="caption">Play/Pause</div>
               </li>
               <li>
-                <div class="keys"><span class="key">Ctrl</span> + <span class="key">M</span></div>
                 <div class="caption">Insert a timestamp</div>
-              </li>
-              <li>
-                <div class="keys"><span class="key">Ctrl</span> + <span class="key">L</span></div>
-                <div class="caption">Loop between two timestamps</div>
-              </li>
-              <li>
-                <div class="keys"><span class="key">Ctrl</span> + <span class="key">Alt</span> + <span class="key">&lt;</span> <span class="key">&gt;</span></div>
-                <div class="caption">Jump between timestamps</div>
+                <div class="keys"><span class="key">Ctrl</span> + <span class="key">M</span></div>
               </li>
             </ul>
+
+            <div class="help">
+              <div>Read this first</div>
+              <div>
+                <span class="icon circle-question"></span>
+                <a href="#">How to transcribe</a>
+              </div>
+            </div>
           </div>
 
-          <button class="save">Save</button>
+          <div class="submission">
+            <label><input type="checkbox" name="finished"> Transcription finished</label>
+            <button class="save">Save</button>
+          </div>
         </aside>
 
     </main>
