@@ -1,11 +1,7 @@
-// https://css-tricks.com/creating-an-editable-textarea-that-supports-syntax-highlighted-code/
 export class CTextarea extends HTMLElement {
 
   constructor(){
     super();
-    // this.lang=this.getAttribute("lang") || "";
-    // this.voice=this.getAttribute("voice") || "";
-    // this.text=this.getAttribute("text") || "";
   }
 
   connectedCallback(){
@@ -35,10 +31,6 @@ export class CTextarea extends HTMLElement {
     html=html.replace(/\</g, "&lt;").replace(/\>/g, "&rt;");
     //forcefully unignore trailing newline, if present:
     if(html[html.length-1]=="\n") html+=" ";
-    //hilite timestamps:
-    // html=html.replace(/\([0-9]+:[0-9]+\)/g, (s) => {
-    //   return `<span class="timestamp">${s}</span>`;
-    // })
     //markup timestamps and segments:
     const frags = html.split(/(\([0-9]+:[0-9]+\))/);
     html = "";

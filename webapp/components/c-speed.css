@@ -1,0 +1,28 @@
+c-speed {
+  display: block;
+}
+c-speed label {
+  display: block;
+  margin-bottom: 13px;
+  font-weight: normal;
+  position: relative;
+  top: 3px;
+}
+c-speed label span.value {
+  white-space: nowrap;
+  float: right;
+  margin-left: 0.5em;
+  margin-right: 5px;
+  padding: 5px 10px 3px 10px;
+  line-height: 1.25em;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  box-shadow: 1px 1px 0px #ffffff, inset 1px 1px 0px #ffffff;
+  position: relative;
+  top: -3px;
+  text-align: center;
+  min-width: 3em;
+}
+c-speed input {
+  width: calc(100% - 5px);
+}

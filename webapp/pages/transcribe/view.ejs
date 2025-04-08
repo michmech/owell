@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/c-textarea.css"/>
     <script type="module" src="/c-textarea.js"></script>
 
+    <link rel="stylesheet" href="/c-speed.css"/>
+    <script type="module" src="/c-speed.js"></script>
+
     <link rel="stylesheet" href="/transcribe/styles.css"/>
     <script src="/transcribe/scripts.js"></script>
   </head>
@@ -17,17 +20,17 @@
           <h1>Fear a phòs maighdeann-mhara.</h1>
           <a class="uplink" title="More info at Tobar an Dualchais" target="_blank" href="https://www.tobarandualchais.co.uk/track/1345?l=<%-uilang%>">1345 <span class="icon up-right-from-square"></span></a>
         </div>
-        <audio controls preload="auto" src="https://www.tobarandualchais.co.uk/source-track/20.500.12734/43118/SOSS_000052_001345.mp4"></audio>
+        <audio controls preload="auto" src="/sounds/1345.mp4"></audio>
         <c-textarea>
           <textarea spellcheck="false">Tha àite teann air Inbhir Nis (0:03) ris an abair iad anns a' Bheurla, Kessock Ferry. (0:06) Mar a theireadh sibh, Aiseag Cheasaig. (0:10) Agus bha duine a' gabhail a cheum sìos air a' chladach, (0:17) agus chunnaic e coltas boireannach na cadal. (0:20) Agus fhuair e grèim oirre, (0:23) agus gu dè a bh' ann ach a' mhaighdeann-mhara. (0:25) Agus thug e dhith an cochall, (0:28) agus dar a bheir iad dhith an cochall, (0:31) mar a tha a' chùis air innse, (0:32) chan eil i nas fheàrr na neach eile sa mhuir. (0:36) 'S thug e dhachaigh i agus phòs iad, agus chuir e an cochall fad...</textarea>
         </c-textarea>
 
         <aside class="toolbox">
           <div class="scrollable">
-            <div class="speed">
+            <c-speed>
               <label for="speed">Playback speed <span class="value">1&nbsp;×</span></label>
-              <input id="speed" type="range" min="1" max="8" value="3">
-            </div>
+              <input id="speed" type="range"/>
+            </c-speed>
   
             <ul class="legend">
               <li>

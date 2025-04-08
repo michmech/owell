@@ -86,26 +86,8 @@ aside.toolbox div.scrollable {
   }
 }
 
-aside.toolbox div.speed {
+aside.toolbox c-speed {
   margin-bottom: 25px;
-}
-aside.toolbox div.speed label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: normal;
-}
-aside.toolbox div.speed label span.value {
-  float: right;
-  margin-left: 0.5em;
-  margin-right: 5px;
-  padding: 5px 10px 3px 10px;
-  line-height: 1em;
-  border: 1px solid #bbbbbb;
-  border-radius: 2px;
-  box-shadow: 1px 1px 0px #ffffff, inset 1px 1px 0px #ffffff;
-}
-aside.toolbox div.speed input {
-  width: calc(100% - 5px);
 }
 
 aside.toolbox ul.legend {
@@ -129,7 +111,7 @@ aside.toolbox ul.legend li div.keys {
 }
 aside.toolbox ul.legend li div.keys span.key {
   font-family: "Overpass Mono", monospace;
-  line-height: 1em;
+  line-height: 1.25em;
   font-size: 0.8em;
   border: 1px solid #999999;
   padding: 5px 5px 2px 5px;
@@ -139,7 +121,7 @@ aside.toolbox ul.legend li div.keys span.key {
 }
 
 aside.toolbox div.help {
-  margin-top: 20px;
+  margin-top: 30px;
   color: #666666;
   font-size: 0.9em;
 }
