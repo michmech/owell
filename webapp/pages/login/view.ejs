@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/login/styles.css"/>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <div class="container">
+        <%if(loginFailed){%>
+          <div class="failed">
+            <%=L("Seòladh post-d mì-cheart no facal-faire mì-cheart.|Incorrect e-mail address or incorrect password.")%>
+          </div>  
+        <%}%>
+        <form method="post" action="">
+          <input type="hidden" name="redirTo" value="<%=redirTo%>"/>
+          <div class="line">
+            <label>
+              <span class="label"><%=L("Seòladh post-d|E-mail address")%></span>
+              <input name="email" value="<%=email%>"/>
+            </label>
+          </div>
+          <div class="line">
+            <label>
+              <span class="label"><%=L("Facal-faire|Password")%></span>
+              <input name="password" type="password" value="<%=password%>"/>
+            </label>
+          </div>
+          <div class="line doubleSpaceBefore">
+            <button type="submit"><%=L("Log a-steach|Log in")%></button>
+          </div>
+          <div class="line spaceBefore">
+            <a href="#"><%=L("Facal-faire air dìochuimhne?|Forgot password?")%></a>
+          </div>
+        </form>
+      </div>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

@@ -4,11 +4,21 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import bodyParser from "body-parser";
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' })); // for parsing application/x-www-form-urlencoded
+import cookieParser from 'cookie-parser';
+app.use(cookieParser());
+import { SHA3 } from "sha3";
 
 const PORT=process.env.PORT||80;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-//WWW redirect:
+//our function for hashing passwords:
+app.hash = (s) => {
+  const hash = new SHA3(512);
+  hash.update(s);
+  return hash.digest('hex');
+};
+
+//www redirect:
 function wwwRedirect(req, res, next){
   if(/^[^\.]+\.[^\.]+$/.test(req.headers.host)){
     var newHost="www."+req.headers.host;
@@ -39,6 +49,10 @@ function do404(req, res){
 //Hook up our endpoints:
 import page_home from "./pages/home/server.js";
   page_home(app, L, do404, __dirname);
+import page_login from "./pages/login/server.js";
+  page_login(app, L, do404, __dirname);
+import page_logout from "./pages/logout/server.js";
+  page_logout(app, L, do404, __dirname);
 import page_sendmail from "./pages/sendmail/server.js";
   page_sendmail(app, L, do404, __dirname);
 import page_transcribe from "./pages/transcribe/server.js";

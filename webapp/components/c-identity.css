@@ -1,0 +1,88 @@
+c-identity {
+  float: right;
+  position: relative;
+  top: -3px;
+  display: block;
+}
+c-identity div.badge {
+  background-color: #ffffff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0px #bbbbbb, inset -1px -1px 0px #dddddd;
+  cursor: pointer;
+}
+
+c-identity div.badge span.icon.user {
+  background-color: #999999;
+}
+c-identity.loggedIn div.badge span.icon.user {
+  background-color: #666666;
+}
+c-identity div.badge:hover span.icon.user {
+  background-color: #336699;
+}
+
+c-identity div.badge span.caption {
+  display: inline-block;
+  margin: 0px 0.5em;
+  position: relative;
+  top: 2px;
+  color: #999999;
+}
+c-identity.loggedIn div.badge span.caption {
+  color: #333333;
+}
+c-identity div.badge:hover span.caption {
+  color: #003366;
+}
+@media (max-width: 600px) {
+  c-identity div.badge span.caption {
+    display: none;
+  }
+}
+c-identity div.badge span.icon.angle-down {
+  position: relative;
+  top: 2px;
+  background-color: #999999;
+}
+c-identity.loggedIn div.badge span.icon.angle-down {
+  background-color: #666666;
+}
+c-identity div.badge:hover span.icon.angle-down {
+  background-color: #6699cc;
+}
+
+c-identity div.menu {
+  z-index: 1;
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 4px #999999;
+  background-color: #ffffff;
+  border-radius: 6px;
+  position: absolute;
+  right: 0px;
+  margin-top: 15px;
+  min-width: 100%;
+}
+
+c-identity div.menu div.line {
+  padding: 16px 20px 14px 20px;
+  border-bottom: 1px solid #cccccc;
+}
+c-identity div.menu div.line:last-child {
+  border-bottom: 0px;
+}
+c-identity div.menu div.line a {
+  white-space: nowrap;
+}
+
+c-identity div.menu div.line.email {
+  border-radius: 6px 6px 0px 0px;
+  display: none;
+}
+@media (max-width: 600px) {
+  c-identity div.menu div.line.email {
+    display: block;
+    background-color: #eeeeee;
+    border-radius: 6px 6px 0px 0px;
+  }
+}

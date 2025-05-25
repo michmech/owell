@@ -96,34 +96,3 @@ header span.uilang a.current {
   border-bottom-width: 1px;
 }
 
-header span.identity {
-  float: right;
-  position: relative;
-  top: -3px;
-  display: block;
-  background-color: #ffffff;
-  padding: 6px 15px;
-  border-radius: 20px;
-  box-shadow: inset 1px 1px 0px #bbbbbb, inset -1px -1px 0px #dddddd;
-  cursor: pointer;
-}
-header span.identity span.icon.user {
-  background-color: #999999;
-}
-header span.identity span.caption {
-  display: inline-block;
-  margin: 0px 0.5em;
-  position: relative;
-  top: 2px;
-  color: #999999;
-}
-@media (max-width: 600px) {
-  header span.identity span.caption {
-    display: none;
-  }
-}
-header span.identity span.icon.angle-down {
-  position: relative;
-  top: 2px;
-  background-color: #999999;
-}
