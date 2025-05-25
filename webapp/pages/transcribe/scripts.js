@@ -23,6 +23,18 @@ document.addEventListener("keydown", (ev) => {
     const timestamp=formatTimestamp(document.querySelector("audio").currentTime);
     document.querySelector("c-textarea").insertTimestamp(timestamp);
   }
+  //Ctrl + "<":
+  if(ev.ctrlKey && (ev.key=="," || ev.key=="<")){
+    ev.preventDefault();
+    const audio=document.querySelector("audio");
+    audio.currentTime = audio.currentTime-1;
+  }
+  //Ctrl + "<":
+  if(ev.ctrlKey && (ev.key=="." || ev.key==">")){
+    ev.preventDefault();
+    const audio=document.querySelector("audio");
+    audio.currentTime = audio.currentTime+1;
+  }
 });
 
 window.setTimeout(() => {

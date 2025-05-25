@@ -1,37 +1,38 @@
 div.title {
   margin: 10px 0px 0px 0px;
-  font-size: 1.75em;
-  line-height: 1.25em;
+  white-space: nowrap;
 }
 div.title > h1 {
-  display: inline;
   font-size: inherit;
-  margin: 0px 0.15em 0px 0px;
+  margin: 0px;
   font-weight: normal;
-  color: #333333;
+  color: #000000;
+  overflow-x: auto;
+  padding-bottom: 0px;
+  font-size: 1.3em;
+  line-height: 1.25em;
+  margin-right: -10px;
+  padding-right: 10px;
 }
-div.title > a.uplink {
-  white-space: nowrap;
-  border-bottom: 0px;
+div.title > div.data {
   font-size: 0.9em;
-  color: #999999;
+  margin-top: 5px;
+  color: #666666;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-right: -10px;
+  padding-right: 10px;
 }
-div.title > a.uplink span.icon {
-  background-color: #999999;
-  width: 0.65em;
-  position: relative;
-  top: -2px;
-  margin-left: 2px;
-}
-div.title > a.uplink:hover {
-  color: #209cee;
-}
-div.title > a.uplink:hover span.icon {
-  background-color: #209cee;
+div.title > div.data span.divider {
+  margin: 0px 5px;
 }
 
-audio {
-  margin-top: 20px;
+
+div.audio {
+  margin-top: 10px;
+  height: 65px;
+}
+div.audio audio {
   width: 100%;
   box-shadow: 0px 0px 5px #666666;
   border-radius: 4px;
@@ -87,7 +88,7 @@ aside.toolbox div.scrollable {
 }
 
 aside.toolbox c-speed {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 aside.toolbox ul.legend {
@@ -120,18 +121,6 @@ aside.toolbox ul.legend li div.keys span.key {
   display: inline-block;
 }
 
-aside.toolbox div.help {
-  margin-top: 30px;
-  color: #666666;
-  font-size: 0.9em;
-}
-aside.toolbox div.help span.icon {
-  background-color: #999999;
-  width: 1.25em;
-  height: 1.25em;
-  margin-right: 0.25em;
-}
-
 aside.toolbox div.submission {
   position: absolute;
   left: 0px;
@@ -141,14 +130,23 @@ aside.toolbox div.submission {
 aside.toolbox div.submission label {
   font-size: 0.9em;
   color: #666666;
-  margin-bottom: 10px;
   display: block;
   cursor: pointer;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.25em;
+  margin-bottom: 10px;
+}
+aside.toolbox div.submission label input {
+  position: absolute;
+  left: 0px;
+  top: -2px;
 }
 aside.toolbox div.submission label:has(input:checked) {
   color: #333333;
 }
 aside.toolbox div.submission button.save {
+  margin-top: 5px;
   width: 100%;
   font: inherit;
   padding: 10px;
