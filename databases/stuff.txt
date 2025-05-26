@@ -1,6 +1,6 @@
 create a user:
-insert into users(email, passwordHash) values('valselob@gmail.com', '2b9704cf25016a5bb05331513ca8a079658e0e1b63e622734929b58080e915bd73f8cfd1663964278ea6287b139c572ed2174c1711cb204b281622a705096d03')
-the password will be: razdvatri
+insert into users(email, passwordHash) values('test@test.com', '9ece086e9bac491fac5c1d1046ca11d737b92a2b2ebd93f005d7b710110c0a678288166e7fbe796883a4f2e9b3ca9f484f521d0ce464345cc1aec96779149c14')
+the password will be: test
 
 statuses
   available
