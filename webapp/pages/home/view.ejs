@@ -8,7 +8,75 @@
   <body>
     <%-include("../../includes/header/view.ejs", this)%>
     <main>
-      <p>Hello world.</p>
+      
+      <div class="banner <%=loggedIn ? 'loggedIn' : ''%>">
+        <div class="backdrop"></div>
+        <div class="transparency"></div>
+        <div class="slogan"><span><%=L("Ag ath-sgrìobhadh guthan ar sinnsirean|We are transcribing Scotland’s oral heritage")%></span></div>
+      </div>
+
+      <%if(!loggedIn){%>
+        <div class="cta">
+          <a class="button" href="#">
+            <%=L("Thig gu bith ath-sgrìobhair saor-thoileach|Become a volunteer transcriber")%>
+            <span class="icon angles-right"></span>
+          </a>
+          <div class="or">
+            <%=L("Cuide rinn mu thràth?|With us already?")%>
+            <a href="/<%-uilang%>/<%-L("a-steach|login")%>"><%=L("Log a-steach|Log in")%>&nbsp;»</a>
+          </div>
+        </div>
+        <div class="welcome">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales accumsan velit a tincidunt. Aliquam eget maximus ex. Etiam diam lectus, dapibus non consequat eu, vehicula sit amet ex. Nunc massa dolor, pellentesque eu scelerisque eget, scelerisque in purus. Vivamus lacus justo, rhoncus a condimentum id, sollicitudin non ligula.
+          <a href="/<%-uilang%>/<%-L("mu-ar-deidhinn|about-us")%>"><%=L("Tuilleadh fiosrachaidh...|More information...")%></a>
+        </div>
+      <%}%>
+
+      <div class="tracks">
+        <%for(let i=0; i<myTracks.length; i++){const track=myTracks[i];%>
+          <div class="track prominent">
+            <span class="status">
+              <span class="dots">● <span class="blanks">● ●</span></span>
+              <%=L("ga ath-sgrìobhadh agadsa|being transcribed by you")%>
+            </span>
+            <div class="title">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></div>
+            <div class="data">
+              <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
+              <span class="divider">&middot;</span>
+              <%=L("Àireamh an teip thùsail|Original tape ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
+              <span class="divider">&middot;</span>
+              <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+            </div>
+            <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Lean air adhart ag ath-sgrìobh|Continue transcribing")%>&nbsp;»</a>
+          </div>
+        <%}%>
+        <%for(let i=0; i<tracks.length; i++){const track=tracks[i];%>
+          <div class="track">
+            <span class="status">
+              <span class="dots">
+                <%if(track.status=="available"){%><span class="blanks">● ● ●</span><%}%>
+                <%if(track.status=="owned"){%>● <span class="blanks">● ●</span><%}%>
+                <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
+                <%if(track.status=="approved"){%>● ● ●<%}%>
+              </span>
+              <%if(track.status=="available"){%><%=L("ri làimh air son ath-sgrìobhadh|available for transcription")%><%}%>
+              <%if(track.status=="owned"){%><%=L("ga ath-sgrìobhadh|being transcribed")%><%}%>
+              <%if(track.status=="finished"){%><%=L("air a ath-sgrìobhadh, a’ feitheamh ri ceadacadh|transcribed, awaiting approval")%><%}%>
+              <%if(track.status=="approved"){%><%=L("air a ath-sgrìobhadh agus ceadaichte|transcribed and approved")%><%}%>
+            </span>
+            <div class="title">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></div>
+            <div class="data">
+              <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
+              <span class="divider">&middot;</span>
+              <%=L("Àireamh an teip thùsail|Original tape ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
+              <span class="divider">&middot;</span>
+              <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+            </div>
+            <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Fosgail|Open")%>&nbsp;»</a>
+          </div>
+        <%}%>
+      </div>
+
     </main>
     <%-include("../../includes/footer/view.ejs", this)%>
   </body>

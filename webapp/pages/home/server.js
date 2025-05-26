@@ -11,6 +11,9 @@ export default function(app, L, do404, rootdir){
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
 
+    const tracks=[];
+    const myTracks=[];
+
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
       { //check if the user is already logged in:
@@ -18,6 +21,23 @@ export default function(app, L, do404, rootdir){
         const sql=`select email from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
+      }
+      { //get list of tracks:
+        const sql=`select id, title, status, owner from tracks order by id`
+        const stmt=db.prepare(sql);
+        stmt.all().map(row => {
+          const track={
+            id: row["id"],
+            title: row["title"],
+            status: row["status"],
+            owner: row["owner"],
+          };
+          if(track.status=="owned" && track.owner==email){
+            myTracks.push(track);
+          } else {
+            tracks.push(track);
+          }
+        });
       }
     } catch(e){
       console.log(e);
@@ -38,6 +58,8 @@ export default function(app, L, do404, rootdir){
         "en": "/en",
       },
       isHomepage: true,
+      tracks,
+      myTracks,
     });
   });
   

@@ -70,6 +70,11 @@ header a.tobar span.icon {
 header a.tobar:hover span.icon {
   background-color: #eeeeee;
 }
+@media (max-width: 600px) {
+  header a.tobar span.icon {
+    display: none;
+  }
+}
 
 header .title {
   display: inline-block;

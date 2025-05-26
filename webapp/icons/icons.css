@@ -27,3 +27,7 @@ span.icon.circle-question {
   mask-image: url(/circle-question.svg);
   -webkit-mask-image: url(/circle-question.svg);
 }
+span.icon.angles-right {
+  mask-image: url(/angles-right.svg);
+  -webkit-mask-image: url(/angles-right.svg);
+}

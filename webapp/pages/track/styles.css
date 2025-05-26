@@ -14,6 +14,11 @@ div.title > h1 {
   margin-right: -10px;
   padding-right: 10px;
 }
+div.title > h1 span.year {
+  color: #667788;
+  margin-left: 3px;
+  font-size: 0.8em;
+}
 div.title > div.data {
   font-size: 0.9em;
   margin-top: 5px;
@@ -168,4 +173,67 @@ aside.toolbox div.submission button.save:active {
     max-width: 400px;
     width: 100%;
   }
+}
+
+div.stage {
+  text-align: center;
+  margin-top: 15vh;
+}
+div.stage span.status {
+  display: inline-block;
+  background-color: #a5eaf5;
+  border-radius: 4px;
+  line-height: 1.25em;
+  padding: 8px 16px;
+  color: #245583;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+div.stage span.status span.dots {
+  margin-right: 5px;
+}
+div.stage span.status span.dots span.blanks {
+  color: #ffffff;
+}
+div.stage button {
+  margin-top: 20px;
+  font: inherit;
+  border: 0px;
+  height: 100px;
+  min-width: 300px;
+  border-radius: 200px;
+  box-shadow: 0px 0px 5px #666666;
+  cursor: pointer;
+  background-color: #ffffff;
+  position: relative;
+}
+div.stage div.cta {
+  text-align: center;
+}
+div.stage div.cta a.button {
+  border-radius: 40px;
+  box-shadow: 0px 0px 5px #666666;
+  background-color: #dbfaff;
+  display: inline-block;
+  padding: 20px 70px 20px 40px;
+  border: 0px;
+  margin-top: 40px;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+div.stage div.cta a.button span.icon {
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 0.85em);
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #999999;
+}
+div.stage div.cta a.button:hover span.icon {
+  background-color: #667788;
+}
+div.stage div.cta div.or {
+  margin-top: 20px;
+  color: #666666;
 }

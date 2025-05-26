@@ -1,0 +1,207 @@
+div.banner {
+  height: 400px;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+div.banner.loggedIn {
+  height: 190px;
+  margin-bottom: -20px;
+}
+div.banner div.backdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 4px;
+  background-image: url(/home/backdrop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+div.banner div.transparency {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #ffffff;
+  filter: opacity(0.5);
+}
+div.banner div.slogan {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+div.banner div.slogan span {
+  background-color: #0280a5;
+  display: block;
+  margin: 150px 50px 0px 50px;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.5em;
+  line-height: 1.5em;
+  padding: 15px 20px;
+  border-radius: 4px;
+}
+div.banner.loggedIn div.slogan span {
+  margin-top: 60px;
+  font-size: 2em;
+}
+@media(max-width: 700px){
+  div.banner div.slogan span {
+    font-size: 2em;
+    margin: 75px 20px 0px 20px;
+  }
+  div.banner.loggedIn div.slogan span {
+    font-size: 1.75em;
+    margin: 20px 20px 0px 20px;
+  }
+}
+
+div.cta {
+  float: right;
+  width: 500px;
+  text-align: center;
+}
+@media(max-width: 700px){
+  div.cta {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+}
+div.cta a.button {
+  border-radius: 40px;
+  box-shadow: 0px 0px 5px #666666;
+  background-color: #dbfaff;
+  display: inline-block;
+  padding: 20px 70px 20px 40px;
+  border: 0px;
+  margin-top: 40px;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+@media(max-width: 700px){
+  div.cta a.button {
+    margin-top: 0px;
+  }
+}
+div.cta a.button span.icon {
+  position: absolute;
+  right: 30px;
+  top: calc(50% - 0.85em);
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #999999;
+}
+div.cta a.button:hover span.icon {
+  background-color: #667788;
+}
+div.cta div.or {
+  margin-top: 20px;
+  color: #666666;
+}
+
+div.welcome {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-right: 600px;
+}
+@media(max-width: 700px){
+  div.welcome {
+    margin-top: 30px;
+    margin-right: 0px;
+  }
+}
+
+div.tracks {
+  margin: 60px 0px 40px 0px;
+}
+
+div.track {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  padding-right: 250px;
+  border: 2px solid transparent;
+}
+div.track.prominent {
+  border-color: #3cb1c4;
+}
+@media(max-width: 700px){
+  div.track {
+    padding-right: 0px;
+  }
+}
+div.track span.status {
+  display: inline-block;
+  background-color: #a5eaf5;
+  border-radius: 2px;
+  line-height: 1.25em;
+  padding: 5px 10px;
+  color: #245583;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+div.track span.status span.dots {
+  margin-right: 5px;
+}
+div.track span.status span.dots span.blanks {
+  color: #ffffff;
+}
+
+div.track div.title {
+  font-size: inherit;
+  margin: 0px;
+  font-weight: normal;
+  color: #000000;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+div.track div.title span.year {
+  color: #667788;
+  margin-left: 3px;
+  font-size: 0.8em;
+}
+div.track > div.data {
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #666666;
+  line-height: 2em;
+}
+div.track > div.data a {
+  line-height: 1.5em;
+}
+div.track > div.data span.divider {
+  margin: 0px 5px;
+}
+div.track a.button {
+  border-radius: 40px;
+  box-shadow: 0px 0px 5px #666666;
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 0px;
+  position: relative;
+  font-size: 1.1em;
+  position: absolute;
+  right: 40px;
+  top: calc(50% - 1.25em);
+}
+@media(max-width: 700px){
+  div.track a.button {
+    margin-top: 20px;
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}

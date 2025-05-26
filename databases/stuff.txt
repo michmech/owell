@@ -1,3 +1,9 @@
 create a user:
 insert into users(email, passwordHash) values('valselob@gmail.com', '2b9704cf25016a5bb05331513ca8a079658e0e1b63e622734929b58080e915bd73f8cfd1663964278ea6287b139c572ed2174c1711cb204b281622a705096d03')
 the password will be: razdvatri
+
+statuses
+  available
+  owned
+  finished
+  approved
