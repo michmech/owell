@@ -3,6 +3,7 @@ c-identity {
   position: relative;
   top: -3px;
   display: block;
+  user-select: none;
 }
 c-identity div.badge {
   background-color: #ffffff;

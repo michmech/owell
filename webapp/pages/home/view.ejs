@@ -36,10 +36,18 @@
         <%for(let i=0; i<myTracks.length; i++){const track=myTracks[i];%>
           <div class="track prominent">
             <span class="status">
-              <span class="dots">● <span class="blanks">● ●</span></span>
-              <%=L("ga ath-sgrìobhadh agadsa|being transcribed by you")%>
+              <span class="dots">
+                <%if(track.status=="available"){%><span class="blanks">● ● ●</span><%}%>
+                <%if(track.status=="owned"){%>● <span class="blanks">● ●</span><%}%>
+                <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
+                <%if(track.status=="approved"){%>● ● ●<%}%>
+              </span>
+              <%if(track.status=="available"){%><%=L("Ri làimh air son ath-sgrìobhadh|Available for transcription")%><%}%>
+              <%if(track.status=="owned"){%><%=L("Ga ath-sgrìobhadh aig|Being transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
+              <%if(track.status=="finished"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a>, <%=L("a’ feitheamh ri ceadachadh|awaiting approval")%><%}%>
+              <%if(track.status=="approved"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a> <%=L("agus ceadaichte|and approved")%><%}%>
             </span>
-            <div class="title">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></div>
+            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></a></div>
             <div class="data">
               <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
               <span class="divider">&middot;</span>
@@ -47,7 +55,11 @@
               <span class="divider">&middot;</span>
               <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
             </div>
-            <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Lean air adhart ag ath-sgrìobh|Continue transcribing")%>&nbsp;»</a>
+            <%if(track.status=="owned"){%>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Lean air adhart ag ath-sgrìobh|Continue transcribing")%>&nbsp;»</a>
+            <%} else if(track.status=="finished"){%>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Review")%>&nbsp;»</a>
+            <%}%>
           </div>
         <%}%>
         <%for(let i=0; i<tracks.length; i++){const track=tracks[i];%>
@@ -59,12 +71,12 @@
                 <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
                 <%if(track.status=="approved"){%>● ● ●<%}%>
               </span>
-              <%if(track.status=="available"){%><%=L("ri làimh air son ath-sgrìobhadh|available for transcription")%><%}%>
-              <%if(track.status=="owned"){%><%=L("ga ath-sgrìobhadh|being transcribed")%><%}%>
-              <%if(track.status=="finished"){%><%=L("air a ath-sgrìobhadh, a’ feitheamh ri ceadacadh|transcribed, awaiting approval")%><%}%>
-              <%if(track.status=="approved"){%><%=L("air a ath-sgrìobhadh agus ceadaichte|transcribed and approved")%><%}%>
+              <%if(track.status=="available"){%><%=L("Ri làimh air son ath-sgrìobhadh|Available for transcription")%><%}%>
+              <%if(track.status=="owned"){%><%=L("Ga ath-sgrìobhadh aig|Being transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
+              <%if(track.status=="finished"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a>, <%=L("a’ feitheamh ri ceadachadh|awaiting approval")%><%}%>
+              <%if(track.status=="approved"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a> <%=L("agus ceadaichte|and approved")%><%}%>
             </span>
-            <div class="title">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></div>
+            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></a></div>
             <div class="data">
               <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
               <span class="divider">&middot;</span>
@@ -72,7 +84,18 @@
               <span class="divider">&middot;</span>
               <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
             </div>
-            <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Fosgail|Open")%>&nbsp;»</a>
+            <%if(track.status=="available"){%>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Fosgail|Open")%>&nbsp;»</a>
+            <%}%>
+            <%if(track.status=="owned"){%>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Èist|Listen")%>&nbsp;»</a>
+            <%}%>
+            <%if(track.status=="finished"){%>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Èist|Listen")%>&nbsp;»</a>
+            <%}%>
+            <%if(track.status=="approved"){%>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Èist & Leugh|Listen & Read")%>&nbsp;»</a>
+            <%}%>
           </div>
         <%}%>
       </div>

@@ -28,6 +28,26 @@ div.title > div.data {
   margin-right: -10px;
   padding-right: 10px;
 }
+div.title > div.data span.status {
+  display: inline-block;
+  background-color: #a5eaf5;
+  border-radius: 4px;
+  line-height: 1.25em;
+  padding: 7px 10px 5px 10px;
+  color: #245583;
+  margin-right: 5px;
+  font-size: 1em;
+}
+div.title > div.data span.status span.dots {
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+div.title > div.data span.status span.dots span.blanks {
+  color: #ffffff;
+}
+
 div.title > div.data span.divider {
   margin: 0px 5px;
 }
@@ -179,33 +199,23 @@ div.stage {
   text-align: center;
   margin-top: 15vh;
 }
-div.stage span.status {
-  display: inline-block;
-  background-color: #a5eaf5;
-  border-radius: 4px;
-  line-height: 1.25em;
-  padding: 8px 16px;
-  color: #245583;
-  margin-bottom: 10px;
-  font-size: 1em;
-}
-div.stage span.status span.dots {
-  margin-right: 5px;
-}
-div.stage span.status span.dots span.blanks {
-  color: #ffffff;
+div.stage div.message {
+  color: #666666;
 }
 div.stage button {
   margin-top: 20px;
   font: inherit;
   border: 0px;
-  height: 100px;
+  height: 75px;
   min-width: 300px;
   border-radius: 200px;
   box-shadow: 0px 0px 5px #666666;
   cursor: pointer;
   background-color: #ffffff;
   position: relative;
+}
+div.stage button.smaller {
+  height: 50px;
 }
 div.stage div.cta {
   text-align: center;

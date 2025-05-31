@@ -139,21 +139,24 @@ div.track.prominent {
 }
 @media(max-width: 700px){
   div.track {
-    padding-right: 0px;
+    padding-right: 20px;
   }
 }
 div.track span.status {
   display: inline-block;
   background-color: #a5eaf5;
-  border-radius: 2px;
+  border-radius: 4px;
   line-height: 1.25em;
-  padding: 5px 10px;
+  padding: 7px 10px 5px 10px;
   color: #245583;
   margin-bottom: 10px;
   font-size: 0.9em;
 }
 div.track span.status span.dots {
+  display: inline-block;
   margin-right: 5px;
+  position: relative;
+  top: -1px;
 }
 div.track span.status span.dots span.blanks {
   color: #ffffff;
@@ -167,10 +170,20 @@ div.track div.title {
   font-size: 1.3em;
   line-height: 1.5em;
 }
+div.track div.title a {
+  color: inherit;
+  border: 0px;
+}
+div.track div.title a:hover {
+  color: #245583;
+}
 div.track div.title span.year {
   color: #667788;
   margin-left: 3px;
   font-size: 0.8em;
+}
+div.track div.title a:hover span.year {
+  color: #3c6c99;
 }
 div.track > div.data {
   font-size: 0.9em;

@@ -2,6 +2,7 @@ export class CTextarea extends HTMLElement {
 
   constructor(){
     super();
+    this.isPublic=(this.getAttribute("public")=="yes");
   }
 
   connectedCallback(){
@@ -11,7 +12,11 @@ export class CTextarea extends HTMLElement {
     this.appendChild(h);
     
     const textarea=this.querySelector("textarea");
-    textarea.addEventListener("input", x => {this.#hilite()}); 
+    if(this.isPublic){
+      textarea.readOnly=true;
+    } else {
+      textarea.addEventListener("input", x => {this.#hilite()}); 
+    }
     textarea.addEventListener("scroll", x => {this.#syncScroll()}); 
     
     this.#hilite();

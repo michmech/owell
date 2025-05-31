@@ -10,6 +10,7 @@ export default function(app, L, do404, rootdir){
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
+    let isAdmin=false;
 
     const tracks=[];
     const myTracks=[];
@@ -18,12 +19,16 @@ export default function(app, L, do404, rootdir){
     try{
       { //check if the user is already logged in:
         let yesterday=(new Date()); yesterday.setHours(yesterday.getHours()-24); yesterday=yesterday.toISOString();
-        const sql=`select email from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
+        const sql=`select email, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
         const stmt=db.prepare(sql);
-        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
+        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
       { //get list of tracks:
-        const sql=`select id, title, status, owner from tracks order by id`
+        const sql=`
+          select t.id, t.title, t.status, t.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          from tracks as t
+          left outer join users as u on u.email=t.owner
+          order by t.id`
         const stmt=db.prepare(sql);
         stmt.all().map(row => {
           const track={
@@ -31,8 +36,10 @@ export default function(app, L, do404, rootdir){
             title: row["title"],
             status: row["status"],
             owner: row["owner"],
+            ownerROWID: row["ownerROWID"],
+            ownerDisplayName: row["ownerDisplayName"],
           };
-          if(track.status=="owned" && track.owner==email){
+          if( (track.status=="owned" && track.owner==email) || (track.status=="finished" && isAdmin)){
             myTracks.push(track);
           } else {
             tracks.push(track);
@@ -49,6 +56,7 @@ export default function(app, L, do404, rootdir){
       uilang: req.params.uilang,
       loggedIn,
       email,
+      isAdmin,
 
       L: multistring => L(req.params.uilang, multistring),
       pageTitle: L(req.params.uilang, "Fosgladh an Tobair|Opening The Well"),

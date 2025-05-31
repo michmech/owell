@@ -19,6 +19,18 @@
         <div class="title">
           <h1>“<%=trackTitle%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></h1>
           <div class="data">
+            <span class="status">
+              <span class="dots">
+                <%if(status=="available"){%><span class="blanks">● ● ●</span><%}%>
+                <%if(status=="owned"){%>● <span class="blanks">● ●</span><%}%>
+                <%if(status=="finished"){%>● ● <span class="blanks">●</span><%}%>
+                <%if(status=="approved"){%>● ● ●<%}%>
+              </span>
+              <%if(status=="available"){%><%=L("Ri làimh air son ath-sgrìobhadh|Available for transcription")%><%}%>
+              <%if(status=="owned"){%><%=L("Ga ath-sgrìobhadh aig|Being transcribed by")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%}%>
+              <%if(status=="finished"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a>, <%=L("a’ feitheamh ri ceadachadh|awaiting approval")%><%}%>
+              <%if(status=="approved"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a> <%=L("agus ceadaichte|and approved")%><%}%>
+            </span>
             <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=trackID%>?l=<%-uilang%>"><%=trackID%></a>
             <span class="divider">&middot;</span>
             <%=L("Àireamh an teip thùsail|Original tape ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
@@ -27,10 +39,32 @@
           </div>
         </div>
         <div class="audio">
-          <audio controls preload="auto" src="/sounds/1345.mp4"></audio>
+          <audio controls preload="auto" src="/sounds/<%-trackID%>.mp4"></audio>
         </div>
 
-        <%if(loggedIn && email==owner && status=="owned"){%>
+        <%if(status=="approved" && !loggedIn){%>
+          <c-textarea public="yes">
+            <textarea name="transcript" spellcheck="false"><%=transcript%></textarea>
+          </c-textarea>
+          <aside class="toolbox">
+            <div class="scrollable">
+              <c-speed>
+                <label for="speed"><%=L("Luaths na fuaime|Playback speed")%> <span class="value">1&nbsp;×</span></label>
+                <input id="speed" type="range"/>
+              </c-speed>
+              <ul class="legend">
+                <li>
+                  <div class="caption"><%=L("Seinn/Stad/Ath-sheinn|Play/Pause/Replay")%></div>
+                  <div class="keys"><span class="key">Ctrl</span> + <span class="key">Space</span></div>
+                </li>
+                <li>
+                  <div class="caption"><%=L("Air ais/air aghaidh de 1 diog|Rewind/Forward by 1 second")%></div>
+                  <div class="keys"><span class="key">Ctrl</span> + <span class="key">,</span> <span class="key">.</span></div>
+                </li>
+              </ul>
+            </div>
+        </aside>
+      <%} else if( (status=="owned" && loggedIn && email==owner) || (status=="finished" && loggedIn && isAdmin) || (status=="approved" && loggedIn && isAdmin) ){%>
           <form method="post" action="">
             <c-textarea>
               <textarea name="transcript" spellcheck="false"><%=transcript%></textarea>
@@ -43,12 +77,12 @@
                 </c-speed>
                 <ul class="legend">
                   <li>
-                    <div class="caption"><%=L("Air ais/air aghaidh de 1 diog|Rewind/Forward by 1 second")%></div>
-                    <div class="keys"><span class="key">Ctrl</span> + <span class="key">&lt;</span> <span class="key">&gt;</span></div>
-                  </li>
-                  <li>
                     <div class="caption"><%=L("Seinn/Stad/Ath-sheinn|Play/Pause/Replay")%></div>
                     <div class="keys"><span class="key">Ctrl</span> + <span class="key">Space</span></div>
+                  </li>
+                  <li>
+                    <div class="caption"><%=L("Air ais/air aghaidh de 1 diog|Rewind/Forward by 1 second")%></div>
+                    <div class="keys"><span class="key">Ctrl</span> + <span class="key">,</span> <span class="key">.</span></div>
                   </li>
                   <li>
                     <div class="caption"><%=L("Cuir stampa-tìde a-steach|Insert a timestamp")%></div>
@@ -57,9 +91,18 @@
                 </ul>
               </div>
               <div class="submission">
-                <label><input type="radio" name="status" value="owned" checked> <%=L("Neo-chrìochnaichte, leanaidh mi air adhart nas anmoiche|Unfinished, I will continue later")%></label>
-                <label><input type="radio" name="status" value="available"> <%=L("Neo-chrìochnaichte, leanadh cuideigin eile air adhart|Unfinished, let someone else continue")%></label>
-                <label><input type="radio" name="status" value="finished"> <%=L("Crìochnaichte|Finished")%></label>
+                <%if( (status=="owned" && loggedIn && email==owner) ){%>
+                  <label><input type="radio" name="status" value="owned" checked> <%=L("Neo-chrìochnaichte, leanaidh mi air adhart nas anmoiche|Unfinished, I will continue later")%></label>
+                  <label><input type="radio" name="status" value="available"> <%=L("Neo-chrìochnaichte, leanadh cuideigin eile air adhart|Unfinished, let someone else continue")%></label>
+                  <label><input type="radio" name="status" value="finished"> <%=L("Crìochnaichte|Finished")%></label>
+                <%} else if( (status=="finished" && loggedIn && isAdmin) ){%>
+                  <label><input type="radio" name="status" value="approved" checked> <%=L("Approve, this is good to go")%></label>
+                  <label><input type="radio" name="status" value="available"> <%=L("Reject, let someone start again")%></label>
+                  <label><input type="radio" name="status" value="finished"> <%=L("I will decide later")%></label>
+                <%} else if( (status=="approved" && loggedIn && isAdmin) ){%>
+                  <label><input type="radio" name="status" value="approved" checked> <%=L("Keep approved")%></label>
+                  <label><input type="radio" name="status" value="finished"> <%=L("Cancel approval")%></label>
+                <%}%>
                 <button type="submit" class="save"><%-L("Sàbhail|Save")%></button>
               </div>
             </aside>
@@ -68,10 +111,6 @@
           <div class="stage">
             
             <%if(status=="available"){%>
-              <span class="status">
-                <span class="dots"><span class="blanks">● ● ●</span></span>
-                <%=L("ri làimh air son ath-sgrìobhadh|available for transcription")%>
-              </span>
               <%if(loggedIn){%>
                 <form method="post" action="">
                   <input type="hidden" name="status" value="owned"/>
@@ -92,17 +131,53 @@
             <%}%>
 
             <%if(status=="owned"){%>
-              <span class="status">
-                <span class="dots">● <span class="blanks">● ●</span></span>
-                <%=L("ga ath-sgrìobhadh|being transcribed")%>
-              </span>
+              <%if(loggedIn){%>
+                <div class="message">
+                  <%=L("This track is being transcribed by another user.")%>
+                </div>
+                <div class="cta">
+                  <div class="or">
+                    <a href="/<%-uilang%>"><%=L("Find something else to transcribe")%>&nbsp;»</a>
+                  </div>
+                </div>
+              <%} else {%>
+                <div class="message">
+                  <%=L("This track is being transcribed by a volunteer transcriber.")%>
+                </div>
+                <div class="cta">
+                  <a class="button" href="#">
+                    <%=L("Thig gu bith ath-sgrìobhair saor-thoileach|Become a volunteer transcriber")%>
+                    <span class="icon angles-right"></span>
+                  </a>
+                  <div class="or">
+                    <%=L("Cuide rinn mu thràth?|With us already?")%>
+                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+trackID)%>"><%=L("Log a-steach|Log in")%>&nbsp;»</a>
+                  </div>
+                </div>
+              <%}%>
             <%}%>
 
             <%if(status=="finished"){%>
-              <span class="status">
-                <span class="dots">● ● <span class="blanks">●</span></span>
-                <%=L("air a ath-sgrìobhadh, a’ feitheamh ri ceadacadh|transcribed, awaiting approval")%>
-              </span>
+              <%if(loggedIn && owner==email){%>
+                <form method="post" action="">
+                  <input type="hidden" name="status" value="owned"/>
+                  <button type="submit" class="smaller"><%=L("Return to transcribing")%></button>
+                </form>
+              <%} else {%>
+                <div class="message">
+                  <%=L("This track has recently been transcribed by a volunteer transcriber and is awaiting approval.")%>
+                </div>
+                <div class="cta">
+                  <a class="button" href="#">
+                    <%=L("Thig gu bith ath-sgrìobhair saor-thoileach|Become a volunteer transcriber")%>
+                    <span class="icon angles-right"></span>
+                  </a>
+                  <div class="or">
+                    <%=L("Cuide rinn mu thràth?|With us already?")%>
+                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+trackID)%>"><%=L("Log a-steach|Log in")%>&nbsp;»</a>
+                  </div>
+                </div>
+              <%}%>
             <%}%>
 
           </div>
