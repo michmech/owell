@@ -25,7 +25,7 @@ export default function(app, L, do404, rootdir){
           const stmt=db.prepare(sql);
           stmt.run({trackID, transcript, status});
         } else if(status=="available") {
-          const sql=`update tracks set status=$status, email=NULL where id=$trackID`;
+          const sql=`update tracks set status=$status, owner=NULL where id=$trackID`;
           const stmt=db.prepare(sql);
           stmt.run({trackID, status});
         } else if(status=="owned") {

@@ -28,7 +28,7 @@ c-identity div.badge span.caption {
   margin: 0px 0.5em;
   position: relative;
   top: 2px;
-  color: #999999;
+  color: #666666;
 }
 c-identity.loggedIn div.badge span.caption {
   color: #333333;
