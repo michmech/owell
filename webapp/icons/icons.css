@@ -31,3 +31,11 @@ span.icon.angles-right {
   mask-image: url(/angles-right.svg);
   -webkit-mask-image: url(/angles-right.svg);
 }
+span.icon.play {
+  mask-image: url(/play.svg);
+  -webkit-mask-image: url(/play.svg);
+}
+span.icon.pause {
+  mask-image: url(/pause.svg);
+  -webkit-mask-image: url(/pause.svg);
+}

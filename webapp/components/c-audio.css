@@ -1,0 +1,79 @@
+c-audio {
+  display: block;
+  height: 45px;
+  width: 100%;
+  box-shadow: 0px 0px 5px #666666;
+  background-color: #434343;
+  border-radius: 2px;
+  position: relative;
+}
+c-audio audio {
+  display: none;
+  /* position: absolute;
+  top: -100px */
+}
+
+c-audio button.the {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 45px;
+  bottom: 0px;
+  border: 0px;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+c-audio button.the span.icon {
+  display: none;
+  background-color: #ffffff;
+}
+c-audio button.the.play span.icon.play {
+  display: inline-block;
+}
+c-audio button.the.pause span.icon.pause {
+  display: inline-block;
+}
+
+c-audio span.time {
+  position: absolute;
+  right: 15px;
+  bottom: 8px;
+  color: #aaaaaa;
+  font-size: 0.9em;
+}
+c-audio span.time span.now {
+  font-family:'Courier New', Courier, monospace;
+  color: #ffffff;
+}
+c-audio span.time span.slash {
+  margin: 0px 2px 0px 3px;
+}
+c-audio span.time span.duration {
+  font-family:'Courier New', Courier, monospace;
+}
+
+c-audio div.thermo {
+  position: absolute;
+  top: 16px;
+  height: 15px;
+  left: 50px;
+  right: 125px;
+  overflow: hidden;
+  cursor: pointer;
+}
+c-audio div.thermo div.inside {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0px;
+  right: 0px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+c-audio div.thermo div.inside div.fill {
+  background-color: #00abce;
+  height: 5px;
+  width: 25%;
+}

@@ -3,6 +3,9 @@
   <head>
     <%-include("../../includes/headContent/view.ejs", this)%>
     
+    <link rel="stylesheet" href="/c-audio.css"/>
+    <script type="module" src="/c-audio.js"></script>
+
     <link rel="stylesheet" href="/c-textarea.css"/>
     <script type="module" src="/c-textarea.js"></script>
 
@@ -38,9 +41,9 @@
             <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
           </div>
         </div>
-        <div class="audio">
+        <c-audio>
           <audio controls preload="auto" src="/sounds/<%-trackID%>.mp4"></audio>
-        </div>
+        </c-audio>
 
         <%if(status=="approved" && !loggedIn){%>
           <c-textarea public="yes">
@@ -117,6 +120,9 @@
                   <button type="submit"><%=L("Tòisich ag ath-sgrìobh|Start transcribing")%></button>
                 </form>
               <%} else {%>
+                <div class="message">
+                  <%=L("This track is waiting for someone to volunteer to transcribe it.")%>
+                </div>
                 <div class="cta">
                   <a class="button" href="#">
                     <%=L("Thig gu bith ath-sgrìobhair saor-thoileach|Become a volunteer transcriber")%>
