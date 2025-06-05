@@ -1,0 +1,206 @@
+Users logging in and out:
+-------------------------
+
+anonymous
+neo-aithnichte
+
+Log in
+Log a-steach
+
+Create a new account
+Cruthaich cunntas ùr
+
+Log out
+Log a-mach
+
+Change your password
+Atharraich am facal-faire agad
+
+Forgot password?
+Facal-faire air dìochuimhne?
+
+E-mail address
+Seòladh post-d
+
+Password
+Facal-faire
+
+Incorrect e-mail address or incorrect password.
+Seòladh post-d mì-cheart no facal-faire mì-cheart.
+
+
+Homepage, header, footer:
+-------------------------
+
+Opening The Well
+Fosgladh an Tobair
+
+We are transcribing Scotland’s oral heritage
+Ag ath-sgrìobhadh guthan ar sinnsirean
+
+Become a volunteer transcriber
+Thig gu bith ath-sgrìobhair saor-thoileach
+
+With us already?
+Cuide rinn mu thràth?
+
+More information
+Tuilleadh fiosrachaidh
+
+Scottish Gaelic community transcription project
+A’ choimhearsnachd ag ath-sgrìobhadh
+
+About us
+Mu ar deidhinn
+
+The University of Edinburgh
+Oilthigh Dhùn Èideann
+
+Riaghaltas na h-Alba
+Scottish Government
+
+
+The statuses of an audio track:
+-------------------------------
+
+Available for transcription
+Ri làimh air son ath-sgrìobhadh
+
+Being transcribed by $1
+Ga ath-sgrìobhadh aig $1
+
+Transcribed by $1, awaiting approval
+Air a ath-sgrìobhadh aig $1, a’ feitheamh ri ceadachadh
+
+Transcribed by $1 and approved
+Air a ath-sgrìobhadh aig $1 agus ceadaichte
+
+
+Metadata about each audio track:
+--------------------------------
+
+Year
+Bliadhna
+
+Track ID
+Àireamh a’ chlàir
+
+Original tape ID
+Àireamh an teip thùsail
+
+Speaking
+A’ bruidhinn
+
+
+Action buttons next to the listing of each audio track:
+-------------------------------------------------------
+
+Continue transcribing
+Lean air adhart ag ath-sgrìobh
+
+Review
+Review
+
+Open
+Fosgail
+
+Listen
+Èist
+
+Listen & Read
+Èist & Leugh
+
+
+Transcription tools:
+--------------------
+
+Playback speed
+Luaths na fuaime
+
+Play/Pause/Replay
+Seinn/Stad/Ath-sheinn
+
+Space
+Space
+
+Rewind/Forward by 1 second
+Air ais/air aghaidh de 1 diog
+
+Insert a timestamp
+Cuir stampa-tìde a-steach
+
+A transcriber saving a transcription:
+-------------------------------------
+
+Unfinished, I will continue later
+Neo-chrìochnaichte, leanaidh mi air adhart nas anmoiche
+
+Unfinished, let someone else continue
+Neo-chrìochnaichte, leanadh cuideigin eile air adhart
+
+Finished
+Crìochnaichte
+
+Save
+Sàbhail
+
+Return to transcribing
+Return to transcribing
+
+
+An administrator approving or rejecting a transcription:
+--------------------------------------------------------
+
+Approve, this is good to go
+Approve, this is good to go
+
+Reject, let someone start again
+Reject, let someone start again
+
+I will decide later
+I will decide later
+
+
+An administrator saving an already-approved transcription:
+----------------------------------------------------------
+
+Keep approved
+Keep approved
+
+Cancel approval
+Cancel approval
+
+
+When an audio track is available for transcription (message shown to logged-in users):
+--------------------------------------------------------------------------------------
+
+Start transcribing
+Tòisich ag ath-sgrìobh
+
+
+When an audio track is available for transcription (message shown to not-logged-in users):
+------------------------------------------------------------------------------------------
+
+This track is waiting for someone to volunteer to transcribe it.
+This track is waiting for someone to volunteer to transcribe it.
+
+
+When an audio track is being transcribed by someone else (messages shown to logged-in users):
+---------------------------------------------------------------------------------------------
+
+This track is being transcribed by another user.
+This track is being transcribed by another user.
+
+Find something else to transcribe
+Find something else to transcribe
+
+
+When an audio track is being transcribed or awaiting approval (messages shown to not-logged-in users):
+------------------------------------------------------------------------------------------------------
+
+This track is being transcribed by a volunteer transcriber.
+This track is being transcribed by a volunteer transcriber.
+
+This track has recently been transcribed by a volunteer transcriber and is awaiting approval.
+This track has recently been transcribed by a volunteer transcriber and is awaiting approval.
+
