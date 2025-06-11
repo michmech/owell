@@ -1,0 +1,210 @@
+{
+  "#anonymous": {
+    "en": "anonymous",
+    "gd": "neo-aithnichte"
+  },
+  "#login": {
+    "en": "Log in",
+    "gd": "Log a-steach"
+  },
+  "#createaccount": {
+    "en": "Create a new account",
+    "gd": "Cruthaich cunntas ùr"
+  },
+  "#logout": {
+    "en": "Log out",
+    "gd": "Log a-mach"
+  },
+  "#changepassword": {
+    "en": "Change your password",
+    "gd": "Atharraich t’ fhacal-faire"
+  },
+  "#forgotpassword": {
+    "en": "Forgot password?",
+    "gd": "Facal-faire air dìochuimhne?"
+  },
+  "#emailaddress": {
+    "en": "E-mail address",
+    "gd": "Seòladh post-d"
+  },
+  "#password": {
+    "en": "Password",
+    "gd": "Facal-faire"
+  },
+  "#loginfailed": {
+    "en": "Incorrect e-mail address or incorrect password.",
+    "gd": "Seòladh post-d ceàrr no facal-faire ceàrr."
+  },
+  "#sitetitle": {
+    "en": "Opening The Well",
+    "gd": "Fosgladh an Tobair"
+  },
+  "#siteslogan": {
+    "en": "We are transcribing Scotland’s oral heritage",
+    "gd": "Tha sinn a’ tar-sgrìobhadh beul-aithris na h-Alba"
+  },
+  "#comejoinus": {
+    "en": "Become a volunteer transcriber",
+    "gd": "Thig gar cuideachadh"
+  },
+  "#alreadyin": {
+    "en": "With us already?",
+    "gd": "Cuide rinn mar thà?"
+  },
+  "#moreinfo": {
+    "en": "More information",
+    "gd": "Tuilleadh fiosrachaidh"
+  },
+  "#sitedescription": {
+    "en": "Gaelic community transcription project",
+    "gd": "Pròiseact tar-sgrìobhaidh na coimhearsnachd Ghàidhlig"
+  },
+  "#aboutus": {
+    "en": "About us",
+    "gd": "Mu ar deidhinn"
+  },
+  "#unofed": {
+    "en": "The University of Edinburgh",
+    "gd": "Oilthigh Dhùn Èideann"
+  },
+  "#scotgov": {
+    "en": "Scottish Government",
+    "gd": "Riaghaltas na h-Alba"
+  },
+  "#available": {
+    "en": "Available for transcription",
+    "gd": "Deiseil airson a thar-sgrìobhadh"
+  },
+  "#owned": {
+    "en": "Being transcribed by",
+    "gd": "Ga thar-sgrìobhadh aig"
+  },
+  "#finished": {
+    "en": "Transcribed by $, awaiting approval",
+    "gd": "Tar-sgrìobhte aig $, a’ feitheamh ri ceadachadh"
+  },
+  "#approved": {
+    "en": "Transcribed by $ and approved",
+    "gd": "Tar-sgrìobhte aig $ agus ceadaichte"
+  },
+  "#year": {
+    "en": "Year",
+    "gd": "Bliadhna"
+  },
+  "#trackid": {
+    "en": "Track ID",
+    "gd": "Àireamh a’ chlàir"
+  },
+  "#originaltapeid": {
+    "en": "Original tape ID",
+    "gd": "Àireamh na teip tùsail"
+  },
+  "#speaking": {
+    "en": "Speaking",
+    "gd": "Bruidhinn"
+  },
+  "#continuetranscribing": {
+    "en": "Continue transcribing",
+    "gd": "Lean ort le tar-sgrìobhadh"
+  },
+  "#review": {
+    "en": "Review",
+    "gd": "Lèirmheas"
+  },
+  "#open": {
+    "en": "Open",
+    "gd": "Fosgail"
+  },
+  "#listen": {
+    "en": "Listen",
+    "gd": "Èist"
+  },
+  "#listenandread": {
+    "en": "Listen & Read",
+    "gd": "Èist & Leugh"
+  },
+  "#speed": {
+    "en": "Playback speed",
+    "gd": "Luaths na fuaime"
+  },
+  "#playpause": {
+    "en": "Play/Pause/Replay",
+    "gd": "Seinn/Stad/Ath-sheinn"
+  },
+  "#space": {
+    "en": "Space",
+    "gd": "Spàs"
+  },
+  "#onesecond": {
+    "en": "Rewind/Forward by 1 second",
+    "gd": "Air ais/air aghaidh de 1 diog"
+  },
+  "#inserttimestamp": {
+    "en": "Insert a timestamp",
+    "gd": "Cuir stampa-tìde a-steach"
+  },
+  "#savewillcontinue": {
+    "en": "Unfinished, I will continue later",
+    "gd": "Neo-chrìochnaichte, leanaidh mi orm a-rithist"
+  },
+  "#savewillnotcontinue": {
+    "en": "Unfinished, let someone else continue",
+    "gd": "Neo-chrìochnaichte, leig le cuideigin eile a dhèanamh"
+  },
+  "#savefinished": {
+    "en": "Finished",
+    "gd": "Crìochnaichte"
+  },
+  "#save": {
+    "en": "Save",
+    "gd": "Glèidh"
+  },
+  "#returntotranscribing": {
+    "en": "Return to transcribing",
+    "gd": "Till a thar-sgrìobhadh"
+  },
+  "#approve": {
+    "en": "Approve, this is good to go",
+    "gd": "Ceadaich, tha seo deiseil"
+  },
+  "#reject": {
+    "en": "Reject, let someone start again",
+    "gd": "Diùlt, leig le cuideigin tòiseachadh a-rithist"
+  },
+  "#decidelater": {
+    "en": "I will decide later",
+    "gd": "Nì mi a-rithist e"
+  },
+  "#keepapproved": {
+    "en": "Keep approved",
+    "gd": "Cùm e ceadaichte"
+  },
+  "#cancelapproval": {
+    "en": "Cancel approval",
+    "gd": "Diùlt an ceadachadh"
+  },
+  "#starttranscribing": {
+    "en": "Start transcribing",
+    "gd": "Tòisich air tar-sgrìobhadh"
+  },
+  "#trackwaiting": {
+    "en": "This track is waiting for someone to volunteer to transcribe it.",
+    "gd": "Tha an clàr seo ri a thar-sgrìobhadh fhathast."
+  },
+  "#trackownedbyanother": {
+    "en": "This track is being transcribed by another user.",
+    "gd": "Tha an clàr seo ga thar-sgrìobhadh aig cuideigin eile."
+  },
+  "#findsomethingelse": {
+    "en": "Find something else to transcribe",
+    "gd": "Lorg rudeigin eile a thar-sgrìobhas tu"
+  },
+  "#trackownedbyvolunteer": {
+    "en": "This track is being transcribed by a volunteer transcriber.",
+    "gd": "Tha an clàr seo ga thar-sgrìobhadh aig cuideigin eile."
+  },
+  "#trackwaitingforapproval": {
+    "en": "This track has recently been transcribed by a volunteer transcriber and is awaiting approval.",
+    "gd": "Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh."
+  }
+}

@@ -30,13 +30,13 @@ export class CIdentity extends HTMLElement {
     if(this.loggedIn){
       divMenu.innerHTML=`
         <div class="line email">${this.email}</div>
-        <div class="line"><a href="/${this.uilang}/${LOC("atharraich-facal-faire|change-password")}">${LOC("Atharraich am facal-faire agad|Change your password")}</a></div>
-        <div class="line"><a href="/${this.uilang}/${LOC("a-amach|logout")}?to=${location}">${LOC("Log a-mach|Log out")}</a></div>
+        <div class="line"><a href="/${this.uilang}/${LOC("atharraich-facal-faire|change-password")}">${LOC("#changepassword")}</a></div>
+        <div class="line"><a href="/${this.uilang}/${LOC("a-amach|logout")}?to=${location}">${LOC("#logout")}</a></div>
       `;
     } else {
       divMenu.innerHTML=`
-        <div class="line"><a href="/${this.uilang}/${LOC("a-steach|login")}?to=${location}">${LOC("Log a-steach|Log in")}</a></div>
-        <div class="line"><a href="/${this.uilang}/${LOC("claraich|signup")}">${LOC("Cruthaich cunntas ùr|Create a new account")}</a></div>
+        <div class="line"><a href="/${this.uilang}/${LOC("a-steach|login")}?to=${location}">${LOC("#login")}</a></div>
+        <div class="line"><a href="/${this.uilang}/${LOC("claraich|signup")}">${LOC("#createaccount")}</a></div>
       `;
     }
     this.appendChild(divMenu);

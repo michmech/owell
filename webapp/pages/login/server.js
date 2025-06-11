@@ -83,9 +83,9 @@ export default function(app, L, do404, rootdir){
         loggedIn,
         email,
 
-        L: multistring => L(req.params.uilang, multistring),
-        pageTitle: L(req.params.uilang, "Fosgladh an Tobair|Opening The Well"),
-        pageDescription: L(req.params.uilang, "Fosgladh an Tobair|Opening The Well"),
+        L: (multistring, subpart) => L(req.params.uilang, multistring, subpart),
+        pageTitle: L(req.params.uilang, "#sitetitle"),
+        pageDescription: L(req.params.uilang, "#sitedescription"),
         pageUrls: {
           "gd": "/gd/a-steach",
           "en": "/en/login",

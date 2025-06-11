@@ -18,14 +18,14 @@
   <div class="strip strip2">
     <div class="main">
       <%if(isHomepage){%>
-        <h1 class="title"><a href="/<%=uilang%>"><%=L("FOSGLADH AN TOBAIR|OPENING THE WELL")%></a></h1>
+        <h1 class="title"><a href="/<%=uilang%>"><%=L("#sitetitle").toUpperCase()%></a></h1>
       <%} else {%>
-        <div class="title"><a href="/<%=uilang%>"><%=L("FOSGLADH AN TOBAIR|OPENING THE WELL")%></a></div>
+        <div class="title"><a href="/<%=uilang%>"><%=L("#sitetitle").toUpperCase()%></a></div>
       <%}%>
       <c-identity loggedIn="<%=loggedIn ? 'yes' : 'no'%>" email="<%=email%>">
         <div class="badge">
           <span class="icon user"></span>
-          <span class="caption"><%=L("neo-aithnichte|anonymous")%></span>
+          <span class="caption"><%=L("#anonymous")%></span>
           <span class="icon angle-down"></span>
         </div>
       </c-identity>

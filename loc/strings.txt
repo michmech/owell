@@ -1,112 +1,143 @@
 Users logging in and out:
 -------------------------
 
+#anonymous
 anonymous
 neo-aithnichte
 
+##login
 Log in
 Log a-steach
 
+##createaccount
 Create a new account
 Cruthaich cunntas ùr
 
+##logout
 Log out
 Log a-mach
 
+##changepassword
 Change your password
-Atharraich am facal-faire agad
+Atharraich t’ fhacal-faire
 
+#forgotpassword
 Forgot password?
 Facal-faire air dìochuimhne?
 
+#emailaddress
 E-mail address
 Seòladh post-d
 
+#password
 Password
 Facal-faire
 
+#loginfailed
 Incorrect e-mail address or incorrect password.
-Seòladh post-d mì-cheart no facal-faire mì-cheart.
+Seòladh post-d ceàrr no facal-faire ceàrr.
 
 
 Homepage, header, footer:
 -------------------------
 
+#sitetitle
 Opening The Well
 Fosgladh an Tobair
 
+#siteslogan
 We are transcribing Scotland’s oral heritage
-Ag ath-sgrìobhadh guthan ar sinnsirean
+Tha sinn a’ tar-sgrìobhadh beul-aithris na h-Alba
 
+#comejoinus
 Become a volunteer transcriber
-Thig gu bith ath-sgrìobhair saor-thoileach
+Thig gar cuideachadh
 
+#alreadyin
 With us already?
-Cuide rinn mu thràth?
+Cuide rinn mar thà?
 
+#moreinfo
 More information
 Tuilleadh fiosrachaidh
 
-Scottish Gaelic community transcription project
-A’ choimhearsnachd ag ath-sgrìobhadh
+#sitedescription
+Gaelic community transcription project
+Pròiseact tar-sgrìobhaidh na coimhearsnachd Ghàidhlig
 
+#aboutus
 About us
 Mu ar deidhinn
 
+#unofed
 The University of Edinburgh
 Oilthigh Dhùn Èideann
 
+#scotgov
+Scottish Government 
 Riaghaltas na h-Alba
-Scottish Government
 
 
 The statuses of an audio track:
 -------------------------------
 
+#available
 Available for transcription
-Ri làimh air son ath-sgrìobhadh
+Deiseil airson a thar-sgrìobhadh
 
-Being transcribed by $1
-Ga ath-sgrìobhadh aig $1
+#owned
+Being transcribed by
+Ga thar-sgrìobhadh aig
 
-Transcribed by $1, awaiting approval
-Air a ath-sgrìobhadh aig $1, a’ feitheamh ri ceadachadh
+#finished
+Transcribed by $, awaiting approval
+Tar-sgrìobhte aig $, a’ feitheamh ri ceadachadh
 
-Transcribed by $1 and approved
-Air a ath-sgrìobhadh aig $1 agus ceadaichte
+#approved
+Transcribed by $ and approved
+Tar-sgrìobhte aig $ agus ceadaichte
 
 
 Metadata about each audio track:
 --------------------------------
 
+#year
 Year
 Bliadhna
 
+#trackid
 Track ID
 Àireamh a’ chlàir
 
+#originaltapeid
 Original tape ID
-Àireamh an teip thùsail
+Àireamh na teip tùsail
 
+#speaking
 Speaking
-A’ bruidhinn
+Bruidhinn
 
 
 Action buttons next to the listing of each audio track:
 -------------------------------------------------------
 
+#continuetranscribing
 Continue transcribing
-Lean air adhart ag ath-sgrìobh
+Lean ort le tar-sgrìobhadh
 
+#review
 Review
-Review
+Lèirmheas
 
+#open
 Open
 Fosgail
 
+#listen
 Listen
 Èist
 
+#listenandread
 Listen & Read
 Èist & Leugh
 
@@ -114,93 +145,114 @@ Listen & Read
 Transcription tools:
 --------------------
 
+#speed
 Playback speed
 Luaths na fuaime
 
+#playpause
 Play/Pause/Replay
 Seinn/Stad/Ath-sheinn
 
+#space
 Space
-Space
+Spàs
 
+#onesecond
 Rewind/Forward by 1 second
 Air ais/air aghaidh de 1 diog
 
+#inserttimestamp
 Insert a timestamp
 Cuir stampa-tìde a-steach
+
 
 A transcriber saving a transcription:
 -------------------------------------
 
+#savewillcontinue
 Unfinished, I will continue later
-Neo-chrìochnaichte, leanaidh mi air adhart nas anmoiche
+Neo-chrìochnaichte, leanaidh mi orm a-rithist
 
+#savewillnotcontinue
 Unfinished, let someone else continue
-Neo-chrìochnaichte, leanadh cuideigin eile air adhart
+Neo-chrìochnaichte, leig le cuideigin eile a dhèanamh
 
+#savefinished
 Finished
 Crìochnaichte
 
+#save
 Save
-Sàbhail
+Glèidh
 
+#returntotranscribing
 Return to transcribing
-Return to transcribing
+Till a thar-sgrìobhadh
 
 
 An administrator approving or rejecting a transcription:
 --------------------------------------------------------
 
+#approve
 Approve, this is good to go
-Approve, this is good to go
+Ceadaich, tha seo deiseil
 
+#reject
 Reject, let someone start again
-Reject, let someone start again
+Diùlt, leig le cuideigin tòiseachadh a-rithist
 
+#decidelater
 I will decide later
-I will decide later
+Nì mi a-rithist e
 
 
 An administrator saving an already-approved transcription:
 ----------------------------------------------------------
 
+#keepapproved
 Keep approved
-Keep approved
+Cùm e ceadaichte
 
+#cancelapproval
 Cancel approval
-Cancel approval
+Diùlt an ceadachadh
 
 
 When an audio track is available for transcription (message shown to logged-in users):
 --------------------------------------------------------------------------------------
 
+#starttranscribing
 Start transcribing
-Tòisich ag ath-sgrìobh
+Tòisich air tar-sgrìobhadh
 
 
 When an audio track is available for transcription (message shown to not-logged-in users):
 ------------------------------------------------------------------------------------------
 
+#trackwaiting
 This track is waiting for someone to volunteer to transcribe it.
-This track is waiting for someone to volunteer to transcribe it.
+Tha an clàr seo ri a thar-sgrìobhadh fhathast.
 
 
 When an audio track is being transcribed by someone else (messages shown to logged-in users):
 ---------------------------------------------------------------------------------------------
 
+#trackownedbyanother
 This track is being transcribed by another user.
-This track is being transcribed by another user.
+Tha an clàr seo ga thar-sgrìobhadh aig cuideigin eile. 
 
+#findsomethingelse
 Find something else to transcribe
-Find something else to transcribe
+Lorg rudeigin eile a thar-sgrìobhas tu
 
 
 When an audio track is being transcribed or awaiting approval (messages shown to not-logged-in users):
 ------------------------------------------------------------------------------------------------------
 
+#trackownedbyvolunteer
 This track is being transcribed by a volunteer transcriber.
-This track is being transcribed by a volunteer transcriber.
+Tha an clàr seo ga thar-sgrìobhadh aig cuideigin eile. 
 
+#trackwaitingforapproval
 This track has recently been transcribed by a volunteer transcriber and is awaiting approval.
-This track has recently been transcribed by a volunteer transcriber and is awaiting approval.
-
+Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh. 

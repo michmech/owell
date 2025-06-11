@@ -12,23 +12,23 @@
       <div class="banner <%=loggedIn ? 'loggedIn' : ''%>">
         <div class="backdrop"></div>
         <div class="transparency"></div>
-        <div class="slogan"><span><%=L("Ag ath-sgrìobhadh guthan ar sinnsirean|We are transcribing Scotland’s oral heritage")%></span></div>
+        <div class="slogan"><span><%=L("#siteslogan")%></span></div>
       </div>
 
       <%if(!loggedIn){%>
         <div class="cta">
           <a class="button" href="#">
-            <%=L("Thig gu bith ath-sgrìobhair saor-thoileach|Become a volunteer transcriber")%>
+            <%=L("#comejoinus")%>
             <span class="icon angles-right"></span>
           </a>
           <div class="or">
-            <%=L("Cuide rinn mu thràth?|With us already?")%>
-            <a href="/<%-uilang%>/<%-L("a-steach|login")%>"><%=L("Log a-steach|Log in")%>&nbsp;»</a>
+            <%=L("#alreadyin")%>
+            <a href="/<%-uilang%>/<%-L("a-steach|login")%>"><%=L("#login")%>&nbsp;»</a>
           </div>
         </div>
         <div class="welcome">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales accumsan velit a tincidunt. Aliquam eget maximus ex. Etiam diam lectus, dapibus non consequat eu, vehicula sit amet ex. Nunc massa dolor, pellentesque eu scelerisque eget, scelerisque in purus. Vivamus lacus justo, rhoncus a condimentum id, sollicitudin non ligula.
-          <a href="/<%-uilang%>/<%-L("mu-ar-deidhinn|about-us")%>"><%=L("Tuilleadh fiosrachaidh...|More information...")%></a>
+          <a href="/<%-uilang%>/<%-L("mu-ar-deidhinn|about-us")%>"><%=L("#moreinfo")%>...</a>
         </div>
       <%}%>
 
@@ -42,23 +42,23 @@
                 <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
                 <%if(track.status=="approved"){%>● ● ●<%}%>
               </span>
-              <%if(track.status=="available"){%><%=L("Ri làimh air son ath-sgrìobhadh|Available for transcription")%><%}%>
-              <%if(track.status=="owned"){%><%=L("Ga ath-sgrìobhadh aig|Being transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
-              <%if(track.status=="finished"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a>, <%=L("a’ feitheamh ri ceadachadh|awaiting approval")%><%}%>
-              <%if(track.status=="approved"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a> <%=L("agus ceadaichte|and approved")%><%}%>
+              <%if(track.status=="available"){%><%=L("#available")%><%}%>
+              <%if(track.status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
+              <%if(track.status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
+              <%if(track.status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
             </span>
-            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></a></div>
+            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("#year").toUpperCase()%> 1952)</span></a></div>
             <div class="data">
-              <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
+              <%=L("#trackid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
               <span class="divider">&middot;</span>
-              <%=L("Àireamh an teip thùsail|Original tape ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
+              <%=L("#originaltapeid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
               <span class="divider">&middot;</span>
-              <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+              <%=L("#speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
             </div>
             <%if(track.status=="owned"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Lean air adhart ag ath-sgrìobh|Continue transcribing")%>&nbsp;»</a>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#continuetranscribing")%>&nbsp;»</a>
             <%} else if(track.status=="finished"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Review")%>&nbsp;»</a>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#review")%>&nbsp;»</a>
             <%}%>
           </div>
         <%}%>
@@ -71,30 +71,30 @@
                 <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
                 <%if(track.status=="approved"){%>● ● ●<%}%>
               </span>
-              <%if(track.status=="available"){%><%=L("Ri làimh air son ath-sgrìobhadh|Available for transcription")%><%}%>
-              <%if(track.status=="owned"){%><%=L("Ga ath-sgrìobhadh aig|Being transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
-              <%if(track.status=="finished"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a>, <%=L("a’ feitheamh ri ceadachadh|awaiting approval")%><%}%>
-              <%if(track.status=="approved"){%><%=L("Air a ath-sgrìobhadh aig|Transcribed by")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a> <%=L("agus ceadaichte|and approved")%><%}%>
+              <%if(track.status=="available"){%><%=L("#available")%><%}%>
+              <%if(track.status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
+              <%if(track.status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
+              <%if(track.status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
             </span>
-            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("BLIADHNA|YEAR")%> 1952)</span></a></div>
+            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("#year").toUpperCase()%> 1952)</span></a></div>
             <div class="data">
-              <%=L("Àireamh a’ chlàir|Track ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
+              <%=L("#trackid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
               <span class="divider">&middot;</span>
-              <%=L("Àireamh an teip thùsail|Original tape ID")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
+              <%=L("#originaltapeid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
               <span class="divider">&middot;</span>
-              <%=L("A’ bruidhinn|Speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+              <%=L("#speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
             </div>
             <%if(track.status=="available"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Fosgail|Open")%>&nbsp;»</a>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#open")%>&nbsp;»</a>
             <%}%>
             <%if(track.status=="owned"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Èist|Listen")%>&nbsp;»</a>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#listen")%>&nbsp;»</a>
             <%}%>
             <%if(track.status=="finished"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Èist|Listen")%>&nbsp;»</a>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#listen")%>&nbsp;»</a>
             <%}%>
             <%if(track.status=="approved"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("Èist & Leugh|Listen & Read")%>&nbsp;»</a>
+              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#listenandread")%>&nbsp;»</a>
             <%}%>
           </div>
         <%}%>

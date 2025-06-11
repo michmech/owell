@@ -11,28 +11,28 @@
       <div class="container">
         <%if(loginFailed){%>
           <div class="failed">
-            <%=L("Seòladh post-d mì-cheart no facal-faire mì-cheart.|Incorrect e-mail address or incorrect password.")%>
+            <%=L("#loginfailed")%>
           </div>  
         <%}%>
         <form method="post" action="">
           <input type="hidden" name="redirTo" value="<%=redirTo%>"/>
           <div class="line">
             <label>
-              <span class="label"><%=L("Seòladh post-d|E-mail address")%></span>
+              <span class="label"><%=L("#emailaddress")%></span>
               <input name="email" value="<%=email%>"/>
             </label>
           </div>
           <div class="line">
             <label>
-              <span class="label"><%=L("Facal-faire|Password")%></span>
+              <span class="label"><%=L("#password")%></span>
               <input name="password" type="password" value="<%=password%>"/>
             </label>
           </div>
           <div class="line doubleSpaceBefore">
-            <button type="submit"><%=L("Log a-steach|Log in")%></button>
+            <button type="submit"><%=L("#login")%></button>
           </div>
           <div class="line spaceBefore">
-            <a href="#"><%=L("Facal-faire air dìochuimhne?|Forgot password?")%></a>
+            <a href="#"><%=L("#forgotpassword")%></a>
           </div>
         </form>
       </div>

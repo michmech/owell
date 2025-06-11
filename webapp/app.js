@@ -34,7 +34,16 @@ app.set("views", path.join(__dirname, "pages"));
 app.set("view engine", "ejs"); //http://ejs.co/
 
 //Localization:
-const L=function(uilang, multistring){
+import strings from "./strings.json" with { type: "json" }; //this only works in Node.js v22 (or thereabouts) and above
+const L=function(uilang, multistring, subpart){
+  if(multistring.startsWith("#")){
+    let string=multistring
+    if(strings[multistring] && strings[multistring][uilang]) string=strings[multistring][uilang];
+    subpart = subpart || 0;
+    const substrings=string.split("$");
+    if(substrings.length>subpart) return substrings[subpart];
+    return string;
+  }
   const arr=multistring.split("|");
   if(uilang=="gd" && arr.length>0) return arr[0];
   if(uilang=="en" && arr.length>1) return arr[1];
