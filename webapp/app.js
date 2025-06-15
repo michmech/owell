@@ -66,6 +66,8 @@ import page_sendmail from "./pages/sendmail/server.js";
   page_sendmail(app, L, do404, __dirname);
 import page_track from "./pages/track/server.js";
   page_track(app, L, do404, __dirname);
+import page_getsoundfile from "./pages/getsoundfile/server.js";
+  page_getsoundfile(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);
