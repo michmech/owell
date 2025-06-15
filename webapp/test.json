@@ -1,0 +1,382 @@
+{
+  "lock_version": 3,
+  "position": 1,
+  "publish": true,
+  "ref_id": "358aa29f20eb5ac8ac70b2a8720f511f",
+  "component_id": "102130",
+  "title": "Cha Tèid Mi do dh'Fhear gun Bhàta",
+  "display_string": "Cha Tèid Mi do dh'Fhear gun Bhàta, 1956",
+  "restrictions_apply": false,
+  "created_by": "gvanbre",
+  "last_modified_by": "admin",
+  "create_time": "2020-09-08T22:58:39Z",
+  "system_mtime": "2025-05-26T09:48:12Z",
+  "user_mtime": "2023-05-29T02:38:11Z",
+  "suppressed": false,
+  "is_slug_auto": false,
+  "level": "item",
+  "jsonmodel_type": "archival_object",
+  "external_ids": [
+    {
+      "external_id": "102130",
+      "source": "Rescue site track id",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "jsonmodel_type": "external_id"
+    }
+  ],
+  "subjects": [
+    {
+      "ref": "/subjects/1"
+    },
+    {
+      "ref": "/subjects/351"
+    },
+    {
+      "ref": "/subjects/352"
+    }
+  ],
+  "linked_events": [],
+  "extents": [
+    {
+      "lock_version": 0,
+      "number": "1",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "portion": "whole",
+      "extent_type": "digital file",
+      "jsonmodel_type": "extent"
+    }
+  ],
+  "lang_materials": [
+    {
+      "lock_version": 0,
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "jsonmodel_type": "lang_material",
+      "notes": [],
+      "language_and_script": {
+        "lock_version": 0,
+        "created_by": "admin",
+        "last_modified_by": "admin",
+        "create_time": "2023-05-29T02:38:11Z",
+        "system_mtime": "2023-05-29T02:38:11Z",
+        "user_mtime": "2023-05-29T02:38:11Z",
+        "language": "gla",
+        "jsonmodel_type": "language_and_script"
+      }
+    }
+  ],
+  "dates": [
+    {
+      "lock_version": 0,
+      "expression": "1956",
+      "begin": "1956",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "date_type": "inclusive",
+      "label": "creation",
+      "certainty": "approximate",
+      "jsonmodel_type": "date"
+    }
+  ],
+  "external_documents": [],
+  "rights_statements": [
+    {
+      "lock_version": 0,
+      "identifier": "6e87c340d2b51f189c1b15d6a57e335f",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "start_date": "1956-01-01",
+      "rights_type": "copyright",
+      "status": "copyrighted",
+      "jurisdiction": "GB",
+      "jsonmodel_type": "rights_statement",
+      "external_documents": [],
+      "acts": [],
+      "linked_agents": [],
+      "notes": [
+        {
+          "jsonmodel_type": "note_rights_statement",
+          "persistent_id": "00df6cc7d5a5a93048c34f3e4b00e2c3",
+          "label": "Computed Copyright",
+          "type": "additional_information",
+          "content": [
+            "Granted"
+          ],
+          "publish": false
+        }
+      ]
+    },
+    {
+      "lock_version": 0,
+      "identifier": "6b91075a7754e8f3755ac108b932c35d",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "start_date": "1956-01-01",
+      "rights_type": "copyright",
+      "status": "copyrighted",
+      "jurisdiction": "GB",
+      "jsonmodel_type": "rights_statement",
+      "external_documents": [],
+      "acts": [],
+      "linked_agents": [
+        {
+          "ref": "/agents/people/12"
+        }
+      ],
+      "notes": [
+        {
+          "jsonmodel_type": "note_rights_statement",
+          "persistent_id": "62b91d960337a92e3b95f884cf8aeb7c",
+          "label": "Agent track copyright status",
+          "type": "additional_information",
+          "content": [
+            "Granted"
+          ],
+          "publish": false
+        }
+      ]
+    },
+    {
+      "lock_version": 0,
+      "identifier": "77db114fa7a91c0090ac84bb00fab0a4",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "start_date": "1956-01-01",
+      "rights_type": "copyright",
+      "status": "copyrighted",
+      "jurisdiction": "GB",
+      "jsonmodel_type": "rights_statement",
+      "external_documents": [],
+      "acts": [],
+      "linked_agents": [
+        {
+          "ref": "/agents/people/827"
+        }
+      ],
+      "notes": [
+        {
+          "jsonmodel_type": "note_rights_statement",
+          "persistent_id": "e05249d96c65eb001ae1f6a1b5f4c5c6",
+          "label": "Agent track copyright status",
+          "type": "additional_information",
+          "content": [
+            "Granted"
+          ],
+          "publish": false
+        }
+      ]
+    }
+  ],
+  "linked_agents": [
+    {
+      "is_primary": false,
+      "role": "creator",
+      "relator": "ctb",
+      "terms": [],
+      "ref": "/agents/people/12"
+    },
+    {
+      "is_primary": false,
+      "role": "creator",
+      "relator": "Fieldworker",
+      "terms": [],
+      "ref": "/agents/people/827"
+    }
+  ],
+  "import_previous_arks": [],
+  "ancestors": [
+    {
+      "ref": "/repositories/2/archival_objects/111462",
+      "level": "series"
+    },
+    {
+      "ref": "/repositories/2/archival_objects/110465",
+      "level": "subfonds"
+    },
+    {
+      "ref": "/repositories/2/resources/1",
+      "level": "fonds"
+    }
+  ],
+  "instances": [
+    {
+      "lock_version": 0,
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2023-05-29T02:38:11Z",
+      "system_mtime": "2023-05-29T02:38:11Z",
+      "user_mtime": "2023-05-29T02:38:11Z",
+      "instance_type": "digital_object",
+      "jsonmodel_type": "instance",
+      "is_representative": false,
+      "digital_object": {
+        "ref": "/repositories/2/digital_objects/37341"
+      }
+    }
+  ],
+  "notes": [
+    {
+      "jsonmodel_type": "note_singlepart",
+      "persistent_id": "f0c42c8d6b57eac1a8a5167025b406bc",
+      "label": "Short Title",
+      "type": "abstract",
+      "content": [
+        "Cha tèid mi do dh'fh"
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "6186b2ba03eb40734887f2e728a8b865",
+      "label": "Track Status",
+      "type": "odd",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "Audio OK",
+          "publish": false
+        }
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "84ec3642edfef8db8aa09a91f63393be",
+      "label": "Audio Quality",
+      "type": "phystech",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "Good",
+          "publish": false
+        }
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "f08a105cba232ec3e40d8fb0e9dadcf8",
+      "label": "Original Track ID",
+      "type": "custodhist",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "SA1956.26.A1",
+          "publish": false
+        }
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_singlepart",
+      "persistent_id": "7ba6dad6ceeacc88e7dfe54ed2c4fbf2",
+      "label": "Start Time",
+      "type": "materialspec",
+      "content": [
+        "00:00:04"
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_singlepart",
+      "persistent_id": "98361aab9b6825d68e115e6daa94b8f6",
+      "label": "End Time",
+      "type": "materialspec",
+      "content": [
+        "00:05:14"
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "3bc3625985e0287b80ec9c168ed2142a",
+      "label": "Summary - English",
+      "type": "scopecontent",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "The composer of this waulking/clapping song lists the kinds of men she would not take, and explains her reasons. They include the herdsman, the blacksmith's son, the joiner, the tailor, the shepherd's son, and the man who lived with his mother.",
+          "publish": false
+        }
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "f31f7cef8d58ca607f19ede19cbe96d5",
+      "label": "Summary - Gaelic",
+      "type": "scopecontent",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "Tha an tè a rinn an t-òran luaidh/basaidh seo ag innse cò na fir nach gabhadh i. Nam measg bha am buachaille, mac a' ghobha, saor, an tàillear, mac a' chìobair, agus am fear a bha a' fuireach còmhla ri a mhàthair.",
+          "publish": false
+        }
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "2957f9cb2c0aafd57acc902976bde3d1",
+      "label": "Item Note",
+      "type": "odd",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "Transcribed in the School of Scottish Studies.\n\nSee:\n'Òrain Luaidh Màiri Nighean Alasdair' (K. C. Craig ed., 1949) p. 15\n'Hebridean Folksongs' vol. 3  (John L. Campbell & F. Collinson eds., 1981) p. 190",
+          "publish": false
+        }
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "persistent_id": "434b3fd3163b9f19e75d78299503ecc5",
+      "label": "Metadata",
+      "type": "processinfo",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "Catalogue ID : 4197",
+          "publish": false
+        }
+      ],
+      "publish": false
+    }
+  ],
+  "accession_links": [],
+  "uri": "/repositories/2/archival_objects/102130",
+  "repository": {
+    "ref": "/repositories/2"
+  },
+  "resource": {
+    "ref": "/repositories/2/resources/1"
+  },
+  "parent": {
+    "ref": "/repositories/2/archival_objects/111462"
+  },
+  "has_unpublished_ancestor": false
+}
