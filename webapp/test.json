@@ -1,42 +1,48 @@
 {
-  "lock_version": 4,
-  "position": 2,
+  "lock_version": 5,
+  "position": 4,
   "publish": true,
-  "ref_id": "55b31778ac072cf0b9818b4e63dd17d8",
-  "component_id": "1345",
-  "title": "Fear a phòs maighdeann-mhara.",
-  "display_string": "Fear a phòs maighdeann-mhara., 25 May 1952",
+  "ref_id": "76620305bea3199ec3a40c52472e653b",
+  "component_id": "1343",
+  "title": "Prògram Choinnich",
+  "display_string": "Prògram Choinnich, 15 February 1995, 15 February 1995",
   "restrictions_apply": false,
   "created_by": "gvanbre",
   "last_modified_by": "admin",
   "create_time": "2020-09-07T14:15:10Z",
-  "system_mtime": "2025-05-26T09:36:48Z",
-  "user_mtime": "2023-05-29T00:02:22Z",
+  "system_mtime": "2025-05-26T12:15:26Z",
+  "user_mtime": "2024-11-07T14:50:28Z",
   "suppressed": false,
   "is_slug_auto": false,
   "level": "item",
   "jsonmodel_type": "archival_object",
   "external_ids": [
     {
-      "external_id": "1345",
+      "external_id": "1343",
       "source": "Rescue site track id",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
       "jsonmodel_type": "external_id"
     }
   ],
   "subjects": [
     {
-      "ref": "/subjects/2"
+      "ref": "/subjects/6"
     },
     {
-      "ref": "/subjects/279"
+      "ref": "/subjects/186"
     },
     {
-      "ref": "/subjects/280"
+      "ref": "/subjects/187"
+    },
+    {
+      "ref": "/subjects/277"
+    },
+    {
+      "ref": "/subjects/278"
     }
   ],
   "linked_events": [],
@@ -46,9 +52,9 @@
       "number": "1",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
       "portion": "whole",
       "extent_type": "digital file",
       "jsonmodel_type": "extent"
@@ -59,18 +65,18 @@
       "lock_version": 0,
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
       "jsonmodel_type": "lang_material",
       "notes": [],
       "language_and_script": {
         "lock_version": 0,
         "created_by": "admin",
         "last_modified_by": "admin",
-        "create_time": "2023-05-29T00:02:22Z",
-        "system_mtime": "2023-05-29T00:02:22Z",
-        "user_mtime": "2023-05-29T00:02:22Z",
+        "create_time": "2024-11-07T14:50:28Z",
+        "system_mtime": "2024-11-07T14:50:28Z",
+        "user_mtime": "2024-11-07T14:50:28Z",
         "language": "gla",
         "jsonmodel_type": "language_and_script"
       }
@@ -79,15 +85,28 @@
   "dates": [
     {
       "lock_version": 0,
-      "expression": "25 May 1952",
-      "begin": "1952-05-25",
+      "expression": "15 February 1995",
+      "begin": "1995-02-15",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
       "date_type": "single",
       "label": "creation",
+      "jsonmodel_type": "date"
+    },
+    {
+      "lock_version": 0,
+      "expression": "15 February 1995",
+      "begin": "1995-02-15",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
+      "date_type": "single",
+      "label": "broadcast",
       "jsonmodel_type": "date"
     }
   ],
@@ -95,13 +114,13 @@
   "rights_statements": [
     {
       "lock_version": 0,
-      "identifier": "fa647e215c7f42f521b265341f6fc302",
+      "identifier": "1ed99be0f6f2180f9c6a750d585db023",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
-      "start_date": "1952-05-25",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
+      "start_date": "1995-02-15",
       "rights_type": "copyright",
       "status": "copyrighted",
       "jurisdiction": "GB",
@@ -112,11 +131,11 @@
       "notes": [
         {
           "jsonmodel_type": "note_rights_statement",
-          "persistent_id": "a83568290bde4817845b94d41155f1ec",
+          "persistent_id": "ee39b5231fd5e769f7f2265db0c6cb95",
           "label": "Computed Copyright",
           "type": "additional_information",
           "content": [
-            "Granted"
+            "Granted - pending"
           ],
           "publish": false
         }
@@ -124,13 +143,13 @@
     },
     {
       "lock_version": 0,
-      "identifier": "992e05fe3349911c171066c4c3b475bd",
+      "identifier": "3fb375cbbf3ba937dc7b55a63fd984ca",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
-      "start_date": "1952-05-25",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
+      "start_date": "1995-02-15",
       "rights_type": "copyright",
       "status": "copyrighted",
       "jurisdiction": "GB",
@@ -139,13 +158,13 @@
       "acts": [],
       "linked_agents": [
         {
-          "ref": "/agents/people/273"
+          "ref": "/agents/people/45"
         }
       ],
       "notes": [
         {
           "jsonmodel_type": "note_rights_statement",
-          "persistent_id": "9b44d7342dcf6877181dd20480e1333e",
+          "persistent_id": "355d78b90564eebe0b51cd51736c9117",
           "label": "Agent track copyright status",
           "type": "additional_information",
           "content": [
@@ -157,13 +176,13 @@
     },
     {
       "lock_version": 0,
-      "identifier": "f792c90f31d79123118eac047b23b5d3",
+      "identifier": "3bbfb93ea977c3f93e4b91579a18dd3e",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
-      "start_date": "1952-05-25",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
+      "start_date": "1995-02-15",
       "rights_type": "copyright",
       "status": "copyrighted",
       "jurisdiction": "GB",
@@ -172,18 +191,51 @@
       "acts": [],
       "linked_agents": [
         {
-          "ref": "/agents/people/322"
+          "ref": "/agents/people/383"
         }
       ],
       "notes": [
         {
           "jsonmodel_type": "note_rights_statement",
-          "persistent_id": "ab1bc52bf5f92a2cafb0abc49c2c5beb",
+          "persistent_id": "3522797b13730030ae251ebf348d23e6",
+          "label": "Agent track copyright status",
+          "type": "additional_information",
+          "content": [
+            "Granted - pending"
+          ],
+          "publish": false
+        }
+      ]
+    },
+    {
+      "lock_version": 0,
+      "identifier": "568435f71b73145a632b90382c07b77a",
+      "created_by": "admin",
+      "last_modified_by": "admin",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
+      "start_date": "1995-02-15",
+      "rights_type": "copyright",
+      "status": "copyrighted",
+      "jurisdiction": "GB",
+      "jsonmodel_type": "rights_statement",
+      "external_documents": [],
+      "acts": [],
+      "linked_agents": [
+        {
+          "ref": "/agents/people/307"
+        }
+      ],
+      "notes": [
+        {
+          "jsonmodel_type": "note_rights_statement",
           "label": "Agent track copyright status",
           "type": "additional_information",
           "content": [
             "Granted"
           ],
+          "persistent_id": "0b7186aaa01dc35dd0573327141e820b",
           "publish": false
         }
       ]
@@ -193,26 +245,33 @@
     {
       "is_primary": false,
       "role": "creator",
-      "relator": "Fieldworker",
+      "relator": "ivr",
       "terms": [],
-      "ref": "/agents/people/273"
+      "ref": "/agents/people/45"
     },
     {
       "is_primary": false,
       "role": "creator",
       "relator": "ctb",
       "terms": [],
-      "ref": "/agents/people/322"
+      "ref": "/agents/people/383"
+    },
+    {
+      "is_primary": false,
+      "role": "creator",
+      "relator": "ctb",
+      "terms": [],
+      "ref": "/agents/people/307"
     }
   ],
   "import_previous_arks": [],
   "ancestors": [
     {
-      "ref": "/repositories/2/archival_objects/110507",
+      "ref": "/repositories/2/archival_objects/110686",
       "level": "series"
     },
     {
-      "ref": "/repositories/2/archival_objects/110465",
+      "ref": "/repositories/2/archival_objects/110466",
       "level": "subfonds"
     },
     {
@@ -225,41 +284,41 @@
       "lock_version": 0,
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T00:02:22Z",
-      "system_mtime": "2023-05-29T00:02:22Z",
-      "user_mtime": "2023-05-29T00:02:22Z",
+      "create_time": "2024-11-07T14:50:28Z",
+      "system_mtime": "2024-11-07T14:50:28Z",
+      "user_mtime": "2024-11-07T14:50:28Z",
       "instance_type": "digital_object",
       "jsonmodel_type": "instance",
       "is_representative": false,
       "digital_object": {
-        "ref": "/repositories/2/digital_objects/41092"
+        "ref": "/repositories/2/digital_objects/47454"
       }
     }
   ],
   "notes": [
     {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "f3f6d4275492730c0d3b1591ec24eeac",
+      "persistent_id": "de171fa49119f288794d2c9631490e43",
       "label": "Short Title",
       "type": "abstract",
       "content": [
-        "Maighdinn-mhara"
+        "Glendale Project"
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "05cf7354179068936e36b40c45604356",
+      "persistent_id": "44d8e66d56fad1efc8d0198cbff16ad8",
       "label": "First Line",
       "type": "abstract",
       "content": [
-        "Tha àite teann air Inbhir Nis..."
+        "The muinntir Ghleann Dail..  "
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "bad4729517a6f6a989983e27325d624c",
+      "persistent_id": "7d177d1fe6206628960135b4e036561d",
       "label": "Track Status",
       "type": "odd",
       "subnotes": [
@@ -273,7 +332,7 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "67689949aeec73d2e8073e7882865e4c",
+      "persistent_id": "cc22579ac5abb37d98d5fc9eb1f7ad68",
       "label": "Audio Quality",
       "type": "phystech",
       "subnotes": [
@@ -286,48 +345,34 @@
       "publish": false
     },
     {
-      "jsonmodel_type": "note_multipart",
-      "persistent_id": "247239dcc8cd8dee97501685b3ce8e96",
-      "label": "Original Track ID",
-      "type": "custodhist",
-      "subnotes": [
-        {
-          "jsonmodel_type": "note_text",
-          "content": "SA1952.127.2",
-          "publish": false
-        }
-      ],
-      "publish": false
-    },
-    {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "5a86f1babde02bdee6e720b0a034083a",
+      "persistent_id": "60745155ff83d352f2568543501f71da",
       "label": "Start Time",
       "type": "materialspec",
       "content": [
-        "00:01:25"
+        "00:18:51"
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "e2c1768777512e2bc24b47f61236ba44",
+      "persistent_id": "409e5c3c29609c42458a479dbb0dfc93",
       "label": "End Time",
       "type": "materialspec",
       "content": [
-        "00:03:38"
+        "00:28:59"
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "18febb79c9bbd4f2326962ef6002e9ce",
+      "persistent_id": "d05179d465dc92b72f344ed3b4923577",
       "label": "Summary - English",
       "type": "scopecontent",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "A man who married a mermaid.\n\nA man at Kessock near Inverness found a mermaid asleep and hid her skin. They married and had a son. Her son later found the skin and gave it back to her. She went back to the sea, but promised there would always be fish in plenty at Kessock.",
+          "content": "Fundraising for a new community hall in Glendale, Skye.\n\nThe Glendale Project in Skye are building a community facility and are fundraising by targeting other places worldwide which are called Glendale.",
           "publish": false
         }
       ],
@@ -335,13 +380,13 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "af4b891775a86c0cd169593c1580f753",
+      "persistent_id": "9621b2a37777e4dd341415f18263b7da",
       "label": "Summary - Gaelic",
       "type": "scopecontent",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "Fear a phòs maighdeann-mhara.\n\nLorg duine maighdeann-mhara aig Aiseag Cheasaig faisg air Inbhir Nis. Thug e bhuaipe an cochall [craiceann] aice, is thug e dhachaigh leis i. Phòs iad agus bha mac aca. Aon latha lorg am mac cochall a mhàthar, is thug e air ais dhi e. Thill ise don mhuir, ach thuirt i gum biodh iasg an-còmhnaidh pailt aig Aiseag Cheasaig.",
+          "content": "A' cruinneachadh airgid airson talla coimhearsnachd ùr an Gleann Dail san Eilean Sgitheanach.\n\nPròiseact Ghleann Dail san Eilean Sgitheanach a tha a' togail talla coimhearsnachd, a' feuchainn ri taic airgid fhaighinn o àitichean eile air feadh an t-saoghail air a bheil Gleann Dail.",
           "publish": false
         }
       ],
@@ -349,13 +394,13 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "7932e3d66dc593646137908b9642d387",
-      "label": "Item Note",
+      "persistent_id": "dc3d518a8e38ce61a12866e92c429a35",
+      "label": "Item Time Period",
       "type": "odd",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "The contributor uses both 'cochall' and 'slige' for the skin of the mermaid.",
+          "content": "1995",
           "publish": false
         }
       ],
@@ -363,13 +408,13 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "5005a0ef9389ad1bbe4b8f84ac931d50",
+      "persistent_id": "27cebb42aa8166e830432a22415b7050",
       "label": "Metadata",
       "type": "processinfo",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "Catalogue ID : 41",
+          "content": "Catalogue ID : 270",
           "publish": false
         }
       ],
@@ -382,16 +427,16 @@
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "Iain MacDhòmhnaill: Tha àite teann air Inbhir Nis ris an abair iad anns a' Bheurla, Kessock Ferry. Mar a theireadh sibh, Aiseag Cheasaig. Agus bha duine a' gabhail a cheum sìos air a' chladach, agus chunnaic e coltas boireannach na cadal. Agus fhuair e grèim oirre, agus gu dè a bh' ann ach a' mhaighdeann-mhara. Agus thug e dhith an cochall, agus dar a bheir iad dhith an cochall, mar a tha a' chùis air innse, chan eil i nas fheàrr na neach eile sa mhuir. 'S thug e dhachaigh i agus phòs iad, agus chuir e an cochall fad... falach ann an àite dìomhaireach ann am bothan, a-mach. Agus bha i daonnan ag iarraidh a' chochaill, agus an cochall cha robh e a' toirt dì. Nam faigheadh i an cochall dhèanadh i air a' mhuir air ais, agus math a bha fios aige air sin.\n\nAch dh'fhàs an gille aice an-àirde, na chnapach mòr làidir, agus air dha a bhith a-mach mun bhothan, gu dè thàinig e air an rathad ach gun d' fhuair e an t-slige. Agus thug e an t-slige a bha seo a-staigh, 's dar a thug e an t-slige a-staigh dh'aithnich ise dè a bh' ann agus chuir i oirre an t-slige a bha seo, agus rinn i air a' mhuir. \"Agus mar a bha mi daonnan ag ràitinn, nam faighinn an cochall cha bhiodh an t-àite a tha seo gun iasg, ged a bhiodh e gann an àiteachan eile, 's duine sam bith a rachadh a dh'iasgach ann, gheibh e iasg uair sam bith ann.\" Agus i a' faotainn a' chochaill, tharraing i agus thuirt i:\n\n\"Cumaidh mi ri mo bhriathran.\"\n\nAgus gus an latha an-diugh, aig Kessock Ferry, gheibh thu am pailteas de dh'iasg ann ged a bhiodh e gann an àiteachan eile. Agus cha d' fhuair an duine forfhais riamh oirre, ach dar a thàinig e dhachaigh bho obair thuig e mar a bha a' chùis. Chaidh e a choimhead agus fhuair e an t-slige... an t-àite falamh, agus mar sin tha an naidheachd a' dol. Gheibh thu an t-iasg an siud dar nach eil e an àite eile.\n",
+          "content": "Coinneach MacÌomhair (CM): Tha muinntir Ghleann Dail anns an Eilean Sgitheanach an dòchas a bhith a' faighinn taic le pròiseact coimhearsnachd a th' aca bho Ghleann Dailean eile ann an àitichean eile anns an t-saoghal, gu sònraichte tha iad an dòchas airgead fhaighinn à Gleann Dail an California anns na Stàitean Aonaichte. Tha Comann Thalla Choimhearsnachd Ghleann Dail an dòchas togalach a chur suas a bheir dhaibh talla, ionad-dotair, taighean-beaga agus pàirc-chloinne. Tha Sam Thorburn air comataidh na talla. Tha air an loidhne agam an-dràsta. Madainn mhath, Sam.\n\nSam Thorburn (ST): Halò.\n\nCM: Innis dhomh beagan mu dheidhinn an rud a tha sibh a' feuchainn ri dhèanamh ann an Gleann Dail an toiseach.\n\nST: Uill, tha sinn... tha sinn a' feuchainn ri talla a thogail. Tha sinn... tha feum againn air àite airson feadhainn òg, agus a bharrachd air sin, tha feum againn air àite airson surgery airson an dotair, agus public toilets cuideachd. Tha sinn a' dol a dhèanamh na trì rudan sin aig an aon, mas urrainn dhuinn.\n\nCM: Cò smaoinich air seo? Sgrìobhadh chun a h-uile Gleann Dail eile a gheibheadh sibh lorg air.\n\nST: Uill, 's e cuideigineach a bh' air a' chomataidh againn, Magaidh Mac a' Phì, 's ise... bha i a' smaoineachadh gur dòcha gur e... gum faigheadh sinn beagan airgead bhon an fheadhainn à thall fairis. Ach so far, cha d' fhuair sinn dad fhathast. Ach tha sinn... tha sinn an dòchas gun tig beagan a-staigh fhathast.\n\nCM: Càit a bheil... cia mheud Gleann Dail a lorg sibh?\n\nST: Uill, tha suas ri dà fhichead ann uile-gu-lèir. Tha feadhainn... tha a' chuid as motha dhiubh ann a... thall ann an Canada 's ann a... anns na... an USA, ach tha Gleann Dail ann an Zimbabwe cuideachd, agus tha mi a' smaointinn gu bheil... gu bheil fear shìos ann an South America an àiteigineach, ach 's e an fheadhainn thall an Ameireaga a chuir sinne fiosrachadh gu. Ach cha d' fhuair sinn air ais brath fhathast, ach bho California, bho Glendale California.\n\nCM: Tha mi a' tuigse gu bheil iad cho fad às ri Gleann Dail ann an Astràilia.\n\nST: Uill, tha iad a' ràdh gun robh iad... cha do... cha do sgrìobh sinn gu gin ann an Astràilia co-dhiù. Cha do bhodraig sin. Tha e ro fhada air falbh.\n\nCM: Ò, cha toireadh an t-airgead fada a' tighinn an-diugh.\n\nST: Uill...\n\nCM: Agus, uill, 's e beachd inntinneach a tha sin dha-rìribh, agus tha sibh ag ràdh gu ruige seo, 's e dìreach California aon àite às an d' fhuair sibh freagairt.\n\nST: Sin agad an aon àite bhon d' fhuair sinn freagairt. Tha fear thall an sin, journalist air an Glendale News thall ann an California, 's bha e... bha e... ghabh e fhèin interest mhòr anns an rud... anns a' ghnothach, 's thòisich e fhèin a' dèanamh enquiries timcheall air cia mheud Gleann Dail a th' ann, agus rinn e...  sgrìobh e artaigil thall anns a' phàipear thall an sin mu dheidhinn an t-àite, 's tha e a' dol air adhart mar sin.\n\nCM: Agus, uill, dè an ìre aig a bheil sibh le bhith a' togail ur cuid airgid an-dràsta?\n\nST: Uill, tha suas ri ceithir mìle againn anns a' bhanca, agus tha sinn... tha sinn an dòchas gum faigh sinn beagan bho comhairle na sgìre, 's tha sinn an dèidh talamh fhaotainn mar-thà airson... airson... airson an talla a thogail. Fhuair sinn... fhuair sinn beagan talamh bho croitear anns an àite, fear Sid Johnston, agus tha sin a' dèanamh cuideachadh mòr dhuinn. Mar sin, chan eil againn a-nis ach dìreach beagan airgead fhaotainn 's an talla a chur suas.\n\nCM: A bheil a h-uile càil a th' ann, am pròiseact gu lèir, a' dol a chosg an t-uabhas airgid?\n\nST: Dè tha sin?\n\nCM: A bheil am pròiseact fhèin... gu lèir a' dol a chosg...\n\nST: Ò, tha e a' dol a chosg tòrr, ceart gu leòr. Bidh e... bidh e còrr 's ceud mìle not, tha mi a' creidsinn, ach, uill, ma gheibh sinn cuideachadh bho... bhon council... uill, cosgaidh e suas ri fifty thousand airson na toilets fhèin a thogail, agus ma tha sinn a' toirt dhaibh an talamh agus a h-uile rud a th' ann, tha còir gun toir iad beagan cuideachadh dhuinn, agus ma bheir an hospital trust, ma bheir iad dhuinn beagan cuideachadh cuideachd airson surgery. Chan eil againn an-dràsta ann an Gleann Dail ach seann telephone exchange airson surgery, 's tha na patients, tha aca ri bhith a' feitheamh a-muigh san fhuachd no ann an càraichean gus am bi an t-àite clìor, 's chan eil uisge no sìon san t-àite, 's mar sin, tha feum mòr aca air surgery san àite.\n\nCM: 'S ann a... 's ann a bu chòir dhuibh co-chruinneachadh a ghairm ann an Gleann Dail an ath-bhliadhna agus cuireadh a thoirt dha na daoine às a h-uile Gleann Dail a tha sin, 's 's dòcha gum faigh sibh na bhiodh a dhìth oirbh de dh'airgead ann an sin.\n\nST: Uill, aidh. Uill, tha a hundred-and-fifty thousand de dhaoine a' fuireach ann an Gleann Dail... Glendale California.\n\nCM: A bheil?\n\nST: 'S nam biodh dìreach aonan fhèin... tha gu leòr millionaires nam measg cuideachd, tha mi a' creidsinn. Nan toireadh dìreach fear no dhà seachad mìle no dhà, dhèanadh e cuideachadh mòr dhuinn.\n\nCM: Uill, ag èisteachd ris a seo, tha Tormod Dòmhnallach ann an Stiùidio Phort Rìgh. A Thormoid.\n\nTormod Dòmhnallach (TD): Seadh, a Choinnich.\n\nCM: Madainn mhath dhut.\n\nTD: Ò, ciamar a tha thu an-diugh?\n\nCM: An robh fhios agadsa gun robh na bha siud de Ghleann Dailean ann?\n\nTD: Uill, cha robh fhios a'm gun robh dà fhichead ann no còrr 's dà fhichead gu dearbh, 's tha e inntinneach dha-rìribh cluinntinn gu bheil fear ann an Zimbabwe, ach... Bha e inntinneach dha-rìribh a bhith ag èisteachd ri Sam a' bruidhinn ann a shiud, ach tha mi an dòchas nach cluinn feadhainn aca gu bheil ceithir mìle not aige, no 's ann a bhios iadsan a' sgrìobhadh thuigesan ag iarraidh... ag iarraidh airgead airsan.\n\nCM: Tha thusa air a bhith ann an dhà no thrì de Ghleann Dailean thall thairis thu fhèin, nach eil?\n\nTD: Uill, tha gu dearbh, agus a h-uile turas a rachainn tro fhear dhiubh, no faisg air fear dhiubh, bhithinn an-còmhnaidh a' cur na ceist orm fhèin, saoil an ann air Gleann Dail anns an Eilean Sgitheanach no air Gleann Dail ann an Uibhist a chaidh ainmeachadh. Agus a-nist, tha fhios a'm ann an Ceap Breatann, Gleann Dàil an sin ann an Siorramachd Inbhir Nis ann an Ceap Breatann air a bheil mi... anns a bheil mi gu math eòlach, tha na daoine an sin, fhios agad, 's ann à Loch Abar a thàinig a' mhòr-chuid de na Gàidheil a shuidhich ann a shin, agus tha iad a' ràdh gur ann à gl-... air Gleann Dail ann an Uibhist a chaidh ainmeachadh. A-nist, co-dhiù tha sin ceart no ceàrr, chan eil fhios a'm. 'S tha mi air a bhith cuideachd ann an Gleann Dail eile a tha gu math Gàidhealach ann an Ontario, ann an, mar a chanas iad, Glengarry County ann an Ontario, agus 's e àite gu math inntinneach a tha sin cuideachd far an deach an t-uabhas Ghàidheil. Agus le amas aon uair o chionn mu dheich bliadhna air ais, bha mi ann am baile ann am Florida air a bheil Gleann Dail. Tha sin faisg air Sarasota, eadar Tampa agus Sarasota, agus 's e baile meadhanach mòr a tha sin cuideachd. Chan eil fhios a'm a bheil e cho mòr ris an fhear ann an California, ach tha... 's dòcha baile beag mar fichead mìle duine no rudeigin... rudeigin mar sin a th' ann. Agus tha fhios a'm gu bheil fear eile ann an North Carolina, ged nach robh mi... ged nach robh mi an sin fhathast.\n\nAch tha mi an dòchas gun cùm Sam air a' sgrìobhadh gu na daoine a tha sin agus nach cailleadh e a mhisneachd mura cluinn e a' chiad turas. 'S dòcha... rud a tha cudromach, mar a bhios fhios aige, 's dòcha, a' sgrìobhadh 's a' faighinn sgeul air na daoine, gu h-àraid ann a... anns na Stàitean 's ann an Canada, 's e a bhith cinnteach gu bheil ainm na siorrachd, sin ainm a' chounty, air litir sam bith a thèid thuca, 's tha sin uabhasach cudromach dha na puist, a bhith a' cur litrichean do dhaoine. 'S mura cluinn e, chan eil aige ach feuchainn a-rithist.\n\nCM: Am faod mi faighneachd, Sam, a bheil... an do sgrìobh sibh gu Gleann Dail ann am Florida? \n\nST: Cha do... cha do sgrìobh, cha do sgrìobh. Uill, ma sgrìobh, cha d' fhuair sinn... cha d'fhuair sinn sìon air ais co-dhiù. Chan eil... chan eil na details agam air an fheadhainn a sgrìobh sinn gu idir. Bha suas ri dusan no còig-deug litrichean a chaidh a-mach, ach cha d' fhuair sinn... chan eil... chan eil na details agam air cò... dè an fheadhainn a bh' ann idir.\n\nCM: Nise, a Thormoid, tha sinn... tha sinne gu bhith a' bruidhinn nas anmoiche anns a' phrògram a tha seo mu dheidhinn dòigheannan aig buidheannan saor-thoileach a bhith a' togail airgead, agus tha mi cinnteach, ma tha daoine... ma tha daoine a' sgrìobhadh gu àite anns na Stàitean Aonaichte agus an Canada mar sin, tha uiread às dèidh airgead nan daoine sin, agus dh'fheumadh duine dìreach barrachd air sgrìobhadh litir a dhèanamh, nach fheumadh.\n\nTD: Ò, tha sin ceart. Ach feumaidh tu a bhith cinnteach, ge-tà, gu bheil thu ga chur gu cuideigin a gheibh e, mar gum b' eadh, 's bhiodh e uabhasach, tha mi a' smaoineachadh, riatanach an toiseach, mar a thuirt mi, ainm na siorrachd anns a bheil am ba-... anns a bheil am baile, gu bheil an sgrìobhadh a bhith air an litir, agus ma gheibh thu sgeul air duine, ainm duine, bhiodh sin feumail cuideachd. Ach cuimhnich, ge-tà, a Choinnich, agus bhiodh seo 's dòcha feumail do... do mhuinntir Ghleann Dail an eilein a tha seo cuideachd, gu bheil ùidh mhòr aig na daoine thall an sin ann an Alba anns an fharsaingeachd, agus ged a tha e inntinneach mu dheidhinn na h-ainmeannan, a bheil fhios agad, tha mòran dhe na h-ainmeannan a gheibh thu a tha caran Gàidhealach no Èireannach, agus chan eil math dhuinn leigeil às ar cuimhne gur dòcha gur ann à Èirinn a thàinig mòran de dh'ainmeannan-àitichean, anns na Stàitean gu h-àraid, le gleann agus dail 's rudan mar sin annta. Ged a tha iad mothachail dhan a sin, feumaidh sinn cuimhneachadh gun tàinig mòran dhe na h-ainmeannan a tha sin a-staigh, chan ann idir an lùib nan daoine a chaidh a-null 's a shuidhich an sin an toiseach, ach nuair a thàinig oifis a' phuist a-staigh an toiseach. Tha fhios a'm ann an Ceap Breatann, ainmeannan mar Inverness agus Aberdeen, agus Glencoe... nist, chan eil mi dìreach cho deimhinne mu dheidhinn Glendale, ach Glencoe, 's ann a thàinig iad sin a-staigh anns na h-eighteen eighties nuair a bh' aig Oifis a' Phuist ri ainmeannan a thoirt air àitichean an àite ainmeannan nan daoine mar a bha iad air an ainmeachadh an toiseach. Mar sin, dh'fhaodadh nach eil ceangal sam bith eadar na h-ainmeannan eadar gach Gleann Dail a tha thall agus Gleann Dail an seo.\n\nCM: Carson a tha thu... carson a tha thu a' feuchainn ri sgeulachd mhath a mhilleadh?\n\nTD: Uill, tha mi a' smaoineachadh gu bheil an sgeulachd math fhathast. Ann an iomadh dòigh, dh'fhaodadh gu bheil i... dh'fhaodadh gu bheil i nas fheàrr, ach a Choinnich, ma tha leth-mhionaid agad airson sgeulachd iongantach, bha mi a' smaoineachadh dìreach mus tàinig mi air an èadhar an seo 's mi ag èisteachd ri Sam a' bruidhinn mu turas a bha mi ann an Gleann Dail ann an Ontario, 's tha sin ann an siorramachd ris an can iad Glengarry, mar a thuirt mi, Gleanna Ghàrradh, agus fhuair mi litir aig aon àm. 'S e a chuir ann an toiseach mi, gun teagamh. Nuair a bha mi a' fuireach ann an Ceap Breatann, fhuair mi litir bho... bho fhear an sin 's e a' faighneachd saoil dè an ciall a bh' aig an ainm Glengarry. Bha e sa Ghàidhlig a bha iad a' toirt air, agus dè a' Ghàidhlig a bha iad air a thoirt air, agus tha e doirbh gu leòr dhuinn uile a tha eòlach air a bhith a' ràdh... cleachdte ri bhith a' ràdh nam faclan sin, a ràdh anns a' Ghàidhlig, ach 's e bha... bha iadsan air a thoirt air Glengarry ach Baile a' Chip. Sgrìobh mise air ais, nuair a dh'fhaighnich e dhòmhsa dè an ciall a bhiodh aig Baile a' Chip, agus thuirt mi, uill, a bheil càil às na records agaibh fhèin a dhearbhadh, 's thuirt e, uill, gun robh dearbhadh aca air ais ann an nineteen twelve gun do dh'fheuch cuideigin ri faighinn a-mach dè bh' ann, agus choimhead iad suas ann am faclair e, agus airson Glengarry a fhuair iad a man's or boy's oblong woollen cap. Sin an seòrsa glengarry a bha iad a' smaoineachadh a bh' ann, agus thug iad Baile... Baile a' Chip air, an dùil gur e... gur e ceap a bh' ann. Mar sin, tha ainmeannan-àitichean a' tighinn thugainn ann an caochladh dhòighean, a Choinnich.\n\nCM: 'S e rud a chòrdadh e riumsa, mas e agus gu bheil daoine, duine sam bith ag èisteachd a dh'aithnicheas no a tha fhios aige air duine sam bith aig a bheil Gàidhlig ann an gin sam bith dhe na Gleann Dailean a tha sin, gun innseadh iad dhuinn mun deidhinn, agus gur dòcha gum faigh sinn facal leotha. Mo thaing dhutsa an-dràsta, a Thormoid, agus mo thaing dhutsa, Sam, agus tha mi an dòchas gun tèid gu math dhuibh ann a bhith a' sireadh 's a' faighinn airgead bho na Gleann Dailean a tha sin. Mo thaing dhuibh an-dràsta.",
           "publish": false
         }
       ],
-      "persistent_id": "73924bed3281515baa41bcba5a2dbbc0",
+      "persistent_id": "a424f4d5ba9d42f3e3adc044ab3199ae",
       "publish": false
     }
   ],
   "accession_links": [],
-  "uri": "/repositories/2/archival_objects/1345",
+  "uri": "/repositories/2/archival_objects/1343",
   "repository": {
     "ref": "/repositories/2"
   },
@@ -399,7 +444,7 @@
     "ref": "/repositories/2/resources/1"
   },
   "parent": {
-    "ref": "/repositories/2/archival_objects/110507"
+    "ref": "/repositories/2/archival_objects/110686"
   },
   "has_unpublished_ancestor": false
 }

@@ -39,3 +39,11 @@ span.icon.pause {
   mask-image: url(/pause.svg);
   -webkit-mask-image: url(/pause.svg);
 }
+span.icon.square-plus {
+  mask-image: url(/square-plus.svg);
+  -webkit-mask-image: url(/square-plus.svg);
+}
+span.icon.trash-can {
+  mask-image: url(/trash-can.svg);
+  -webkit-mask-image: url(/trash-can.svg);
+}

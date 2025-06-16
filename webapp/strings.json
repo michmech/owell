@@ -103,6 +103,14 @@
     "en": "Speaking",
     "gd": "Bruidhinn"
   },
+  "#fieldworker": {
+    "en": "Fieldworker",
+    "gd": "Fieldworker"
+  },
+  "#fieldworkers": {
+    "en": "Fieldworkers",
+    "gd": "Fieldworkers"
+  },
   "#continuetranscribing": {
     "en": "Continue transcribing",
     "gd": "Lean ort le tar-sgrìobhadh"
@@ -206,5 +214,9 @@
   "#trackwaitingforapproval": {
     "en": "This track has recently been transcribed by a volunteer transcriber and is awaiting approval.",
     "gd": "Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh."
+  },
+  "#delete": {
+    "en": "Delete",
+    "gd": "Delete"
   }
 }

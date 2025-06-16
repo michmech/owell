@@ -1,0 +1,124 @@
+c-listing {
+  display: block;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  padding-right: 250px;
+  border: 2px solid transparent;
+}
+c-listing.prominent {
+  border-color: #3cb1c4;
+}
+@media(max-width: 700px){
+  c-listing {
+    padding-right: 20px;
+  }
+}
+c-listing span.status {
+  display: inline-block;
+  background-color: #a5eaf5;
+  border-radius: 4px;
+  line-height: 1.25em;
+  padding: 7px 10px 5px 10px;
+  color: #245583;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+c-listing span.status span.dots {
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+c-listing span.status span.dots span.blanks {
+  color: #ffffff;
+}
+
+c-listing div.title {
+  font-size: inherit;
+  margin: 0px;
+  font-weight: normal;
+  color: #000000;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+c-listing div.title a {
+  color: inherit;
+  border: 0px;
+}
+c-listing div.title a:hover {
+  color: #245583;
+}
+c-listing div.title span.year {
+  color: #667788;
+  margin-left: 3px;
+  font-size: 0.8em;
+}
+c-listing div.title a:hover span.year {
+  color: #3c6c99;
+}
+c-listing > div.data {
+  font-size: 0.9em;
+  margin-top: 5px;
+  color: #666666;
+  line-height: 2em;
+}
+c-listing > div.data a {
+  line-height: 1.5em;
+}
+c-listing > div.data span.divider {
+  margin: 0px 5px;
+}
+c-listing a.button {
+  border-radius: 40px;
+  box-shadow: 0px 0px 5px #666666;
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 0px;
+  position: relative;
+  font-size: 1.1em;
+  position: absolute;
+  right: 40px;
+  top: calc(50% - 1.25em);
+}
+@media(max-width: 700px){
+  c-listing a.button {
+    margin-top: 20px;
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
+
+c-listing button.delete {
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0px;
+  font: inherit;
+  font-size: 0.85em;
+  color: #aaaaaa;
+  line-height: 1em;
+}
+c-listing button.delete span.icon {
+  background-color: #cccccc;
+  font-size: 1.25em;
+  position: relative;
+  top: -2px;
+  margin-right: 2px;
+}
+c-listing button.delete:hover {
+  color: #666666;
+} 
+c-listing button.delete:hover span.icon {
+  background-color: #999999;
+} 
+c-listing button.delete:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+} 

@@ -53,7 +53,7 @@ footer div.subtitle {
   margin-top: 5px;
 }
 footer div.subtitle span.divider {
-  border-left: 1px solid #666666;
+  color: #dddddd;
   margin: 0px 10px;
 }
 

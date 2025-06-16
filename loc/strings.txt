@@ -81,19 +81,19 @@ Riaghaltas na h-Alba
 The statuses of an audio track:
 -------------------------------
 
-#available
+##available
 Available for transcription
 Deiseil airson a thar-sgrìobhadh
 
-#owned
+##owned
 Being transcribed by
 Ga thar-sgrìobhadh aig
 
-#finished
+##finished
 Transcribed by $, awaiting approval
 Tar-sgrìobhte aig $, a’ feitheamh ri ceadachadh
 
-#approved
+##approved
 Transcribed by $ and approved
 Tar-sgrìobhte aig $ agus ceadaichte
 
@@ -101,7 +101,7 @@ Tar-sgrìobhte aig $ agus ceadaichte
 Metadata about each audio track:
 --------------------------------
 
-#year
+##year
 Year
 Bliadhna
 
@@ -113,31 +113,39 @@ Track ID
 Original tape ID
 Àireamh na teip tùsail
 
-#speaking
+##speaking
 Speaking
 Bruidhinn
+
+##fieldworker
+Fieldworker
+Fieldworker
+
+##fieldworkers
+Fieldworkers
+Fieldworkers
 
 
 Action buttons next to the listing of each audio track:
 -------------------------------------------------------
 
-#continuetranscribing
+##continuetranscribing
 Continue transcribing
 Lean ort le tar-sgrìobhadh
 
-#review
+##review
 Review
 Lèirmheas
 
-#open
+##open
 Open
 Fosgail
 
-#listen
+##listen
 Listen
 Èist
 
-#listenandread
+##listenandread
 Listen & Read
 Èist & Leugh
 
@@ -256,3 +264,12 @@ Tha an clàr seo ga thar-sgrìobhadh aig cuideigin eile.
 #trackwaitingforapproval
 This track has recently been transcribed by a volunteer transcriber and is awaiting approval.
 Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh. 
+
+
+Adding and removing tracks:
+---------------------------
+
+##delete
+Delete
+Delete
+
