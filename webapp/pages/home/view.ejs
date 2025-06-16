@@ -38,10 +38,10 @@
 
       <div class="sounds">
         <%for(let i=0; i<mySounds.length; i++){const sound=mySounds[i];%>
-          <c-listing class="prominent" data-admin="<%-(loggedIn && isAdmin)%>" data-id="<%-sound.id%>" data="<%=JSON.stringify(sound)%>"></c-listing>
+          <c-listing class="prominent" data-admin="<%-(loggedIn && isAdmin) ? '1' : ''%>" data-id="<%-sound.id%>" data="<%=JSON.stringify(sound)%>"></c-listing>
         <%}%>
         <%for(let i=0; i<sounds.length; i++){const sound=sounds[i];%>
-          <c-listing class="" data-admin="<%-(loggedIn && isAdmin)%>" data-id="<%-sound.id%>" data="<%=JSON.stringify(sound)%>"></c-listing>
+          <c-listing class="" data-admin="<%-(loggedIn && isAdmin) ? '1' : ''%>" data-id="<%-sound.id%>" data="<%=JSON.stringify(sound)%>"></c-listing>
         <%}%>
       </div>
 
@@ -49,7 +49,7 @@
         <div class="adder">
           <div class="title">
             <span class="icon square-plus"></span>
-            <span class="title">Add a new item</span>
+            <span class="title">Add a new item from Tobar an Dualchais</span>
           </div>
         </div>
       <%}%>
