@@ -32,69 +32,109 @@
         </div>
       <%}%>
 
-      <div class="tracks">
-        <%for(let i=0; i<myTracks.length; i++){const track=myTracks[i];%>
-          <div class="track prominent">
+      <div class="sounds">
+        <%for(let i=0; i<mySounds.length; i++){const sound=mySounds[i];%>
+          <div class="sound prominent">
             <span class="status">
               <span class="dots">
-                <%if(track.status=="available"){%><span class="blanks">● ● ●</span><%}%>
-                <%if(track.status=="owned"){%>● <span class="blanks">● ●</span><%}%>
-                <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
-                <%if(track.status=="approved"){%>● ● ●<%}%>
+                <%if(sound.status=="available"){%><span class="blanks">● ● ●</span><%}%>
+                <%if(sound.status=="owned"){%>● <span class="blanks">● ●</span><%}%>
+                <%if(sound.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
+                <%if(sound.status=="approved"){%>● ● ●<%}%>
               </span>
-              <%if(track.status=="available"){%><%=L("#available")%><%}%>
-              <%if(track.status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
-              <%if(track.status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
-              <%if(track.status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
+              <%if(sound.status=="available"){%><%=L("#available")%><%}%>
+              <%if(sound.status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-sound.ownerROWID%>" class="owner"><%=sound.ownerDisplayName%></a><%}%>
+              <%if(sound.status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-sound.ownerROWID%>" class="owner"><%=sound.ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
+              <%if(sound.status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-sound.ownerROWID%>" class="owner"><%=sound.ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
             </span>
-            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("#year").toUpperCase()%> 1952)</span></a></div>
+            <div class="title"><a href="/<%=uilang%>/<%=sound.id%>">“<%=sound.title%>” <%if(sound.year){%><span class="year">(<%=L("#year").toUpperCase()%> <%=sound.year%>)</span><%}%></a></div>
             <div class="data">
-              <%=L("#trackid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
-              <span class="divider">&middot;</span>
-              <%=L("#originaltapeid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
-              <span class="divider">&middot;</span>
-              <%=L("#speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+              <%if(sound.speakers.length>0){%>
+                <%=L("#speaking")%>:
+                <%for(let i=0; i<sound.speakers.length; i++){%>
+                  <a target="_blank" href="https://www.tobarandualchais.co.uk/person/<%-sound.speakers[i].id%>?l=<%-uilang%>">
+                    <%=sound.speakers[i].name%>
+                    <%if(sound.speakers[i].lifetime){%>(<%=sound.speakers[i].lifetime%>)<%}%>
+                  </a> <%if(i<sound.speakers.length-1){%>,<%}%>
+                <%}%>
+              <%}%>
+              <%if(sound.speakers.length>0 && sound.fieldworkers.length>0){%>
+                <span class="divider">&middot;</span>
+              <%}%>
+              <%if(sound.fieldworkers.length>0){%>
+                <%if(sound.fieldworkers.length==1){%>
+                  <%=L("#fieldworker")%>:
+                <%} else {%>
+                  <%=L("#fieldworkers")%>:
+                <%}%>
+                <%for(let i=0; i<sound.fieldworkers.length; i++){%>
+                  <a target="_blank" href="https://www.tobarandualchais.co.uk/person/<%-sound.fieldworkers[i].id%>?l=<%-uilang%>">
+                    <%=sound.fieldworkers[i].name%>
+                    <%if(sound.fieldworkers[i].lifetime){%>(<%=sound.fieldworkers[i].lifetime%>)<%}%>
+                  </a> <%if(i<sound.fieldworkers.length-1){%>,<%}%>
+                <%}%>
+              <%}%>
             </div>
-            <%if(track.status=="owned"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#continuetranscribing")%>&nbsp;»</a>
-            <%} else if(track.status=="finished"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#review")%>&nbsp;»</a>
+            <%if(sound.status=="owned"){%>
+              <a href="/<%=uilang%>/<%=sound.id%>" class="button"><%=L("#continuetranscribing")%>&nbsp;»</a>
+            <%} else if(sound.status=="finished"){%>
+              <a href="/<%=uilang%>/<%=sound.id%>" class="button"><%=L("#review")%>&nbsp;»</a>
             <%}%>
           </div>
         <%}%>
-        <%for(let i=0; i<tracks.length; i++){const track=tracks[i];%>
-          <div class="track">
+        <%for(let i=0; i<sounds.length; i++){const sound=sounds[i];%>
+          <div class="sound">
             <span class="status">
               <span class="dots">
-                <%if(track.status=="available"){%><span class="blanks">● ● ●</span><%}%>
-                <%if(track.status=="owned"){%>● <span class="blanks">● ●</span><%}%>
-                <%if(track.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
-                <%if(track.status=="approved"){%>● ● ●<%}%>
+                <%if(sound.status=="available"){%><span class="blanks">● ● ●</span><%}%>
+                <%if(sound.status=="owned"){%>● <span class="blanks">● ●</span><%}%>
+                <%if(sound.status=="finished"){%>● ● <span class="blanks">●</span><%}%>
+                <%if(sound.status=="approved"){%>● ● ●<%}%>
               </span>
-              <%if(track.status=="available"){%><%=L("#available")%><%}%>
-              <%if(track.status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%}%>
-              <%if(track.status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
-              <%if(track.status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-track.ownerROWID%>" class="owner"><%=track.ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
+              <%if(sound.status=="available"){%><%=L("#available")%><%}%>
+              <%if(sound.status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-sound.ownerROWID%>" class="owner"><%=sound.ownerDisplayName%></a><%}%>
+              <%if(sound.status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-sound.ownerROWID%>" class="owner"><%=sound.ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
+              <%if(sound.status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-sound.ownerROWID%>" class="owner"><%=sound.ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
             </span>
-            <div class="title"><a href="/<%=uilang%>/<%=track.id%>">“<%=track.title%>” <span class="year">(<%=L("#year").toUpperCase()%> 1952)</span></a></div>
+            <div class="title"><a href="/<%=uilang%>/<%=sound.id%>">“<%=sound.title%>” <%if(sound.year){%><span class="year">(<%=L("#year").toUpperCase()%> <%=sound.year%>)</span><%}%></a></div>
             <div class="data">
-              <%=L("#trackid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=track.id%>?l=<%-uilang%>"><%=track.id%></a>
-              <span class="divider">&middot;</span>
-              <%=L("#originaltapeid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
-              <span class="divider">&middot;</span>
-              <%=L("#speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+              <%if(sound.speakers.length>0){%>
+                <%=L("#speaking")%>:
+                <%for(let i=0; i<sound.speakers.length; i++){%>
+                  <a target="_blank" href="https://www.tobarandualchais.co.uk/person/<%-sound.speakers[i].id%>?l=<%-uilang%>">
+                    <%=sound.speakers[i].name%>
+                    <%if(sound.speakers[i].lifetime){%>(<%=sound.speakers[i].lifetime%>)<%}%>
+                  </a> <%if(i<sound.speakers.length-1){%>,<%}%>
+                <%}%>
+              <%}%>
+              <%if(sound.speakers.length>0 && sound.fieldworkers.length>0){%>
+                <span class="divider">&middot;</span>
+              <%}%>
+              <%if(sound.fieldworkers.length>0){%>
+                <%if(sound.fieldworkers.length==1){%>
+                  <%=L("#fieldworker")%>:
+                <%} else {%>
+                  <%=L("#fieldworkers")%>:
+                <%}%>
+                <%for(let i=0; i<sound.fieldworkers.length; i++){%>
+                  <a target="_blank" href="https://www.tobarandualchais.co.uk/person/<%-sound.fieldworkers[i].id%>?l=<%-uilang%>">
+                    <%=sound.fieldworkers[i].name%>
+                    <%if(sound.fieldworkers[i].lifetime){%>(<%=sound.fieldworkers[i].lifetime%>)<%}%>
+                  </a> <%if(i<sound.fieldworkers.length-1){%>,<%}%>
+                <%}%>
+              <%}%>
             </div>
-            <%if(track.status=="available"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#open")%>&nbsp;»</a>
+            <%if(sound.status=="available"){%>
+              <a href="/<%=uilang%>/<%=sound.id%>" class="button"><%=L("#open")%>&nbsp;»</a>
             <%}%>
-            <%if(track.status=="owned"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#listen")%>&nbsp;»</a>
+            <%if(sound.status=="owned"){%>
+              <a href="/<%=uilang%>/<%=sound.id%>" class="button"><%=L("#listen")%>&nbsp;»</a>
             <%}%>
-            <%if(track.status=="finished"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#listen")%>&nbsp;»</a>
+            <%if(sound.status=="finished"){%>
+              <a href="/<%=uilang%>/<%=sound.id%>" class="button"><%=L("#listen")%>&nbsp;»</a>
             <%}%>
-            <%if(track.status=="approved"){%>
-              <a href="/<%=uilang%>/<%=track.id%>" class="button"><%=L("#listenandread")%>&nbsp;»</a>
+            <%if(sound.status=="approved"){%>
+              <a href="/<%=uilang%>/<%=sound.id%>" class="button"><%=L("#listenandread")%>&nbsp;»</a>
             <%}%>
           </div>
         <%}%>

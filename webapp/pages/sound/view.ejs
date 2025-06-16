@@ -12,15 +12,22 @@
     <link rel="stylesheet" href="/c-speed.css"/>
     <script type="module" src="/c-speed.js"></script>
 
-    <link rel="stylesheet" href="/track/styles.css"/>
-    <script src="/track/scripts.js"></script>
+    <link rel="stylesheet" href="/sound/styles.css"/>
+    <script src="/sound/scripts.js"></script>
   </head>
   <body>
     <%-include("../../includes/header/view.ejs", this)%>
     <main>
       
         <div class="title">
-          <h1>“<%=trackTitle%>” <span class="year">(<%=L("#year").toUpperCase()%> 1952)</span></h1>
+          <h1>
+            “<%=soundTitle%>”
+            <%if(year){%><span class="year">(<%=L("#year").toUpperCase()%> <%=year%>)</span><%}%>
+            <span class="divider">&middot;</span>
+            <a title="<%=L("#trackid")%>" target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=trackID%>?l=<%-uilang%>"><%=trackID%></a>
+            <span class="divider">&middot;</span>
+            <a title="<%=L("#originaltapeid")%>" target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F<%-tapeID%>&search%5Btype%5D=archival_object"><%=tapeTitle%></a>
+          </h1>
           <div class="data">
             <span class="status">
               <span class="dots">
@@ -34,15 +41,35 @@
               <%if(status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
               <%if(status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
             </span>
-            <%=L("#trackid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/track/<%=trackID%>?l=<%-uilang%>"><%=trackID%></a>
-            <span class="divider">&middot;</span>
-            <%=L("#originaltapeid")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F110507&search%5Btype%5D=archival_object">SA1952.127.128</a></a>
-            <span class="divider">&middot;</span>
-            <%=L("#speaking")%>: <a target="_blank" href="https://www.tobarandualchais.co.uk/person/322?l=gd">John MacDonald (1876-1964)</a>
+            <%if(speakers.length>0){%>
+              <%=L("#speaking")%>:
+              <%for(let i=0; i<speakers.length; i++){%>
+                <a target="_blank" href="https://www.tobarandualchais.co.uk/person/<%-speakers[i].id%>?l=<%-uilang%>">
+                  <%=speakers[i].name%>
+                  <%if(speakers[i].lifetime){%>(<%=speakers[i].lifetime%>)<%}%>
+                </a> <%if(i<speakers.length-1){%>,<%}%>
+              <%}%>
+            <%}%>
+            <%if(speakers.length>0 && fieldworkers.length>0){%>
+              <span class="divider">&middot;</span>
+            <%}%>
+            <%if(fieldworkers.length>0){%>
+              <%if(fieldworkers.length==1){%>
+                <%=L("#fieldworker")%>:
+              <%} else {%>
+                <%=L("#fieldworkers")%>:
+              <%}%>
+              <%for(let i=0; i<fieldworkers.length; i++){%>
+                <a target="_blank" href="https://www.tobarandualchais.co.uk/person/<%-fieldworkers[i].id%>?l=<%-uilang%>">
+                  <%=fieldworkers[i].name%>
+                  <%if(fieldworkers[i].lifetime){%>(<%=fieldworkers[i].lifetime%>)<%}%>
+                </a> <%if(i<fieldworkers.length-1){%>,<%}%>
+              <%}%>
+            <%}%>
           </div>
         </div>
         <c-audio>
-          <audio controls preload="auto" src="/sounds/<%-trackID%>.mp4"></audio>
+          <audio controls preload="auto" src="/sounds/<%-soundID%>.mp4"></audio>
         </c-audio>
 
         <%if(status=="approved" && !loggedIn){%>
@@ -130,7 +157,7 @@
                   </a>
                   <div class="or">
                     <%=L("#alreadyin")%>
-                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+trackID)%>"><%=L("#login")%>&nbsp;»</a>
+                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+soundID)%>"><%=L("#login")%>&nbsp;»</a>
                   </div>
                 </div>
               <%}%>
@@ -157,7 +184,7 @@
                   </a>
                   <div class="or">
                     <%=L("#alreadyin")%>
-                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+trackID)%>"><%=L("#login")%>&nbsp;»</a>
+                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+soundID)%>"><%=L("#login")%>&nbsp;»</a>
                   </div>
                 </div>
               <%}%>
@@ -180,7 +207,7 @@
                   </a>
                   <div class="or">
                     <%=L("#alreadyin")%>
-                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+trackID)%>"><%=L("#login")%>&nbsp;»</a>
+                    <a href="/<%-uilang%>/<%-L("a-steach|login")%>?to=<%-encodeURIComponent("/"+uilang+"/"+soundID)%>"><%=L("#login")%>&nbsp;»</a>
                   </div>
                 </div>
               <%}%>

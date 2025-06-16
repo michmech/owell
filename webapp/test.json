@@ -1,42 +1,42 @@
 {
-  "lock_version": 3,
-  "position": 1,
+  "lock_version": 4,
+  "position": 2,
   "publish": true,
-  "ref_id": "358aa29f20eb5ac8ac70b2a8720f511f",
-  "component_id": "102130",
-  "title": "Cha Tèid Mi do dh'Fhear gun Bhàta",
-  "display_string": "Cha Tèid Mi do dh'Fhear gun Bhàta, 1956",
+  "ref_id": "55b31778ac072cf0b9818b4e63dd17d8",
+  "component_id": "1345",
+  "title": "Fear a phòs maighdeann-mhara.",
+  "display_string": "Fear a phòs maighdeann-mhara., 25 May 1952",
   "restrictions_apply": false,
   "created_by": "gvanbre",
   "last_modified_by": "admin",
-  "create_time": "2020-09-08T22:58:39Z",
-  "system_mtime": "2025-05-26T09:48:12Z",
-  "user_mtime": "2023-05-29T02:38:11Z",
+  "create_time": "2020-09-07T14:15:10Z",
+  "system_mtime": "2025-05-26T09:36:48Z",
+  "user_mtime": "2023-05-29T00:02:22Z",
   "suppressed": false,
   "is_slug_auto": false,
   "level": "item",
   "jsonmodel_type": "archival_object",
   "external_ids": [
     {
-      "external_id": "102130",
+      "external_id": "1345",
       "source": "Rescue site track id",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
       "jsonmodel_type": "external_id"
     }
   ],
   "subjects": [
     {
-      "ref": "/subjects/1"
+      "ref": "/subjects/2"
     },
     {
-      "ref": "/subjects/351"
+      "ref": "/subjects/279"
     },
     {
-      "ref": "/subjects/352"
+      "ref": "/subjects/280"
     }
   ],
   "linked_events": [],
@@ -46,9 +46,9 @@
       "number": "1",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
       "portion": "whole",
       "extent_type": "digital file",
       "jsonmodel_type": "extent"
@@ -59,18 +59,18 @@
       "lock_version": 0,
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
       "jsonmodel_type": "lang_material",
       "notes": [],
       "language_and_script": {
         "lock_version": 0,
         "created_by": "admin",
         "last_modified_by": "admin",
-        "create_time": "2023-05-29T02:38:11Z",
-        "system_mtime": "2023-05-29T02:38:11Z",
-        "user_mtime": "2023-05-29T02:38:11Z",
+        "create_time": "2023-05-29T00:02:22Z",
+        "system_mtime": "2023-05-29T00:02:22Z",
+        "user_mtime": "2023-05-29T00:02:22Z",
         "language": "gla",
         "jsonmodel_type": "language_and_script"
       }
@@ -79,16 +79,15 @@
   "dates": [
     {
       "lock_version": 0,
-      "expression": "1956",
-      "begin": "1956",
+      "expression": "25 May 1952",
+      "begin": "1952-05-25",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
-      "date_type": "inclusive",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
+      "date_type": "single",
       "label": "creation",
-      "certainty": "approximate",
       "jsonmodel_type": "date"
     }
   ],
@@ -96,13 +95,13 @@
   "rights_statements": [
     {
       "lock_version": 0,
-      "identifier": "6e87c340d2b51f189c1b15d6a57e335f",
+      "identifier": "fa647e215c7f42f521b265341f6fc302",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
-      "start_date": "1956-01-01",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
+      "start_date": "1952-05-25",
       "rights_type": "copyright",
       "status": "copyrighted",
       "jurisdiction": "GB",
@@ -113,7 +112,7 @@
       "notes": [
         {
           "jsonmodel_type": "note_rights_statement",
-          "persistent_id": "00df6cc7d5a5a93048c34f3e4b00e2c3",
+          "persistent_id": "a83568290bde4817845b94d41155f1ec",
           "label": "Computed Copyright",
           "type": "additional_information",
           "content": [
@@ -125,13 +124,13 @@
     },
     {
       "lock_version": 0,
-      "identifier": "6b91075a7754e8f3755ac108b932c35d",
+      "identifier": "992e05fe3349911c171066c4c3b475bd",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
-      "start_date": "1956-01-01",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
+      "start_date": "1952-05-25",
       "rights_type": "copyright",
       "status": "copyrighted",
       "jurisdiction": "GB",
@@ -140,13 +139,13 @@
       "acts": [],
       "linked_agents": [
         {
-          "ref": "/agents/people/12"
+          "ref": "/agents/people/273"
         }
       ],
       "notes": [
         {
           "jsonmodel_type": "note_rights_statement",
-          "persistent_id": "62b91d960337a92e3b95f884cf8aeb7c",
+          "persistent_id": "9b44d7342dcf6877181dd20480e1333e",
           "label": "Agent track copyright status",
           "type": "additional_information",
           "content": [
@@ -158,13 +157,13 @@
     },
     {
       "lock_version": 0,
-      "identifier": "77db114fa7a91c0090ac84bb00fab0a4",
+      "identifier": "f792c90f31d79123118eac047b23b5d3",
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
-      "start_date": "1956-01-01",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
+      "start_date": "1952-05-25",
       "rights_type": "copyright",
       "status": "copyrighted",
       "jurisdiction": "GB",
@@ -173,13 +172,13 @@
       "acts": [],
       "linked_agents": [
         {
-          "ref": "/agents/people/827"
+          "ref": "/agents/people/322"
         }
       ],
       "notes": [
         {
           "jsonmodel_type": "note_rights_statement",
-          "persistent_id": "e05249d96c65eb001ae1f6a1b5f4c5c6",
+          "persistent_id": "ab1bc52bf5f92a2cafb0abc49c2c5beb",
           "label": "Agent track copyright status",
           "type": "additional_information",
           "content": [
@@ -194,22 +193,22 @@
     {
       "is_primary": false,
       "role": "creator",
-      "relator": "ctb",
+      "relator": "Fieldworker",
       "terms": [],
-      "ref": "/agents/people/12"
+      "ref": "/agents/people/273"
     },
     {
       "is_primary": false,
       "role": "creator",
-      "relator": "Fieldworker",
+      "relator": "ctb",
       "terms": [],
-      "ref": "/agents/people/827"
+      "ref": "/agents/people/322"
     }
   ],
   "import_previous_arks": [],
   "ancestors": [
     {
-      "ref": "/repositories/2/archival_objects/111462",
+      "ref": "/repositories/2/archival_objects/110507",
       "level": "series"
     },
     {
@@ -226,31 +225,41 @@
       "lock_version": 0,
       "created_by": "admin",
       "last_modified_by": "admin",
-      "create_time": "2023-05-29T02:38:11Z",
-      "system_mtime": "2023-05-29T02:38:11Z",
-      "user_mtime": "2023-05-29T02:38:11Z",
+      "create_time": "2023-05-29T00:02:22Z",
+      "system_mtime": "2023-05-29T00:02:22Z",
+      "user_mtime": "2023-05-29T00:02:22Z",
       "instance_type": "digital_object",
       "jsonmodel_type": "instance",
       "is_representative": false,
       "digital_object": {
-        "ref": "/repositories/2/digital_objects/37341"
+        "ref": "/repositories/2/digital_objects/41092"
       }
     }
   ],
   "notes": [
     {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "f0c42c8d6b57eac1a8a5167025b406bc",
+      "persistent_id": "f3f6d4275492730c0d3b1591ec24eeac",
       "label": "Short Title",
       "type": "abstract",
       "content": [
-        "Cha tèid mi do dh'fh"
+        "Maighdinn-mhara"
+      ],
+      "publish": false
+    },
+    {
+      "jsonmodel_type": "note_singlepart",
+      "persistent_id": "05cf7354179068936e36b40c45604356",
+      "label": "First Line",
+      "type": "abstract",
+      "content": [
+        "Tha àite teann air Inbhir Nis..."
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "6186b2ba03eb40734887f2e728a8b865",
+      "persistent_id": "bad4729517a6f6a989983e27325d624c",
       "label": "Track Status",
       "type": "odd",
       "subnotes": [
@@ -264,7 +273,7 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "84ec3642edfef8db8aa09a91f63393be",
+      "persistent_id": "67689949aeec73d2e8073e7882865e4c",
       "label": "Audio Quality",
       "type": "phystech",
       "subnotes": [
@@ -278,13 +287,13 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "f08a105cba232ec3e40d8fb0e9dadcf8",
+      "persistent_id": "247239dcc8cd8dee97501685b3ce8e96",
       "label": "Original Track ID",
       "type": "custodhist",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "SA1956.26.A1",
+          "content": "SA1952.127.2",
           "publish": false
         }
       ],
@@ -292,33 +301,33 @@
     },
     {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "7ba6dad6ceeacc88e7dfe54ed2c4fbf2",
+      "persistent_id": "5a86f1babde02bdee6e720b0a034083a",
       "label": "Start Time",
       "type": "materialspec",
       "content": [
-        "00:00:04"
+        "00:01:25"
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_singlepart",
-      "persistent_id": "98361aab9b6825d68e115e6daa94b8f6",
+      "persistent_id": "e2c1768777512e2bc24b47f61236ba44",
       "label": "End Time",
       "type": "materialspec",
       "content": [
-        "00:05:14"
+        "00:03:38"
       ],
       "publish": false
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "3bc3625985e0287b80ec9c168ed2142a",
+      "persistent_id": "18febb79c9bbd4f2326962ef6002e9ce",
       "label": "Summary - English",
       "type": "scopecontent",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "The composer of this waulking/clapping song lists the kinds of men she would not take, and explains her reasons. They include the herdsman, the blacksmith's son, the joiner, the tailor, the shepherd's son, and the man who lived with his mother.",
+          "content": "A man who married a mermaid.\n\nA man at Kessock near Inverness found a mermaid asleep and hid her skin. They married and had a son. Her son later found the skin and gave it back to her. She went back to the sea, but promised there would always be fish in plenty at Kessock.",
           "publish": false
         }
       ],
@@ -326,13 +335,13 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "f31f7cef8d58ca607f19ede19cbe96d5",
+      "persistent_id": "af4b891775a86c0cd169593c1580f753",
       "label": "Summary - Gaelic",
       "type": "scopecontent",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "Tha an tè a rinn an t-òran luaidh/basaidh seo ag innse cò na fir nach gabhadh i. Nam measg bha am buachaille, mac a' ghobha, saor, an tàillear, mac a' chìobair, agus am fear a bha a' fuireach còmhla ri a mhàthair.",
+          "content": "Fear a phòs maighdeann-mhara.\n\nLorg duine maighdeann-mhara aig Aiseag Cheasaig faisg air Inbhir Nis. Thug e bhuaipe an cochall [craiceann] aice, is thug e dhachaigh leis i. Phòs iad agus bha mac aca. Aon latha lorg am mac cochall a mhàthar, is thug e air ais dhi e. Thill ise don mhuir, ach thuirt i gum biodh iasg an-còmhnaidh pailt aig Aiseag Cheasaig.",
           "publish": false
         }
       ],
@@ -340,13 +349,13 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "2957f9cb2c0aafd57acc902976bde3d1",
+      "persistent_id": "7932e3d66dc593646137908b9642d387",
       "label": "Item Note",
       "type": "odd",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "Transcribed in the School of Scottish Studies.\n\nSee:\n'Òrain Luaidh Màiri Nighean Alasdair' (K. C. Craig ed., 1949) p. 15\n'Hebridean Folksongs' vol. 3  (John L. Campbell & F. Collinson eds., 1981) p. 190",
+          "content": "The contributor uses both 'cochall' and 'slige' for the skin of the mermaid.",
           "publish": false
         }
       ],
@@ -354,21 +363,35 @@
     },
     {
       "jsonmodel_type": "note_multipart",
-      "persistent_id": "434b3fd3163b9f19e75d78299503ecc5",
+      "persistent_id": "5005a0ef9389ad1bbe4b8f84ac931d50",
       "label": "Metadata",
       "type": "processinfo",
       "subnotes": [
         {
           "jsonmodel_type": "note_text",
-          "content": "Catalogue ID : 4197",
+          "content": "Catalogue ID : 41",
           "publish": false
         }
       ],
       "publish": false
+    },
+    {
+      "jsonmodel_type": "note_multipart",
+      "label": "Transcript",
+      "type": "odd",
+      "subnotes": [
+        {
+          "jsonmodel_type": "note_text",
+          "content": "Iain MacDhòmhnaill: Tha àite teann air Inbhir Nis ris an abair iad anns a' Bheurla, Kessock Ferry. Mar a theireadh sibh, Aiseag Cheasaig. Agus bha duine a' gabhail a cheum sìos air a' chladach, agus chunnaic e coltas boireannach na cadal. Agus fhuair e grèim oirre, agus gu dè a bh' ann ach a' mhaighdeann-mhara. Agus thug e dhith an cochall, agus dar a bheir iad dhith an cochall, mar a tha a' chùis air innse, chan eil i nas fheàrr na neach eile sa mhuir. 'S thug e dhachaigh i agus phòs iad, agus chuir e an cochall fad... falach ann an àite dìomhaireach ann am bothan, a-mach. Agus bha i daonnan ag iarraidh a' chochaill, agus an cochall cha robh e a' toirt dì. Nam faigheadh i an cochall dhèanadh i air a' mhuir air ais, agus math a bha fios aige air sin.\n\nAch dh'fhàs an gille aice an-àirde, na chnapach mòr làidir, agus air dha a bhith a-mach mun bhothan, gu dè thàinig e air an rathad ach gun d' fhuair e an t-slige. Agus thug e an t-slige a bha seo a-staigh, 's dar a thug e an t-slige a-staigh dh'aithnich ise dè a bh' ann agus chuir i oirre an t-slige a bha seo, agus rinn i air a' mhuir. \"Agus mar a bha mi daonnan ag ràitinn, nam faighinn an cochall cha bhiodh an t-àite a tha seo gun iasg, ged a bhiodh e gann an àiteachan eile, 's duine sam bith a rachadh a dh'iasgach ann, gheibh e iasg uair sam bith ann.\" Agus i a' faotainn a' chochaill, tharraing i agus thuirt i:\n\n\"Cumaidh mi ri mo bhriathran.\"\n\nAgus gus an latha an-diugh, aig Kessock Ferry, gheibh thu am pailteas de dh'iasg ann ged a bhiodh e gann an àiteachan eile. Agus cha d' fhuair an duine forfhais riamh oirre, ach dar a thàinig e dhachaigh bho obair thuig e mar a bha a' chùis. Chaidh e a choimhead agus fhuair e an t-slige... an t-àite falamh, agus mar sin tha an naidheachd a' dol. Gheibh thu an t-iasg an siud dar nach eil e an àite eile.\n",
+          "publish": false
+        }
+      ],
+      "persistent_id": "73924bed3281515baa41bcba5a2dbbc0",
+      "publish": false
     }
   ],
   "accession_links": [],
-  "uri": "/repositories/2/archival_objects/102130",
+  "uri": "/repositories/2/archival_objects/1345",
   "repository": {
     "ref": "/repositories/2"
   },
@@ -376,7 +399,7 @@
     "ref": "/repositories/2/resources/1"
   },
   "parent": {
-    "ref": "/repositories/2/archival_objects/111462"
+    "ref": "/repositories/2/archival_objects/110507"
   },
   "has_unpublished_ancestor": false
 }

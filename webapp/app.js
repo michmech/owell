@@ -64,8 +64,8 @@ import page_logout from "./pages/logout/server.js";
   page_logout(app, L, do404, __dirname);
 import page_sendmail from "./pages/sendmail/server.js";
   page_sendmail(app, L, do404, __dirname);
-import page_track from "./pages/track/server.js";
-  page_track(app, L, do404, __dirname);
+import page_sound from "./pages/sound/server.js";
+  page_sound(app, L, do404, __dirname);
 import page_getsoundfile from "./pages/getsoundfile/server.js";
   page_getsoundfile(app, L, do404, __dirname);
 

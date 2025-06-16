@@ -1,5 +1,5 @@
 div.title {
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
   white-space: nowrap;
 }
 div.title > h1 {
@@ -8,7 +8,8 @@ div.title > h1 {
   font-weight: normal;
   color: #000000;
   overflow-x: auto;
-  padding-bottom: 0px;
+  padding-top: 1px;
+  padding-bottom: 4px;
   font-size: 1.3em;
   line-height: 1.25em;
   margin-right: -10px;
@@ -19,14 +20,26 @@ div.title > h1 span.year {
   margin-left: 3px;
   font-size: 0.8em;
 }
+div.title > h1 a {
+  font-size: 0.7em;
+  line-height: 1.2em;
+}
+div.title > h1 span.divider {
+  margin: 0px 5px;
+  font-size: 0.7em;
+  line-height: 1.25em;
+}
 div.title > div.data {
   font-size: 0.9em;
-  margin-top: 5px;
+  padding-top: 0px;
   color: #666666;
   overflow-x: auto;
   padding-bottom: 10px;
   margin-right: -10px;
   padding-right: 10px;
+}
+div.title > div.data a {
+  line-height: 1.25em;
 }
 div.title > div.data span.status {
   display: inline-block;
@@ -35,7 +48,7 @@ div.title > div.data span.status {
   line-height: 1.25em;
   padding: 7px 10px 5px 10px;
   color: #245583;
-  margin-right: 5px;
+  margin-right: 8px;
   font-size: 1em;
 }
 div.title > div.data span.status span.dots {

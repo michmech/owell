@@ -12,8 +12,8 @@ export default function(app, L, do404, rootdir){
     let loggedIn=false;
     let isAdmin=false;
 
-    const tracks=[];
-    const myTracks=[];
+    const sounds=[];
+    const mySounds=[];
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -23,27 +23,54 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
-      { //get list of tracks:
+      { //get list of sounds:
         const sql=`
-          select t.id, t.title, t.status, t.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
-          from tracks as t
-          left outer join users as u on u.email=t.owner
-          order by t.id`
+          select s.id, s.track_id, s.title, s.year, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          from sounds as s
+          left outer join users as u on u.email=s.owner
+          order by s.ROWID`
         const stmt=db.prepare(sql);
         stmt.all().map(row => {
-          const track={
+          const sound={
             id: row["id"],
+            trackID: row["track_id"],
             title: row["title"],
+            year: row["year"],
             status: row["status"],
             owner: row["owner"],
             ownerROWID: row["ownerROWID"],
             ownerDisplayName: row["ownerDisplayName"],
+            speakers: [],
+            fieldworkers: [],
           };
-          if( (track.status=="owned" && track.owner==email) || (track.status=="finished" && isAdmin)){
-            myTracks.push(track);
+          if( (sound.status=="owned" && sound.owner==email) || (sound.status=="finished" && isAdmin)){
+            mySounds.push(sound);
           } else {
-            tracks.push(track);
+            sounds.push(sound);
           }
+        });
+      }
+      { //add people to sounds:
+        const sql=`
+          select p.track_id, p.person_id, p.name, p.lifetime, p.role
+          from people as p
+          order by p.ROWID`;
+        const stmt=db.prepare(sql);
+        stmt.all().map(row => {
+          const person={
+            id: row["person_id"],
+            name: row["name"],
+            lifetime: row["lifetime"],
+          };
+          const trackID=row["track_id"];
+          [sounds, mySounds].forEach(arr => {
+            arr.forEach(s => {
+              if(s.trackID==trackID){
+                if(row["role"]=="speaker") s.speakers.push(person);
+                if(row["role"]=="fieldworker") s.fieldworkers.push(person);
+              }
+            });
+          });
         });
       }
     } catch(e){
@@ -66,8 +93,8 @@ export default function(app, L, do404, rootdir){
         "en": "/en",
       },
       isHomepage: true,
-      tracks,
-      myTracks,
+      sounds,
+      mySounds,
     });
   });
   

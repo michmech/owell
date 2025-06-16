@@ -2,12 +2,12 @@ import sqlite from "better-sqlite3";
 
 export default function(app, L, do404, rootdir){
 
-  app.post("/:uilang(gd|en)/:trackID([0-9]+)", function(req, res){
+  app.post("/:uilang(gd|en)/:soundID([0-9]+)", function(req, res){
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
 
-    const trackID=parseInt(req.params.trackID);
+    const soundID=parseInt(req.params.soundID);
     const status=req.body.status;
     const transcript=req.body.transcript;
 
@@ -19,27 +19,27 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
       }
-      if(loggedIn) { //update the track as required:
+      if(loggedIn) { //update the sound as required:
         if(transcript){
-          const sql=`update tracks set transcript=$transcript, status=$status where id=$trackID`;
+          const sql=`update sounds set transcript=$transcript, status=$status where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({trackID, transcript, status});
+          stmt.run({soundID, transcript, status});
         } else if(status=="available") {
-          const sql=`update tracks set status=$status, owner=NULL where id=$trackID`;
+          const sql=`update sounds set status=$status, owner=NULL where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({trackID, status});
+          stmt.run({soundID, status});
         } else if(status=="owned") {
-          const sql=`update tracks set status=$status, owner=$email where id=$trackID`;
+          const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({trackID, email, status});
+          stmt.run({soundID, email, status});
         } else if(status=="finished") {
-          const sql=`update tracks set status=$status, owner=$email where id=$trackID`;
+          const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({trackID, email, status});
+          stmt.run({soundID, email, status});
         } else if(status=="approved") {
-          const sql=`update tracks set status=$status where id=$trackID`;
+          const sql=`update sounds set status=$status where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({trackID, status});
+          stmt.run({soundID, status});
         }
       }
     } catch(e){
@@ -48,22 +48,28 @@ export default function(app, L, do404, rootdir){
       db.close();
     }
 
-    res.redirect("/"+req.params.uilang+"/"+trackID);
+    res.redirect("/"+req.params.uilang+"/"+soundID);
   });
 
-  app.get("/:uilang(gd|en)/:trackID([0-9]+)", function(req, res){
+  app.get("/:uilang(gd|en)/:soundID([0-9]+)", function(req, res){
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
     let isAdmin=false;
 
-    const trackID=parseInt(req.params.trackID);
-    let trackTitle=""
+    const soundID=parseInt(req.params.soundID);
+    let trackID=0;
+    let soundTitle=""
+    let year="";
+    let tapeID=0;
+    let tapeTitle="";
     let status="";
     let transcript="";
     let owner="";
     let ownerROWID=0;
     let ownerDisplayName="";
+    const speakers=[];
+    const fieldworkers=[];
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -73,20 +79,41 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
-      { //get the track:
+      { //get the sound:
         const sql=`
-          select t.id, t.title, t.status, t.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, t.transcript
-          from tracks as t
-          left outer join users as u on u.email=t.owner
-          where id=$trackID`;
+          select s.id, s.track_id, s.title, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
+          from sounds as s
+          left outer join users as u on u.email=s.owner
+          where id=$soundID`;
         const stmt=db.prepare(sql);
-        stmt.all({trackID}).map(row => {
-          trackTitle=row["title"];
+        stmt.all({soundID}).map(row => {
+          trackID=row["track_id"];
+          soundTitle=row["title"];
+          year=row["year"];
+          tapeID=row["tape_id"];
+          tapeTitle=row["tape_title"];
           status=row["status"];
           transcript=row["transcript"] || "";
           owner=row["owner"] || "";
           ownerROWID=row["ownerROWID"] || 0;
           ownerDisplayName=row["ownerDisplayName"] || "";
+        });
+      }
+      { //get the sounds's people:
+        const sql=`
+          select p.person_id, p.name, p.lifetime, p.role
+          from people as p
+          where track_id=$trackID
+          order by p.ROWID`;
+        const stmt=db.prepare(sql);
+        stmt.all({trackID}).map(row => {
+          const person={
+            id: row["person_id"],
+            name: row["name"],
+            lifetime: row["lifetime"],
+          };
+          if(row["role"]=="speaker") speakers.push(person);
+          if(row["role"]=="fieldworker") fieldworkers.push(person);
         });
       }
     } catch(e){
@@ -95,7 +122,7 @@ export default function(app, L, do404, rootdir){
       db.close();
     }
 
-    res.render("track/view.ejs", {
+    res.render("sound/view.ejs", {
       uilang: req.params.uilang,
       loggedIn,
       email,
@@ -105,18 +132,24 @@ export default function(app, L, do404, rootdir){
       pageTitle: L(req.params.uilang, "#sitetitle"),
       pageDescription: L(req.params.uilang, "#sitedescription"),
       pageUrls: {
-        "gd": "/gd/"+trackID,
-        "en": "/en/"+trackID,
+        "gd": "/gd/"+soundID,
+        "en": "/en/"+soundID,
       },
       isHomepage: false,
 
+      soundID,
       trackID,
-      trackTitle,
+      soundTitle,
+      year,
+      tapeID,
+      tapeTitle,
       status,
       transcript,
       owner,
       ownerROWID,
       ownerDisplayName,
+      speakers,
+      fieldworkers,
     });
   });
   
