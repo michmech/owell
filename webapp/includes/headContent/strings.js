@@ -35,6 +35,14 @@ const STRINGS = {
     "en": "Year",
     "gd": "Bliadhna"
   },
+  "#trackid": {
+    "en": "Track ID",
+    "gd": "Àireamh a’ chlàir"
+  },
+  "#part": {
+    "en": "Part",
+    "gd": "Pàirt"
+  },
   "#speaking": {
     "en": "Speaking",
     "gd": "Bruidhinn"
@@ -67,8 +75,36 @@ const STRINGS = {
     "en": "Listen & Read",
     "gd": "Èist & Leugh"
   },
+  "#addanewtrack": {
+    "en": "Add a track from Tobar an Dualchais",
+    "gd": "Add a track from Tobar an Dualchais"
+  },
+  "#go": {
+    "en": "Go",
+    "gd": "Go"
+  },
+  "#trackalreadyexists": {
+    "en": "We already have this track.",
+    "gd": "We already have this track."
+  },
+  "#errorhasoccurred": {
+    "en": "An error has occurred.",
+    "gd": "An error has occurred."
+  },
+  "#errortalkingtotadapi": {
+    "en": "An error has occurred while getting data from Tobar an Dualchais.",
+    "gd": "An error has occurred while getting data from Tobar an Dualchais."
+  },
+  "#nosuchtrack": {
+    "en": "No such track exists in Tobar an Dualchais.",
+    "gd": "No such track exists in Tobar an Dualchais."
+  },
   "#delete": {
     "en": "Delete",
     "gd": "Delete"
+  },
+  "#abouttodeletetrack": {
+    "en": "This track is about to be deleted.",
+    "gd": "This track is about to be deleted."
   }
 };

@@ -25,7 +25,7 @@ export default function(app, L, do404, rootdir){
       }
       { //get list of sounds:
         const sql=`
-          select s.id, s.track_id, s.title, s.year, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           order by s.ROWID`
@@ -36,6 +36,7 @@ export default function(app, L, do404, rootdir){
             trackID: row["track_id"],
             title: row["title"],
             year: row["year"],
+            partNumber: row["part_number"],
             status: row["status"],
             owner: row["owner"],
             ownerROWID: row["ownerROWID"],

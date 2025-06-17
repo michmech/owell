@@ -105,13 +105,17 @@ Metadata about each audio track:
 Year
 Bliadhna
 
-#trackid
+##trackid
 Track ID
 Àireamh a’ chlàir
 
 #originaltapeid
 Original tape ID
 Àireamh na teip tùsail
+
+##part
+Part
+Pàirt
 
 ##speaking
 Speaking
@@ -266,10 +270,37 @@ This track has recently been transcribed by a volunteer transcriber and is await
 Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh. 
 
 
-Adding and removing tracks:
+Adding and deleting tracks:
 ---------------------------
+
+##addanewtrack
+Add a track from Tobar an Dualchais
+Add a track from Tobar an Dualchais
+
+##go
+Go
+Go
+
+##trackalreadyexists
+We already have this track.
+We already have this track.
+
+##errorhasoccurred
+An error has occurred.
+An error has occurred.
+
+##errortalkingtotadapi
+An error has occurred while getting data from Tobar an Dualchais.
+An error has occurred while getting data from Tobar an Dualchais.
+
+##nosuchtrack
+No such track exists in Tobar an Dualchais.
+No such track exists in Tobar an Dualchais.
 
 ##delete
 Delete
 Delete
 
+##abouttodeletetrack
+This track is about to be deleted.
+This track is about to be deleted.

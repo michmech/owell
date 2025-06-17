@@ -19,10 +19,30 @@ a {
   text-decoration: none;
   border-bottom: 1px solid;
   color: #245583;
-  display: inline-block;
+  /* display: inline-block; */
 }
 a:hover {
   color: #3c6c99;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.fade-in {
+  animation-name: fade-in;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
+}
+
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+.fade-out {
+  animation-name: fade-out;
+  animation-iteration-count: 1;
+  animation-duration: 1000ms;
 }
 
 main {

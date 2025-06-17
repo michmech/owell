@@ -14,6 +14,8 @@ div.title > h1 {
   line-height: 1.25em;
   margin-right: -10px;
   padding-right: 10px;
+  margin-left: -10px;
+  padding-left: 10px;
 }
 div.title > h1 span.year {
   color: #667788;
@@ -37,6 +39,8 @@ div.title > div.data {
   padding-bottom: 10px;
   margin-right: -10px;
   padding-right: 10px;
+  margin-left: -10px;
+  padding-left: 10px;
 }
 div.title > div.data a {
   line-height: 1.25em;
@@ -287,3 +291,22 @@ div.data button.delete:active {
   top: 1px;
   left: 1px;
 } 
+
+div.title > div.data span.parts {}
+div.title > div.data span.parts *.part {
+  border-bottom: 0px;
+  color: #778899;
+  font-size: 1.15em;
+  line-height: 1em;
+  margin-right: 10px;
+  padding-top: 0px;
+  outline-offset: 2px;
+}
+div.title > div.data span.parts a.part:hover {
+  color: #245583;
+} 
+div.title > div.data span.parts span.part.current {
+  color: #556677;
+  font-weight: bold;
+  border-bottom: 4px solid #778899;
+}

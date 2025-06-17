@@ -26,7 +26,7 @@ export class CListing extends HTMLElement {
       if(sound.status=="approved") html+=`${LOC("#approved", 0)}<a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName}</a>${LOC("#approved", 1)}`;
     html+=`</span>`;
 
-    if(isAdmin) html+=`<button class="delete"><span class="icon trash-can"></span> ${LOC("#delete")}</button>`;
+    if(isAdmin) html+=`<button class="delete"><span class="icon trash-can"></span><span class="label"> ${LOC("#delete")}</span></button>`;
 
     html+=`<div class="title">`;
       html+=`<a href="/${uilang}/${sound.id}">`;
@@ -36,6 +36,10 @@ export class CListing extends HTMLElement {
     html+=`</div>`;
 
     html+=`<div class="data">`;
+      if(sound.partNumber>0){
+        html+=`<span class="part">${LOC("#part")} ${sound.partNumber}</span>`;
+        html+=` <span class="divider">&middot;</span> `;
+      }
       if(sound.speakers.length>0){
         html+=`${LOC("#speaking")}: `;
         for(let i=0; i<sound.speakers.length; i++){
@@ -81,6 +85,28 @@ export class CListing extends HTMLElement {
     html+=`</a>`;
 
     this.innerHTML=html;
+
+    if(isAdmin){
+      this.querySelector("button.delete").addEventListener("click", (ev)=>{ this.#delete() });
+    }
+  }
+
+  #delete(){
+    if(confirm(LOC("#abouttodeletetrack"))){
+      const id=this.getAttribute("data-id");
+      fetch("/delete?id="+id).then(resp => {
+        if(resp.ok){
+          resp.json().then(result => {
+            if(result){
+              this.classList.add("fade-out");
+              window.setTimeout(()=>{
+                this.parentNode.removeChild(this);
+              }, 1000);
+            }
+          });
+        }
+      });
+    }
   }
 }
 customElements.define("c-listing", CListing);

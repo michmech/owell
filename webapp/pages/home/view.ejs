@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/c-listing.css"/>
     <script type="module" src="/c-listing.js"></script>
 
+    <link rel="stylesheet" href="/c-adder.css"/>
+    <script type="module" src="/c-adder.js"></script>
+
     <link rel="stylesheet" href="/home/styles.css"/>
     <script src="/home/scripts.js"></script>
   </head>
@@ -46,12 +49,7 @@
       </div>
 
       <%if(loggedIn && isAdmin){%>
-        <div class="adder">
-          <div class="title">
-            <span class="icon square-plus"></span>
-            <span class="title">Add a new item from Tobar an Dualchais</span>
-          </div>
-        </div>
+        <c-adder/>
       <%}%>
 
     </main>

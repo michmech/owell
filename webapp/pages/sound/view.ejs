@@ -29,6 +29,17 @@
             <a title="<%=L("#originaltapeid")%>" target="_blank" href="https://www.tobarandualchais.co.uk/search?l=<%-uilang%>&search%5Bterm%5D=%2Frepositories%2F2%2Farchival_objects%2F<%-tapeID%>&search%5Btype%5D=archival_object"><%=tapeTitle%></a>
           </h1>
           <div class="data">
+            <%if(partNumber>0){%>
+              <span class="parts">
+                <%for(let i=0; i<partNumbers.length; i++){%>
+                  <%if(partNumbers[i].partNumber!=partNumber){%>
+                    <a class="part" href="/<%-uilang%>/<%-partNumbers[i].id%>"><%=L("#part")%> <%=partNumbers[i].partNumber%></a>
+                  <%} else {%>
+                    <span class="part current"><%=L("#part")%> <%=partNumbers[i].partNumber%></span>
+                  <%}%>
+                <%}%>
+              </span>
+            <%}%>
             <span class="status">
               <span class="dots">
                 <%if(status=="available"){%><span class="blanks">● ● ●</span><%}%>
@@ -42,8 +53,8 @@
               <%if(status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
             </span>
             <%if(loggedIn && isAdmin){%>
-              <button class="delete"><span class="icon trash-can"></span> <%=L("#delete")%></button>
-              <span class="divider">&middot;</span>
+              <!-- <button class="delete"><span class="icon trash-can"></span> <%=L("#delete")%></button>
+              <span class="divider">&middot;</span> -->
             <%}%>
             <%if(speakers.length>0){%>
               <%=L("#speaking")%>:

@@ -60,6 +60,8 @@ export default function(app, L, do404, rootdir){
     const soundID=parseInt(req.params.soundID);
     let trackID=0;
     let soundTitle=""
+    let partNumber=0;
+    const partNumbers=[];
     let year="";
     let tapeID=0;
     let tapeTitle="";
@@ -81,7 +83,7 @@ export default function(app, L, do404, rootdir){
       }
       { //get the sound:
         const sql=`
-          select s.id, s.track_id, s.title, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
+          select s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
           from sounds as s
           left outer join users as u on u.email=s.owner
           where id=$soundID`;
@@ -89,6 +91,7 @@ export default function(app, L, do404, rootdir){
         stmt.all({soundID}).map(row => {
           trackID=row["track_id"];
           soundTitle=row["title"];
+          partNumber=row["part_number"];
           year=row["year"];
           tapeID=row["tape_id"];
           tapeTitle=row["tape_title"];
@@ -97,6 +100,16 @@ export default function(app, L, do404, rootdir){
           owner=row["owner"] || "";
           ownerROWID=row["ownerROWID"] || 0;
           ownerDisplayName=row["ownerDisplayName"] || "";
+        });
+      }
+      if(partNumber>0) { //get the other parts, if any:
+        const sql=`select id, part_number from sounds where track_id=$trackID order by ROWID`;
+        const stmt=db.prepare(sql);
+        stmt.all({trackID}).map(row => {
+          partNumbers.push({
+            id: row["id"],
+            partNumber: row["part_number"],
+          });
         });
       }
       { //get the sounds's people:
@@ -140,6 +153,8 @@ export default function(app, L, do404, rootdir){
       soundID,
       trackID,
       soundTitle,
+      partNumber,
+      partNumbers,
       year,
       tapeID,
       tapeTitle,

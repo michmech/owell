@@ -40,6 +40,8 @@ document.addEventListener("keydown", (ev) => {
 window.setTimeout(() => {
   document.querySelector("audio").addEventListener("timeupdate", (ev) => {
     const time=ev.target.currentTime;
-    document.querySelector("c-textarea").hiliteSegment(time);
+    if(document.querySelector("c-textarea")){
+      document.querySelector("c-textarea").hiliteSegment(time);
+    }
   });
 });

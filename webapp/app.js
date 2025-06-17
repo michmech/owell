@@ -68,10 +68,15 @@ import page_sound from "./pages/sound/server.js";
   page_sound(app, L, do404, __dirname);
 import page_getsoundfile from "./pages/getsoundfile/server.js";
   page_getsoundfile(app, L, do404, __dirname);
+import page_tadget from "./pages/tadget/server.js";
+  page_tadget(app, L, do404, __dirname);
+import page_delete from "./pages/delete/server.js";
+  page_delete(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);
 app.all("/*/view.ejs", do404);
+app.all("/tadget/getter.js", do404);
 
 //Our static files and 404 page:
 app.use("/", express.static(path.join(__dirname, "pages")));
