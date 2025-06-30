@@ -10,9 +10,9 @@ export default function(app, L, do404, rootdir){
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
       {
-        const sql=`update users set sessionKey=NULL, lastSeen=$now where lower(email)=lower($email)`;
+        const sql=`update users set sessionKey=NULL where lower(email)=lower($email)`;
         const stmt=db.prepare(sql);
-        stmt.run({email, sessionKey, now});
+        stmt.run({email, sessionKey});
       }
     } catch(e){
       console.log(e);

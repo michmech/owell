@@ -17,6 +17,10 @@ Cruthaich cunntas ùr
 Log out
 Log a-mach
 
+##yourprofile
+Your profile
+Your profile
+
 ##changepassword
 Change your password
 Atharraich t’ fhacal-faire

@@ -11,6 +11,10 @@ const STRINGS = {
     "en": "Log out",
     "gd": "Log a-mach"
   },
+  "#yourprofile": {
+    "en": "Your profile",
+    "gd": "Your profile"
+  },
   "#changepassword": {
     "en": "Change your password",
     "gd": "Atharraich t’ fhacal-faire"

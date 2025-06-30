@@ -3,7 +3,9 @@ export class CIdentity extends HTMLElement {
   constructor(){
     super();
     this.email = this.getAttribute("email");
-    this.loggedIn = this.getAttribute("loggedIn")=="yes";
+    this.displayName = this.getAttribute("display-name");
+    this.rowid = this.getAttribute("rowid");
+    this.loggedIn = this.getAttribute("logged-in")=="yes";
     this.uilang = document.querySelector("html").getAttribute("lang");
   }
 
@@ -12,13 +14,21 @@ export class CIdentity extends HTMLElement {
       this.classList.add("loggedIn");
       this.querySelector(".badge .caption").innerText=this.email;
     }
-    this.querySelector(".badge").addEventListener("click", (ev)=>{this.#clickBadge()});
+    this.querySelector(".badge").addEventListener("click", (ev)=>{this.#clickBadge(ev)});
+    document.addEventListener("click", (ev)=>{ this.#clickAnywhere(ev) });
   }
 
-  #clickBadge(){
+  #clickAnywhere(ev){
+    if(!ev.target.closest("c-identity")) {
+      const menu=this.querySelector("div.menu");
+      if(menu) menu.remove();
+    }
+  }
+
+  #clickBadge(ev){
     const menu=this.querySelector("div.menu");
     if(menu){
-      menu.parentElement.removeChild(menu);
+      menu.remove();
     } else {
       this.#showMenu();
     }
@@ -29,7 +39,11 @@ export class CIdentity extends HTMLElement {
     divMenu.classList.add("menu");
     if(this.loggedIn){
       divMenu.innerHTML=`
-        <div class="line email">${this.email}</div>
+        <div class="line headline">
+          <div class="displayName">${this.displayName}</div>
+          <div class="email">${this.email}</div>
+        </div>
+        <div class="line"><a href="/${this.uilang}/u${this.rowid}">${LOC("#yourprofile")}</a></div>
         <div class="line"><a href="/${this.uilang}/${LOC("atharraich-facal-faire|change-password")}">${LOC("#changepassword")}</a></div>
         <div class="line"><a href="/${this.uilang}/${LOC("a-amach|logout")}?to=${location}">${LOC("#logout")}</a></div>
       `;

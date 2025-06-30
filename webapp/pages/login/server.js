@@ -5,6 +5,8 @@ export default function(app, L, do404, rootdir){
   //the login form, before submission:
   app.get("/:uilang(gd|en)/(a-steach|login)", function(req, res){
     const email=req.cookies.email;
+    let userROWID=0;
+    let userDisplayName="";
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
     
@@ -13,9 +15,9 @@ export default function(app, L, do404, rootdir){
     try{
       { //check if the user is already logged in:
         let yesterday=(new Date()); yesterday.setHours(yesterday.getHours()-24); yesterday=yesterday.toISOString();
-        const sql=`select email from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
+        const sql=`select ROWID, email, displayName, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
         const stmt=db.prepare(sql);
-        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
+        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
     } catch(e){
       console.log(e);
@@ -24,6 +26,8 @@ export default function(app, L, do404, rootdir){
     }
     res.render("login/view.ejs", {
       uilang: req.params.uilang,
+      userDisplayName,
+      userROWID,
       loggedIn,
       email,
 
@@ -46,6 +50,8 @@ export default function(app, L, do404, rootdir){
   app.post("/:uilang(gd|en)/(a-steach|login)", function(req, res){
     let loggedIn = false;
     const email = req.body.email;
+    let userROWID=0;
+    let userDisplayName="";
     const password = req.body.password;
     const passwordHash = app.hash(password);
 
@@ -80,6 +86,8 @@ export default function(app, L, do404, rootdir){
     } else { //if login failed, display the login form again: 
       res.render("login/view.ejs", {
         uilang: req.params.uilang,
+        userDisplayName: "",
+        userROWID: 0,
         loggedIn,
         email,
 

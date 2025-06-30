@@ -76,14 +76,19 @@ c-identity div.menu div.line a {
   white-space: nowrap;
 }
 
-c-identity div.menu div.line.email {
+c-identity div.menu div.line.headline {
+  background-color: #eeeeee;
+  color: #333333;
   border-radius: 6px 6px 0px 0px;
+}
+c-identity div.menu div.line.headline div.displayName {
+  font-weight: bold;
+}
+c-identity div.menu div.line.headline div.email {
   display: none;
 }
 @media (max-width: 600px) {
-  c-identity div.menu div.line.email {
+  c-identity div.menu div.line.headline div.email {
     display: block;
-    background-color: #eeeeee;
-    border-radius: 6px 6px 0px 0px;
   }
 }

@@ -4,6 +4,8 @@ export default function(app, L, do404, rootdir){
 
   app.post("/:uilang(gd|en)/:soundID([0-9]+)", function(req, res){
     const email=req.cookies.email;
+    let userROWID=0;
+    let userDisplayName="";
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
 
@@ -15,9 +17,9 @@ export default function(app, L, do404, rootdir){
     try{
       { //check if the user is already logged in:
         let yesterday=(new Date()); yesterday.setHours(yesterday.getHours()-24); yesterday=yesterday.toISOString();
-        const sql=`select email from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
+        const sql=`select ROWID, email, displayName, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
         const stmt=db.prepare(sql);
-        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
+        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
       if(loggedIn) { //update the sound as required:
         if(transcript){
@@ -53,6 +55,8 @@ export default function(app, L, do404, rootdir){
 
   app.get("/:uilang(gd|en)/:soundID([0-9]+)", function(req, res){
     const email=req.cookies.email;
+    let userROWID=0;
+    let userDisplayName="";
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
     let isAdmin=false;
@@ -77,9 +81,9 @@ export default function(app, L, do404, rootdir){
     try{
       { //check if the user is already logged in:
         let yesterday=(new Date()); yesterday.setHours(yesterday.getHours()-24); yesterday=yesterday.toISOString();
-        const sql=`select email, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
+        const sql=`select ROWID, email, displayName, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
         const stmt=db.prepare(sql);
-        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
+        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
       { //get the sound:
         const sql=`
@@ -137,6 +141,8 @@ export default function(app, L, do404, rootdir){
 
     res.render("sound/view.ejs", {
       uilang: req.params.uilang,
+      userDisplayName,
+      userROWID,
       loggedIn,
       email,
       isAdmin,

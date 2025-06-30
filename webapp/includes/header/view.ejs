@@ -22,7 +22,7 @@
       <%} else {%>
         <div class="title"><a href="/<%=uilang%>"><%=L("#sitetitle").toUpperCase()%></a></div>
       <%}%>
-      <c-identity loggedIn="<%=loggedIn ? 'yes' : 'no'%>" email="<%=email%>">
+      <c-identity logged-in="<%=loggedIn ? 'yes' : 'no'%>" email="<%=email%>" display-name="<%=userDisplayName%>" rowid="<%=userROWID%>">
         <div class="badge">
           <span class="icon user"></span>
           <span class="caption"><%=L("#anonymous")%></span>
