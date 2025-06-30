@@ -308,3 +308,32 @@ Delete
 ##abouttodeletetrack
 This track is about to be deleted.
 This track is about to be deleted.
+
+
+Users signing up for accounts:
+------------------------------
+
+#displayname
+Display name
+Display name
+
+#register
+Clàraich
+Register
+
+#displaynamemustnotbeblank
+Your display name must not be empty.
+Your display name must not be empty.
+
+#emailmustnotbeblank
+Your e-mail address must not be empty.
+Your e-mail address must not be empty.
+
+#passwordmustnotbeblank
+Your password must not be empty.
+Your password must not be empty.
+
+#emailalreadytaken
+This e-mail address already has an account here.
+This e-mail address already has an account here.
+

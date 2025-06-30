@@ -32,8 +32,8 @@ export default function(app, L, do404, rootdir){
       email,
 
       L: multistring => L(req.params.uilang, multistring),
-      pageTitle: L(req.params.uilang, "Fosgladh an Tobair|Opening The Well"),
-      pageDescription: L(req.params.uilang, "Fosgladh an Tobair|Opening The Well"),
+      pageTitle: L(req.params.uilang, "#sitetitle"),
+      pageDescription: L(req.params.uilang, "#sitedescription"),
       pageUrls: {
         "gd": "/gd/a-steach",
         "en": "/en/login",
@@ -63,7 +63,7 @@ export default function(app, L, do404, rootdir){
     let loginFailed = true; 
     try{
       { //check if email and password match:
-        const sql=`select email from users where lower(email)=lower($email) and passwordHash=$passwordHash`;
+        const sql=`select email from users where lower(email)=lower($email) and passwordHash=$passwordHash and registrationCompleted=1`;
         const stmt=db.prepare(sql);
         stmt.all({email, passwordHash}).map(row => { loginFailed = false; loggedIn=true; });
       }

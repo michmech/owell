@@ -254,5 +254,29 @@
   "#abouttodeletetrack": {
     "en": "This track is about to be deleted.",
     "gd": "This track is about to be deleted."
+  },
+  "#displayname": {
+    "en": "Display name",
+    "gd": "Display name"
+  },
+  "#register": {
+    "en": "Clàraich",
+    "gd": "Register"
+  },
+  "#displaynamemustnotbeblank": {
+    "en": "Your display name must not be empty.",
+    "gd": "Your display name must not be empty."
+  },
+  "#emailmustnotbeblank": {
+    "en": "Your e-mail address must not be empty.",
+    "gd": "Your e-mail address must not be empty."
+  },
+  "#passwordmustnotbeblank": {
+    "en": "Your password must not be empty.",
+    "gd": "Your password must not be empty."
+  },
+  "#emailalreadytaken": {
+    "en": "This e-mail address already has an account here.",
+    "gd": "This e-mail address already has an account here."
   }
 }

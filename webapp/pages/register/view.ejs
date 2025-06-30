@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/register/styles.css"/>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <%if(!registrationAttempted || registrationFailed){%>
+        <div class="container">
+          <%if(registrationFailed){%>
+            <div class="failed">
+              <%=L(registrationFailed)%>
+            </div>  
+          <%}%>
+          <form method="post" action="">
+            <div class="line">
+              <label>
+                <span class="label"><%=L("#displayname")%></span>
+                <input name="displayName" value="<%=displayName%>"/>
+              </label>
+            </div>
+            <div class="line">
+              <label>
+                <span class="label"><%=L("#emailaddress")%></span>
+                <input name="email" value="<%=email%>"/>
+              </label>
+            </div>
+            <div class="line">
+              <label>
+                <span class="label"><%=L("#password")%></span>
+                <input name="password" type="password" value="<%=password%>"/>
+              </label>
+            </div>
+            <div class="line doubleSpaceBefore">
+              <button type="submit"><%=L("#register")%></button>
+            </div>
+          </form>
+        </div>
+      <%} else {%>
+        <div class="container">
+          OK! We've sent you an e-mail.
+        </div>
+      <%}%>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

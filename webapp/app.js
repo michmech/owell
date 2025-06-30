@@ -72,6 +72,10 @@ import page_tadget from "./pages/tadget/server.js";
   page_tadget(app, L, do404, __dirname);
 import page_delete from "./pages/delete/server.js";
   page_delete(app, L, do404, __dirname);
+import page_register from "./pages/register/server.js";
+  page_register(app, L, do404, __dirname);
+import page_register2 from "./pages/register2/server.js";
+  page_register2(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);
