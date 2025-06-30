@@ -3,10 +3,6 @@ const STRINGS = {
     "en": "Log in",
     "gd": "Log a-steach"
   },
-  "#createaccount": {
-    "en": "Create a new account",
-    "gd": "Cruthaich cunntas ùr"
-  },
   "#logout": {
     "en": "Log out",
     "gd": "Log a-mach"
@@ -18,6 +14,10 @@ const STRINGS = {
   "#changepassword": {
     "en": "Change your password",
     "gd": "Atharraich t’ fhacal-faire"
+  },
+  "#comejoinus": {
+    "en": "Become a volunteer transcriber",
+    "gd": "Thig gar cuideachadh"
   },
   "#available": {
     "en": "Available for transcription",

@@ -66,7 +66,7 @@ c-identity div.menu {
 }
 
 c-identity div.menu div.line {
-  padding: 16px 40px 14px 20px;
+  padding: 16px 25px 14px 20px;
   border-bottom: 1px solid #cccccc;
 }
 c-identity div.menu div.line:last-child {
@@ -74,11 +74,13 @@ c-identity div.menu div.line:last-child {
 }
 c-identity div.menu div.line a {
   white-space: nowrap;
+  display: block;
+  border: 0;
 }
 
 c-identity div.menu div.line.headline {
   background-color: #eeeeee;
-  color: #333333;
+    color: #333333;
   border-radius: 6px 6px 0px 0px;
 }
 c-identity div.menu div.line.headline div.displayName {

@@ -47,3 +47,7 @@ span.icon.trash-can {
   mask-image: url(/trash-can.svg);
   -webkit-mask-image: url(/trash-can.svg);
 }
+span.icon.circle-check {
+  mask-image: url(/circle-check.svg);
+  -webkit-mask-image: url(/circle-check.svg);
+}

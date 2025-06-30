@@ -7,10 +7,6 @@
     "en": "Log in",
     "gd": "Log a-steach"
   },
-  "#createaccount": {
-    "en": "Create a new account",
-    "gd": "Cruthaich cunntas ùr"
-  },
   "#logout": {
     "en": "Log out",
     "gd": "Log a-mach"
@@ -54,6 +50,10 @@
   "#alreadyin": {
     "en": "With us already?",
     "gd": "Cuide rinn mar thà?"
+  },
+  "#homepageblurb": {
+    "en": "<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are buiding a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.",
+    "gd": "<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are buiding a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic."
   },
   "#moreinfo": {
     "en": "More information",
@@ -255,28 +255,88 @@
     "en": "This track is about to be deleted.",
     "gd": "This track is about to be deleted."
   },
+  "#signupblurb1": {
+    "en": "By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.",
+    "gd": "By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>."
+  },
+  "#signupblurb2": {
+    "en": "You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?",
+    "gd": "You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?"
+  },
+  "#taketour": {
+    "en": "Take the guided tour",
+    "gd": "Take the guided tour"
+  },
+  "#signupblurb3": {
+    "en": "You can transcribe as much or as little as you want. Fill out this registration form to start.",
+    "gd": "You can transcribe as much or as little as you want. Fill out this registration form to start."
+  },
   "#displayname": {
     "en": "Display name",
     "gd": "Display name"
   },
-  "#register": {
-    "en": "Clàraich",
-    "gd": "Register"
+  "#displaynamelegend": {
+    "en": "Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.",
+    "gd": "Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later."
   },
   "#displaynamemustnotbeblank": {
     "en": "Your display name must not be empty.",
     "gd": "Your display name must not be empty."
   },
+  "#emaillegend": {
+    "en": "You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.",
+    "gd": "You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties."
+  },
   "#emailmustnotbeblank": {
     "en": "Your e-mail address must not be empty.",
     "gd": "Your e-mail address must not be empty."
+  },
+  "#emailalreadytaken": {
+    "en": "This e-mail address already has an account here.",
+    "gd": "This e-mail address already has an account here."
+  },
+  "#passwordlegend": {
+    "en": "Choose a password for yourself. You will use this to log in.",
+    "gd": "Choose a password for yourself. You will use this to log in."
   },
   "#passwordmustnotbeblank": {
     "en": "Your password must not be empty.",
     "gd": "Your password must not be empty."
   },
-  "#emailalreadytaken": {
-    "en": "This e-mail address already has an account here.",
-    "gd": "This e-mail address already has an account here."
+  "#register": {
+    "en": "Register",
+    "gd": "Clàraich"
+  },
+  "#afterregistration": {
+    "en": "After registration, we will send you an e-mail with a link to confirm your e-mail address.",
+    "gd": "After registration, we will send you an e-mail with a link to confirm your e-mail address."
+  },
+  "#registrationaccepted": {
+    "en": "Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.",
+    "gd": "Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address."
+  },
+  "#emailshouldarrive": {
+    "en": "The e-mail should arrive immediately. If it doesn't, check your spam folder.",
+    "gd": "The e-mail should arrive immediately. If it doesn't, check your spam folder."
+  },
+  "#emailconfirmed": {
+    "en": "Your e-mail address has been confirmed.",
+    "gd": "Your e-mail address has been confirmed."
+  },
+  "#emailwelcome": {
+    "en": "Welcome to Opening the Well",
+    "gd": "Welcome to Opening the Well"
+  },
+  "#emailwelcomeline1": {
+    "en": "Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.",
+    "gd": "Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber."
+  },
+  "#emailwelcomebutton": {
+    "en": "Confirm",
+    "gd": "Confirm"
+  },
+  "#emailwelcomeexplanation": {
+    "en": "You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.",
+    "gd": "You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail."
   }
 }

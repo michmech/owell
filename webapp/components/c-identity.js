@@ -50,7 +50,7 @@ export class CIdentity extends HTMLElement {
     } else {
       divMenu.innerHTML=`
         <div class="line"><a href="/${this.uilang}/${LOC("a-steach|login")}?to=${location}">${LOC("#login")}</a></div>
-        <div class="line"><a href="/${this.uilang}/${LOC("claraich|register")}">${LOC("#createaccount")}</a></div>
+        <div class="line"><a href="/${this.uilang}/${LOC("claraich|register")}">${LOC("#comejoinus")}</a></div>
       `;
     }
     this.appendChild(divMenu);

@@ -9,10 +9,6 @@ neo-aithnichte
 Log in
 Log a-steach
 
-##createaccount
-Create a new account
-Cruthaich cunntas ùr
-
 ##logout
 Log out
 Log a-mach
@@ -53,13 +49,17 @@ Fosgladh an Tobair
 We are transcribing Scotland’s oral heritage
 Tha sinn a’ tar-sgrìobhadh beul-aithris na h-Alba
 
-#comejoinus
+##comejoinus
 Become a volunteer transcriber
 Thig gar cuideachadh
 
 #alreadyin
 With us already?
 Cuide rinn mar thà?
+
+#homepageblurb
+<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are buiding a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.
+<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are buiding a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.
 
 #moreinfo
 More information
@@ -313,27 +313,91 @@ This track is about to be deleted.
 Users signing up for accounts:
 ------------------------------
 
+#signupblurb1
+By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.
+By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.
+
+#signupblurb2
+You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?
+You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?
+
+#taketour
+Take the guided tour
+Take the guided tour
+
+#signupblurb3
+You can transcribe as much or as little as you want. Fill out this registration form to start.
+You can transcribe as much or as little as you want. Fill out this registration form to start.
+
 #displayname
 Display name
 Display name
 
-#register
-Clàraich
-Register
+#displaynamelegend
+Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.
+Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.
 
 #displaynamemustnotbeblank
 Your display name must not be empty.
 Your display name must not be empty.
 
+#emaillegend
+You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.
+You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.
+
 #emailmustnotbeblank
 Your e-mail address must not be empty.
 Your e-mail address must not be empty.
+
+#emailalreadytaken
+This e-mail address already has an account here.
+This e-mail address already has an account here.
+
+#passwordlegend
+Choose a password for yourself. You will use this to log in.
+Choose a password for yourself. You will use this to log in.
 
 #passwordmustnotbeblank
 Your password must not be empty.
 Your password must not be empty.
 
-#emailalreadytaken
-This e-mail address already has an account here.
-This e-mail address already has an account here.
+#register
+Register
+Clàraich
+
+#afterregistration
+After registration, we will send you an e-mail with a link to confirm your e-mail address.
+After registration, we will send you an e-mail with a link to confirm your e-mail address.
+
+#registrationaccepted
+Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.
+Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.
+
+#emailshouldarrive
+The e-mail should arrive immediately. If it doesn't, check your spam folder.
+The e-mail should arrive immediately. If it doesn't, check your spam folder.
+
+#emailconfirmed
+Your e-mail address has been confirmed.
+Your e-mail address has been confirmed.
+
+
+E-mail confirmation sent to newly registered users:
+---------------------------------------------------
+
+#emailwelcome
+Welcome to Opening the Well
+Welcome to Opening the Well
+
+#emailwelcomeline1
+Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.
+Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.
+
+#emailwelcomebutton
+Confirm
+Confirm
+
+#emailwelcomeexplanation
+You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.
+You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.
 

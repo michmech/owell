@@ -9,6 +9,7 @@ export default function(app, L, do404, rootdir){
     let userDisplayName="";
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
+    let isAdmin=false;
     
     const redirTo=req.query.to || `/${req.params.uilang}`;
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
@@ -24,26 +25,32 @@ export default function(app, L, do404, rootdir){
     } finally {
       db.close();
     }
-    res.render("login/view.ejs", {
-      uilang: req.params.uilang,
-      userDisplayName,
-      userROWID,
-      loggedIn,
-      email,
 
-      L: multistring => L(req.params.uilang, multistring),
-      pageTitle: L(req.params.uilang, "#sitetitle"),
-      pageDescription: L(req.params.uilang, "#sitedescription"),
-      pageUrls: {
-        "gd": "/gd/a-steach",
-        "en": "/en/login",
-      },
-      isHomepage: false,
+    if(loggedIn){
+      res.redirect(`/${req.params.uilang}/`);
+    } else {
+      res.render("login/view.ejs", {
+        uilang: req.params.uilang,
+        userDisplayName,
+        userROWID,
+        loggedIn,
+        email,
+  
+        L: multistring => L(req.params.uilang, multistring),
+        pageTitle: L(req.params.uilang, "#sitetitle"),
+        pageDescription: L(req.params.uilang, "#sitedescription"),
+        pageUrls: {
+          "gd": "/gd/a-steach",
+          "en": "/en/login",
+        },
+        isHomepage: false,
+  
+        loginFailed: false,
+        redirTo,
+        password: "",
+      });
+    }
 
-      loginFailed: false,
-      redirTo,
-      password: "",
-    });
   });
 
   //the login form, after submission:

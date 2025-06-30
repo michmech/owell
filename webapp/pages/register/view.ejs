@@ -14,34 +14,70 @@
             <div class="failed">
               <%=L(registrationFailed)%>
             </div>  
+          <%} else {%>
+            <h1><%=L("#comejoinus")%></h1>
           <%}%>
-          <form method="post" action="">
-            <div class="line">
-              <label>
-                <span class="label"><%=L("#displayname")%></span>
-                <input name="displayName" value="<%=displayName%>"/>
-              </label>
-            </div>
-            <div class="line">
-              <label>
-                <span class="label"><%=L("#emailaddress")%></span>
-                <input name="email" value="<%=email%>"/>
-              </label>
-            </div>
-            <div class="line">
-              <label>
-                <span class="label"><%=L("#password")%></span>
-                <input name="password" type="password" value="<%=password%>"/>
-              </label>
-            </div>
-            <div class="line doubleSpaceBefore">
-              <button type="submit"><%=L("#register")%></button>
-            </div>
-          </form>
+          <div class="left <%if(registrationFailed){%>hidable<%}%>">
+            <p>
+              <%-L("#signupblurb1", true)%>
+            </p>
+            <p>
+              <%=L("#signupblurb2")%>
+              <a class="cta" href="/<%=uilang%>/<%-L("turas|tour")%>"><%=L("#taketour")%>&nbsp;»</a>
+            </p>
+            <p>
+              <%=L("#signupblurb3", true)%>
+            </p>
+          </div>
+          <div class="right">
+            <form method="post" action="">
+              <div class="line">
+                <label>
+                  <span class="label"><%=L("#displayname")%></span>
+                  <input name="displayName" value="<%=displayName%>"/>
+                </label>
+                <div class="legend">
+                  <%=L("#displaynamelegend")%>
+                </div>
+              </div>
+              <div class="line">
+                <label>
+                  <span class="label"><%=L("#emailaddress")%></span>
+                  <input name="email" value="<%=email%>"/>
+                </label>
+                <div class="legend">
+                  <%=L("#emaillegend")%>
+                </div>
+              </div>
+              <div class="line">
+                <label>
+                  <span class="label"><%=L("#password")%></span>
+                  <input name="password" type="password" value="<%=password%>"/>
+                </label>
+                <div class="legend">
+                  <%=L("#passwordlegend")%>
+                </div>
+              </div>
+              <div class="line doubleSpaceBefore">
+                <button type="submit"><%=L("#register")%></button>
+              </div>
+              <div class="line legend">
+                <%=L("#afterregistration")%>
+              </div>
+            </form>
+          </div>
         </div>
       <%} else {%>
         <div class="container">
-          OK! We've sent you an e-mail.
+          <div class="ok">
+            <span class="icon circle-check"></span>
+            <div class="message">
+              <%=L("#registrationaccepted")%>
+            </div>
+            <div class="submessage">
+              <%=L("#emailshouldarrive")%>
+            </div>
+          </div>
         </div>
       <%}%>
 

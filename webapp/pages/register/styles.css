@@ -1,10 +1,12 @@
 div.container {
-  max-width: 500px;
-  margin: 15vh auto 0px auto;
+  max-width: 1000px;
+  margin: 5vh auto 0px auto;
+  overflow: auto;
 }
 @media (max-width: 600px) {
   div.container {
     margin-top: 5vh;
+    overflow: unset;
   }
 }
 
@@ -14,6 +16,14 @@ div.failed {
   border-radius: 4px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 1.75em;
+  margin: 0 0 2em 0;
+  text-align: center;
+  line-height: 1.5em;
 }
 
 label {
@@ -80,4 +90,89 @@ form div.line:not(:has(label)) {
     padding-left: 0px;
     text-align: center;
   }
+}
+
+form div.line div.legend {
+  margin-left: 205px;
+  font-size: 0.9em;
+  line-height: 1.25em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+@media (max-width: 600px) {
+  form div.line div.legend {
+    margin-left: 0px;
+  }
+}
+
+form div.legend {
+  font-size: 0.9em;
+  line-height: 1.25em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+div.ok {
+  text-align: center;
+  text-wrap: balance;
+  max-width: 500px;
+  margin: 15vh auto 0px auto;
+}
+div.ok span.icon {
+  width: 3em;
+  height: 3em;
+  background-color: #999999;
+}
+div.ok div.message {
+  /* text-align: left; */
+  margin-top: 20px;
+  font-size: 1.15em;
+  line-height: 1.5em;
+}
+div.ok div.submessage {
+  /* text-align: left; */
+  margin-top: 10px;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #666666;
+}
+
+div.container div.left {
+  float: left;
+  width: 40%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  color: #334455;
+  line-height: 1.75em;
+}
+div.container div.left strong {
+  color: #000000;
+}
+div.container div.right {
+  float: right;
+  width: 60%;
+  border-left: 2px solid #dddddd;
+  padding-left: 40px;
+  box-sizing: border-box;
+  padding-right: 6px;
+}
+@media (max-width: 600px) {
+  div.container div.left {
+    float: none;
+    width: auto;
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+  div.container div.left.hidable {
+    display: none;
+  }
+  div.container div.right {
+    float: none;
+    width: auto;
+    border-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }  
 }

@@ -9,8 +9,16 @@
     <main>
       
       <div class="container">
-        OK! You're in. You can log in now.
-      </div>
+        <div class="ok">
+          <span class="icon circle-check"></span>
+          <div class="message">
+            <%=L("#emailconfirmed")%>
+          </div>
+          <div class="submessage">
+            <a href="/<%-uilang%>/<%-L("a-steach|login")%>"><%=L("#login")%>&nbsp;»</a>
+          </div>
+        </div>
+    </div>
 
     </main>
     <%-include("../../includes/footer/view.ejs", this)%>
