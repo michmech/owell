@@ -1,5 +1,6 @@
 import sqlite from "better-sqlite3";
 import nodemailer from "nodemailer";
+import {mailBuilder} from "../../mailBuilder.js";
 
 export default function(app, L, do404, rootdir){
 
@@ -103,10 +104,8 @@ export default function(app, L, do404, rootdir){
           }
           
           //send confirmation email:
-          let url=process.env.URLSTART;
-          url+=`/${req.params.uilang}/${L(req.params.uilang, "claraich2|register2")}?e=${email}&k=${registrationKey}`;
-          console.log(url);
-          sendmail(email, url, (multistring, subpart) => L(req.params.uilang, multistring, subpart), req.params.uilang);
+          const path=`/${req.params.uilang}/${L(req.params.uilang, "claraich2|register2")}?e=${email}&k=${registrationKey}`;
+          sendmail(email, path, (multistring, subpart) => L(req.params.uilang, multistring, subpart), req.params.uilang);
         }
       } catch(e){
         console.log(e);
@@ -149,29 +148,25 @@ function generateKey(){
   return key;
 }
 
-function sendmail(to, url, L, uilang){
-  let html=`
-    <p>
-      <b>${L("#emailwelcome")}.</b>
-      ${L("#emailwelcomeline1")}.
-    </p>
-    <p style="text-align: center">
-      <a href="${url}" style="font-weight: bold">${L("#emailwelcomebutton")}</a>
-    </p>
-    <p style="color: #666666; font-size: 0.9em">
-      ${L("#emailwelcomeexplanation")}
-    </p>
-    <p style="text-align: center; font-size: 0.9em">
-      <a href="${process.env.URLSTART}/${uilang}">${L("#sitetitle")}</a>
-    </p>
-  `;
+function sendmail(to, path, L, uilang){
+  const html=mailBuilder.buildEmail({
+    title: L("#sitetitle"),
+    uilang: uilang,
+    rows: [{
+      type: "confirm",
+      intro: `<b>${L("#emailwelcome")}.</b> ${L("#emailwelcomeline1")}`,
+      caption: L("#emailwelcomebutton"),
+      path: path,
+    }],
+    footerText: `${L("#emailwelcomeexplanation")}`,
+  });
   let transporter = nodemailer.createTransport({
     sendmail: true,
     newline: 'unix',
     path: '/usr/sbin/sendmail'
   });
   transporter.sendMail({
-    from: 'info@openingthewell.cahss.ed.ac.uk',
+    from: `"${L("#sitetitle")}" <info@openingthewell.cahss.ed.ac.uk>`,
     to: to,
     subject: L("Welcome to Opening the Well"),
     html: html,
