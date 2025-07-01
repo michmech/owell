@@ -14,8 +14,19 @@ export default function(app, L, do404, rootdir){
     let loggedIn=false;
     let isAdmin=false;
 
-    const sounds=[];
-    const mySounds=[];
+    const stats={
+      users: 0,
+      words: 0,
+      hours: 0,
+      minutes: "00",
+    };
+    const tabs={
+      mine: 0,
+      available: 0,
+      owned: 0,
+      finished: 0,
+      approved: 0,
+    };
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -25,56 +36,34 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
-      { //get list of sounds:
-        const sql=`
-          select s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
-          from sounds as s
-          left outer join users as u on u.email=s.owner
-          order by s.ROWID`
+      { //get tabs by status:
+        const sql=`select status, count(*) as count from sounds group by status`;
         const stmt=db.prepare(sql);
-        stmt.all().map(row => {
-          const sound={
-            id: row["id"],
-            trackID: row["track_id"],
-            title: row["title"],
-            year: row["year"],
-            partNumber: row["part_number"],
-            status: row["status"],
-            owner: row["owner"],
-            ownerROWID: row["ownerROWID"],
-            ownerDisplayName: row["ownerDisplayName"],
-            speakers: [],
-            fieldworkers: [],
-          };
-          if( (sound.status=="owned" && sound.owner==email) || (sound.status=="finished" && isAdmin)){
-            mySounds.push(sound);
-          } else {
-            sounds.push(sound);
-          }
-        });
+        stmt.all().map(row => { tabs[row["status"]]=row["count"] });
       }
-      { //add people to sounds:
-        const sql=`
-          select p.track_id, p.person_id, p.name, p.lifetime, p.role
-          from people as p
-          order by p.ROWID`;
+      if(loggedIn) { //get "mine" tabs:
+        const sql=`select count(*) as count from sounds where owner=$email`;
         const stmt=db.prepare(sql);
-        stmt.all().map(row => {
-          const person={
-            id: row["person_id"],
-            name: row["name"],
-            lifetime: row["lifetime"],
-          };
-          const trackID=row["track_id"];
-          [sounds, mySounds].forEach(arr => {
-            arr.forEach(s => {
-              if(s.trackID==trackID){
-                if(row["role"]=="speaker") s.speakers.push(person);
-                if(row["role"]=="fieldworker") s.fieldworkers.push(person);
-              }
-            });
-          });
-        });
+        stmt.all({email}).map(row => { tabs.mine=row["count"] });
+      }
+      { //get "users" stat:
+        const sql=`select count(*) as count from users where registrationCompleted=1`;
+        const stmt=db.prepare(sql);
+        stmt.all({email}).map(row => { stats.users=row["count"] });
+      }
+      { //get "words" stat:
+        const sql=`select sum(wordcount) as count from sounds where status='approved'`;
+        const stmt=db.prepare(sql);
+        stmt.all({email}).map(row => { stats.words=row["count"] || 0 });
+      }
+      { //get "hours" and "minutes" stat:
+        let duration=0;
+        const sql=`select sum(duration) as duration from sounds where status='approved'`;
+        const stmt=db.prepare(sql);
+        stmt.all({email}).map(row => { duration=row["duration"] || 0 });
+        const minutes=Math.floor(duration/60);
+        stats.hours=Math.floor(minutes/60);
+        stats.minutes=(minutes%60).toString().padStart(2, "0");
       }
     } catch(e){
       console.log(e);
@@ -98,8 +87,9 @@ export default function(app, L, do404, rootdir){
         "en": "/en",
       },
       isHomepage: true,
-      sounds,
-      mySounds,
+
+      tabs,
+      stats,
     });
   });
   

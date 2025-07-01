@@ -16,9 +16,9 @@ export class CListing extends HTMLElement {
     html+=`<span class="status">`;
       html+=`<span class="dots">`;
         if(sound.status=="available") html+=`<span class="blanks">● ● ●</span>`;
-        if(sound.status=="owned") html+=`● ● <span class="blanks">●</span>`;
-        if(sound.status=="finished") html+=`● ● ● <span class="blanks">●</span>`;
-        if(sound.status=="approved") html+=`● ● ● ●`;
+        if(sound.status=="owned") html+=`● <span class="blanks">● ●</span>`;
+        if(sound.status=="finished") html+=`● ● <span class="blanks">●</span>`;
+        if(sound.status=="approved") html+=`● ● ●`;
       html+=`</span> `;
       if(sound.status=="available") html+=`${LOC("#available")}`;
       if(sound.status=="owned") html+=`${LOC("#owned")} <a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName}</a>`;
@@ -72,15 +72,12 @@ export class CListing extends HTMLElement {
     html+=`</div>`;
 
     html+=`<a href="/${uilang}/${sound.id}" class="button">`;
-      if(isProminent){
-        if(sound.status=="owned") html+=`${LOC("#continuetranscribing")}`;
-        else if(sound.status=="finished") html+=`${LOC("#review")}`;
-      } else {
-        if(sound.status=="available") html+=`${LOC("#open")}`;
-        else if(sound.status=="owned") html+=`${LOC("#listen")}`;
-        else if(sound.status=="finished") html+=`${LOC("#listen")}`;
-        else if(sound.status=="approved") html+=`${LOC("#listenandread")}`;
-      }
+      if(isProminent && sound.status=="owned") html+=`${LOC("#continuetranscribing")}`;
+      else if(isProminent && sound.status=="finished") html+=`${LOC("#review")}`;
+      else if(sound.status=="available") html+=`${LOC("#open")}`;
+      else if(sound.status=="owned") html+=`${LOC("#listen")}`;
+      else if(sound.status=="finished") html+=`${LOC("#listen")}`;
+      else if(sound.status=="approved") html+=`${LOC("#listenandread")}`;
       html+=`&nbsp;»`;
     html+=`</a>`;
 

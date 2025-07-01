@@ -52,7 +52,7 @@ const L=function(uilang, multistring, subpart){
 
 //404:
 function do404(req, res){
-  res.status(404).render("404.ejs", {});
+  res.status(404).render("404/view.ejs", {});
 }
 
 //Hook up our endpoints:
@@ -74,6 +74,8 @@ import page_register from "./pages/register/server.js";
   page_register(app, L, do404, __dirname);
 import page_register2 from "./pages/register2/server.js";
   page_register2(app, L, do404, __dirname);
+import page_list from "./pages/list/server.js";
+  page_list(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);

@@ -16,8 +16,8 @@ export default async function(archival_object_id){
     }
   } catch(e){
     error = e;
+    console.log(error);
   }
-  // console.log(error, session);
 
   //get the track ("archival object"): 
   const it={
@@ -54,6 +54,7 @@ export default async function(archival_object_id){
     }
   } catch(e){
     error = e;
+    console.log(error);
   }
 
   //get the speakers:
@@ -76,6 +77,7 @@ export default async function(archival_object_id){
       }
     } catch(e){
       error = e;
+      console.log(error);
     }
   }
   it.speakers = it.speakers.filter(x => typeof(x)=="object");
@@ -100,6 +102,7 @@ export default async function(archival_object_id){
       }
     } catch(e){
       error = e;
+      console.log(error);
     }
   }
   it.fieldworkers = it.fieldworkers.filter(x => typeof(x)=="object");
@@ -123,6 +126,7 @@ export default async function(archival_object_id){
       }
     } catch(e){
       error = e;
+      console.log(error);
     }
   }
   it.sounds = it.sounds.filter(x => typeof(x)=="object");
@@ -144,6 +148,7 @@ export default async function(archival_object_id){
       }
     } catch(e){
       error = e;
+      console.log(error);
     }
   }
   if(typeof(it.tape)!="object") it.tape={id: "", title: ""};

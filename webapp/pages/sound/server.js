@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {wordcounter} from "../../wordcounter.js"; 
 
 export default function(app, L, do404, rootdir){
 
@@ -12,6 +13,7 @@ export default function(app, L, do404, rootdir){
     const soundID=parseInt(req.params.soundID);
     const status=req.body.status;
     const transcript=req.body.transcript;
+    const duration=parseFloat(req.body.duration);
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -23,9 +25,10 @@ export default function(app, L, do404, rootdir){
       }
       if(loggedIn) { //update the sound as required:
         if(transcript){
-          const sql=`update sounds set transcript=$transcript, status=$status where id=$soundID`;
+          const wordcount =  wordcounter.countWords(transcript);
+          const sql=`update sounds set transcript=$transcript, wordcount=$wordcount, duration=$duration, status=$status where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({soundID, transcript, status});
+          stmt.run({soundID, transcript, wordcount, duration, status});
         } else if(status=="available") {
           const sql=`update sounds set status=$status, owner=NULL where id=$soundID`;
           const stmt=db.prepare(sql);
@@ -76,6 +79,7 @@ export default function(app, L, do404, rootdir){
     let ownerDisplayName="";
     const speakers=[];
     const fieldworkers=[];
+    let duration=0;
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -87,7 +91,7 @@ export default function(app, L, do404, rootdir){
       }
       { //get the sound:
         const sql=`
-          select s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
+          select s.duration, s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
           from sounds as s
           left outer join users as u on u.email=s.owner
           where id=$soundID`;
@@ -104,6 +108,7 @@ export default function(app, L, do404, rootdir){
           owner=row["owner"] || "";
           ownerROWID=row["ownerROWID"] || 0;
           ownerDisplayName=row["ownerDisplayName"] || "";
+          duration=row["duration"];
         });
       }
       if(partNumber>0) { //get the other parts, if any:
@@ -171,6 +176,7 @@ export default function(app, L, do404, rootdir){
       ownerDisplayName,
       speakers,
       fieldworkers,
+      duration,
     });
   });
   

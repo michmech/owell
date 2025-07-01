@@ -44,4 +44,15 @@ window.setTimeout(() => {
       document.querySelector("c-textarea").hiliteSegment(time);
     }
   });
+  document.querySelector("audio").addEventListener("durationchange", (ev) => {
+    updateDuration();
+  });
+  updateDuration();
 });
+
+function updateDuration(){
+  const input=document.querySelector("input[name=duration]");
+  const prevKnownDuration=parseFloat(input.value);
+  const duration=document.querySelector("audio").duration;
+  if(duration > prevKnownDuration) input.value=duration;
+}

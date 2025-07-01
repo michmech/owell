@@ -149,6 +149,7 @@
                   <label><input type="radio" name="status" value="approved" checked> <%=L("#keepapproved")%></label>
                   <label><input type="radio" name="status" value="finished"> <%=L("#cancelapproval")%></label>
                 <%}%>
+                <input type="hidden" name="duration" value="<%-duration%>"/>
                 <button type="submit" class="save"><%=L("#save")%></button>
               </div>
             </aside>

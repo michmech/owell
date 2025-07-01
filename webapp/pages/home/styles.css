@@ -69,7 +69,7 @@ div.cta {
   width: 500px;
   text-align: center;
 }
-@media(max-width: 700px){
+@media(max-width: 1000px){
   div.cta {
     float: none;
     width: auto;
@@ -115,7 +115,7 @@ div.welcome {
   margin-right: 600px;
   color: #334455;
 }
-@media(max-width: 700px){
+@media(max-width: 1000px){
   div.welcome {
     margin-top: 30px;
     margin-right: 0px;
@@ -125,7 +125,196 @@ div.welcome strong {
   color: #000000;
 }
 
-div.sounds {
-  margin: 60px 0px 40px 0px;
+div.stats {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+div.stats div.box {
+  background-color: #f9f9f9;
+  color: #333333;
+  padding: 30px 0px 20px 105px;
+  border-radius: 2px;
+  width: 32%;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+@media (max-width: 800px) {
+  div.stats {
+    flex-direction: column;
+  }
+  div.stats div.box {
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+div.stats div.box span.icon {
+  background-color: #cccccc;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+div.stats div.box span.icon.clock {
+  width: 2.75em;
+}
+div.stats div.box div.number {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 2em;
+  /* color: #245583; */
+  color: #666666;
+}
+div.stats div.box div.legend {
+  margin-top: 10px;
+  text-wrap: balance;
 }
 
+div.tabsContainer {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+div.tabs {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  border-bottom: 1px solid #245583;
+  padding: 0px 5px;
+  box-shadow: 0px 10px 5px -5px #ffffff;
+}
+div.tabs button {
+  width: 24%;
+  margin: 0px 5px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #bbbbbb;
+  border-bottom: 0px;
+  border-radius: 4px 4px 0px 0px;
+  padding: 15px 0px 10px 0px;
+  box-shadow: inset 1px 1px 0px #ffffff;
+}
+div.tabs button:hover {
+  border-color: #aaaaaa;
+}
+div.tabs button:active {
+  position: relative;
+  top: 1px;
+}
+div.tabs button.current {
+  border-color: #245583;
+  z-index: 1;
+  position: relative;
+  top: 1px;
+  background-color: #ffffff;
+  box-shadow: 3px -2px 0px #dddddd;
+}
+@media (max-width: 800px) {
+  div.tabs button {
+    padding-top: 10px;
+  }
+}
+div.tabs button span.dots {
+  display: inline-block;
+  color: #999999;
+  background-color: #dddddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+@media (max-width: 800px) {
+  div.tabs button span.dots {
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 0.7em;
+  }
+}
+div.tabs button:hover span.dots {
+  color: #888888;
+  background-color: #d9d9d9;
+}
+div.tabs button.current span.dots {
+  color: #245583;
+  background-color: #a5eaf5;
+}
+div.tabs button span.dots span.blanks {
+  color: #ffffff;
+}
+div.tabs button span.icon {
+  background-color: #999999;
+  height: 1.25em;
+  width: 1.25em;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+@media (max-width: 800px) {
+  div.tabs button span.icon {
+    margin-bottom: 5px;
+  }
+}
+div.tabs button:hover span.icon {
+  background-color: #888888;
+}
+div.tabs button.current span.icon {
+  background-color: #3274b3;
+}
+div.tabs button span.legend {
+  margin-top: 8px;
+  display: block;
+  color: #666666;
+  font-size: 0.95em;
+}
+@media (max-width: 800px) {
+  div.tabs button span.legend {
+    display: none;
+  }
+}
+div.tabs button:hover span.legend {
+  color: #555555;
+}
+div.tabs button.current span.legend {
+  color: #245583;
+}
+div.tabs button span.number {
+  display: block;
+  color: #666666;
+  font-size: 0.95em;
+}
+div.tabs button:hover span.number {
+  color: #555555;
+}
+div.tabs button.current span.number {
+  color: #245583;
+}
+
+div.nojoy {
+  color: #999999;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: -100px;
+}
+
+div.sounds {
+  margin: -5px 0px 40px 0px;
+  min-height: 300px;
+}
+div.sounds.loading {
+  background-image: url(/home/preloader.gif);
+  background-repeat: no-repeat;
+  background-position: center 100px;
+}

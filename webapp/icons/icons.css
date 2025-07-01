@@ -51,3 +51,15 @@ span.icon.circle-check {
   mask-image: url(/circle-check.svg);
   -webkit-mask-image: url(/circle-check.svg);
 }
+span.icon.users {
+  mask-image: url(/users.svg);
+  -webkit-mask-image: url(/users.svg);
+}
+span.icon.keyboard {
+  mask-image: url(/keyboard.svg);
+  -webkit-mask-image: url(/keyboard.svg);
+}
+span.icon.clock {
+  mask-image: url(/clock.svg);
+  -webkit-mask-image: url(/clock.svg);
+}

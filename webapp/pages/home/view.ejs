@@ -39,17 +39,62 @@
         </div>
       <%}%>
 
-      <div class="sounds">
-        <%for(let i=0; i<mySounds.length; i++){const sound=mySounds[i];%>
-          <c-listing class="prominent" data-admin="<%-(loggedIn && isAdmin) ? '1' : ''%>" data-id="<%-sound.id%>" data="<%=JSON.stringify(sound)%>"></c-listing>
-        <%}%>
-        <%for(let i=0; i<sounds.length; i++){const sound=sounds[i];%>
-          <c-listing class="" data-admin="<%-(loggedIn && isAdmin) ? '1' : ''%>" data-id="<%-sound.id%>" data="<%=JSON.stringify(sound)%>"></c-listing>
-        <%}%>
+      <div class="stats">
+        <div class="box">
+          <span class="icon clock"></span>
+          <div class="number"><%=stats.hours%>:<%=stats.minutes%></div>
+          <div class="legend">Hours and minutes of speech transcribed so far</div>
+        </div>
+        <div class="box">
+          <span class="icon keyboard"></span>
+          <div class="number"><%=stats.words.toLocaleString("en", {useGrouping: true})%></div>
+          <div class="legend">Words transcribed so far</div>
+        </div>
+        <div class="box">
+          <span class="icon users"></span>
+          <div class="number"><%=stats.users.toLocaleString("en", {useGrouping: true})%></div>
+          <div class="legend">Volunteer transcribers</div>
+          <a href="/<%-uilang%>/u">Meet them</a>
+        </div>
       </div>
 
+      <div class="tabsContainer">
+        <div class="tabs">
+          <%if(loggedIn){%>
+            <button data-query="mine">
+              <span class="icon user"></span>
+              <span class="legend">Your contributions</span>
+              <span class="number">(<%=tabs.mine%>)</span>
+            </button>
+          <%}%>
+          <button data-query="available">
+            <span class="dots"><span class="blanks">● ● ●</span></span>
+            <span class="legend">Available for transcription</span>
+            <span class="number">(<%=tabs.available%>)</span>
+          </button>
+          <button data-query="owned">
+            <span class="dots">● <span class="blanks">● ●</span></span>
+            <span class="legend">Being transcribed</span>
+            <span class="number">(<%=tabs.owned%>)</span>
+          </button>
+          <button data-query="finished">
+            <span class="dots">● ● <span class="blanks">●</span></span>
+            <span class="legend">Transcribed, awaiting approval</span>
+            <span class="number">(<%=tabs.finished%>)</span>
+          </button>
+          <button data-query="approved">
+            <span class="dots">● ● ●</span>
+            <span class="legend">Transcribed and approved</span>
+            <span class="number">(<%=tabs.approved%>)</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nojoy" style="display: none;">None at the moment.</div>
+      <div class="sounds loading"></div>
+
       <%if(loggedIn && isAdmin){%>
-        <c-adder/>
+        <c-adder style="display: none"/>
       <%}%>
 
     </main>
