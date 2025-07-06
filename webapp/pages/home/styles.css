@@ -204,8 +204,9 @@ div.tabs button {
   border: 1px solid #bbbbbb;
   border-bottom: 0px;
   border-radius: 4px 4px 0px 0px;
-  padding: 15px 0px 10px 0px;
+  padding: 15px 10px 10px 10px;
   box-shadow: inset 1px 1px 0px #ffffff;
+  text-wrap: balance;
 }
 div.tabs button:hover {
   border-color: #aaaaaa;
@@ -225,6 +226,8 @@ div.tabs button.current {
 @media (max-width: 800px) {
   div.tabs button {
     padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 div.tabs button span.dots {

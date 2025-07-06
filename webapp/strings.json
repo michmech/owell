@@ -59,6 +59,30 @@
     "en": "More information",
     "gd": "Tuilleadh fiosrachaidh"
   },
+  "#hourminustessofar": {
+    "en": "Hours and minutes of speech transcribed so far",
+    "gd": "Hours and minutes of speech transcribed so far"
+  },
+  "#wordssofar": {
+    "en": "Words transcribed so far",
+    "gd": "Words transcribed so far"
+  },
+  "#numberofvolunteertranscribers": {
+    "en": "Volunteer transcribers",
+    "gd": "Volunteer transcribers"
+  },
+  "#meetthem": {
+    "en": "Meet them",
+    "gd": "Cuir aithne orra"
+  },
+  "#yourcontributions": {
+    "en": "Your contributions",
+    "gd": "Your contributions"
+  },
+  "#notrackstoshow": {
+    "en": "None at the moment.",
+    "gd": "None at the moment."
+  },
   "#sitedescription": {
     "en": "Gaelic community transcription project",
     "gd": "Pròiseact tar-sgrìobhaidh na coimhearsnachd Ghàidhlig"
@@ -83,13 +107,25 @@
     "en": "Being transcribed by",
     "gd": "Ga thar-sgrìobhadh aig"
   },
+  "#ownedanonymously": {
+    "en": "Being transcribed",
+    "gd": "Ga thar-sgrìobhadh"
+  },
   "#finished": {
     "en": "Transcribed by $, awaiting approval",
     "gd": "Tar-sgrìobhte aig $, a’ feitheamh ri ceadachadh"
   },
+  "#finishedanonymously": {
+    "en": "Transcribed, awaiting approval",
+    "gd": "Tar-sgrìobhte, a’ feitheamh ri ceadachadh"
+  },
   "#approved": {
     "en": "Transcribed by $ and approved",
     "gd": "Tar-sgrìobhte aig $ agus ceadaichte"
+  },
+  "#approvedanonymously": {
+    "en": "Transcribed and approved",
+    "gd": "Tar-sgrìobhte agus ceadaichte"
   },
   "#year": {
     "en": "Year",

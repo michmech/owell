@@ -65,6 +65,30 @@ Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh-obrachail anns a bheil
 More information
 Tuilleadh fiosrachaidh
 
+#hourminustessofar
+Hours and minutes of speech transcribed so far
+Hours and minutes of speech transcribed so far
+
+#wordssofar
+Words transcribed so far
+Words transcribed so far
+
+#numberofvolunteertranscribers
+Volunteer transcribers
+Volunteer transcribers
+
+#meetthem
+Meet them
+Cuir aithne orra
+
+#yourcontributions
+Your contributions
+Your contributions
+
+#notrackstoshow
+None at the moment.
+None at the moment.
+
 #sitedescription
 Gaelic community transcription project
 Pròiseact tar-sgrìobhaidh na coimhearsnachd Ghàidhlig
@@ -93,13 +117,25 @@ Deiseil airson a thar-sgrìobhadh
 Being transcribed by
 Ga thar-sgrìobhadh aig
 
+#ownedanonymously
+Being transcribed
+Ga thar-sgrìobhadh
+
 ##finished
 Transcribed by $, awaiting approval
 Tar-sgrìobhte aig $, a’ feitheamh ri ceadachadh
 
+#finishedanonymously
+Transcribed, awaiting approval
+Tar-sgrìobhte, a’ feitheamh ri ceadachadh
+
 ##approved
 Transcribed by $ and approved
 Tar-sgrìobhte aig $ agus ceadaichte
+
+#approvedanonymously
+Transcribed and approved
+Tar-sgrìobhte agus ceadaichte
 
 
 Metadata about each audio track:
