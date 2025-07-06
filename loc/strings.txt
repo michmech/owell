@@ -15,7 +15,7 @@ Log a-mach
 
 ##yourprofile
 Your profile
-Your profile
+A' phròifil agad
 
 ##changepassword
 Change your password
@@ -59,7 +59,7 @@ Cuide rinn mar thà?
 
 #homepageblurb
 <strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.
-<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.
+Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh-obrachail anns a bheil saor-thoilich a' tar-sgrìobhadh chlàraidhean sa Ghàidhlig. Còmhla ri chèile, tha sinn a' togail corpas de chainnt tar-sgrìobhte a chuireas gu mòr ri dùthchas na h-Alba, rannsachadh air cànanachas agus faclaireachd agus adhartas ann an teicneòlas aithneachadh labhairt na Gàidhlig.
 
 #moreinfo
 More information
@@ -127,11 +127,11 @@ Bruidhinn
 
 ##fieldworker
 Fieldworker
-Fieldworker
+Obraiche-raoin
 
 ##fieldworkers
 Fieldworkers
-Fieldworkers
+Obraichean-raoin
 
 
 Action buttons next to the listing of each audio track:
@@ -279,35 +279,35 @@ Adding and deleting tracks:
 
 ##addanewtrack
 Add a track from Tobar an Dualchais
-Add a track from Tobar an Dualchais
+Tog clàr bho Thobar an Dualchais
 
 ##go
 Go
-Go
+Siuthad
 
 ##trackalreadyexists
 We already have this track.
-We already have this track.
+Tha an clàr seo againn mar thà.
 
 ##errorhasoccurred
 An error has occurred.
-An error has occurred.
+Thachair mearachd. 
 
 ##errortalkingtotadapi
 An error has occurred while getting data from Tobar an Dualchais.
-An error has occurred while getting data from Tobar an Dualchais.
+Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchais. 
 
 ##nosuchtrack
 No such track exists in Tobar an Dualchais.
-No such track exists in Tobar an Dualchais.
+Chan eil an clàr seo ann an Tobar an Dualchais
 
 ##delete
 Delete
-Delete
+Sguab às
 
 ##abouttodeletetrack
 This track is about to be deleted.
-This track is about to be deleted.
+Tha an clàr seo gu sguabadh às.
 
 
 Users signing up for accounts:
@@ -315,51 +315,51 @@ Users signing up for accounts:
 
 #signupblurb1
 By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.
-By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.
+Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic dhuinn le bhith a' togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h-Alba  .
 
 #signupblurb2
 You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?
-You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?
+Bidh thu a' tar-sgrìobhadh chlàraidhean de dhaoine a' bruidhinn na Gàidhlig. Cò ris a tha seo coltach?
 
 #taketour
 Take the guided tour
-Take the guided tour
+Gabh turas stiùirichte
 
 #signupblurb3
 You can transcribe as much or as little as you want. Fill out this registration form to start.
-You can transcribe as much or as little as you want. Fill out this registration form to start.
+Tar-sgrìobh an uiread a thogras tu. Lìon am foirm-clàraidh seo gus tòiseachadh. 
 
 #displayname
 Display name
-Display name
+Ainm-taisbeanaidh 
 
 #displaynamelegend
 Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.
-Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.
+Cuir a-staidh t' ainm no t' fhar-ainm. Cleachar seo mar ainm poblach na làraich seo. Faodaidh tu atharrachadh a-rithist. 
 
 #displaynamemustnotbeblank
 Your display name must not be empty.
-Your display name must not be empty.
+Chan fhaod t' ainm-taisbeanaidh a bhith bàn. 
 
 #emaillegend
 You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.
-You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.
+Cleachdaidh tu seo airson logadh a-staidh. Cha taisbeanar do sheòladh p-d gu poblach ach cha toirear e do threas-phàrtaidhean gu bràth.  
 
 #emailmustnotbeblank
 Your e-mail address must not be empty.
-Your e-mail address must not be empty.
+Chan fhaod do sheòladh p-d a bhith bàn. 
 
 #emailalreadytaken
 This e-mail address already has an account here.
-This e-mail address already has an account here.
+Tha am seòladh p-d sin air a chleachdadh a cheanna an seo. 
 
 #passwordlegend
 Choose a password for yourself. You will use this to log in.
-Choose a password for yourself. You will use this to log in.
+Tagh facal-faire dhut fhèin. Cleachdaidh tu sin airson logadh-staigh. 
 
 #passwordmustnotbeblank
 Your password must not be empty.
-Your password must not be empty.
+Chan fhaod t' fhacal-faire a bhith bàn. 
 
 #register
 Register
@@ -367,19 +367,19 @@ Clàraich
 
 #afterregistration
 After registration, we will send you an e-mail with a link to confirm your e-mail address.
-After registration, we will send you an e-mail with a link to confirm your e-mail address.
+An dèidh dhut clàradh, cuiridh sinn p-d thugad le ceangail gus an seòladh p-d agad a dhearbhadh. 
 
 #registrationaccepted
 Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.
-Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.
+Ghabh sinn ris a' chlàradh agad. Chuir sinn p-d thugad le ceangail gus an seòladh p-d agad a dhearbhadh. 
 
 #emailshouldarrive
 The e-mail should arrive immediately. If it doesn't, check your spam folder.
-The e-mail should arrive immediately. If it doesn't, check your spam folder.
+Bu chòir dhan phost-dhealain ruighinn air ball. Mur an ruig e, coimhead sa phasgan-spama agad. 
 
 #emailconfirmed
 Your e-mail address has been confirmed.
-Your e-mail address has been confirmed.
+Chaidh an seòladh p-d agad a dhearbhachadh. 
 
 
 E-mail confirmation sent to newly registered users:
@@ -387,17 +387,17 @@ E-mail confirmation sent to newly registered users:
 
 #emailwelcome
 Welcome to Opening the Well
-Welcome to Opening the Well
+Fàilte gu Fosgladh an Tobair
 
 #emailwelcomeline1
 Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.
-Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.
+Gliog air a' cheangail shìos gus an seòladh p-d agad a dhearbhachadh agus an clàradh agad a chrìochnachadh mar tar-sgrìobhadair saor-thoileach. 
 
 #emailwelcomebutton
 Confirm
-Confirm
+Dearbhaich
 
 #emailwelcomeexplanation
 You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.
-You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.
+Fhuair thu am post-dealain seo on a chlàraich thu mar tar-sgrìobhadair saor-thoileach air ar làraich-linn. Mura tusa a rinn sin, faodaidh tu cur às dhen phost-dealain seo gu sàbhailte. 
 

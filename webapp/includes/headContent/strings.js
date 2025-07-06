@@ -9,7 +9,7 @@ const STRINGS = {
   },
   "#yourprofile": {
     "en": "Your profile",
-    "gd": "Your profile"
+    "gd": "A' phròifil agad"
   },
   "#changepassword": {
     "en": "Change your password",
@@ -53,11 +53,11 @@ const STRINGS = {
   },
   "#fieldworker": {
     "en": "Fieldworker",
-    "gd": "Fieldworker"
+    "gd": "Obraiche-raoin"
   },
   "#fieldworkers": {
     "en": "Fieldworkers",
-    "gd": "Fieldworkers"
+    "gd": "Obraichean-raoin"
   },
   "#continuetranscribing": {
     "en": "Continue transcribing",
@@ -81,34 +81,34 @@ const STRINGS = {
   },
   "#addanewtrack": {
     "en": "Add a track from Tobar an Dualchais",
-    "gd": "Add a track from Tobar an Dualchais"
+    "gd": "Tog clàr bho Thobar an Dualchais"
   },
   "#go": {
     "en": "Go",
-    "gd": "Go"
+    "gd": "Siuthad"
   },
   "#trackalreadyexists": {
     "en": "We already have this track.",
-    "gd": "We already have this track."
+    "gd": "Tha an clàr seo againn mar thà."
   },
   "#errorhasoccurred": {
     "en": "An error has occurred.",
-    "gd": "An error has occurred."
+    "gd": "Thachair mearachd."
   },
   "#errortalkingtotadapi": {
     "en": "An error has occurred while getting data from Tobar an Dualchais.",
-    "gd": "An error has occurred while getting data from Tobar an Dualchais."
+    "gd": "Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchais."
   },
   "#nosuchtrack": {
     "en": "No such track exists in Tobar an Dualchais.",
-    "gd": "No such track exists in Tobar an Dualchais."
+    "gd": "Chan eil an clàr seo ann an Tobar an Dualchais"
   },
   "#delete": {
     "en": "Delete",
-    "gd": "Delete"
+    "gd": "Sguab às"
   },
   "#abouttodeletetrack": {
     "en": "This track is about to be deleted.",
-    "gd": "This track is about to be deleted."
+    "gd": "Tha an clàr seo gu sguabadh às."
   }
 };

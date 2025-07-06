@@ -13,7 +13,7 @@
   },
   "#yourprofile": {
     "en": "Your profile",
-    "gd": "Your profile"
+    "gd": "A' phròifil agad"
   },
   "#changepassword": {
     "en": "Change your password",
@@ -53,7 +53,7 @@
   },
   "#homepageblurb": {
     "en": "<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.",
-    "gd": "<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic."
+    "gd": "Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh-obrachail anns a bheil saor-thoilich a' tar-sgrìobhadh chlàraidhean sa Ghàidhlig. Còmhla ri chèile, tha sinn a' togail corpas de chainnt tar-sgrìobhte a chuireas gu mòr ri dùthchas na h-Alba, rannsachadh air cànanachas agus faclaireachd agus adhartas ann an teicneòlas aithneachadh labhairt na Gàidhlig."
   },
   "#moreinfo": {
     "en": "More information",
@@ -113,11 +113,11 @@
   },
   "#fieldworker": {
     "en": "Fieldworker",
-    "gd": "Fieldworker"
+    "gd": "Obraiche-raoin"
   },
   "#fieldworkers": {
     "en": "Fieldworkers",
-    "gd": "Fieldworkers"
+    "gd": "Obraichean-raoin"
   },
   "#continuetranscribing": {
     "en": "Continue transcribing",
@@ -225,83 +225,83 @@
   },
   "#addanewtrack": {
     "en": "Add a track from Tobar an Dualchais",
-    "gd": "Add a track from Tobar an Dualchais"
+    "gd": "Tog clàr bho Thobar an Dualchais"
   },
   "#go": {
     "en": "Go",
-    "gd": "Go"
+    "gd": "Siuthad"
   },
   "#trackalreadyexists": {
     "en": "We already have this track.",
-    "gd": "We already have this track."
+    "gd": "Tha an clàr seo againn mar thà."
   },
   "#errorhasoccurred": {
     "en": "An error has occurred.",
-    "gd": "An error has occurred."
+    "gd": "Thachair mearachd."
   },
   "#errortalkingtotadapi": {
     "en": "An error has occurred while getting data from Tobar an Dualchais.",
-    "gd": "An error has occurred while getting data from Tobar an Dualchais."
+    "gd": "Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchais."
   },
   "#nosuchtrack": {
     "en": "No such track exists in Tobar an Dualchais.",
-    "gd": "No such track exists in Tobar an Dualchais."
+    "gd": "Chan eil an clàr seo ann an Tobar an Dualchais"
   },
   "#delete": {
     "en": "Delete",
-    "gd": "Delete"
+    "gd": "Sguab às"
   },
   "#abouttodeletetrack": {
     "en": "This track is about to be deleted.",
-    "gd": "This track is about to be deleted."
+    "gd": "Tha an clàr seo gu sguabadh às."
   },
   "#signupblurb1": {
     "en": "By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.",
-    "gd": "By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>."
+    "gd": "Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic dhuinn le bhith a' togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h-Alba  ."
   },
   "#signupblurb2": {
     "en": "You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?",
-    "gd": "You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?"
+    "gd": "Bidh thu a' tar-sgrìobhadh chlàraidhean de dhaoine a' bruidhinn na Gàidhlig. Cò ris a tha seo coltach?"
   },
   "#taketour": {
     "en": "Take the guided tour",
-    "gd": "Take the guided tour"
+    "gd": "Gabh turas stiùirichte"
   },
   "#signupblurb3": {
     "en": "You can transcribe as much or as little as you want. Fill out this registration form to start.",
-    "gd": "You can transcribe as much or as little as you want. Fill out this registration form to start."
+    "gd": "Tar-sgrìobh an uiread a thogras tu. Lìon am foirm-clàraidh seo gus tòiseachadh."
   },
   "#displayname": {
     "en": "Display name",
-    "gd": "Display name"
+    "gd": "Ainm-taisbeanaidh"
   },
   "#displaynamelegend": {
     "en": "Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.",
-    "gd": "Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later."
+    "gd": "Cuir a-staidh t' ainm no t' fhar-ainm. Cleachar seo mar ainm poblach na làraich seo. Faodaidh tu atharrachadh a-rithist."
   },
   "#displaynamemustnotbeblank": {
     "en": "Your display name must not be empty.",
-    "gd": "Your display name must not be empty."
+    "gd": "Chan fhaod t' ainm-taisbeanaidh a bhith bàn."
   },
   "#emaillegend": {
     "en": "You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.",
-    "gd": "You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties."
+    "gd": "Cleachdaidh tu seo airson logadh a-staidh. Cha taisbeanar do sheòladh p-d gu poblach ach cha toirear e do threas-phàrtaidhean gu bràth."
   },
   "#emailmustnotbeblank": {
     "en": "Your e-mail address must not be empty.",
-    "gd": "Your e-mail address must not be empty."
+    "gd": "Chan fhaod do sheòladh p-d a bhith bàn."
   },
   "#emailalreadytaken": {
     "en": "This e-mail address already has an account here.",
-    "gd": "This e-mail address already has an account here."
+    "gd": "Tha am seòladh p-d sin air a chleachdadh a cheanna an seo."
   },
   "#passwordlegend": {
     "en": "Choose a password for yourself. You will use this to log in.",
-    "gd": "Choose a password for yourself. You will use this to log in."
+    "gd": "Tagh facal-faire dhut fhèin. Cleachdaidh tu sin airson logadh-staigh."
   },
   "#passwordmustnotbeblank": {
     "en": "Your password must not be empty.",
-    "gd": "Your password must not be empty."
+    "gd": "Chan fhaod t' fhacal-faire a bhith bàn."
   },
   "#register": {
     "en": "Register",
@@ -309,34 +309,34 @@
   },
   "#afterregistration": {
     "en": "After registration, we will send you an e-mail with a link to confirm your e-mail address.",
-    "gd": "After registration, we will send you an e-mail with a link to confirm your e-mail address."
+    "gd": "An dèidh dhut clàradh, cuiridh sinn p-d thugad le ceangail gus an seòladh p-d agad a dhearbhadh."
   },
   "#registrationaccepted": {
     "en": "Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.",
-    "gd": "Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address."
+    "gd": "Ghabh sinn ris a' chlàradh agad. Chuir sinn p-d thugad le ceangail gus an seòladh p-d agad a dhearbhadh."
   },
   "#emailshouldarrive": {
     "en": "The e-mail should arrive immediately. If it doesn't, check your spam folder.",
-    "gd": "The e-mail should arrive immediately. If it doesn't, check your spam folder."
+    "gd": "Bu chòir dhan phost-dhealain ruighinn air ball. Mur an ruig e, coimhead sa phasgan-spama agad."
   },
   "#emailconfirmed": {
     "en": "Your e-mail address has been confirmed.",
-    "gd": "Your e-mail address has been confirmed."
+    "gd": "Chaidh an seòladh p-d agad a dhearbhachadh."
   },
   "#emailwelcome": {
     "en": "Welcome to Opening the Well",
-    "gd": "Welcome to Opening the Well"
+    "gd": "Fàilte gu Fosgladh an Tobair"
   },
   "#emailwelcomeline1": {
     "en": "Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.",
-    "gd": "Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber."
+    "gd": "Gliog air a' cheangail shìos gus an seòladh p-d agad a dhearbhachadh agus an clàradh agad a chrìochnachadh mar tar-sgrìobhadair saor-thoileach."
   },
   "#emailwelcomebutton": {
     "en": "Confirm",
-    "gd": "Confirm"
+    "gd": "Dearbhaich"
   },
   "#emailwelcomeexplanation": {
     "en": "You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.",
-    "gd": "You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail."
+    "gd": "Fhuair thu am post-dealain seo on a chlàraich thu mar tar-sgrìobhadair saor-thoileach air ar làraich-linn. Mura tusa a rinn sin, faodaidh tu cur às dhen phost-dealain seo gu sàbhailte."
   }
 }
