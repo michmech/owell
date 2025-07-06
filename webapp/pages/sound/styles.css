@@ -1,6 +1,7 @@
 div.title {
   margin: 0px 0px -5px 0px;
   white-space: nowrap;
+  position: relative;
 }
 div.title * {
   outline-offset: 1px;
@@ -16,13 +17,16 @@ div.title > div.pretitle {
   margin-left: -10px;
   padding-left: 10px;
 }
+div.title > div.pretitle:has(c-spotmenu){
+  margin-bottom: -4px;
+}
 div.title > h1 {
   font-size: inherit;
   margin: 0px;
   font-weight: normal;
   color: #000000;
   overflow-x: auto;
-  padding-top: 0px;
+  padding-top: 4px;
   padding-bottom: 2px;
   font-size: 1.3em;
   line-height: 1.25em;

@@ -1,3 +1,7 @@
+c-spotmenu {
+  display: inline-block;
+}
+
 c-spotmenu button.opener {
   background: transparent;
   border: 1px solid #cccccc;
@@ -20,3 +24,89 @@ c-spotmenu button.opener span.icon {
 c-spotmenu button.opener:hover span.icon {
   background-color: #6699cc;
 } 
+
+c-spotmenu div.menu {
+  z-index: 2;
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 4px #999999;
+  background-color: #ffffff;
+  border-radius: 6px;
+  position: absolute;
+  margin-top: 10px;
+}
+@media(max-width: 700px){
+  c-spotmenu div.menu {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+div.title c-spotmenu div.menu {
+  position: absolute;
+  margin-top: 10px;
+}
+@media(max-width: 700px){
+  div.title c-spotmenu div.menu {
+    left: 0px;
+    right: 0px;
+  }
+}
+
+c-spotmenu div.menu div.line {
+  padding: 16px 15px 14px 15px;
+  border-bottom: 1px solid #cccccc;
+}
+c-spotmenu div.menu div.line:last-child {
+  border-bottom: 0px;
+}
+c-spotmenu div.menu div.line > a {
+  white-space: nowrap;
+  display: block;
+  border: 0;
+  color: #666666;
+  outline-offset: 8px;
+}
+c-spotmenu div.menu div.line > button {
+  background: transparent;
+  border: 0px;
+  padding: 0px;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  display: block;
+  width: 100%;
+  color: #666666;
+  text-align: left;
+  outline-offset: 8px;
+}
+c-spotmenu div.menu div.line > *:hover {
+  color: #3c6c99;
+}
+c-spotmenu div.menu div.line > * > span.icon {
+  background-color: #999999;
+  margin-right: 10px;
+}
+c-spotmenu div.menu div.line > *:hover > span.icon {
+  background-color: #3c6c99;
+}
+
+c-spotmenu div.menu div.line > .difficulty.low {
+  color: #30a582;
+}
+c-spotmenu div.menu div.line > .difficulty.low > span.icon {
+  background-color: #30a582;
+}
+
+c-spotmenu div.menu div.line > .difficulty.medium {
+  color: #3c45c4;
+}
+c-spotmenu div.menu div.line > .difficulty.medium > span.icon {
+  background-color: #3c45c4;
+}
+
+c-spotmenu div.menu div.line > .difficulty.high {
+  color: #3a0101;
+}
+c-spotmenu div.menu div.line > .difficulty.high > span.icon {
+  background-color: #3a0101;
+}

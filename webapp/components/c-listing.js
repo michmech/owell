@@ -32,8 +32,14 @@ export class CListing extends HTMLElement {
         html+=`<span class="medium"><span class="icon square"></span> ${LOC("#difficultymedium")}</span>`;
         html+=`<span class="high"><span class="icon diamond"></span> ${LOC("#difficultyhigh")}</span>`;
       html+=`</span>`;
-      if(isAdmin){
-        html+=` <c-spotmenu></c-spotmenu>`;
+      if(isAdmin || isProminent){
+        html+=` <c-spotmenu
+          sound-id="${id}"
+          show-difficulty="${isAdmin ? 'yes' : 'no'}"
+          show-history="${isProminent || isAdmin ? 'yes' : 'no'}"
+          show-giveup="${isProminent && sound.status=='owned' ? 'yes' : 'no'}"
+          show-delete="${isAdmin ? 'yes' : 'no'}"
+        "></c-spotmenu>`;
       }
     html+=`</span>`;
 
@@ -82,7 +88,8 @@ export class CListing extends HTMLElement {
 
     html+=`<a href="/${uilang}/${sound.id}" class="button">`;
       if(isProminent && sound.status=="owned") html+=`${LOC("#continuetranscribing")}`;
-      else if(isProminent && sound.status=="finished") html+=`${LOC("#review")}`;
+      else if(isAdmin && sound.status=="finished") html+=`${LOC("#review")}`;
+      else if(isProminent && sound.status=="finished") html+=`${LOC("#open")}`;
       else if(sound.status=="available") html+=`${LOC("#open")}`;
       else if(sound.status=="owned") html+=`${LOC("#listen")}`;
       else if(sound.status=="finished") html+=`${LOC("#listen")}`;

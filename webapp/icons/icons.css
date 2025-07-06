@@ -79,3 +79,11 @@ span.icon.ellipsis {
   mask-image: url(/ellipsis.svg);
   -webkit-mask-image: url(/ellipsis.svg);
 }
+span.icon.clock-rotate-left {
+  mask-image: url(/clock-rotate-left.svg);
+  -webkit-mask-image: url(/clock-rotate-left.svg);
+}
+span.icon.xmark {
+  mask-image: url(/xmark.svg);
+  -webkit-mask-image: url(/xmark.svg);
+}

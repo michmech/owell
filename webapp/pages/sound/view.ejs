@@ -42,9 +42,14 @@
                 <span class="medium"><span class="icon square"></span> <%=L("#difficultymedium")%></span>
                 <span class="high"><span class="icon diamond"></span> <%=L("#difficultyhigh")%></span>
               </span>
-              <%if(loggedIn && isAdmin){%>
-                <c-spotmenu></c-spotmenu>
-                <!-- <button class="delete"><span class="icon trash-can"></span> <%=L("#delete")%></button> -->
+              <%if((loggedIn && email==owner) || isAdmin){%>
+                <c-spotmenu
+                  sound-id="<%-soundID%>"
+                  show-difficulty="<%-isAdmin ? 'yes' : 'no'%>"
+                  show-history="<%-email==owner || isAdmin ? 'yes' : 'no'%>"
+                  show-giveup="<%-email==owner && status=='owned' ? 'yes' : 'no'%>"
+                  show-delete="<%-isAdmin ? 'yes' : 'no'%>"
+                ></c-spotmenu>
               <%}%>
             </span>
           </div>
@@ -103,7 +108,7 @@
           <audio controls preload="auto" src="/getsoundfile?id=<%-soundID%>"></audio>
         </c-audio>
 
-        <%if(status=="approved" && !loggedIn){%>
+        <%if(status=="approved" && (!loggedIn || !isAdmin)){%>
           <c-textarea public="yes">
             <textarea name="transcript" spellcheck="false"><%=transcript%></textarea>
           </c-textarea>
@@ -154,7 +159,6 @@
               <div class="submission">
                 <%if( (status=="owned" && loggedIn && email==owner) ){%>
                   <label><input type="radio" name="status" value="owned" checked> <%=L("#savewillcontinue")%></label>
-                  <label><input type="radio" name="status" value="available"> <%=L("#savewillnotcontinue")%></label>
                   <label><input type="radio" name="status" value="finished"> <%=L("#savefinished")%></label>
                 <%} else if( (status=="finished" && loggedIn && isAdmin) ){%>
                   <label><input type="radio" name="status" value="approved" checked> <%=L("#approve")%></label>

@@ -79,6 +79,7 @@ export default function(app, L, do404, rootdir){
             ownerDisplayName: null,
             speakers: [],
             fieldworkers: [],
+            difficulty: "medium",
           });
         });
       }

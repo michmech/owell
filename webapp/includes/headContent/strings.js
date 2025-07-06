@@ -103,14 +103,6 @@ const STRINGS = {
     "en": "No such track exists in Tobar an Dualchais.",
     "gd": "Chan eil an clàr seo ann an Tobar an Dualchais"
   },
-  "#delete": {
-    "en": "Delete",
-    "gd": "Sguab às"
-  },
-  "#abouttodeletetrack": {
-    "en": "This track is about to be deleted.",
-    "gd": "Tha an clàr seo gu sguabadh às."
-  },
   "#difficultylow": {
     "en": "Easy",
     "gd": "Easy"
@@ -122,5 +114,25 @@ const STRINGS = {
   "#difficultyhigh": {
     "en": "Very difficult",
     "gd": "Very difficult"
+  },
+  "#menu": {
+    "en": "Menu",
+    "gd": "Menu"
+  },
+  "#history": {
+    "en": "History",
+    "gd": "History"
+  },
+  "#giveup": {
+    "en": "Give up transcribing",
+    "gd": "Give up transcribing"
+  },
+  "#delete": {
+    "en": "Delete",
+    "gd": "Sguab às"
+  },
+  "#abouttodeletetrack": {
+    "en": "This track is about to be deleted.",
+    "gd": "Tha an clàr seo gu sguabadh às."
   }
 };

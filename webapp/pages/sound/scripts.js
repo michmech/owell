@@ -52,7 +52,9 @@ window.setTimeout(() => {
 
 function updateDuration(){
   const input=document.querySelector("input[name=duration]");
-  const prevKnownDuration=parseFloat(input.value);
-  const duration=document.querySelector("audio").duration;
-  if(duration > prevKnownDuration) input.value=duration;
+  if(input){
+    const prevKnownDuration=parseFloat(input.value);
+    const duration=document.querySelector("audio").duration;
+    if(duration > prevKnownDuration) input.value=duration;
+  }
 }

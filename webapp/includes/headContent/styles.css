@@ -11,7 +11,7 @@ body {
 }
 *:focus {
   outline-color: #ee2042;
-  outline-offset: 4px;
+  outline-offset: 0px;
   outline-style: dotted;
   outline-width: 2px;
 }

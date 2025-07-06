@@ -225,10 +225,6 @@ A transcriber saving a transcription:
 Unfinished, I will continue later
 Neo-chrìochnaichte, leanaidh mi orm a-rithist
 
-#savewillnotcontinue
-Unfinished, let someone else continue
-Neo-chrìochnaichte, leig le cuideigin eile a dhèanamh
-
 #savefinished
 Finished
 Crìochnaichte
@@ -345,15 +341,6 @@ Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchai
 No such track exists in Tobar an Dualchais.
 Chan eil an clàr seo ann an Tobar an Dualchais
 
-##delete
-Delete
-Sguab às
-
-##abouttodeletetrack
-This track is about to be deleted.
-Tha an clàr seo gu sguabadh às.
-
-
 Users signing up for accounts:
 ------------------------------
 
@@ -460,3 +447,29 @@ Somewhat difficult
 ##difficultyhigh
 Very difficult
 Very difficult
+
+
+Drop-down menu next to a track:
+-------------------------------
+
+##menu
+Menu
+Menu
+
+##history
+History
+History
+
+##giveup
+Give up transcribing
+Give up transcribing
+
+##delete
+Delete
+Sguab às
+
+##abouttodeletetrack
+This track is about to be deleted.
+Tha an clàr seo gu sguabadh às.
+
+

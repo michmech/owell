@@ -5,51 +5,56 @@ c-identity {
   display: block;
   user-select: none;
 }
-c-identity div.badge {
+c-identity button.badge {
   background-color: #ffffff;
   padding: 6px 15px;
   border-radius: 20px;
   box-shadow: inset 1px 1px 0px #bbbbbb, inset -1px -1px 0px #dddddd;
   cursor: pointer;
+  display: block;
+  font: inherit;
+  line-height: inherit;
+  border: 0px;
+  outline-offset: -3px;
 }
 
-c-identity div.badge span.icon.user {
+c-identity button.badge span.icon.user {
   background-color: #999999;
 }
-c-identity.loggedIn div.badge span.icon.user {
+c-identity.loggedIn button.badge span.icon.user {
   background-color: #666666;
 }
-c-identity div.badge:hover span.icon.user {
+c-identity button.badge:hover span.icon.user {
   background-color: #336699;
 }
 
-c-identity div.badge span.caption {
+c-identity button.badge span.caption {
   display: inline-block;
   margin: 0px 0.5em;
   position: relative;
   top: 2px;
   color: #666666;
 }
-c-identity.loggedIn div.badge span.caption {
+c-identity.loggedIn button.badge span.caption {
   color: #333333;
 }
-c-identity div.badge:hover span.caption {
+c-identity button.badge:hover span.caption {
   color: #003366;
 }
 @media (max-width: 600px) {
-  c-identity div.badge span.caption {
+  c-identity button.badge span.caption {
     display: none;
   }
 }
-c-identity div.badge span.icon.angle-down {
+c-identity button.badge span.icon.angle-down {
   position: relative;
   top: 2px;
   background-color: #999999;
 }
-c-identity.loggedIn div.badge span.icon.angle-down {
+c-identity.loggedIn button.badge span.icon.angle-down {
   background-color: #666666;
 }
-c-identity div.badge:hover span.icon.angle-down {
+c-identity button.badge:hover span.icon.angle-down {
   background-color: #6699cc;
 }
 
@@ -66,7 +71,7 @@ c-identity div.menu {
 }
 
 c-identity div.menu div.line {
-  padding: 16px 25px 14px 20px;
+  padding: 16px 15px 14px 15px;
   border-bottom: 1px solid #cccccc;
 }
 c-identity div.menu div.line:last-child {
@@ -76,6 +81,8 @@ c-identity div.menu div.line a {
   white-space: nowrap;
   display: block;
   border: 0;
+  outline-offset: 8px;
+  padding: 0px 5px;
 }
 
 c-identity div.menu div.line.headline {
@@ -85,9 +92,11 @@ c-identity div.menu div.line.headline {
 }
 c-identity div.menu div.line.headline div.displayName {
   font-weight: bold;
+  padding: 0px 5px;
 }
 c-identity div.menu div.line.headline div.email {
   display: none;
+  padding: 0px 5px;
 }
 @media (max-width: 600px) {
   c-identity div.menu div.line.headline div.email {

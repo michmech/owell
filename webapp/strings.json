@@ -199,10 +199,6 @@
     "en": "Unfinished, I will continue later",
     "gd": "Neo-chrìochnaichte, leanaidh mi orm a-rithist"
   },
-  "#savewillnotcontinue": {
-    "en": "Unfinished, let someone else continue",
-    "gd": "Neo-chrìochnaichte, leig le cuideigin eile a dhèanamh"
-  },
   "#savefinished": {
     "en": "Finished",
     "gd": "Crìochnaichte"
@@ -290,14 +286,6 @@
   "#nosuchtrack": {
     "en": "No such track exists in Tobar an Dualchais.",
     "gd": "Chan eil an clàr seo ann an Tobar an Dualchais"
-  },
-  "#delete": {
-    "en": "Delete",
-    "gd": "Sguab às"
-  },
-  "#abouttodeletetrack": {
-    "en": "This track is about to be deleted.",
-    "gd": "Tha an clàr seo gu sguabadh às."
   },
   "#signupblurb1": {
     "en": "By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.",
@@ -394,5 +382,25 @@
   "#difficultyhigh": {
     "en": "Very difficult",
     "gd": "Very difficult"
+  },
+  "#menu": {
+    "en": "Menu",
+    "gd": "Menu"
+  },
+  "#history": {
+    "en": "History",
+    "gd": "History"
+  },
+  "#giveup": {
+    "en": "Give up transcribing",
+    "gd": "Give up transcribing"
+  },
+  "#delete": {
+    "en": "Delete",
+    "gd": "Sguab às"
+  },
+  "#abouttodeletetrack": {
+    "en": "This track is about to be deleted.",
+    "gd": "Tha an clàr seo gu sguabadh às."
   }
 }

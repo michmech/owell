@@ -57,6 +57,12 @@ c-listing span.menuspot {
     margin-top: 15px;
   }
 }
+c-listing span.difficulty.grey * {
+  color: #999999 !important;
+}
+c-listing span.difficulty.grey span.icon {
+  background-color: #cccccc !important;
+}
 c-listing span.difficulty > span {
   display: none;
 }
