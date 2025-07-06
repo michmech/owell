@@ -1,6 +1,20 @@
 div.title {
-  margin: 5px 0px 0px 0px;
+  margin: 0px 0px -5px 0px;
   white-space: nowrap;
+}
+div.title * {
+  outline-offset: 1px;
+}
+div.title > div.pretitle {
+  font-size: 0.9em;
+  padding-top: 0px;
+  color: #666666;
+  overflow-x: auto;
+  padding-bottom: 0px;
+  margin-right: -10px;
+  padding-right: 10px;
+  margin-left: -10px;
+  padding-left: 10px;
 }
 div.title > h1 {
   font-size: inherit;
@@ -8,8 +22,8 @@ div.title > h1 {
   font-weight: normal;
   color: #000000;
   overflow-x: auto;
-  padding-top: 1px;
-  padding-bottom: 4px;
+  padding-top: 0px;
+  padding-bottom: 2px;
   font-size: 1.3em;
   line-height: 1.25em;
   margin-right: -10px;
@@ -33,7 +47,7 @@ div.title > h1 span.divider {
 }
 div.title > div.data {
   font-size: 0.9em;
-  padding-top: 0px;
+  padding-top: 2px;
   color: #666666;
   overflow-x: auto;
   padding-bottom: 10px;
@@ -45,26 +59,9 @@ div.title > div.data {
 div.title > div.data a {
   line-height: 1.25em;
 }
-div.title > div.data span.status {
-  display: inline-block;
-  background-color: #a5eaf5;
-  border-radius: 4px;
-  line-height: 1.25em;
-  padding: 7px 10px 5px 10px;
-  color: #245583;
-  margin-right: 8px;
-  font-size: 1em;
+div.title > div.data > a {
+  margin-left: 0.2em;
 }
-div.title > div.data span.status span.dots {
-  display: inline-block;
-  margin-right: 5px;
-  position: relative;
-  top: -1px;
-}
-div.title > div.data span.status span.dots span.blanks {
-  color: #ffffff;
-}
-
 div.title > div.data span.divider {
   margin: 0px 7px;
 }
@@ -78,7 +75,7 @@ c-audio {
 c-textarea {
   display: inline-block;
   width: calc(100% - 315px);
-  height: calc(100vh - 280px);
+  height: calc(100vh - 300px);
   margin-top: 15px;
   box-sizing: border-box;
   box-shadow: 0px 0px 5px #666666;
@@ -94,7 +91,7 @@ aside.toolbox {
   float: right;
   width: 285px;
   margin-top: 15px;
-  height: calc(100vh - 280px);
+  height: calc(100vh - 300px);
   padding-top: 10px;
   box-sizing: border-box;
   position: relative;
@@ -208,6 +205,16 @@ aside.toolbox div.submission button.save:active {
   }
 }
 
+div.givenup {
+  margin-top: 20px;
+  color: #666666;
+  text-wrap: balance;
+  font-size: 0.95em;
+}
+div.givenup div.line2 {
+  margin-top: 5px;
+}
+
 div.stage {
   text-align: center;
   margin-top: 15vh;
@@ -261,38 +268,9 @@ div.stage div.cta div.or {
   color: #666666;
 }
 
-div.data button.delete {
-  background: transparent;
-  border: 0px;
-  cursor: pointer;
-  margin-left: 0px;
-  margin-right: -2px;
-  padding: 0px;
-  font: inherit;
-  font-size: 1em;
-  color: #aaaaaa;
-  line-height: 1em;
+div.title > div.data span.parts {
+  margin-right: -10px;
 }
-div.data button.delete span.icon {
-  background-color: #cccccc;
-  font-size: 1.25em;
-  position: relative;
-  top: -2px;
-  margin-right: 2px;
-}
-div.data button.delete:hover {
-  color: #666666;
-} 
-div.data button.delete:hover span.icon {
-  background-color: #999999;
-} 
-div.data button.delete:active {
-  position: relative;
-  top: 1px;
-  left: 1px;
-} 
-
-div.title > div.data span.parts {}
 div.title > div.data span.parts *.part {
   border-bottom: 0px;
   color: #778899;
@@ -310,3 +288,64 @@ div.title > div.data span.parts span.part.current {
   font-weight: bold;
   border-bottom: 4px solid #778899;
 }
+
+div.title > div.pretitle span.status {
+  display: inline-block;
+  background-color: #a5eaf5;
+  border-radius: 4px;
+  line-height: 1.25em;
+  padding: 7px 10px 5px 10px;
+  color: #245583;
+  margin-right: 8px;
+  font-size: 1em;
+}
+div.title > div.pretitle span.status span.dots {
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+div.title > div.pretitle span.status span.dots span.blanks {
+  color: #ffffff;
+}
+
+div.title > div.pretitle span.menuspot {
+  display: inline-block;
+  line-height: 1.25em;
+  color: #666666;
+  margin-bottom: 10px;
+  font-size: 1em;
+  margin-left: 5px;
+}
+div.title > div.pretitle span.difficulty > span {
+  display: none;
+}
+div.title > div.pretitle span.difficulty > span span.icon {
+  margin-right: 3px;
+  position: relative;
+  top: -1px;
+}
+div.title > div.pretitle span.difficulty.low > span.low {
+  display: inline;
+  color: #30a582;
+}
+div.title > div.pretitle span.difficulty.low > span.low span.icon {
+  background-color: #30a582;
+}
+div.title > div.pretitle span.difficulty.medium > span.medium {
+  display: inline;
+  color: #3c45c4;
+}
+div.title > div.pretitle span.difficulty.medium > span.medium span.icon {
+  background-color: #3c45c4;
+}
+div.title > div.pretitle span.difficulty.high > span.high {
+  display: inline;
+  color: #3a0101;
+}
+div.title > div.pretitle span.difficulty.high > span.high span.icon {
+  background-color: #3a0101;
+}
+
+
+

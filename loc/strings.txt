@@ -277,6 +277,14 @@ When an audio track is available for transcription (message shown to logged-in u
 Start transcribing
 Tòisich air tar-sgrìobhadh
 
+#givenup1
+This track has already been partially transcribed by someone else.
+This track has already been partially transcribed by someone else.
+
+#givenup2
+You can continue where they left off, or delete and start from scratch.
+You can continue where they left off, or delete and start from scratch.
+
 
 When an audio track is available for transcription (message shown to not-logged-in users):
 ------------------------------------------------------------------------------------------
@@ -437,3 +445,18 @@ Dearbhaich
 You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.
 Fhuair thu am post-dealain seo on a chlàraich thu mar tar-sgrìobhadair saor-thoileach air ar làraich-linn. Mura tusa a rinn sin, faodaidh tu cur às dhen phost-dealain seo gu sàbhailte. 
 
+
+Difficulty levels:
+------------------
+
+##difficultylow
+Easy
+Easy
+
+##difficultymedium
+Somewhat difficult
+Somewhat difficult
+
+##difficultyhigh
+Very difficult
+Very difficult

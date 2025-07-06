@@ -110,5 +110,17 @@ const STRINGS = {
   "#abouttodeletetrack": {
     "en": "This track is about to be deleted.",
     "gd": "Tha an clàr seo gu sguabadh às."
+  },
+  "#difficultylow": {
+    "en": "Easy",
+    "gd": "Easy"
+  },
+  "#difficultymedium": {
+    "en": "Somewhat difficult",
+    "gd": "Somewhat difficult"
+  },
+  "#difficultyhigh": {
+    "en": "Very difficult",
+    "gd": "Very difficult"
   }
 };

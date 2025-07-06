@@ -1,0 +1,22 @@
+c-spotmenu button.opener {
+  background: transparent;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 3px 5px;
+  cursor: pointer;
+  margin-left: 8px;
+  font: inherit;
+  font-size: 1em;
+  line-height: 1em;
+  position: relative;
+  top: -1px;
+  outline-offset: 0px;
+}
+c-spotmenu button.opener span.icon {
+  background-color: #667788;
+  font-size: 1.25em;
+}
+c-spotmenu button.opener:hover span.icon {
+  background-color: #6699cc;
+} 

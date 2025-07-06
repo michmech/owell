@@ -233,7 +233,7 @@ div.tabs button.current {
 div.tabs button span.dots {
   display: inline-block;
   color: #999999;
-  background-color: #dddddd;
+  background-color: #cccccc;
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 0.8em;
@@ -249,7 +249,7 @@ div.tabs button span.dots {
 }
 div.tabs button:hover span.dots {
   color: #888888;
-  background-color: #d9d9d9;
+  background-color: #c9c9c9;
 }
 div.tabs button.current span.dots {
   color: #245583;
@@ -279,7 +279,7 @@ div.tabs button.current span.icon {
 div.tabs button span.legend {
   margin-top: 8px;
   display: block;
-  color: #666666;
+  color: #333333;
   font-size: 0.95em;
 }
 @media (max-width: 800px) {
@@ -295,7 +295,7 @@ div.tabs button.current span.legend {
 }
 div.tabs button span.number {
   display: block;
-  color: #666666;
+  color: #333333;
   font-size: 0.95em;
 }
 div.tabs button:hover span.number {
@@ -306,7 +306,7 @@ div.tabs button.current span.number {
 }
 
 div.nojoy {
-  color: #999999;
+  color: #666666;
   text-align: center;
   margin-top: 100px;
   margin-bottom: -100px;

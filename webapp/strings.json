@@ -239,6 +239,14 @@
     "en": "Start transcribing",
     "gd": "Tòisich air tar-sgrìobhadh"
   },
+  "#givenup1": {
+    "en": "This track has already been partially transcribed by someone else.",
+    "gd": "This track has already been partially transcribed by someone else."
+  },
+  "#givenup2": {
+    "en": "You can continue where they left off, or delete and start from scratch.",
+    "gd": "You can continue where they left off, or delete and start from scratch."
+  },
   "#trackwaiting": {
     "en": "This track is waiting for someone to volunteer to transcribe it.",
     "gd": "Tha an clàr seo ri a thar-sgrìobhadh fhathast."
@@ -374,5 +382,17 @@
   "#emailwelcomeexplanation": {
     "en": "You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.",
     "gd": "Fhuair thu am post-dealain seo on a chlàraich thu mar tar-sgrìobhadair saor-thoileach air ar làraich-linn. Mura tusa a rinn sin, faodaidh tu cur às dhen phost-dealain seo gu sàbhailte."
+  },
+  "#difficultylow": {
+    "en": "Easy",
+    "gd": "Easy"
+  },
+  "#difficultymedium": {
+    "en": "Somewhat difficult",
+    "gd": "Somewhat difficult"
+  },
+  "#difficultyhigh": {
+    "en": "Very difficult",
+    "gd": "Very difficult"
   }
 }

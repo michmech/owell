@@ -31,7 +31,7 @@ function clickTab(button){
           // listing.setAttribute("class", "fade-in");
           listing.classList.add("fade-in");
           if(sound.prominent) listing.classList.add("prominent");
-          listing.setAttribute("data-admin", resizeTo.isAdmin ? "1" : "0");
+          listing.setAttribute("data-admin", resp.isAdmin ? "1" : "0");
           listing.setAttribute("data-id", sound.id);
           listing.setAttribute("data", JSON.stringify(sound));
           document.querySelector("div.sounds").appendChild(listing);

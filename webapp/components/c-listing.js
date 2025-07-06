@@ -7,7 +7,7 @@ export class CListing extends HTMLElement {
   connectedCallback(){
     const uilang = document.querySelector("html").getAttribute("lang");
     const id=this.getAttribute("data-id");
-    const isAdmin=!!this.getAttribute("data-admin");
+    const isAdmin=(this.getAttribute("data-admin")=="1");
     const isProminent=this.classList.contains("prominent");
     const sound=JSON.parse(this.getAttribute("data"));
 
@@ -26,7 +26,16 @@ export class CListing extends HTMLElement {
       if(sound.status=="approved") html+=`${LOC("#approved", 0)}<a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName}</a>${LOC("#approved", 1)}`;
     html+=`</span>`;
 
-    if(isAdmin) html+=`<button class="delete"><span class="icon trash-can"></span><span class="label"> ${LOC("#delete")}</span></button>`;
+    html+=`<span class="menuspot">`;
+      html+=`<span class="difficulty ${sound.difficulty}">`;
+        html+=`<span class="low"><span class="icon circle"></span> ${LOC("#difficultylow")}</span>`;
+        html+=`<span class="medium"><span class="icon square"></span> ${LOC("#difficultymedium")}</span>`;
+        html+=`<span class="high"><span class="icon diamond"></span> ${LOC("#difficultyhigh")}</span>`;
+      html+=`</span>`;
+      if(isAdmin){
+        html+=` <c-spotmenu></c-spotmenu>`;
+      }
+    html+=`</span>`;
 
     html+=`<div class="title">`;
       html+=`<a href="/${uilang}/${sound.id}">`;
@@ -82,28 +91,6 @@ export class CListing extends HTMLElement {
     html+=`</a>`;
 
     this.innerHTML=html;
-
-    if(isAdmin){
-      this.querySelector("button.delete").addEventListener("click", (ev)=>{ this.#delete() });
-    }
-  }
-
-  #delete(){
-    if(confirm(LOC("#abouttodeletetrack"))){
-      const id=this.getAttribute("data-id");
-      fetch("/delete?id="+id).then(resp => {
-        if(resp.ok){
-          resp.json().then(result => {
-            if(result){
-              this.classList.add("fade-out");
-              window.setTimeout(()=>{
-                this.parentNode.removeChild(this);
-              }, 1000);
-            }
-          });
-        }
-      });
-    }
   }
 }
 customElements.define("c-listing", CListing);

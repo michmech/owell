@@ -3,6 +3,9 @@
   <head>
     <%-include("../../includes/headContent/view.ejs", this)%>
     
+    <link rel="stylesheet" href="/c-spotmenu.css"/>
+    <script type="module" src="/c-spotmenu.js"></script>
+
     <link rel="stylesheet" href="/c-audio.css"/>
     <script type="module" src="/c-audio.js"></script>
 
@@ -20,6 +23,31 @@
     <main>
       
         <div class="title">
+          <div class="pretitle">
+            <span class="status">
+              <span class="dots">
+                <%if(status=="available"){%><span class="blanks">● ● ●</span><%}%>
+                <%if(status=="owned"){%>● <span class="blanks">● ●</span><%}%>
+                <%if(status=="finished"){%>● ● <span class="blanks">●</span><%}%>
+                <%if(status=="approved"){%>● ● ●<%}%>
+              </span>
+              <%if(status=="available"){%><%=L("#available")%><%}%>
+              <%if(status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%}%>
+              <%if(status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
+              <%if(status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
+            </span>
+            <span class="menuspot">
+              <span class="difficulty <%-difficulty%>">
+                <span class="low"><span class="icon circle"></span> <%=L("#difficultylow")%></span>
+                <span class="medium"><span class="icon square"></span> <%=L("#difficultymedium")%></span>
+                <span class="high"><span class="icon diamond"></span> <%=L("#difficultyhigh")%></span>
+              </span>
+              <%if(loggedIn && isAdmin){%>
+                <c-spotmenu></c-spotmenu>
+                <!-- <button class="delete"><span class="icon trash-can"></span> <%=L("#delete")%></button> -->
+              <%}%>
+            </span>
+          </div>
           <h1>
             “<%=soundTitle%>”
             <%if(year){%><span class="year">(<%=L("#year").toUpperCase()%> <%=year%>)</span><%}%>
@@ -39,22 +67,9 @@
                   <%}%>
                 <%}%>
               </span>
-            <%}%>
-            <span class="status">
-              <span class="dots">
-                <%if(status=="available"){%><span class="blanks">● ● ●</span><%}%>
-                <%if(status=="owned"){%>● <span class="blanks">● ●</span><%}%>
-                <%if(status=="finished"){%>● ● <span class="blanks">●</span><%}%>
-                <%if(status=="approved"){%>● ● ●<%}%>
-              </span>
-              <%if(status=="available"){%><%=L("#available")%><%}%>
-              <%if(status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%}%>
-              <%if(status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
-              <%if(status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
-            </span>
-            <%if(loggedIn && isAdmin){%>
-              <!-- <button class="delete"><span class="icon trash-can"></span> <%=L("#delete")%></button>
-              <span class="divider">&middot;</span> -->
+              <%if(speakers.length>0 || fieldworkers.length>0){%>
+                <span class="divider">&middot;</span>
+              <%}%>
             <%}%>
             <%if(speakers.length>0){%>
               <%=L("#speaking")%>:
@@ -163,6 +178,12 @@
                   <input type="hidden" name="status" value="owned"/>
                   <button type="submit"><%=L("#starttranscribing")%></button>
                 </form>
+                <%if(transcript.trim()!=""){%>
+                  <div class="givenup">
+                    <div class="line1"><%=L("#givenup1")%></div>
+                    <div class="line2"><%=L("#givenup2")%></div>
+                  </div>
+                <%}%>
               <%} else {%>
                 <div class="message">
                   <%=L("#trackwaiting")%>

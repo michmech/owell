@@ -26,10 +26,11 @@ export default function(app, L, do404, rootdir){
       if(loggedIn) { //update the sound as required:
         if(transcript){
           const wordcount =  wordcounter.countWords(transcript);
-          const sql=`update sounds set transcript=$transcript, wordcount=$wordcount, duration=$duration, status=$status where id=$soundID`;
+          const sql=`update sounds set transcript=$transcript, wordcount=$wordcount, duration=$duration where id=$soundID`;
           const stmt=db.prepare(sql);
-          stmt.run({soundID, transcript, wordcount, duration, status});
-        } else if(status=="available") {
+          stmt.run({soundID, transcript, wordcount, duration});
+        }
+        if(status=="available") {
           const sql=`update sounds set status=$status, owner=NULL where id=$soundID`;
           const stmt=db.prepare(sql);
           stmt.run({soundID, status});
@@ -80,6 +81,7 @@ export default function(app, L, do404, rootdir){
     const speakers=[];
     const fieldworkers=[];
     let duration=0;
+    let difficulty="";
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -91,7 +93,7 @@ export default function(app, L, do404, rootdir){
       }
       { //get the sound:
         const sql=`
-          select s.duration, s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
+          select s.difficulty, s.duration, s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
           from sounds as s
           left outer join users as u on u.email=s.owner
           where id=$soundID`;
@@ -109,6 +111,7 @@ export default function(app, L, do404, rootdir){
           ownerROWID=row["ownerROWID"] || 0;
           ownerDisplayName=row["ownerDisplayName"] || "";
           duration=row["duration"];
+          difficulty=row["difficulty"];
         });
       }
       if(partNumber>0) { //get the other parts, if any:
@@ -177,6 +180,7 @@ export default function(app, L, do404, rootdir){
       speakers,
       fieldworkers,
       duration,
+      difficulty,
     });
   });
   
