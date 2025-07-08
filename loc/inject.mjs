@@ -6,6 +6,7 @@ const clientsidejson={};
 let buffer=[];
 (await fs.readFile("./strings.txt", "utf8")).split("\n").forEach(line => {
   line=line.trim();
+  line=line.replace(/-/g, "‑"); //non-breaking hyphen
   if(line==""){
     processBuffer(buffer);
     buffer=[];

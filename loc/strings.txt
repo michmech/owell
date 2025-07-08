@@ -346,7 +346,7 @@ Users signing up for accounts:
 
 #signupblurb1
 By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.
-Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic dhuinn le bhith a' togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h-Alba  .
+Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic dhuinn le bhith a' togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h-Alba.
 
 #signupblurb2
 You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?

@@ -1,11 +1,11 @@
 const STRINGS = {
   "#login": {
     "en": "Log in",
-    "gd": "Log a-steach"
+    "gd": "Log a‑steach"
   },
   "#logout": {
     "en": "Log out",
-    "gd": "Log a-mach"
+    "gd": "Log a‑mach"
   },
   "#yourprofile": {
     "en": "Your profile",
@@ -13,27 +13,27 @@ const STRINGS = {
   },
   "#changepassword": {
     "en": "Change your password",
-    "gd": "Atharraich t’ fhacal-faire"
+    "gd": "Atharraich t’ fhacal‑faire"
   },
   "#comejoinus": {
     "en": "Become a volunteer transcriber",
-    "gd": "Gabh nar cuideachd mar tar-sgrìobhadair"
+    "gd": "Gabh nar cuideachd mar tar‑sgrìobhadair"
   },
   "#available": {
     "en": "Available for transcription",
-    "gd": "Deiseil airson a thar-sgrìobhadh"
+    "gd": "Deiseil airson a thar‑sgrìobhadh"
   },
   "#owned": {
     "en": "Being transcribed by",
-    "gd": "Ga thar-sgrìobhadh aig"
+    "gd": "Ga thar‑sgrìobhadh aig"
   },
   "#finished": {
     "en": "Transcribed by $, awaiting approval",
-    "gd": "Tar-sgrìobhte aig $, a’ feitheamh ri ceadachadh"
+    "gd": "Tar‑sgrìobhte aig $, a’ feitheamh ri ceadachadh"
   },
   "#approved": {
     "en": "Transcribed by $ and approved",
-    "gd": "Tar-sgrìobhte aig $ agus ceadaichte"
+    "gd": "Tar‑sgrìobhte aig $ agus ceadaichte"
   },
   "#year": {
     "en": "Year",
@@ -53,15 +53,15 @@ const STRINGS = {
   },
   "#fieldworker": {
     "en": "Fieldworker",
-    "gd": "Obraiche-raoin"
+    "gd": "Obraiche‑raoin"
   },
   "#fieldworkers": {
     "en": "Fieldworkers",
-    "gd": "Obraichean-raoin"
+    "gd": "Obraichean‑raoin"
   },
   "#continuetranscribing": {
     "en": "Continue transcribing",
-    "gd": "Lean ort le tar-sgrìobhadh"
+    "gd": "Lean ort le tar‑sgrìobhadh"
   },
   "#review": {
     "en": "Review",
@@ -117,7 +117,7 @@ const STRINGS = {
   },
   "#menu": {
     "en": "Menu",
-    "gd": "Clàr-taice"
+    "gd": "Clàr‑taice"
   },
   "#history": {
     "en": "History",
@@ -125,7 +125,7 @@ const STRINGS = {
   },
   "#giveup": {
     "en": "Give up transcribing",
-    "gd": "Leig romhad an tàr-sgrìobhadh"
+    "gd": "Leig romhad an tàr‑sgrìobhadh"
   },
   "#delete": {
     "en": "Delete",
