@@ -140,6 +140,7 @@ c-listing a.button {
   position: absolute;
   right: 40px;
   top: calc(50% - 1.25em);
+  outline-offset: 2px;
 }
 @media(max-width: 700px){
   c-listing a.button {

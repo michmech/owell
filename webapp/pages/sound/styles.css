@@ -237,6 +237,7 @@ div.stage button {
   cursor: pointer;
   background-color: #ffffff;
   position: relative;
+  outline-offset: 2px;
 }
 div.stage button.smaller {
   height: 50px;
@@ -255,6 +256,7 @@ div.stage div.cta a.button {
   position: relative;
   font-weight: bold;
   font-size: 1.1em;
+  outline-offset: 2px;
 }
 div.stage div.cta a.button span.icon {
   position: absolute;

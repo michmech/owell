@@ -23,6 +23,7 @@ c-audio button.the {
   border-radius: 2px;
   background: transparent;
   cursor: pointer;
+  outline-offset: 5px;
 }
 c-audio button.the span.icon {
   display: none;
