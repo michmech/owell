@@ -17,7 +17,7 @@ const STRINGS = {
   },
   "#comejoinus": {
     "en": "Become a volunteer transcriber",
-    "gd": "Thig gar cuideachadh"
+    "gd": "Gabh nar cuideachd mar tar-sgrìobhadair"
   },
   "#available": {
     "en": "Available for transcription",
@@ -105,27 +105,27 @@ const STRINGS = {
   },
   "#difficultylow": {
     "en": "Easy",
-    "gd": "Easy"
+    "gd": "Soirbh"
   },
   "#difficultymedium": {
-    "en": "Somewhat difficult",
-    "gd": "Somewhat difficult"
+    "en": "Intermediate",
+    "gd": "Meadhanach"
   },
   "#difficultyhigh": {
-    "en": "Very difficult",
-    "gd": "Very difficult"
+    "en": "Expert",
+    "gd": "Riaslach"
   },
   "#menu": {
     "en": "Menu",
-    "gd": "Menu"
+    "gd": "Clàr-taice"
   },
   "#history": {
     "en": "History",
-    "gd": "History"
+    "gd": "Eachdraidh"
   },
   "#giveup": {
     "en": "Give up transcribing",
-    "gd": "Give up transcribing"
+    "gd": "Leig romhad an tàr-sgrìobhadh"
   },
   "#delete": {
     "en": "Delete",

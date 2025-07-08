@@ -89,6 +89,7 @@ app.all("/*/view.ejs", do404);
 app.all("/tadget/getter.js", do404);
 
 //Our static files and 404 page:
+app.use("/", express.static(path.join(__dirname, "id")));
 app.use("/", express.static(path.join(__dirname, "pages")));
 app.use("/", express.static(path.join(__dirname, "includes")));
 app.use("/", express.static(path.join(__dirname, "icons")));

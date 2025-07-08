@@ -45,11 +45,11 @@
   },
   "#comejoinus": {
     "en": "Become a volunteer transcriber",
-    "gd": "Thig gar cuideachadh"
+    "gd": "Gabh nar cuideachd mar tar-sgrìobhadair"
   },
   "#alreadyin": {
     "en": "With us already?",
-    "gd": "Cuide rinn mar thà?"
+    "gd": "Còmhla rinn mar thà?"
   },
   "#homepageblurb": {
     "en": "<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.",
@@ -61,15 +61,15 @@
   },
   "#hourminustessofar": {
     "en": "Hours and minutes of speech transcribed so far",
-    "gd": "Hours and minutes of speech transcribed so far"
+    "gd": "Uairean agus mionaidean de labhairt tar-sgrìobhte cheana"
   },
   "#wordssofar": {
     "en": "Words transcribed so far",
-    "gd": "Words transcribed so far"
+    "gd": "Faclan tar-sgrìobhte cheana"
   },
   "#numberofvolunteertranscribers": {
     "en": "Volunteer transcribers",
-    "gd": "Volunteer transcribers"
+    "gd": "Tar-sgrìobhadairean saor-thoileach"
   },
   "#meetthem": {
     "en": "Meet them",
@@ -77,11 +77,11 @@
   },
   "#yourcontributions": {
     "en": "Your contributions",
-    "gd": "Your contributions"
+    "gd": "Ur tabhartasan"
   },
   "#notrackstoshow": {
     "en": "None at the moment.",
-    "gd": "None at the moment."
+    "gd": "Chan eil gin an-dràsta."
   },
   "#sitedescription": {
     "en": "Gaelic community transcription project",
@@ -221,7 +221,7 @@
   },
   "#decidelater": {
     "en": "I will decide later",
-    "gd": "Nì mi a-rithist e"
+    "gd": "Nì mi co-dhùnadh aig àm eile"
   },
   "#keepapproved": {
     "en": "Keep approved",
@@ -237,11 +237,11 @@
   },
   "#givenup1": {
     "en": "This track has already been partially transcribed by someone else.",
-    "gd": "This track has already been partially transcribed by someone else."
+    "gd": "Chaidh pàirt dhen clàr seo a thar-sgrìobhadh aig cuideigin eile cheana."
   },
   "#givenup2": {
     "en": "You can continue where they left off, or delete and start from scratch.",
-    "gd": "You can continue where they left off, or delete and start from scratch."
+    "gd": "Faodaidh tu tòiseachadh far an do stad iad, no cur às dha agus tòiseachadh a-rithist."
   },
   "#trackwaiting": {
     "en": "This track is waiting for someone to volunteer to transcribe it.",
@@ -373,27 +373,27 @@
   },
   "#difficultylow": {
     "en": "Easy",
-    "gd": "Easy"
+    "gd": "Soirbh"
   },
   "#difficultymedium": {
-    "en": "Somewhat difficult",
-    "gd": "Somewhat difficult"
+    "en": "Intermediate",
+    "gd": "Meadhanach"
   },
   "#difficultyhigh": {
-    "en": "Very difficult",
-    "gd": "Very difficult"
+    "en": "Expert",
+    "gd": "Riaslach"
   },
   "#menu": {
     "en": "Menu",
-    "gd": "Menu"
+    "gd": "Clàr-taice"
   },
   "#history": {
     "en": "History",
-    "gd": "History"
+    "gd": "Eachdraidh"
   },
   "#giveup": {
     "en": "Give up transcribing",
-    "gd": "Give up transcribing"
+    "gd": "Leig romhad an tàr-sgrìobhadh"
   },
   "#delete": {
     "en": "Delete",

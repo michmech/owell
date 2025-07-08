@@ -166,7 +166,7 @@ function sendmail(to, path, L, uilang){
     path: '/usr/sbin/sendmail'
   });
   transporter.sendMail({
-    from: `"${L("#sitetitle")}" <info@openingthewell.cahss.ed.ac.uk>`,
+    from: `"${L("#sitetitle")}" <process.env.SENDEREMAIL>`,
     to: to,
     subject: L("Welcome to Opening the Well"),
     html: html,

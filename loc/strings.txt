@@ -51,11 +51,11 @@ Tha sinn a’ tar-sgrìobhadh beul-aithris na h-Alba
 
 ##comejoinus
 Become a volunteer transcriber
-Thig gar cuideachadh
+Gabh nar cuideachd mar tar-sgrìobhadair
 
 #alreadyin
 With us already?
-Cuide rinn mar thà?
+Còmhla rinn mar thà?
 
 #homepageblurb
 <strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.
@@ -67,15 +67,15 @@ Tuilleadh fiosrachaidh
 
 #hourminustessofar
 Hours and minutes of speech transcribed so far
-Hours and minutes of speech transcribed so far
+Uairean agus mionaidean de labhairt tar-sgrìobhte cheana
 
 #wordssofar
 Words transcribed so far
-Words transcribed so far
+Faclan tar-sgrìobhte cheana
 
 #numberofvolunteertranscribers
 Volunteer transcribers
-Volunteer transcribers
+Tar-sgrìobhadairean saor-thoileach
 
 #meetthem
 Meet them
@@ -83,11 +83,11 @@ Cuir aithne orra
 
 #yourcontributions
 Your contributions
-Your contributions
+Ur tabhartasan
 
 #notrackstoshow
 None at the moment.
-None at the moment.
+Chan eil gin an-dràsta.
 
 #sitedescription
 Gaelic community transcription project
@@ -251,7 +251,7 @@ Diùlt, leig le cuideigin tòiseachadh a-rithist
 
 #decidelater
 I will decide later
-Nì mi a-rithist e
+Nì mi co-dhùnadh aig àm eile
 
 
 An administrator saving an already-approved transcription:
@@ -275,11 +275,11 @@ Tòisich air tar-sgrìobhadh
 
 #givenup1
 This track has already been partially transcribed by someone else.
-This track has already been partially transcribed by someone else.
+Chaidh pàirt dhen clàr seo a thar-sgrìobhadh aig cuideigin eile cheana.
 
 #givenup2
 You can continue where they left off, or delete and start from scratch.
-You can continue where they left off, or delete and start from scratch.
+Faodaidh tu tòiseachadh far an do stad iad, no cur às dha agus tòiseachadh a-rithist.
 
 
 When an audio track is available for transcription (message shown to not-logged-in users):
@@ -438,15 +438,15 @@ Difficulty levels:
 
 ##difficultylow
 Easy
-Easy
+Soirbh
 
 ##difficultymedium
-Somewhat difficult
-Somewhat difficult
+Intermediate
+Meadhanach
 
 ##difficultyhigh
-Very difficult
-Very difficult
+Expert
+Riaslach
 
 
 Drop-down menu next to a track:
@@ -454,15 +454,15 @@ Drop-down menu next to a track:
 
 ##menu
 Menu
-Menu
+Clàr-taice
 
 ##history
 History
-History
+Eachdraidh
 
 ##giveup
 Give up transcribing
-Give up transcribing
+Leig romhad an tàr-sgrìobhadh
 
 ##delete
 Delete
@@ -471,5 +471,4 @@ Sguab às
 ##abouttodeletetrack
 This track is about to be deleted.
 Tha an clàr seo gu sguabadh às.
-
 

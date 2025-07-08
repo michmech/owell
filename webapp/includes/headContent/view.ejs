@@ -1,10 +1,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="icon" type="image/png" href="/android-chrome-512x512.png"/>
-<link rel="manifest" href="/site.webmanifest"/>
-<meta property="og:image" content="https://www.canuint.ie/shareable.jpg" />
-<meta name="twitter:image" content="https://www.canuint.ie/shareable.jpg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:image" content="<%-process.env.URLSTART%>/shareable.jpg" />
+<meta name="twitter:image" content="<%-process.env.URLSTART%>/shareable.jpg" />
 
 <!--metadata-->
 <meta property="og:site_name" content="<%=L("#sitetitle")%>" />
@@ -16,8 +18,8 @@
 <meta name="description" content="<%=pageDescription%>" />
 <meta property="og:description" content="<%=pageDescription%>" />
 <meta name="twitter:description" content="<%=pageDescription%>" />
-<meta property="og:url" content="https://www.canuint.ie<%=pageUrls[uilang]%>" />
-<meta name="twitter:url" content="https://www.canuint.ie<%=pageUrls[uilang]%>" />
+<meta property="og:url" content="<%-process.env.URLSTART%><%=pageUrls[uilang]%>" />
+<meta name="twitter:url" content="<%-process.env.URLSTART%><%=pageUrls[uilang]%>" />
 
 <!--scripts etc.-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
