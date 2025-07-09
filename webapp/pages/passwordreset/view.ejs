@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/passwordreset/styles.css"/>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <%if(!resetAttempted) {%>
+        <div class="container">
+          <form method="post" action="">
+            <div class="line">
+              <label>
+                <span class="label"><%=L("#emailaddress")%></span>
+                <input name="email" value="<%=email%>"/>
+              </label>
+            </div>
+            <div class="line doubleSpaceBefore">
+              <button type="submit"><%=L("#changepassword")%></button>
+            </div>
+            <div class="line legend">
+              <%=L("#afterreset")%>
+            </div>
+        </form>
+        </div>
+      <%} else {%>
+        <div class="container">
+          <div class="ok">
+            <span class="icon circle-check"></span>
+            <div class="message">
+              <%=L("#resetaccepted")%>
+            </div>
+            <div class="submessage">
+              <%=L("#emailshouldarrive")%>
+            </div>
+          </div>
+        </div>
+      <%}%>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

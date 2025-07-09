@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/passwordchange/styles.css"/>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <%if(!formSubmitted || changeFailed) {%>
+        <div class="container">
+          <%if(changeFailed){%>
+            <div class="failed">
+              <%=L(changeFailed)%>
+            </div>  
+          <%}%>
+          <form method="post" action="">
+            <div class="line">
+              <label>
+                <span class="label"><%=L("#emailaddress")%></span>
+                <input name="email" value="<%=email%>" disabled/>
+              </label>
+            </div>
+            <div class="line">
+              <label>
+                <span class="label"><%=L("#newpassword")%></span>
+                <input name="password" type="password" value="<%=password%>" autocomplete="new-password"/>
+              </label>
+            </div>
+            <div class="line doubleSpaceBefore">
+              <button type="submit"><%=L("#changepassword")%></button>
+            </div>
+          </form>
+        </div>
+      <%} else {%>
+        <div class="container">
+          <div class="ok">
+            <span class="icon circle-check"></span>
+            <div class="message">
+              <%=L("#passwordchanged")%>
+            </div>
+            <div class="submessage">
+              <%=L("#usenewpasswordnexttime")%>
+            </div>
+          </div>
+        </div>
+      <%}%>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

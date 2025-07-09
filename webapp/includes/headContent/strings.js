@@ -9,11 +9,7 @@ const STRINGS = {
   },
   "#yourprofile": {
     "en": "Your profile",
-    "gd": "A' phròifil agad"
-  },
-  "#changepassword": {
-    "en": "Change your password",
-    "gd": "Atharraich t’ fhacal‑faire"
+    "gd": "A’ phròifil agad"
   },
   "#comejoinus": {
     "en": "Become a volunteer transcriber",
@@ -97,7 +93,7 @@ const STRINGS = {
   },
   "#errortalkingtotadapi": {
     "en": "An error has occurred while getting data from Tobar an Dualchais.",
-    "gd": "Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchais."
+    "gd": "Thachair mearachd is sinn a’ feuchainn ri dàta fhaighinn bho Thobar an Dualchais."
   },
   "#nosuchtrack": {
     "en": "No such track exists in Tobar an Dualchais.",
@@ -134,5 +130,9 @@ const STRINGS = {
   "#abouttodeletetrack": {
     "en": "This track is about to be deleted.",
     "gd": "Tha an clàr seo gu sguabadh às."
+  },
+  "#changepassword": {
+    "en": "Change your password",
+    "gd": "Atharraich t’ fhacal‑faire"
   }
 };

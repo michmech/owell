@@ -82,6 +82,12 @@ import page_register from "./pages/register/server.js";
   page_register(app, L, do404, __dirname);
 import page_register2 from "./pages/register2/server.js";
   page_register2(app, L, do404, __dirname);
+import page_passwordchange from "./pages/passwordchange/server.js";
+  page_passwordchange(app, L, do404, __dirname);
+import page_passwordreset from "./pages/passwordreset/server.js";
+  page_passwordreset(app, L, do404, __dirname);
+import page_passwordreset2 from "./pages/passwordreset2/server.js";
+  page_passwordreset2(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);

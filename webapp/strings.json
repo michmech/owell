@@ -13,15 +13,7 @@
   },
   "#yourprofile": {
     "en": "Your profile",
-    "gd": "A' phròifil agad"
-  },
-  "#changepassword": {
-    "en": "Change your password",
-    "gd": "Atharraich t’ fhacal‑faire"
-  },
-  "#forgotpassword": {
-    "en": "Forgot password?",
-    "gd": "Facal‑faire air dìochuimhne?"
+    "gd": "A’ phròifil agad"
   },
   "#emailaddress": {
     "en": "E‑mail address",
@@ -53,7 +45,7 @@
   },
   "#homepageblurb": {
     "en": "<strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.",
-    "gd": "Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh‑obrachail anns a bheil saor‑thoilich a' tar‑sgrìobhadh chlàraidhean sa Ghàidhlig. Còmhla ri chèile, tha sinn a' togail corpas de chainnt tar‑sgrìobhte a chuireas gu mòr ri dùthchas na h‑Alba, rannsachadh air cànanachas agus faclaireachd agus adhartas ann an teicneòlas aithneachadh labhairt na Gàidhlig."
+    "gd": "Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh‑obrachail anns a bheil saor‑thoilich a’ tar‑sgrìobhadh chlàraidhean sa Ghàidhlig. Còmhla ri chèile, tha sinn a’ togail corpas de chainnt tar‑sgrìobhte a chuireas gu mòr ri dùthchas na h‑Alba, rannsachadh air cànanachas agus faclaireachd agus adhartas ann an teicneòlas aithneachadh labhairt na Gàidhlig."
   },
   "#moreinfo": {
     "en": "More information",
@@ -281,7 +273,7 @@
   },
   "#errortalkingtotadapi": {
     "en": "An error has occurred while getting data from Tobar an Dualchais.",
-    "gd": "Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchais."
+    "gd": "Thachair mearachd is sinn a’ feuchainn ri dàta fhaighinn bho Thobar an Dualchais."
   },
   "#nosuchtrack": {
     "en": "No such track exists in Tobar an Dualchais.",
@@ -289,11 +281,11 @@
   },
   "#signupblurb1": {
     "en": "By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.",
-    "gd": "Le bhith dol nar cuideachd mar tar‑sgrìobhadair saor‑thoileach, bheir thu taic dhuinn le bhith a' togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h‑Alba."
+    "gd": "Le bhith dol nar cuideachd mar tar‑sgrìobhadair saor‑thoileach, bheir thu taic dhuinn le bhith a’ togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h‑Alba."
   },
   "#signupblurb2": {
-    "en": "You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?",
-    "gd": "Bidh thu a' tar‑sgrìobhadh chlàraidhean de dhaoine a' bruidhinn na Gàidhlig. Cò ris a tha seo coltach?"
+    "en": "You will be transcribing recordings of people speaking Scottish Gaelic. What’s it like?",
+    "gd": "Bidh thu a’ tar‑sgrìobhadh chlàraidhean de dhaoine a’ bruidhinn na Gàidhlig. Cò ris a tha seo coltach?"
   },
   "#taketour": {
     "en": "Take the guided tour",
@@ -309,11 +301,11 @@
   },
   "#displaynamelegend": {
     "en": "Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.",
-    "gd": "Cuir a‑staidh t' ainm no t' fhar‑ainm. Cleachar seo mar ainm poblach na làraich seo. Faodaidh tu atharrachadh a‑rithist."
+    "gd": "Cuir a‑staidh t’ ainm no t’ fhar‑ainm. Cleachar seo mar ainm poblach na làraich seo. Faodaidh tu atharrachadh a‑rithist."
   },
   "#displaynamemustnotbeblank": {
     "en": "Your display name must not be empty.",
-    "gd": "Chan fhaod t' ainm‑taisbeanaidh a bhith bàn."
+    "gd": "Chan fhaod t’ ainm‑taisbeanaidh a bhith bàn."
   },
   "#emaillegend": {
     "en": "You will use this to log in. Your e‑mail address will never be shown publicly or shared with third parties.",
@@ -333,7 +325,7 @@
   },
   "#passwordmustnotbeblank": {
     "en": "Your password must not be empty.",
-    "gd": "Chan fhaod t' fhacal‑faire a bhith bàn."
+    "gd": "Chan fhaod t’ fhacal‑faire a bhith bàn."
   },
   "#register": {
     "en": "Register",
@@ -345,10 +337,10 @@
   },
   "#registrationaccepted": {
     "en": "Your registration has been accepted. We have sent you an e‑mail with a link to confirm your e‑mail address.",
-    "gd": "Ghabh sinn ris a' chlàradh agad. Chuir sinn p‑d thugad le ceangail gus an seòladh p‑d agad a dhearbhadh."
+    "gd": "Ghabh sinn ris a’ chlàradh agad. Chuir sinn p‑d thugad le ceangail gus an seòladh p‑d agad a dhearbhadh."
   },
   "#emailshouldarrive": {
-    "en": "The e‑mail should arrive immediately. If it doesn't, check your spam folder.",
+    "en": "The e‑mail should arrive immediately. If it doesn’t, check your spam folder.",
     "gd": "Bu chòir dhan phost‑dhealain ruighinn air ball. Mur an ruig e, coimhead sa phasgan‑spama agad."
   },
   "#emailconfirmed": {
@@ -361,14 +353,14 @@
   },
   "#emailwelcomeline1": {
     "en": "Please click the link below to confirm your e‑mail address and to complete your registration as a volunteer transcriber.",
-    "gd": "Gliog air a' cheangail shìos gus an seòladh p‑d agad a dhearbhachadh agus an clàradh agad a chrìochnachadh mar tar‑sgrìobhadair saor‑thoileach."
+    "gd": "Gliog air a’ cheangail shìos gus an seòladh p‑d agad a dhearbhachadh agus an clàradh agad a chrìochnachadh mar tar‑sgrìobhadair saor‑thoileach."
   },
   "#emailwelcomebutton": {
     "en": "Confirm",
     "gd": "Dearbhaich"
   },
   "#emailwelcomeexplanation": {
-    "en": "You are receiving this e‑mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e‑mail.",
+    "en": "You are receiving this e‑mail because you registered as a volunteer transcriber on our website. If that wasn’t you, you can safely ignore this e‑mail.",
     "gd": "Fhuair thu am post‑dealain seo on a chlàraich thu mar tar‑sgrìobhadair saor‑thoileach air ar làraich‑linn. Mura tusa a rinn sin, faodaidh tu cur às dhen phost‑dealain seo gu sàbhailte."
   },
   "#difficultylow": {
@@ -402,5 +394,41 @@
   "#abouttodeletetrack": {
     "en": "This track is about to be deleted.",
     "gd": "Tha an clàr seo gu sguabadh às."
+  },
+  "#changepassword": {
+    "en": "Change your password",
+    "gd": "Atharraich t’ fhacal‑faire"
+  },
+  "#newpassword": {
+    "en": "New password",
+    "gd": "Facal faire ùr"
+  },
+  "#forgotpassword": {
+    "en": "Forgot password?",
+    "gd": "Facal‑faire air dìochuimhne?"
+  },
+  "#afterreset": {
+    "en": "We will send you an e‑mail with a link to change your password.",
+    "gd": "We will send you an e‑mail with a link to change your password."
+  },
+  "#resetaccepted": {
+    "en": "If this e‑mail address is associated with a valid account, then we have sent you an e‑mail with a link to change your password.",
+    "gd": "If this e‑mail address is associated with a valid account, then we have sent you an e‑mail with a link to change your password."
+  },
+  "#emailresetline1": {
+    "en": "Please click the link below to set a new password for yourself.",
+    "gd": "Please click the link below to set a new password for yourself."
+  },
+  "#emailresetexplanation": {
+    "en": "You are receiving this e‑mail because you have told us that you have forgotten your password. If that wasn’t you, you can safely ignore this e‑mail, your existing password will still work.",
+    "gd": "You are receiving this e‑mail because you have told us that you have forgotten your password. If that wasn’t you, you can safely ignore this e‑mail, your existing password will still work."
+  },
+  "#passwordchanged": {
+    "en": "Your password has been changed.",
+    "gd": "Your password has been changed."
+  },
+  "#usenewpasswordnexttime": {
+    "en": "Don’t forget to use your new password the next time you‘re logging in.",
+    "gd": "Don’t forget to use your new password the next time you‘re logging in."
   }
 }

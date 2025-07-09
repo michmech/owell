@@ -15,15 +15,7 @@ Log a-mach
 
 ##yourprofile
 Your profile
-A' phròifil agad
-
-##changepassword
-Change your password
-Atharraich t’ fhacal-faire
-
-#forgotpassword
-Forgot password?
-Facal-faire air dìochuimhne?
+A’ phròifil agad
 
 #emailaddress
 E-mail address
@@ -59,7 +51,7 @@ Còmhla rinn mar thà?
 
 #homepageblurb
 <strong>Opening the Well</strong> is a crowdsourcing platform where volunteers are transcribing Gaelic language recordings. Together, we are building a corpus of transcribed speech which will enrich Scotland’s intangible cultural heritage, bolster Gaelic research and lexicography, and improve speech recognition technology in Gaelic.
-Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh-obrachail anns a bheil saor-thoilich a' tar-sgrìobhadh chlàraidhean sa Ghàidhlig. Còmhla ri chèile, tha sinn a' togail corpas de chainnt tar-sgrìobhte a chuireas gu mòr ri dùthchas na h-Alba, rannsachadh air cànanachas agus faclaireachd agus adhartas ann an teicneòlas aithneachadh labhairt na Gàidhlig.
+Tha <strong>Fosgladh an Tobair</strong> na làrach sluagh-obrachail anns a bheil saor-thoilich a’ tar-sgrìobhadh chlàraidhean sa Ghàidhlig. Còmhla ri chèile, tha sinn a’ togail corpas de chainnt tar-sgrìobhte a chuireas gu mòr ri dùthchas na h-Alba, rannsachadh air cànanachas agus faclaireachd agus adhartas ann an teicneòlas aithneachadh labhairt na Gàidhlig.
 
 #moreinfo
 More information
@@ -335,7 +327,7 @@ Thachair mearachd.
 
 ##errortalkingtotadapi
 An error has occurred while getting data from Tobar an Dualchais.
-Thachair mearachd is sinn a' feuchainn ri dàta fhaighinn bho Thobar an Dualchais. 
+Thachair mearachd is sinn a’ feuchainn ri dàta fhaighinn bho Thobar an Dualchais. 
 
 ##nosuchtrack
 No such track exists in Tobar an Dualchais.
@@ -346,11 +338,11 @@ Users signing up for accounts:
 
 #signupblurb1
 By joining as a volunteer transcriber, you will be helping us to build better <strong>speech recognition</strong> tools for Gaelic and you will be making Scotland’s oral heritage accessible to a <strong>wider audience</strong>.
-Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic dhuinn le bhith a' togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h-Alba.
+Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic dhuinn le bhith a’ togail uidheamachd <strong>aithneachadh labhairt</strong> airson na Gàidhlig agus nì thu cinnteach gum faigh <strong>barrachd dhaoine</strong> eòlas air dùthchas na h-Alba.
 
 #signupblurb2
-You will be transcribing recordings of people speaking Scottish Gaelic. What's it like?
-Bidh thu a' tar-sgrìobhadh chlàraidhean de dhaoine a' bruidhinn na Gàidhlig. Cò ris a tha seo coltach?
+You will be transcribing recordings of people speaking Scottish Gaelic. What’s it like?
+Bidh thu a’ tar-sgrìobhadh chlàraidhean de dhaoine a’ bruidhinn na Gàidhlig. Cò ris a tha seo coltach?
 
 #taketour
 Take the guided tour
@@ -366,11 +358,11 @@ Ainm-taisbeanaidh
 
 #displaynamelegend
 Enter your real name or a nickname. This will be used to publicly identify you on this website. You will be able to change this later.
-Cuir a-staidh t' ainm no t' fhar-ainm. Cleachar seo mar ainm poblach na làraich seo. Faodaidh tu atharrachadh a-rithist. 
+Cuir a-staidh t’ ainm no t’ fhar-ainm. Cleachar seo mar ainm poblach na làraich seo. Faodaidh tu atharrachadh a-rithist. 
 
 #displaynamemustnotbeblank
 Your display name must not be empty.
-Chan fhaod t' ainm-taisbeanaidh a bhith bàn. 
+Chan fhaod t’ ainm-taisbeanaidh a bhith bàn. 
 
 #emaillegend
 You will use this to log in. Your e-mail address will never be shown publicly or shared with third parties.
@@ -390,7 +382,7 @@ Tagh facal-faire dhut fhèin. Cleachdaidh tu sin airson logadh-staigh.
 
 #passwordmustnotbeblank
 Your password must not be empty.
-Chan fhaod t' fhacal-faire a bhith bàn. 
+Chan fhaod t’ fhacal-faire a bhith bàn. 
 
 #register
 Register
@@ -402,10 +394,10 @@ An dèidh dhut clàradh, cuiridh sinn p-d thugad le ceangail gus an seòladh p-d
 
 #registrationaccepted
 Your registration has been accepted. We have sent you an e-mail with a link to confirm your e-mail address.
-Ghabh sinn ris a' chlàradh agad. Chuir sinn p-d thugad le ceangail gus an seòladh p-d agad a dhearbhadh. 
+Ghabh sinn ris a’ chlàradh agad. Chuir sinn p-d thugad le ceangail gus an seòladh p-d agad a dhearbhadh. 
 
 #emailshouldarrive
-The e-mail should arrive immediately. If it doesn't, check your spam folder.
+The e-mail should arrive immediately. If it doesn’t, check your spam folder.
 Bu chòir dhan phost-dhealain ruighinn air ball. Mur an ruig e, coimhead sa phasgan-spama agad. 
 
 #emailconfirmed
@@ -422,14 +414,14 @@ Fàilte gu Fosgladh an Tobair
 
 #emailwelcomeline1
 Please click the link below to confirm your e-mail address and to complete your registration as a volunteer transcriber.
-Gliog air a' cheangail shìos gus an seòladh p-d agad a dhearbhachadh agus an clàradh agad a chrìochnachadh mar tar-sgrìobhadair saor-thoileach. 
+Gliog air a’ cheangail shìos gus an seòladh p-d agad a dhearbhachadh agus an clàradh agad a chrìochnachadh mar tar-sgrìobhadair saor-thoileach. 
 
 #emailwelcomebutton
 Confirm
 Dearbhaich
 
 #emailwelcomeexplanation
-You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn't you, you can safely ignore this e-mail.
+You are receiving this e-mail because you registered as a volunteer transcriber on our website. If that wasn’t you, you can safely ignore this e-mail.
 Fhuair thu am post-dealain seo on a chlàraich thu mar tar-sgrìobhadair saor-thoileach air ar làraich-linn. Mura tusa a rinn sin, faodaidh tu cur às dhen phost-dealain seo gu sàbhailte. 
 
 
@@ -471,4 +463,44 @@ Sguab às
 ##abouttodeletetrack
 This track is about to be deleted.
 Tha an clàr seo gu sguabadh às.
+
+
+Changing and resetting your password:
+-------------------------------------
+
+##changepassword
+Change your password
+Atharraich t’ fhacal-faire
+
+#newpassword
+New password
+Facal faire ùr
+
+#forgotpassword
+Forgot password?
+Facal-faire air dìochuimhne?
+
+#afterreset
+We will send you an e-mail with a link to change your password.
+We will send you an e-mail with a link to change your password.
+
+#resetaccepted
+If this e-mail address is associated with a valid account, then we have sent you an e-mail with a link to change your password.
+If this e-mail address is associated with a valid account, then we have sent you an e-mail with a link to change your password.
+
+#emailresetline1
+Please click the link below to set a new password for yourself.
+Please click the link below to set a new password for yourself.
+
+#emailresetexplanation
+You are receiving this e-mail because you have told us that you have forgotten your password. If that wasn’t you, you can safely ignore this e-mail, your existing password will still work.
+You are receiving this e-mail because you have told us that you have forgotten your password. If that wasn’t you, you can safely ignore this e-mail, your existing password will still work.
+
+#passwordchanged
+Your password has been changed.
+Your password has been changed.
+
+#usenewpasswordnexttime
+Don’t forget to use your new password the next time you‘re logging in. 
+Don’t forget to use your new password the next time you‘re logging in.
 

@@ -8,11 +8,9 @@ export default function(app, L, do404, rootdir){
     
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
-      { //check if the user is already logged in:
-        const sql=`update users set registrationCompleted=1 where email=$email and registrationKey=$key`;
-        const stmt=db.prepare(sql);
-        stmt.run({email, key});
-      }
+      const sql=`update users set registrationCompleted=1, registrationKey=NULL where email=$email and registrationKey=$key`;
+      const stmt=db.prepare(sql);
+      stmt.run({email, key});
     } catch(e){
       console.log(e);
     } finally {

@@ -1,0 +1,116 @@
+div.container {
+  max-width: 500px;
+  margin: 15vh auto 0px auto;
+}
+@media (max-width: 600px) {
+  div.container {
+    margin-top: 5vh;
+  }
+}
+
+div.failed {
+  background-color: #ffd8d8;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  position: relative;
+  padding-left: 200px;
+}
+@media (max-width: 600px) {
+  label {
+    padding-left: 0px;
+  }
+}
+
+label span.label {
+  position: absolute;
+  left: 0px;
+  top: 7px;
+}
+@media (max-width: 600px) {
+  label span.label {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+label input {
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  font: inherit;
+  width: 100%;
+}
+button {
+  font: inherit;
+  padding: 8px 20px 4px 20px;
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #666666;
+  cursor: pointer;
+  background-color: #dbfaff;
+  position: relative;
+}
+
+form div.line {
+  margin-top: 10px;
+}
+form div.line.spaceBefore {
+  margin-top: 20px;
+}
+form div.line.doubleSpaceBefore {
+  margin-top: 40px;
+}
+
+form div.line:not(:has(label)) {
+  padding-left: 202px;
+}
+@media (max-width: 600px) {
+  form div.line:not(:has(label)) {
+    padding-left: 0px;
+    text-align: center;
+  }
+}
+
+form div.legend {
+  font-size: 0.9em;
+  line-height: 1.25em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+div.ok {
+  text-align: center;
+  text-wrap: balance;
+  max-width: 500px;
+  margin: 15vh auto 0px auto;
+}
+div.ok span.icon {
+  width: 3em;
+  height: 3em;
+  background-color: #999999;
+}
+div.ok div.message {
+  /* text-align: left; */
+  margin-top: 20px;
+  font-size: 1.15em;
+  line-height: 1.5em;
+}
+div.ok div.submessage {
+  /* text-align: left; */
+  margin-top: 10px;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #666666;
+}

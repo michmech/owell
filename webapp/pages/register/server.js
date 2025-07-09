@@ -1,6 +1,7 @@
 import sqlite from "better-sqlite3";
 import nodemailer from "nodemailer";
 import {mailBuilder} from "../../mailBuilder.js";
+// import fs from "fs/promises";
 
 export default function(app, L, do404, rootdir){
 
@@ -160,6 +161,7 @@ function sendmail(to, path, L, uilang){
     }],
     footerText: `${L("#emailwelcomeexplanation")}`,
   });
+  // fs.writeFile("./test.html", html);
   let transporter = nodemailer.createTransport({
     sendmail: true,
     newline: 'unix',
@@ -168,7 +170,7 @@ function sendmail(to, path, L, uilang){
   transporter.sendMail({
     from: `"${L("#sitetitle")}" <process.env.SENDEREMAIL>`,
     to: to,
-    subject: L("Welcome to Opening the Well"),
+    subject: L("#emailwelcome"),
     html: html,
   }, (err, info) => {
     if(err) console.log(err);
