@@ -504,3 +504,23 @@ Your password has been changed.
 Don’t forget to use your new password the next time you‘re logging in. 
 Don’t forget to use your new password the next time you‘re logging in.
 
+
+A user's profile page:
+----------------------
+
+#membersince
+Volunteer transcriber since $
+Tar-sgrìobhadair saor-thoileach o bha $ ann
+
+##edityourprofile
+Edit your profile
+Atharraich a’ phròifil agad
+
+##deleteyouraccount
+Delete your account
+Delete your account
+
+#words
+words
+faclan
+

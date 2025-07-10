@@ -430,5 +430,21 @@
   "#usenewpasswordnexttime": {
     "en": "Don’t forget to use your new password the next time you‘re logging in.",
     "gd": "Don’t forget to use your new password the next time you‘re logging in."
+  },
+  "#membersince": {
+    "en": "Volunteer transcriber since $",
+    "gd": "Tar‑sgrìobhadair saor‑thoileach o bha $ ann"
+  },
+  "#edityourprofile": {
+    "en": "Edit your profile",
+    "gd": "Atharraich a’ phròifil agad"
+  },
+  "#deleteyouraccount": {
+    "en": "Delete your account",
+    "gd": "Delete your account"
+  },
+  "#words": {
+    "en": "words",
+    "gd": "faclan"
   }
 }

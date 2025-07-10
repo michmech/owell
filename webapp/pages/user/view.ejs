@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+
+    <link rel="stylesheet" href="/c-usermenu.css"/>
+    <script type="module" src="/c-usermenu.js"></script>
+
+    <link rel="stylesheet" href="/user/styles.css"/>
+    <script src="/user/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <div class="title">
+        <div class="headshot"><span class="icon user"></span></div>
+        <h1><span class="name">Michal Měchura</span> <c-usermenu></c-usermenu></h1>
+        <div class="tagline"><%=L("#membersince", 0)%><%=(new Date()).toLocaleDateString(uilang, {month: "long", year: "numeric"})%><%=L("#membersince", 1)%></div>
+      </div>
+
+      <div class="bio">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper justo quis erat scelerisque, quis cursus arcu semper. Curabitur sit amet neque pulvinar dui molestie viverra quis non erat. 
+      </div>
+
+      <div class="stats">
+        <div class="box">
+          <div class="difficulty low"><span class="icon circle"></span> <%=L("#difficultylow")%></div>
+          <div class="count"><%=(1234).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
+        </div>
+        <div class="box">
+          <div class="difficulty medium"><span class="icon square"></span> <%=L("#difficultymedium")%></div>
+          <div class="count"><%=(1234).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
+        </div>
+        <div class="box">
+          <div class="difficulty high"><span class="icon diamond"></span> <%=L("#difficultyhigh")%></div>
+          <div class="count"><%=(1234).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
+        </div>
+      </div>
+
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+c-usermenu {
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 1em;
+  font-weight: normal;
+}
+
+c-usermenu button.opener {
+  background: transparent;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 3px 5px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1em;
+  line-height: 1em;
+  position: relative;
+  top: -6px;
+  outline-offset: 0px;
+}
+c-usermenu button.opener span.icon {
+  background-color: #667788;
+  font-size: 1.25em;
+}
+c-usermenu button.opener:hover span.icon {
+  background-color: #6699cc;
+} 
+
+c-usermenu div.menu {
+  z-index: 2;
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 4px #999999;
+  background-color: #ffffff;
+  border-radius: 6px;
+  position: absolute;
+  margin-top: 10px;
+}
+@media(max-width: 700px){
+  c-usermenu div.menu {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+c-usermenu div.menu div.line {
+  padding: 16px 15px 14px 15px;
+  border-bottom: 1px solid #cccccc;
+}
+c-usermenu div.menu div.line:last-child {
+  border-bottom: 0px;
+}
+c-usermenu div.menu div.line > a {
+  white-space: nowrap;
+  display: block;
+  border: 0;
+  color: #666666;
+  outline-offset: 8px;
+}
+c-usermenu div.menu div.line > button {
+  background: transparent;
+  border: 0px;
+  padding: 0px;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  display: block;
+  width: 100%;
+  color: #666666;
+  text-align: left;
+  outline-offset: 8px;
+}
+c-usermenu div.menu div.line > *:hover {
+  color: #3c6c99;
+}
+c-usermenu div.menu div.line > * > span.icon {
+  background-color: #999999;
+  margin-right: 10px;
+}
+c-usermenu div.menu div.line > *:hover > span.icon {
+  background-color: #3c6c99;
+}
+
+c-usermenu div.menu div.line > .delete {
+  color: #9b0000;
+}
+c-usermenu div.menu div.line > .delete > span.icon {
+  background-color: #9b0000;
+}

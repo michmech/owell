@@ -87,3 +87,7 @@ span.icon.xmark {
   mask-image: url(/xmark.svg);
   -webkit-mask-image: url(/xmark.svg);
 }
+span.icon.gear {
+  mask-image: url(/gear.svg);
+  -webkit-mask-image: url(/gear.svg);
+}

@@ -1,0 +1,113 @@
+div.title {
+  margin-top: 20px;
+}
+div.title > div.headshot {
+  background-color: #ffffff;
+  float: left;
+  width: 5em;
+  height: 5em;
+  border-radius: 4em;
+  text-align: center;
+  border: 1px solid #999999;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+div.title > div.headshot span.icon {
+  background-color: #334455;
+  width: 3em;
+  height: 3em;
+  margin-top: 1em;
+}
+div.title h1 {
+  margin: 0px;
+  padding-top: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333333;
+  line-height: 1.25em;
+}
+div.title h1 span.name {
+  margin-right: 5px;
+}
+@media (max-width: 800px) {
+  div.title h1 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+    padding-top: 15px;
+  }
+}
+div.title div.tagline {
+  margin-top: 5px;
+  color: #666666;
+  text-wrap: balance;
+} 
+
+div.bio {
+  clear: both;
+  margin-top: 20px;
+  line-height: 1.75em;
+  max-width: 800px;
+  text-wrap: balance;
+}
+
+div.stats {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+div.stats div.box {
+  background-color: #f9f9f9;
+  color: #333333;
+  padding: 20px 20px 20px 20px;
+  border-radius: 2px;
+  width: 32%;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+}
+@media (max-width: 800px) {
+  div.stats {
+    flex-direction: column;
+  }
+  div.stats div.box {
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+
+
+div.stats div.box div.difficulty {
+  font-size: 0.9em;
+}
+div.stats div.box div.difficulty span.icon {
+  margin-right: 3px;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
+div.stats div.box div.difficulty.low {
+  color: #30a582;
+}
+div.stats div.box div.difficulty.low > span.icon {
+  background-color: #30a582;
+}
+div.stats div.box div.difficulty.medium {
+  color: #3c45c4;
+}
+div.stats div.box div.difficulty.medium > span.icon {
+  background-color: #3c45c4;
+}
+div.stats div.box div.difficulty.high {
+  color: #3a0101;
+}
+div.stats div.box div.difficulty.high > span.icon {
+  background-color: #3a0101;
+}
+
+div.stats div.box div.count {
+  font-size: 1.5em;
+  margin-top: 10px;
+}

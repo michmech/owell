@@ -134,5 +134,13 @@ const STRINGS = {
   "#changepassword": {
     "en": "Change your password",
     "gd": "Atharraich t’ fhacal‑faire"
+  },
+  "#edityourprofile": {
+    "en": "Edit your profile",
+    "gd": "Atharraich a’ phròifil agad"
+  },
+  "#deleteyouraccount": {
+    "en": "Delete your account",
+    "gd": "Delete your account"
   }
 };
