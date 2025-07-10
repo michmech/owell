@@ -1,0 +1,116 @@
+ol.profiles {
+  display: block;
+  margin: 20px -15px;
+  padding: 0px;
+}
+ol.profiles li {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25%;
+  margin: 0px 0px 20px 0px;
+  padding: 2em 20px 0 20px;
+  height: calc(162px + 1.5em);
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  ol.profiles li {
+    width: 33%;
+  }
+}
+@media (max-width: 700px) {
+  ol.profiles li {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  ol.profiles li {
+    width: 100%;
+  }
+}
+
+
+ol.profiles li a.profile {
+  display: block;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 0px #ffffff;
+  padding: 0px 0px;
+  text-align: center;
+  height: 150px;
+  background-color: #f9f9f9;
+}
+
+ol.profiles li a.profile span.headshot {
+  background-color: #ffffff;
+  width: 3em;
+  height: 3em;
+  border-radius: 4em;
+  text-align: center;
+  border: 1px solid #999999;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -1.5em;
+}
+ol.profiles li a.profile span.headshot span.icon {
+  background-color: #334455;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 0.75em;
+}
+
+ol.profiles li a.profile span.name {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #333333;
+  text-wrap: balance;
+}
+ol.profiles li a.profile:hover span.name {
+  color: #3c6c99;
+}
+
+ol.profiles li a.profile span.stats {
+  display: block;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+ol.profiles li a.profile span.stats span.difficulty {
+  display: inline-block;
+  margin: 0px 0.5em;
+}
+ol.profiles li a.profile span.stats span.difficulty span.icon {
+  margin-right: 3px;
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
+}
+ol.profiles li a.profile span.stats span.difficulty.low {
+  color: #30a582;
+}
+ol.profiles li a.profile span.stats span.difficulty.low > span.icon {
+  background-color: #30a582;
+}
+ol.profiles li a.profile span.stats span div.difficulty.medium {
+  color: #3c45c4;
+}
+ol.profiles li a.profile span.stats span.difficulty.medium > span.icon {
+  background-color: #3c45c4;
+}
+ol.profiles li a.profile span.stats span.difficulty.high {
+  color: #3a0101;
+}
+ol.profiles li a.profile span.stats span.difficulty.high > span.icon {
+  background-color: #3a0101;
+}
+
+
+
+
+
+
+
+
+
+

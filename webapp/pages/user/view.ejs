@@ -15,35 +15,38 @@
   <body data-rowid="<%-profile.rowid%>">
     <%-include("../../includes/header/view.ejs", this)%>
     <main>
-      
-      <div class="title">
-        <div class="headshot"><span class="icon user"></span></div>
-        <h1>
-          <span class="name"><%=profile.displayName%></span>
-          <%if(loggedIn && profile.email==email){%><c-usermenu></c-usermenu><%}%>
-        </h1>
-        <div class="tagline"><%=L("#membersince", 0)%><%=(new Date(profile.registeredWhen)).toLocaleDateString(uilang, {month: "long", year: "numeric"})%><%=L("#membersince", 1)%></div>
+
+      <div class="frame">
+        
+        <div class="title">
+          <div class="headshot"><span class="icon user"></span></div>
+          <h1>
+            <span class="name"><%=profile.displayName%></span>
+            <%if(loggedIn && profile.email==email){%><c-usermenu></c-usermenu><%}%>
+          </h1>
+          <div class="tagline"><%=L("#membersince", 0)%><%=(new Date(profile.registeredWhen)).toLocaleDateString(uilang, {month: "long", year: "numeric"})%><%=L("#membersince", 1)%></div>
+        </div>
+  
+        <%if(profile.bioMarkdown.trim()!=""){%>
+          <div class="bio"><%-profile.bioHtml%></div>
+        <%}%>
+  
+        <div class="stats">
+          <div class="box">
+            <div class="difficulty low"><span class="icon circle"></span> <%=L("#difficultylow")%></div>
+            <div class="count"><%=(stats.low).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
+          </div>
+          <div class="box">
+            <div class="difficulty medium"><span class="icon square"></span> <%=L("#difficultymedium")%></div>
+            <div class="count"><%=(stats.medium).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
+          </div>
+          <div class="box">
+            <div class="difficulty high"><span class="icon diamond"></span> <%=L("#difficultyhigh")%></div>
+            <div class="count"><%=(stats.high).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
+          </div>
+        </div>
+  
       </div>
-
-      <%if(profile.bioMarkdown.trim()!=""){%>
-        <div class="bio"><%-profile.bioHtml%></div>
-      <%}%>
-
-      <div class="stats">
-        <div class="box">
-          <div class="difficulty low"><span class="icon circle"></span> <%=L("#difficultylow")%></div>
-          <div class="count"><%=(stats.low).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
-        </div>
-        <div class="box">
-          <div class="difficulty medium"><span class="icon square"></span> <%=L("#difficultymedium")%></div>
-          <div class="count"><%=(stats.medium).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
-        </div>
-        <div class="box">
-          <div class="difficulty high"><span class="icon diamond"></span> <%=L("#difficultyhigh")%></div>
-          <div class="count"><%=(stats.high).toLocaleString("en", {useGrouping: true})%> <%=L("#words")%></div>
-        </div>
-      </div>
-
       <div class="sounds loading"></div>
 
     </main>

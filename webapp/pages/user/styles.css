@@ -1,15 +1,25 @@
-div.title {
-  margin-top: 20px;
+div.frame {
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  box-shadow: inset 1px 1px 0px #ffffff;
+  padding: 0px 20px 20px 20px;
+  margin-top: 5em;
+  background-color: #f9f9f9;
+}
+
+div.frame > div.title {
+  margin-top: -2.5em;
+  text-align: center;
 }
 div.title > div.headshot {
   background-color: #ffffff;
-  float: left;
   width: 5em;
   height: 5em;
   border-radius: 4em;
   text-align: center;
   border: 1px solid #999999;
-  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 5px;
 }
 div.title > div.headshot span.icon {
@@ -45,9 +55,13 @@ div.title div.tagline {
 div.bio {
   clear: both;
   margin-top: 20px;
+  font-size: 1.15em;
   line-height: 1.75em;
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   text-wrap: balance;
+  text-align: center;
 }
 
 div.stats {
@@ -59,7 +73,7 @@ div.stats {
   align-items: stretch;
 }
 div.stats div.box {
-  background-color: #f9f9f9;
+  background-color: #eeeeee;
   color: #333333;
   padding: 20px 20px 20px 20px;
   border-radius: 2px;
@@ -75,6 +89,9 @@ div.stats div.box {
   div.stats div.box {
     width: auto;
     margin-bottom: 10px;
+  }
+  div.stats div.box:last-child {
+    margin-bottom: 0px;
   }
 }
 
@@ -113,8 +130,8 @@ div.stats div.box div.count {
 }
 
 div.sounds {
-  margin: 40px 0px 40px 0px;
-  min-height: 300px;
+  margin: 20px 0px 40px 0px;
+  min-height: 100px;
 }
 div.sounds.loading {
   background-image: url(/home/preloader.gif);
