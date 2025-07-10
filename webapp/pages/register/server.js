@@ -97,8 +97,8 @@ export default function(app, L, do404, rootdir){
           }
           {
             const sql=`
-              insert into users(email, passwordHash, displayName, lastSeen, registrationCompleted, registrationKey)
-              values($email, $passwordHash, $displayName, $now, 0, $registrationKey)  
+              insert into users(email, passwordHash, displayName, lastSeen, registrationCompleted, registrationKey, bio, registeredWhen)
+              values($email, $passwordHash, $displayName, $now, 0, $registrationKey, '', datetime())  
             `;
             const stmt=db.prepare(sql);
             stmt.run({email, passwordHash, displayName, now, registrationKey});

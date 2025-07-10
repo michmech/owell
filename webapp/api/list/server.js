@@ -9,6 +9,7 @@ export default function(app, L, do404, rootdir){
     let isAdmin=false;
 
     const queryName = req.query["queryName"];
+    const rowid = req.query["rowid"] || 0;
     const sounds=[];
 
     let db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
@@ -22,6 +23,12 @@ export default function(app, L, do404, rootdir){
 
       { //get list of sounds:
         let sql="";
+        if(queryName=="theirs") sql=`
+          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          from sounds as s
+          left outer join users as u on u.email=s.owner
+          where u.rowid=$rowid
+          order by s.ROWID desc`;
         if(queryName=="mine") sql=`
           select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
@@ -53,7 +60,7 @@ export default function(app, L, do404, rootdir){
           where s.status='approved'
           order by s.ROWID desc`;
         const stmt=db.prepare(sql);
-        stmt.all({email}).map(row => {
+        stmt.all({email, rowid}).map(row => {
           const sound={
             id: row["id"],
             trackID: row["track_id"],

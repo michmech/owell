@@ -33,7 +33,6 @@ export class CUsermenu extends HTMLElement {
     divMenu.classList.add("menu");
     divMenu.innerHTML=`
       <div class="line"><a class="edit" href="/xyz"><span class="icon gear"></span> ${LOC("#edityourprofile")}</a></div>
-      <div class="line"><a class="history" href="/xyz"><span class="icon clock-rotate-left"></span> ${LOC("#history")}</a></div>
       <div class="line"><a class="delete" href="/xyz"><span class="icon trash-can"></span> ${LOC("#deleteyouraccount")}</a></div>
     `;
 

@@ -33,6 +33,7 @@ c-spotmenu div.menu {
   border-radius: 6px;
   position: absolute;
   margin-top: 10px;
+  overflow: hidden;
 }
 @media(max-width: 700px){
   c-spotmenu div.menu {
@@ -80,14 +81,14 @@ c-spotmenu div.menu div.line > button {
   outline-offset: 8px;
 }
 c-spotmenu div.menu div.line > *:hover {
-  color: #3c6c99;
+  color: inherit;
+}
+c-spotmenu div.menu div.line:has(*:hover) {
+  background-color: #f6f6f6;
 }
 c-spotmenu div.menu div.line > * > span.icon {
   background-color: #999999;
   margin-right: 10px;
-}
-c-spotmenu div.menu div.line > *:hover > span.icon {
-  background-color: #3c6c99;
 }
 
 c-spotmenu div.menu div.line > .difficulty.low {
@@ -109,4 +110,11 @@ c-spotmenu div.menu div.line > .difficulty.high {
 }
 c-spotmenu div.menu div.line > .difficulty.high > span.icon {
   background-color: #3a0101;
+}
+
+c-spotmenu div.menu div.line > .delete {
+  color: #9b0000;
+}
+c-spotmenu div.menu div.line > .delete > span.icon {
+  background-color: #9b0000;
 }

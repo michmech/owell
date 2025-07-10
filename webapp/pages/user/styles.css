@@ -111,3 +111,13 @@ div.stats div.box div.count {
   font-size: 1.5em;
   margin-top: 10px;
 }
+
+div.sounds {
+  margin: 40px 0px 40px 0px;
+  min-height: 300px;
+}
+div.sounds.loading {
+  background-image: url(/home/preloader.gif);
+  background-repeat: no-repeat;
+  background-position: center 100px;
+}
