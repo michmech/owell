@@ -58,3 +58,8 @@ function updateDuration(){
     if(duration > prevKnownDuration) input.value=duration;
   }
 }
+
+function hideGuidelink(){
+  document.querySelector("form div.guidelink").style.display="none";
+  document.querySelector("textarea").focus();
+}

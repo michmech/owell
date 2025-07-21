@@ -133,8 +133,18 @@
       <%} else if( (status=="owned" && loggedIn && email==owner) || (status=="finished" && loggedIn && isAdmin) || (status=="approved" && loggedIn && isAdmin) ){%>
           <form method="post" action="">
             <c-textarea>
-              <textarea name="transcript" spellcheck="false"><%=transcript%></textarea>
+              <textarea autofocus name="transcript" spellcheck="false"><%=transcript%></textarea>
             </c-textarea>
+            <%if(transcript.trim()==""){%>
+              <div class="guidelink">
+                <span class="title"><%=L("#notsurehowtostart")%></span>
+                <span class="inside">
+                  <span class="icon circle-info"></span>
+                  <a href="/<%=uilang%>/<%-L("treoir|guide")%>"><%=L("#guidefortranscribers")%>&nbsp;»</a>
+                  <button type="button" class="hide" title="<%=L("#hidethis")%>" onclick="hideGuidelink()"><span class="icon xmark"></span></button>
+                </span>
+              </div>
+            <%}%>
             <aside class="toolbox">
               <div class="scrollable">
                 <c-speed>

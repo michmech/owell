@@ -230,6 +230,14 @@ Air ais/air aghaidh de 1 diog
 Insert a timestamp
 Cuir stampa-tìde a-steach
 
+#notsurehowtostart
+Not sure how to start?
+Not sure how to start?
+
+#hidethis
+Hide this
+Hide this
+
 
 A transcriber saving a transcription:
 -------------------------------------

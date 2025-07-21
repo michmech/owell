@@ -203,6 +203,14 @@
     "en": "Insert a timestamp",
     "gd": "Cuir stampa‑tìde a‑steach"
   },
+  "#notsurehowtostart": {
+    "en": "Not sure how to start?",
+    "gd": "Not sure how to start?"
+  },
+  "#hidethis": {
+    "en": "Hide this",
+    "gd": "Hide this"
+  },
   "#savewillcontinue": {
     "en": "Unfinished, I will continue later",
     "gd": "Neo‑chrìochnaichte, leanaidh mi orm a‑rithist"
