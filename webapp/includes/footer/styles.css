@@ -59,9 +59,35 @@ footer div.subtitle span.divider {
   color: #dddddd;
   margin: 0px 5px;
 }
+@media (max-width: 1100px) {
+  footer div.subtitle span.links {
+    display: block;
+    margin-top: 0.5em;
+  }
+  footer div.subtitle span.link {
+    display: block;
+    line-height: 2em;
+  }
+  footer div.subtitle span.divider {
+    display: none;
+  }
+  footer div.subtitle span.link a {
+  }
+}
+
+footer div.guidelink {
+  margin-top: 1em;
+}
+footer div.guidelink span.icon {
+  background-color: #ffffff;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+}
+footer div.guidelink a {}
 
 footer div.icons {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 footer div.icons a {
   border: 0px;
@@ -76,4 +102,11 @@ footer div.icons a img {
   footer div.icons a img {
     height: 50px;
   }
+}
+
+footer div.statement {
+  color: #eeeeee;
+  margin-top: 20px;
+  font-size: 0.85em;
+  max-width: 600px;
 }

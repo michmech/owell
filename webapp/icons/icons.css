@@ -91,3 +91,7 @@ span.icon.gear {
   mask-image: url(/gear.svg);
   -webkit-mask-image: url(/gear.svg);
 }
+span.icon.circle-info {
+  mask-image: url(/circle-info.svg);
+  -webkit-mask-image: url(/circle-info.svg);
+}

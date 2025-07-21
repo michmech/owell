@@ -83,6 +83,18 @@
     "en": "About us",
     "gd": "Mu ar deidhinn"
   },
+  "#privacy": {
+    "en": "Privacy",
+    "gd": "Prìobhaideachd"
+  },
+  "#accessibility": {
+    "en": "Accessibility",
+    "gd": "So‑ruigsinneachd"
+  },
+  "#guidefortranscribers": {
+    "en": "Guide for transcribers",
+    "gd": "Guide for transcribers"
+  },
   "#unofed": {
     "en": "The University of Edinburgh",
     "gd": "Oilthigh Dhùn Èideann"
@@ -90,6 +102,10 @@
   "#scotgov": {
     "en": "Scottish Government",
     "gd": "Riaghaltas na h‑Alba"
+  },
+  "#unofedstatement": {
+    "en": "The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a “Recognised body” which has been granted degree awarding powers.",
+    "gd": "The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a “Recognised body” which has been granted degree awarding powers."
   },
   "#available": {
     "en": "Available for transcription",
@@ -286,10 +302,6 @@
   "#signupblurb2": {
     "en": "You will be transcribing recordings of people speaking Scottish Gaelic. What’s it like?",
     "gd": "Bidh thu a’ tar‑sgrìobhadh chlàraidhean de dhaoine a’ bruidhinn na Gàidhlig. Cò ris a tha seo coltach?"
-  },
-  "#taketour": {
-    "en": "Take the guided tour",
-    "gd": "Gabh turas stiùirichte"
   },
   "#signupblurb3": {
     "en": "You can transcribe as much or as little as you want. Fill out this registration form to start.",

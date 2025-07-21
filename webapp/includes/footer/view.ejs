@@ -13,8 +13,26 @@
       <div class="title"><%=L("#sitetitle")%></div>
       <div class="subtitle">
         <%=L("#sitedescription")%>
-        <span class="divider">&middot;</span>
-        <a href="/<%-uilang%>/<%-L("mu-ar-deidhinn|about-us")%>"><%=L("#aboutus")%></a>
+        <span class="links">
+          <span class="link">
+            <span class="divider">&middot;</span>
+            <a href="/<%-uilang%>/<%-L("mu-ar-deidhinn|about-us")%>"><%=L("#aboutus")%></a>
+          </span>
+          <span class="link">
+            <span class="divider">&middot;</span>
+            <a href="/<%-uilang%>/<%-L("priobhaideachd|privacy")%>"><%=L("#privacy")%></a>
+          </span>
+          <span class="link">
+            <span class="divider">&middot;</span>
+            <a href="/<%-uilang%>/<%-L("so-ruigsinneachd|accessibility")%>"><%=L("#accessibility")%></a>
+          </span>
+        </span>
+      </div>
+      <div class="guidelink">
+        <span class="icon circle-info"></span>
+        <a href="/<%-uilang%>/<%-L("treoir|guide")%>">
+          <%=L("#guidefortranscribers")%>
+        </a>
       </div>
       <div class="icons">
         <a target="_blank" href="https://www.ed.ac.uk/" class="ue">
@@ -26,6 +44,9 @@
         <a target="_blank" href="https://www.gov.scot/" class="scotgov">
           <img src="/footer/scotgov.png" alt="<%=L("#scotgov")%>">
         </a>
+      </div>
+      <div class="statement">
+        <%=L("#unofedstatement")%>
       </div>
     </div>
 

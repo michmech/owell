@@ -176,3 +176,13 @@ div.container div.right {
     padding-right: 0px;
   }  
 }
+
+span.guidelink {
+  white-space: nowrap;
+}
+span.guidelink span.icon {
+  background-color: #336699;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.25em;
+}

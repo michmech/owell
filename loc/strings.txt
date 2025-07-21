@@ -89,6 +89,18 @@ Pròiseact tar-sgrìobhaidh na coimhearsnachd Ghàidhlig
 About us
 Mu ar deidhinn
 
+#privacy
+Privacy
+Prìobhaideachd
+
+#accessibility
+Accessibility
+So-ruigsinneachd
+
+#guidefortranscribers
+Guide for transcribers
+Guide for transcribers
+
 #unofed
 The University of Edinburgh
 Oilthigh Dhùn Èideann
@@ -96,6 +108,15 @@ Oilthigh Dhùn Èideann
 #scotgov
 Scottish Government 
 Riaghaltas na h-Alba
+
+
+Statement in the footer of every page, required by CAHSS
+Digital Estates Team's 'Responsibilities for site owners' document:
+-------------------------------------------------------------------
+
+#unofedstatement
+The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a “Recognised body” which has been granted degree awarding powers.
+The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a “Recognised body” which has been granted degree awarding powers.
 
 
 The statuses of an audio track:
@@ -343,10 +364,6 @@ Le bhith dol nar cuideachd mar tar-sgrìobhadair saor-thoileach, bheir thu taic 
 #signupblurb2
 You will be transcribing recordings of people speaking Scottish Gaelic. What’s it like?
 Bidh thu a’ tar-sgrìobhadh chlàraidhean de dhaoine a’ bruidhinn na Gàidhlig. Cò ris a tha seo coltach?
-
-#taketour
-Take the guided tour
-Gabh turas stiùirichte
 
 #signupblurb3
 You can transcribe as much or as little as you want. Fill out this registration form to start.

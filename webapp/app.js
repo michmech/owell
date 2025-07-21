@@ -92,6 +92,8 @@ import page_user from "./pages/user/server.js";
   page_user(app, L, do404, __dirname);
 import page_users from "./pages/users/server.js";
   page_users(app, L, do404, __dirname);
+import page_info from "./pages/info/server.js";
+  page_info(app, L, do404, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+
+    <link rel="stylesheet" href="/info/styles.css"/>
+    <script src="/info/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+
+      <%if(icon){%>
+        <div class="icon">
+          <span class="icon <%-icon%>"></span>
+        </div>
+      <%}%>
+      <%-html%>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>
