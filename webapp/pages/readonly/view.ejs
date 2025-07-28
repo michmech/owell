@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+
+    <link rel="stylesheet" href="/readonly/styles.css"/>
+    <script src="/readonly/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+
+      <div class="icon">
+        <span class="icon person-digging"></span>
+      </div>
+      <div class="message">
+        <%=L("#readonly")%>
+      </div>
+      
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

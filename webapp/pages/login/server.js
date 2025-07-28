@@ -1,9 +1,11 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   //the login form, before submission:
   app.get("/:uilang(gd|en)/(a-steach|login)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     const email=req.cookies.email;
     let userROWID=0;
     let userDisplayName="";
@@ -20,6 +22,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
+      if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
     } catch(e){
       console.log(e);
     } finally {
@@ -55,6 +58,8 @@ export default function(app, L, do404, rootdir){
 
   //the login form, after submission:
   app.post("/:uilang(gd|en)/(a-steach|login)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     let loggedIn = false;
     const email = req.body.email;
     let userROWID=0;

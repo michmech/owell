@@ -1,7 +1,7 @@
 import sqlite from "better-sqlite3";
 import getter from "./getter.js";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/tadget", async function(req, res){
     const email=req.cookies.email;
@@ -21,6 +21,7 @@ export default function(app, L, do404, rootdir){
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
         if(!loggedIn || !isAdmin) error="#errorhasoccurred";
       }
+      if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       if(!error) { //check that we don't already have this track:
         const sql=`select * from sounds as s where s.track_id=$trackID`
         const stmt=db.prepare(sql);

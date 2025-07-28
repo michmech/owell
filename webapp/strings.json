@@ -93,7 +93,7 @@
   },
   "#guidefortranscribers": {
     "en": "Guide for transcribers",
-    "gd": "Guide for transcribers"
+    "gd": "Stiùireadh do thar‑sgrìobhadairean"
   },
   "#unofed": {
     "en": "The University of Edinburgh",
@@ -105,7 +105,7 @@
   },
   "#unofedstatement": {
     "en": "The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a “Recognised body” which has been granted degree awarding powers.",
-    "gd": "The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a “Recognised body” which has been granted degree awarding powers."
+    "gd": "’S e buidheann charthannais a th’ ann an Oilthigh Dhùn Èideann, clàraichte ann an Albainn, leis an àireamh chlàraidh SC005336, Àireamh Clàraidh VAT GB 592 9507 00, agus tha ùghdarrasan na RA ga aithneachadh mar “Bhuidheann Aithnichte” aig a bheil cumhachdan ceuman a thoirt seachad."
   },
   "#available": {
     "en": "Available for transcription",
@@ -205,11 +205,11 @@
   },
   "#notsurehowtostart": {
     "en": "Not sure how to start?",
-    "gd": "Not sure how to start?"
+    "gd": "Gun fhios agad mar a thòisicheas tu?"
   },
   "#hidethis": {
     "en": "Hide this",
-    "gd": "Hide this"
+    "gd": "Cleith seo"
   },
   "#savewillcontinue": {
     "en": "Unfinished, I will continue later",
@@ -237,7 +237,7 @@
   },
   "#decidelater": {
     "en": "I will decide later",
-    "gd": "Nì mi co‑dhùnadh aig àm eile"
+    "gd": "Nì mi co‑dhùnadh uaireigin eile"
   },
   "#keepapproved": {
     "en": "Keep approved",
@@ -429,27 +429,27 @@
   },
   "#afterreset": {
     "en": "We will send you an e‑mail with a link to change your password.",
-    "gd": "We will send you an e‑mail with a link to change your password."
+    "gd": "Cuiridh sinn thugad p‑d le ceangail gus t' fhacal‑faire atharrachadh."
   },
   "#resetaccepted": {
     "en": "If this e‑mail address is associated with a valid account, then we have sent you an e‑mail with a link to change your password.",
-    "gd": "If this e‑mail address is associated with a valid account, then we have sent you an e‑mail with a link to change your password."
+    "gd": "Ma tha an seòladh p‑d seo cuingichte ri cunntas dearbhta, chuir sinn thugad p‑d le ceangail gus t' fhacal‑faire atharrachadh."
   },
   "#emailresetline1": {
     "en": "Please click the link below to set a new password for yourself.",
-    "gd": "Please click the link below to set a new password for yourself."
+    "gd": "Gliog an ceangail shìos gus facal‑faire ùr a thaghadh dhut fhèin."
   },
   "#emailresetexplanation": {
     "en": "You are receiving this e‑mail because you have told us that you have forgotten your password. If that wasn’t you, you can safely ignore this e‑mail, your existing password will still work.",
-    "gd": "You are receiving this e‑mail because you have told us that you have forgotten your password. If that wasn’t you, you can safely ignore this e‑mail, your existing password will still work."
+    "gd": "Fhuair thu am p‑d seo on a dh'innis thu dhuinn gun do dhìochuimhnich thu t' fhacal‑faire. Mur a bu tusa a bh' ann, na gabh dragh mun phost‑d seo; obraichidh t' fhacal‑faire fhathast."
   },
   "#passwordchanged": {
     "en": "Your password has been changed.",
-    "gd": "Your password has been changed."
+    "gd": "Tha t' fhacal‑faire air atharrachadh."
   },
   "#usenewpasswordnexttime": {
     "en": "Don’t forget to use your new password the next time you‘re logging in.",
-    "gd": "Don’t forget to use your new password the next time you‘re logging in."
+    "gd": "Na dìochuimhnich am facal‑faire ùr agad a chleachdadh an ath thuras a bhios tu a' clàradh a‑staigh."
   },
   "#membersince": {
     "en": "Volunteer transcriber since $",
@@ -461,10 +461,14 @@
   },
   "#deleteyouraccount": {
     "en": "Delete your account",
-    "gd": "Delete your account"
+    "gd": "Cuir às dhan chunntas agad."
   },
   "#words": {
     "en": "words",
     "gd": "faclan"
+  },
+  "#readonly": {
+    "en": "This website is currently in read‑only mode for maintenance. Please try again later.",
+    "gd": "This website is currently in read‑only mode for maintenance. Please try again later."
   }
 }

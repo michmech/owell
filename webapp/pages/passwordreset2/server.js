@@ -1,9 +1,11 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   //the new-password form before submission:
   app.get("/:uilang(gd|en)/(facal-faire-air-diochuimhne2|forgot-password2)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     const email = req.query["e"];
     const key = req.query["k"];
     let exists = false;
@@ -50,6 +52,8 @@ export default function(app, L, do404, rootdir){
 
   //the new-password form after submission:
   app.post("/:uilang(gd|en)/(facal-faire-air-diochuimhne2|forgot-password2)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     let loggedIn = false;
     const sessionKey=req.cookies.sessionkey;
     let userROWID=0;

@@ -1,6 +1,6 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/", function(req, res){
     res.redirect("/gd");
@@ -36,6 +36,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
+      if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //get tabs by status:
         const sql=`select status, count(*) as count from sounds group by status`;
         const stmt=db.prepare(sql);

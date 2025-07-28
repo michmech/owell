@@ -3,10 +3,12 @@ import nodemailer from "nodemailer";
 import {mailBuilder} from "../../mailBuilder.js";
 // import fs from "fs/promises";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   //the password reset form, before submission:
   app.get("/:uilang(gd|en)/(facal-faire-air-diochuimhne|forgot-password)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
@@ -19,6 +21,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
       }
+      if(process.env.READONLY==1) loggedIn=false;
     } catch(e){
       console.log(e);
     } finally {
@@ -52,6 +55,8 @@ export default function(app, L, do404, rootdir){
 
   //the password reset form, after submission:
   app.post("/:uilang(gd|en)/(facal-faire-air-diochuimhne|forgot-password)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     let loggedIn = false;
     const email = req.body.email;
     let userROWID=0;

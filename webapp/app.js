@@ -55,45 +55,65 @@ function do404(req, res){
   res.status(404).render("404/view.ejs", {});
 }
 
+//Read-only:
+function doReadOnly(req, res){
+  res.status(503).render("readonly/view.ejs", {
+    uilang: req.params.uilang,
+    userDisplayName : "",
+    userROWID : 0,
+    loggedIn: false,
+    email : "",
+    isAdmin: false,
+    L: (multistring, subpart) => L(req.params.uilang, multistring, subpart),
+    pageTitle: L(req.params.uilang, "#sitetitle"),
+    pageDescription: L(req.params.uilang, "#sitedescription"),
+    pageUrls: {
+      "gd": req.path.replace(/^\/../, "/gd"),
+      "en": req.path.replace(/^\/../, "/en"),
+    },
+    isHomepage: false,
+  });
+}
+
 //Hook up our API endpoints:
 import api_getsoundfile from "./api/getsoundfile/server.js";
-  api_getsoundfile(app, L, do404, __dirname);
+  api_getsoundfile(app, L, do404, doReadOnly, __dirname);
 import api_tadget from "./api/tadget/server.js";
-  api_tadget(app, L, do404, __dirname);
-  import api_list from "./api/list/server.js";
-  api_list(app, L, do404, __dirname);
+  api_tadget(app, L, do404, doReadOnly, __dirname);
+import api_list from "./api/list/server.js";
+  api_list(app, L, do404, doReadOnly, __dirname);
 import api_delete from "./api/delete/server.js";
-  api_delete(app, L, do404, __dirname);
+  api_delete(app, L, do404, doReadOnly, __dirname);
 import api_giveup from "./api/giveup/server.js";
-  api_giveup(app, L, do404, __dirname);
+  api_giveup(app, L, do404, doReadOnly, __dirname);
 import api_difficulty from "./api/difficulty/server.js";
-  api_difficulty(app, L, do404, __dirname);
+  api_difficulty(app, L, do404, doReadOnly, __dirname);
 
 //Hook up our webpage-serving endpoints:
 import page_home from "./pages/home/server.js";
-  page_home(app, L, do404, __dirname);
+  page_home(app, L, do404, doReadOnly, __dirname);
 import page_login from "./pages/login/server.js";
-  page_login(app, L, do404, __dirname);
+  page_login(app, L, do404, doReadOnly, __dirname);
 import page_logout from "./pages/logout/server.js";
-  page_logout(app, L, do404, __dirname);
+  page_logout(app, L, do404, doReadOnly, __dirname);
 import page_sound from "./pages/sound/server.js";
-  page_sound(app, L, do404, __dirname);
+  page_sound(app, L, do404, doReadOnly, __dirname);
 import page_register from "./pages/register/server.js";
-  page_register(app, L, do404, __dirname);
+  page_register(app, L, do404, doReadOnly, __dirname);
 import page_register2 from "./pages/register2/server.js";
-  page_register2(app, L, do404, __dirname);
+  page_register2(app, L, do404, doReadOnly, __dirname);
 import page_passwordchange from "./pages/passwordchange/server.js";
-  page_passwordchange(app, L, do404, __dirname);
+  page_passwordchange(app, L, do404, doReadOnly, __dirname);
 import page_passwordreset from "./pages/passwordreset/server.js";
-  page_passwordreset(app, L, do404, __dirname);
+  page_passwordreset(app, L, do404, doReadOnly, __dirname);
 import page_passwordreset2 from "./pages/passwordreset2/server.js";
-  page_passwordreset2(app, L, do404, __dirname);
+  page_passwordreset2(app, L, do404, doReadOnly, __dirname);
 import page_user from "./pages/user/server.js";
-  page_user(app, L, do404, __dirname);
+  page_user(app, L, do404, doReadOnly, __dirname);
 import page_users from "./pages/users/server.js";
-  page_users(app, L, do404, __dirname);
+  page_users(app, L, do404, doReadOnly, __dirname);
 import page_info from "./pages/info/server.js";
-  page_info(app, L, do404, __dirname);
+  page_info(app, L, do404, doReadOnly, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);

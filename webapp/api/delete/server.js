@@ -1,6 +1,6 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/delete", function(req, res){
     const email=req.cookies.email;
@@ -19,6 +19,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
+      if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       if(loggedIn && isAdmin) {
         { //delete the sound:
           const sql=`delete from sounds where id=$id`

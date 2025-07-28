@@ -1,6 +1,6 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/giveup", function(req, res){
     const email=req.cookies.email;
@@ -20,6 +20,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
+      if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //check if the sound is owned and if the person is its owner:
         const sql=`select * from sounds where status='owned' and owner=$email`;
         const stmt=db.prepare(sql);

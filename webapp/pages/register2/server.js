@@ -1,8 +1,10 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/:uilang(gd|en)/(claraich2|register2)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     const email = req.query["e"];
     const key = req.query["k"];
     

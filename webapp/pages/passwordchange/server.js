@@ -1,9 +1,11 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   //the password change form, before submission:
   app.get("/:uilang(gd|en)/(atharraich-facal-faire|change-password)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+    
     const email=req.cookies.email;
     let userROWID=0;
     let userDisplayName="";
@@ -18,6 +20,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
+      if(process.env.READONLY==1) loggedIn=false;
     } catch(e){
       console.log(e);
     } finally {
@@ -53,6 +56,8 @@ export default function(app, L, do404, rootdir){
 
   //the password change, after submission:
   app.post("/:uilang(gd|en)/(atharraich-facal-faire|change-password)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     let loggedIn = false;
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
@@ -72,6 +77,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
+      if(process.env.READONLY==1) loggedIn=false;
       if(loggedIn){
         if(password.trim()==""){
           changeFailed = "#passwordmustnotbeblank";

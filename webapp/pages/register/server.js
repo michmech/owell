@@ -3,10 +3,12 @@ import nodemailer from "nodemailer";
 import {mailBuilder} from "../../mailBuilder.js";
 // import fs from "fs/promises";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   //the registration form, before submission:
   app.get("/:uilang(gd|en)/(claraich|register)", function(req, res){
+    if(process.env.READONLY==1){ doReadOnly(req, res); return; }
+
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
@@ -19,6 +21,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; });
       }
+      if(process.env.READONLY==1) loggedIn=false;
     } catch(e){
       console.log(e);
     } finally {

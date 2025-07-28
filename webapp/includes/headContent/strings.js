@@ -141,6 +141,6 @@ const STRINGS = {
   },
   "#deleteyouraccount": {
     "en": "Delete your account",
-    "gd": "Delete your account"
+    "gd": "Cuir às dhan chunntas agad."
   }
 };

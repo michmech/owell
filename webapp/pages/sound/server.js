@@ -1,7 +1,7 @@
 import sqlite from "better-sqlite3";
 import {wordcounter} from "../../wordcounter.js"; 
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.post("/:uilang(gd|en)/:soundID([0-9]+)", function(req, res){
     const email=req.cookies.email;
@@ -48,6 +48,7 @@ export default function(app, L, do404, rootdir){
           stmt.run({soundID, status});
         }
       }
+      if(process.env.READONLY==1) loggedIn=false;
     } catch(e){
       console.log(e);
     } finally {
@@ -91,6 +92,7 @@ export default function(app, L, do404, rootdir){
         const stmt=db.prepare(sql);
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
+      if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //get the sound:
         const sql=`
           select s.difficulty, s.duration, s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript

@@ -1,6 +1,6 @@
 import sqlite from "better-sqlite3";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/:uilang(gd|en)/(a-amach|logout)", function(req, res){
     const email=req.cookies.email;

@@ -3,7 +3,7 @@ import fs from "fs";
 import markdown from "markdown-it";
 import attrs from "markdown-it-attrs";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/:uilang(gd|en)/(mu-ar-deidhinn|about-us)", function(req, res){
     go(req, res, L, "about.md", L(req.params.uilang, "#aboutus"), {gd: "/gd/mu-ar-deidhinn", en: "/en/about-us"})
@@ -39,6 +39,7 @@ function go(req, res, L, markdownFileName, pageTitle, pageUrls, icon){
       const stmt=db.prepare(sql);
       stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
     }
+    if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
   } catch(e){
     console.log(e);
   } finally {

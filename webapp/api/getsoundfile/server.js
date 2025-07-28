@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import { Readable } from "node:stream";
 import path from "node:path";
 
-export default function(app, L, do404, rootdir){
+export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/getsoundfile", async function(req, res){
     const id = req.query["id"];

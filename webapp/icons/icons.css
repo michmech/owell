@@ -95,3 +95,7 @@ span.icon.circle-info {
   mask-image: url(/circle-info.svg);
   -webkit-mask-image: url(/circle-info.svg);
 }
+span.icon.person-digging {
+  mask-image: url(/person-digging.svg);
+  -webkit-mask-image: url(/person-digging.svg);
+}
