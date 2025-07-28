@@ -77,7 +77,7 @@ function doMarkdown(txt){
   txt=txt.replace(/\!\[([^\]]*)\]\(([^\)]+)\)\s*(\{\.(([^\}]+))\})?/g, function(m, caption, filename, x, className){
     return `<figure class="${className}"><div><img src="${filename}" alt=""></div><figcaption>${caption}</figcaption></figure>\n\n`;
   });
-  var html=md.render(txt).replace(/<a href="http/g, "<a target=\"_blank\" href=\"http");
+  var html=md.render(txt);
   //add target=_blank to outgoing links:
   html=html.replace(/\<a href="http/g, `<a target="_blank" href="http`);
   return html;

@@ -29,11 +29,12 @@ export class CUsermenu extends HTMLElement {
   }
 
   #showMenu(){
+    const uilang = document.querySelector("html").getAttribute("lang");
     const divMenu = document.createElement("div");
     divMenu.classList.add("menu");
     divMenu.innerHTML=`
-      <div class="line"><a class="edit" href="/xyz"><span class="icon gear"></span> ${LOC("#edityourprofile")}</a></div>
-      <div class="line"><a class="delete" href="/xyz"><span class="icon trash-can"></span> ${LOC("#deleteyouraccount")}</a></div>
+      <div class="line"><a class="edit" href="/${uilang}/${LOC("atharraich-proifil|edit-profile")}"><span class="icon gear"></span> ${LOC("#edityourprofile")}</a></div>
+      <div class="line"><a class="delete" href="/${uilang}/${LOC("cuir-as-cunntas|delete-account")}"><span class="icon trash-can"></span> ${LOC("#deleteyouraccount")}</a></div>
     `;
 
     this.appendChild(divMenu);

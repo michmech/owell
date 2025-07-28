@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/editprofile/styles.css"/>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <div class="container">
+        <%if(updateAttempted && updateFailed){%>
+          <div class="failed">
+            <%=L(updateFailed)%>
+          </div>  
+        <%} else {%>
+          <h1><%=L("#edityourprofile")%></h1>
+        <%}%>
+        <form method="post" action="">
+          <div class="line">
+            <label>
+              <span class="label"><%=L("#displayname")%></span>
+              <input name="displayName" maxlength="50" value="<%=displayName%>"/>
+            </label>
+          </div>
+          <div class="line">
+            <label>
+              <span class="label"><%=L("#bio")%></span>
+              <textarea name="bio" maxlength="500"><%=bio%></textarea>
+            </label>
+            <div class="legend">
+              <%=L("#biolegend")%>
+            </div>
+          </div>
+          <div class="line doubleSpaceBefore">
+            <button type="submit"><%=L("#save")%></button>
+          </div>
+        </form>
+      </div>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

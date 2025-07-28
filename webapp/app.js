@@ -114,6 +114,8 @@ import page_users from "./pages/users/server.js";
   page_users(app, L, do404, doReadOnly, __dirname);
 import page_info from "./pages/info/server.js";
   page_info(app, L, do404, doReadOnly, __dirname);
+import page_editprofile from "./pages/editprofile/server.js";
+  page_editprofile(app, L, do404, doReadOnly, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);

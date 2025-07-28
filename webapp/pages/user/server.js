@@ -1,4 +1,6 @@
 import sqlite from "better-sqlite3";
+import * as linkify from "linkifyjs";
+import linkifyStr from "linkify-string";
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -41,7 +43,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
           profile.displayName=row["displayName"];
           profile.registeredWhen=row["registeredWhen"].substring(0, 10);
           profile.bioMarkdown=row["bio"];
-          profile.bioHtml=profile.bioMarkdown;
+          profile.bioHtml=doMarkdown(profile.bioMarkdown);
         });
       }
       if(profile.email) { //load wordcounts:
@@ -89,4 +91,11 @@ export default function(app, L, do404, doReadOnly, rootdir){
     }
   });
   
+}
+
+function doMarkdown(txt){
+  // txt = txt.replace(/</g, "&lt;");
+  const options = { target: "_blank" };
+  const html = linkifyStr(txt, options);
+  return html;
 }

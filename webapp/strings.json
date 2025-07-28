@@ -467,6 +467,14 @@
     "en": "words",
     "gd": "faclan"
   },
+  "#bio": {
+    "en": "A few words about you",
+    "gd": "A few words about you"
+  },
+  "#biolegend": {
+    "en": "Maximum 500 characters. You can leave this blank.",
+    "gd": "Maximum 500 characters. You can leave this blank."
+  },
   "#readonly": {
     "en": "This website is currently in read‑only mode for maintenance. Please try again later.",
     "gd": "This website is currently in read‑only mode for maintenance. Please try again later."
