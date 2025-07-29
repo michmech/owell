@@ -115,10 +115,6 @@ const STRINGS = {
     "en": "Menu",
     "gd": "Clàr‑taice"
   },
-  "#history": {
-    "en": "History",
-    "gd": "Eachdraidh"
-  },
   "#giveup": {
     "en": "Give up transcribing",
     "gd": "Leig romhad an tàr‑sgrìobhadh"

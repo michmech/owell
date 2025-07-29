@@ -42,11 +42,11 @@
                 <span class="medium"><span class="icon square"></span> <%=L("#difficultymedium")%></span>
                 <span class="high"><span class="icon diamond"></span> <%=L("#difficultyhigh")%></span>
               </span>
-              <%if((loggedIn && email==owner) || isAdmin){%>
+              <%if((loggedIn && email==owner && status=='owned') || isAdmin){%>
                 <c-spotmenu
                   sound-id="<%-soundID%>"
                   show-difficulty="<%-isAdmin ? 'yes' : 'no'%>"
-                  show-history="<%-email==owner || isAdmin ? 'yes' : 'no'%>"
+                  x-show-history="<%-email==owner || isAdmin ? 'yes' : 'no'%>"
                   show-giveup="<%-email==owner && status=='owned' ? 'yes' : 'no'%>"
                   show-delete="<%-isAdmin ? 'yes' : 'no'%>"
                 ></c-spotmenu>

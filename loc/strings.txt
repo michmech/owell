@@ -472,10 +472,6 @@ Drop-down menu next to a track:
 Menu
 Clàr-taice
 
-##history
-History
-Eachdraidh
-
 ##giveup
 Give up transcribing
 Leig romhad an tàr-sgrìobhadh

@@ -32,11 +32,11 @@ export class CListing extends HTMLElement {
         html+=`<span class="medium"><span class="icon square"></span> ${LOC("#difficultymedium")}</span>`;
         html+=`<span class="high"><span class="icon diamond"></span> ${LOC("#difficultyhigh")}</span>`;
       html+=`</span>`;
-      if(isAdmin || isProminent){
+      if(isAdmin || (isProminent && sound.status=='owned')){
         html+=` <c-spotmenu
           sound-id="${id}"
           show-difficulty="${isAdmin ? 'yes' : 'no'}"
-          show-history="${isProminent || isAdmin ? 'yes' : 'no'}"
+          x-show-history="${isProminent || isAdmin ? 'yes' : 'no'}"
           show-giveup="${isProminent && sound.status=='owned' ? 'yes' : 'no'}"
           show-delete="${isAdmin ? 'yes' : 'no'}"
         "></c-spotmenu>`;

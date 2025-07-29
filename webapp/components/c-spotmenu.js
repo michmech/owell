@@ -35,7 +35,6 @@ export class CSpotmenu extends HTMLElement {
       <div class="line"><button data-difficulty="low" class="difficulty low"><span class="icon circle"></span> ${LOC("#difficultylow")}</button></div>
       <div class="line"><button data-difficulty="medium" class="difficulty medium"><span class="icon square"></span> ${LOC("#difficultymedium")}</button></div>
       <div class="line"><button data-difficulty="high" class="difficulty high"><span class="icon diamond"></span> ${LOC("#difficultyhigh")}</button></div>
-      <div class="line"><a class="history" href="/xyz"><span class="icon clock-rotate-left"></span> ${LOC("#history")}</a></div>
       <div class="line"><button class="giveup"><span class="icon xmark"></span> ${LOC("#giveup")}</button></div>
       <div class="line"><button class="delete"><span class="icon trash-can"></span> ${LOC("#delete")}</button></div>
     `;
@@ -50,7 +49,6 @@ export class CSpotmenu extends HTMLElement {
     divMenu.querySelector(".giveup").addEventListener("click", (ev)=>{ this.#giveup(); });
 
     if(this.getAttribute("show-difficulty")!="yes") divMenu.querySelectorAll(".difficulty").forEach(x => x.closest(".line").remove());
-    if(this.getAttribute("show-history")!="yes") divMenu.querySelector(".history").closest(".line").remove();
     if(this.getAttribute("show-giveup")!="yes") divMenu.querySelector(".giveup").closest(".line").remove();
     if(this.getAttribute("show-delete")!="yes") divMenu.querySelector(".delete").closest(".line").remove();
 
