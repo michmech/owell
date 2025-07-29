@@ -23,7 +23,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
       if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //load the profiles:
         const sql=`
-          select u.rowid, u.email, u.displayName
+          select u.rowid, u.email, u.displayName, u.isAdmin
           , sum(s.wordcount) filter(where s.difficulty='low') as wordcountLow
           , sum(s.wordcount) filter(where s.difficulty='medium') as wordcountMedium
           , sum(s.wordcount) filter(where s.difficulty='high') as wordcountHigh
@@ -43,6 +43,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
             rowid: row.rowid,
             email: row.email,
             displayName: row.displayName,
+            isAdmin: (row["isAdmin"]==1),
             wordcountLow: row.wordcountLow || 0,
             wordcountMedium: row.wordcountMedium || 0,
             wordcountHigh: row.wordcountHigh || 0,

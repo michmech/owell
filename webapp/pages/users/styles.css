@@ -59,6 +59,21 @@ ol.profiles li a.profile span.headshot span.icon {
   margin-top: 0.75em;
 }
 
+ol.profiles li a.profile span.badge {
+  display: block;
+  font-size: 0.75em;
+  line-height: 1em;
+  margin-top: -3px;
+  margin-bottom: -5px;
+  text-transform: uppercase;
+}
+ol.profiles li a.profile span.badge span {
+  background-color: #ccddee;
+  color: #004b34;
+  padding: 4px 10px 2px 10px;
+  border-radius: 20px;
+}
+
 ol.profiles li a.profile span.name {
   display: block;
   margin-top: 20px;

@@ -455,6 +455,18 @@
     "en": "Volunteer transcriber since $",
     "gd": "Tar‑sgrìobhadair saor‑thoileach o bha $ ann"
   },
+  "#administrator": {
+    "en": "administrator",
+    "gd": "rianaire"
+  },
+  "#promotetoadmin": {
+    "en": "Promote to administrator",
+    "gd": "Promote to administrator"
+  },
+  "#demotefromadmin": {
+    "en": "Demote from administrator",
+    "gd": "Demote from administrator"
+  },
   "#words": {
     "en": "words",
     "gd": "faclan"

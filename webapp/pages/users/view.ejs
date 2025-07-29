@@ -14,6 +14,11 @@
         <%profiles.forEach((profile,i) => {%><li>
           <a class="profile" href="/<%-uilang%>/u<%-profile.rowid%>">
             <span class="headshot"><span class="icon user"></span></span>
+            <%if(profile.isAdmin){%>
+              <span class="badge">
+                <span><%=L("#administrator")%></span>
+              </span>
+            <%}%>
             <span class="name"><%=profile.displayName || L("#anonymizeduser")%></span>
             <span class="stats">
               <span class="difficulty low"><span class="icon circle"></span> <%=(profile.wordcountLow).toLocaleString("en", {useGrouping: true})%></span>

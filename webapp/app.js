@@ -88,6 +88,10 @@ import api_giveup from "./api/giveup/server.js";
   api_giveup(app, L, do404, doReadOnly, __dirname);
 import api_difficulty from "./api/difficulty/server.js";
   api_difficulty(app, L, do404, doReadOnly, __dirname);
+import api_promote from "./api/promote/server.js";
+  api_promote(app, L, do404, doReadOnly, __dirname);
+import api_demote from "./api/demote/server.js";
+  api_demote(app, L, do404, doReadOnly, __dirname);
 
 //Hook up our webpage-serving endpoints:
 import page_home from "./pages/home/server.js";

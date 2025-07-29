@@ -19,6 +19,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
       registeredWhen: "",
       bioMarkdown: "",
       bioHtml: "",
+      isAdmin: false,
     };
     const stats={
       low: 0,
@@ -36,7 +37,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
       }
       if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //load the profile:
-        const sql=`select email, displayName, bio, registeredWhen from users where rowid=$rowid and registrationCompleted=1`;
+        const sql=`select email, displayName, bio, registeredWhen, isAdmin from users where rowid=$rowid and registrationCompleted=1`;
         const stmt=db.prepare(sql);
         stmt.all({rowid: profile.rowid}).map(row => {
           profile.email=row["email"];
@@ -44,6 +45,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
           profile.registeredWhen=row["registeredWhen"].substring(0, 10);
           profile.bioMarkdown=row["bio"];
           profile.bioHtml=doMarkdown(profile.bioMarkdown);
+          profile.isAdmin=(row["isAdmin"]==1);
         });
       }
       if(profile.email) { //load wordcounts:

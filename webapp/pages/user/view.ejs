@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="/c-usermenu.css"/>
     <script type="module" src="/c-usermenu.js"></script>
 
+    <link rel="stylesheet" href="/c-strangermenu.css"/>
+    <script type="module" src="/c-strangermenu.js"></script>
+
     <link rel="stylesheet" href="/c-listing.css"/>
     <script type="module" src="/c-listing.js"></script>
 
@@ -19,10 +22,18 @@
       <div class="frame">
         
         <div class="title">
-          <div class="headshot"><span class="icon user"></span></div>
+          <div class="headshot">
+            <span class="icon user"></span>
+          </div>
+          <%if(profile.isAdmin){%>
+            <div class="badge">
+              <span><%=L("#administrator")%></span>
+            </div>
+          <%}%>
           <h1>
             <span class="name"><%=profile.displayName  || L("#anonymizeduser")%></span>
             <%if(loggedIn && profile.email==email){%><c-usermenu></c-usermenu><%}%>
+            <%if(loggedIn && profile.email!=email && isAdmin){%><c-strangermenu user-rowid="<%=profile.rowid%>" is-admin="<%=profile.isAdmin?'yes':'no'%>"></c-strangermenu><%}%>
           </h1>
           <div class="tagline"><%=L("#membersince", 0)%><%=(new Date(profile.registeredWhen)).toLocaleDateString(uilang, {month: "long", year: "numeric"})%><%=L("#membersince", 1)%></div>
         </div>

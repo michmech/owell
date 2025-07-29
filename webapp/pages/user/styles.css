@@ -28,6 +28,20 @@ div.title > div.headshot span.icon {
   height: 3em;
   margin-top: 1em;
 }
+div.title div.badge {
+  display: block;
+  font-size: 0.8em;
+  line-height: 1em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+div.title div.badge span {
+  background-color: #ccddee;
+  color: #004b34;
+  padding: 6px 10px 3px 10px;
+  border-radius: 20px;
+}
 div.title h1 {
   margin: 0px;
   padding-top: 10px;

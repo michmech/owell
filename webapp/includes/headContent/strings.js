@@ -135,6 +135,14 @@ const STRINGS = {
     "en": "Change your password",
     "gd": "Atharraich t’ fhacal‑faire"
   },
+  "#promotetoadmin": {
+    "en": "Promote to administrator",
+    "gd": "Promote to administrator"
+  },
+  "#demotefromadmin": {
+    "en": "Demote from administrator",
+    "gd": "Demote from administrator"
+  },
   "#edityourprofile": {
     "en": "Edit your profile",
     "gd": "Atharraich a’ phròifil agad"

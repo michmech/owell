@@ -536,6 +536,18 @@ A user's profile page:
 Volunteer transcriber since $
 Tar-sgrìobhadair saor-thoileach o bha $ ann
 
+#administrator
+administrator
+rianaire
+
+##promotetoadmin
+Promote to administrator
+Promote to administrator
+
+##demotefromadmin
+Demote from administrator
+Demote from administrator
+
 #words
 words
 faclan

@@ -1,7 +1,7 @@
 import sqlite from "better-sqlite3";
 
 export function logEvent(user_rowid, sound_id, event_code, json_payload){
-  // console.log("LOGGED EVENT:", user_rowid, sound_id, eventCode, jsonPayload);
+  // console.log("LOGGED EVENT:", user_rowid, sound_id, event_code, json_payload);
 
   const db=new sqlite("../databases/log.sqlite", {fileMustExist: true});
   try{
@@ -10,7 +10,7 @@ export function logEvent(user_rowid, sound_id, event_code, json_payload){
       values(datetime(), $user_rowid, $sound_id, $event_code, $json_payload)  
     `;
     const stmt=db.prepare(sql);
-    stmt.run({user_rowid, sound_id, event_code, json_payload});
+    stmt.run({user_rowid, sound_id, event_code, json_payload: JSON.stringify(json_payload)});
   } catch(e){
     console.log(e);
   } finally {
