@@ -1,5 +1,6 @@
 import sqlite from "better-sqlite3";
 import {wordcounter} from "../../wordcounter.js"; 
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -24,28 +25,43 @@ export default function(app, L, do404, doReadOnly, rootdir){
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
       if(loggedIn) { //update the sound as required:
-        if(transcript){
-          const wordcount =  wordcounter.countWords(transcript);
-          const sql=`update sounds set transcript=$transcript, wordcount=$wordcount, duration=$duration where id=$soundID`;
-          const stmt=db.prepare(sql);
-          stmt.run({soundID, transcript, wordcount, duration});
+        if(transcript!==undefined){
+          {
+            const wordcount =  wordcounter.countWords(transcript);
+            const sql=`update sounds set transcript=$transcript, wordcount=$wordcount, duration=$duration where id=$soundID`;
+            const stmt=db.prepare(sql);
+            stmt.run({soundID, transcript, wordcount, duration});
+          }
+          logEvent(userROWID, soundID, `sound__transcript--save`, {transcript, status});
         }
         if(status=="available") {
-          const sql=`update sounds set status=$status, owner=NULL where id=$soundID`;
-          const stmt=db.prepare(sql);
-          stmt.run({soundID, status});
+          {
+            const sql=`update sounds set status=$status, owner=NULL where id=$soundID`;
+            const stmt=db.prepare(sql);
+            stmt.run({soundID, status});
+          }
+          if(transcript==undefined) logEvent(userROWID, soundID, `sound__status--set`, {status});
         } else if(status=="owned") {
-          const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
-          const stmt=db.prepare(sql);
-          stmt.run({soundID, email, status});
+          {
+            const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
+            const stmt=db.prepare(sql);
+            stmt.run({soundID, email, status});
+          }
+          if(transcript==undefined) logEvent(userROWID, soundID, `sound__status--set`, {status, owner: userROWID});
         } else if(status=="finished") {
-          const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
-          const stmt=db.prepare(sql);
-          stmt.run({soundID, email, status});
+          {
+            const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
+            const stmt=db.prepare(sql);
+            stmt.run({soundID, email, status});
+          }
+          if(transcript==undefined) logEvent(userROWID, soundID, `sound__status--set`, {status});
         } else if(status=="approved") {
-          const sql=`update sounds set status=$status where id=$soundID`;
-          const stmt=db.prepare(sql);
-          stmt.run({soundID, status});
+          {
+            const sql=`update sounds set status=$status where id=$soundID`;
+            const stmt=db.prepare(sql);
+            stmt.run({soundID, status});
+          }
+          if(transcript==undefined) logEvent(userROWID, soundID, `sound__status--set`, {status});
         }
       }
       if(process.env.READONLY==1) loggedIn=false;

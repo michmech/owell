@@ -1,6 +1,7 @@
 import sqlite from "better-sqlite3";
 import nodemailer from "nodemailer";
 import {mailBuilder} from "../../mailBuilder.js";
+import {logEvent} from '../../logger.js';
 // import fs from "fs/promises";
 
 export default function(app, L, do404, doReadOnly, rootdir){
@@ -106,6 +107,13 @@ export default function(app, L, do404, doReadOnly, rootdir){
             const stmt=db.prepare(sql);
             stmt.run({email, passwordHash, displayName, now, registrationKey});
           }
+          let userROWID = 0;
+          {
+            const sql=`select rowid from users where lower(email)=lower($email)`;
+            const stmt=db.prepare(sql);
+            stmt.all({email}).map(row => { userROWID=row["rowid"] });
+          }
+          logEvent(userROWID, null, `user--register-start`, {displayName});
           
           //send confirmation email:
           const path=`/${req.params.uilang}/${L(req.params.uilang, "claraich2|register2")}?e=${email}&k=${registrationKey}`;

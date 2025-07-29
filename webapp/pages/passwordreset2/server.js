@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -73,9 +74,18 @@ export default function(app, L, do404, doReadOnly, rootdir){
     if(!changeFailed){
       const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
       try{
-        const sql=`update users set passwordHash=$passwordHash, sessionKey=NULL, registrationKey=NULL where lower(email)=lower($email) and registrationKey=$key`;
-        const stmt=db.prepare(sql);
-        stmt.run({email, passwordHash, key});
+        let userROWID = 0;
+        {
+          const sql=`select rowid from users where lower(email)=lower($email)`;
+          const stmt=db.prepare(sql);
+          stmt.all({email}).map(row => { userROWID=row["rowid"] });
+        }
+        {
+          const sql=`update users set passwordHash=$passwordHash, sessionKey=NULL, registrationKey=NULL where lower(email)=lower($email) and registrationKey=$key`;
+          const stmt=db.prepare(sql);
+          stmt.run({email, passwordHash, key});
+        }
+        logEvent(userROWID, null, `user__password--reset-finish`, null);
       } catch(e){
         console.log(e);
       } finally {

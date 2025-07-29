@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -59,7 +60,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
 
   });
 
-  //the registration form, after submission:
+  //the form, after submission:
   app.post("/:uilang(gd|en)/(atharraich-proifil|edit-profile)", function(req, res){
     if(process.env.READONLY==1){ doReadOnly(req, res); return; }
 
@@ -105,6 +106,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
             const stmt=db.prepare(sql);
             stmt.run({email, displayName, bio});
           }
+          logEvent(userROWID, null, `user__profile--edit`, {displayName, bio});
         } catch(e){
           console.log(e);
         } finally {

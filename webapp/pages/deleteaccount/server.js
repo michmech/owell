@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -91,6 +92,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
           const stmt=db.prepare(sql);
           stmt.run({anonymizedEmail, userROWID});
         }
+        logEvent(userROWID, null, `user--selfdelete`, null);
         { //any status=owned sounds belonging to this user, make them status=available:
           const sql=`update sounds set status='available' where owner=$email and status='owned'`;
           const stmt=db.prepare(sql);

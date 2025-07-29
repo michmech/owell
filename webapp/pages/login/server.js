@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -74,15 +75,19 @@ export default function(app, L, do404, doReadOnly, rootdir){
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     let loginFailed = true; 
     try{
+      let userROWID = 0;
       { //check if email and password match:
-        const sql=`select email from users where lower(email)=lower($email) and passwordHash=$passwordHash and registrationCompleted=1`;
+        const sql=`select email, rowid from users where lower(email)=lower($email) and passwordHash=$passwordHash and registrationCompleted=1`;
         const stmt=db.prepare(sql);
-        stmt.all({email, passwordHash}).map(row => { loginFailed = false; loggedIn=true; });
+        stmt.all({email, passwordHash}).map(row => { loginFailed = false; loggedIn=true; userROWID=row["rowid"] });
       }
       if(!loginFailed){ //if they do, tell the DB the user is logged in:
-        const sql=`update users set sessionKey=$sessionKey, lastSeen=$now where lower(email)=lower($email)`;
-        const stmt=db.prepare(sql);
-        stmt.run({email, sessionKey, now});
+        {
+          const sql=`update users set sessionKey=$sessionKey, lastSeen=$now where lower(email)=lower($email)`;
+          const stmt=db.prepare(sql);
+          stmt.run({email, sessionKey, now});
+        }
+        logEvent(userROWID, null, `user--login`, null);
       }
     } catch(e){
       console.log(e);

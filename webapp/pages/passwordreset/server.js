@@ -1,6 +1,7 @@
 import sqlite from "better-sqlite3";
 import nodemailer from "nodemailer";
 import {mailBuilder} from "../../mailBuilder.js";
+import {logEvent} from '../../logger.js';
 // import fs from "fs/promises";
 
 export default function(app, L, do404, doReadOnly, rootdir){
@@ -71,6 +72,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
         const stmt=db.prepare(sql);
         stmt.run({email, registrationKey});
       }
+      logEvent(userROWID, null, `user__password--reset-start`, null);
       {
         //send confirmation email:
         const path=`/${req.params.uilang}/${L(req.params.uilang, "facal-faire-air-diochuimhne2|forgot-password2")}?e=${email}&k=${registrationKey}`;

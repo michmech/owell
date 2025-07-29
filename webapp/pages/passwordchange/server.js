@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -84,10 +85,13 @@ export default function(app, L, do404, doReadOnly, rootdir){
         }
       }
       if(loggedIn && !changeFailed){
-        const sql=`update users set passwordHash=$passwordHash where email=$email`;
-        const stmt=db.prepare(sql);
-        stmt.run({email, passwordHash});
-    }
+        {
+          const sql=`update users set passwordHash=$passwordHash where email=$email`;
+          const stmt=db.prepare(sql);
+          stmt.run({email, passwordHash});
+        }
+        logEvent(userROWID, null, `user__password--change`, null);
+      }
     } catch(e){
       console.log(e);
     } finally {

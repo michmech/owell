@@ -1,4 +1,5 @@
 import sqlite from "better-sqlite3";
+import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
@@ -8,17 +9,18 @@ export default function(app, L, do404, doReadOnly, rootdir){
     let loggedIn=false;
     let isAdmin=false;
     let isOwner=false;
+    let userROWID = 0;
 
-    const id = req.query["id"];
+    const id = parseInt(req.query["id"]);
     let result=false;
 
     let db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
       { //check if the user is logged in and is an admin:
         let yesterday=(new Date()); yesterday.setHours(yesterday.getHours()-24); yesterday=yesterday.toISOString();
-        const sql=`select email, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
+        const sql=`select rowid, email, isAdmin from users where lower(email)=lower($email) and sessionKey=$sessionKey and lastSeen>=$yesterday`;
         const stmt=db.prepare(sql);
-        stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1) });
+        stmt.all({email, sessionKey, yesterday}).map(row => { userROWID=row["rowid"]; loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
       if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //check if the sound is owned and if the person is its owner:
@@ -32,6 +34,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
           const stmt=db.prepare(sql);
           stmt.run({id});
         }
+        logEvent(userROWID, id, `sound--giveup`, null);
         result=true;
       }
     } catch(e){
