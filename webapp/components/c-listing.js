@@ -21,9 +21,9 @@ export class CListing extends HTMLElement {
         if(sound.status=="approved") html+=`● ● ●`;
       html+=`</span> `;
       if(sound.status=="available") html+=`${LOC("#available")}`;
-      if(sound.status=="owned") html+=`${LOC("#owned")} <a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName}</a>`;
-      if(sound.status=="finished") html+=`${LOC("#finished", 0)}<a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName}</a>${LOC("#finished", 1)}`;
-      if(sound.status=="approved") html+=`${LOC("#approved", 0)}<a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName}</a>${LOC("#approved", 1)}`;
+      if(sound.status=="owned") html+=`${LOC("#owned")} <a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName || LOC("#anonymizeduser")}</a>`;
+      if(sound.status=="finished") html+=`${LOC("#finished", 0)}<a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName || LOC("#anonymizeduser")}</a>${LOC("#finished", 1)}`;
+      if(sound.status=="approved") html+=`${LOC("#approved", 0)}<a class="owner" href="/${uilang}/u${sound.ownerROWID}">${sound.ownerDisplayName || LOC("#anonymizeduser")}</a>${LOC("#approved", 1)}`;
     html+=`</span>`;
 
     html+=`<span class="menuspot">`;

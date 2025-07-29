@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+    <link rel="stylesheet" href="/deleteaccount/styles.css"/>
+    <script src="/deleteaccount/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <div class="container">
+        <h1><%=L("#deleteyouraccount")%></h1>
+        <form method="post" action="">
+
+          <div class="line">
+            <div class="legend">
+              <span class="icon triangle-exclamation"></span>
+              <b><%=L("#deleteaccountwarning1")%></b>
+              <%=L("#deleteaccountwarning2")%>
+              <%=L("#deleteaccountwarning3")%>
+            </div>
+          </div>
+
+          <div class="line">
+            <label>
+              <input type="checkbox" id="understand"/>
+              <%=L("#deleteaccountunderstand")%> 
+            </label>
+          </div>
+
+          <div class="line submit">
+            <button type="submit" disabled><span class="icon trash-can"></span> <%=L("#goodbye")%></button>
+          </div>
+
+        </form>
+      </div>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

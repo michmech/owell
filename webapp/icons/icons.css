@@ -99,3 +99,7 @@ span.icon.person-digging {
   mask-image: url(/person-digging.svg);
   -webkit-mask-image: url(/person-digging.svg);
 }
+span.icon.triangle-exclamation {
+  mask-image: url(/triangle-exclamation.svg);
+  -webkit-mask-image: url(/triangle-exclamation.svg);
+}

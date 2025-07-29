@@ -536,17 +536,13 @@ A user's profile page:
 Volunteer transcriber since $
 Tar-sgrìobhadair saor-thoileach o bha $ ann
 
-##edityourprofile
-Edit your profile
-Atharraich a’ phròifil agad
-
-##deleteyouraccount
-Delete your account
-Cuir às dhan chunntas agad. 
-
 #words
 words
 faclan
+
+##edityourprofile
+Edit your profile
+Atharraich a’ phròifil agad
 
 #bio
 A few words about you
@@ -555,6 +551,34 @@ A few words about you
 #biolegend
 Maximum 500 characters. You can leave this blank.
 Maximum 500 characters. You can leave this blank.
+
+##deleteyouraccount
+Delete your account
+Cuir às dhan chunntas agad
+
+#deleteaccountwarning1
+We're sorry to see you go.
+We're sorry to see you go.
+
+#deleteaccountwarning2
+Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber.
+Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber.
+
+#deleteaccountwarning3
+Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead.
+Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead.
+
+#deleteaccountunderstand
+Yes, I want to delete my account. I understand that this cannot be undone.
+Yes, I want to delete my account. I understand that this cannot be undone.
+
+#goodbye
+Good-bye
+Good-bye
+
+##anonymizeduser
+anonymous contributor
+anonymous contributor
 
 
 This will almost never be shown:

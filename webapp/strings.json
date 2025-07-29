@@ -455,17 +455,13 @@
     "en": "Volunteer transcriber since $",
     "gd": "Tar‑sgrìobhadair saor‑thoileach o bha $ ann"
   },
-  "#edityourprofile": {
-    "en": "Edit your profile",
-    "gd": "Atharraich a’ phròifil agad"
-  },
-  "#deleteyouraccount": {
-    "en": "Delete your account",
-    "gd": "Cuir às dhan chunntas agad."
-  },
   "#words": {
     "en": "words",
     "gd": "faclan"
+  },
+  "#edityourprofile": {
+    "en": "Edit your profile",
+    "gd": "Atharraich a’ phròifil agad"
   },
   "#bio": {
     "en": "A few words about you",
@@ -474,6 +470,34 @@
   "#biolegend": {
     "en": "Maximum 500 characters. You can leave this blank.",
     "gd": "Maximum 500 characters. You can leave this blank."
+  },
+  "#deleteyouraccount": {
+    "en": "Delete your account",
+    "gd": "Cuir às dhan chunntas agad"
+  },
+  "#deleteaccountwarning1": {
+    "en": "We're sorry to see you go.",
+    "gd": "We're sorry to see you go."
+  },
+  "#deleteaccountwarning2": {
+    "en": "Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber.",
+    "gd": "Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber."
+  },
+  "#deleteaccountwarning3": {
+    "en": "Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead.",
+    "gd": "Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead."
+  },
+  "#deleteaccountunderstand": {
+    "en": "Yes, I want to delete my account. I understand that this cannot be undone.",
+    "gd": "Yes, I want to delete my account. I understand that this cannot be undone."
+  },
+  "#goodbye": {
+    "en": "Good‑bye",
+    "gd": "Good‑bye"
+  },
+  "#anonymizeduser": {
+    "en": "anonymous contributor",
+    "gd": "anonymous contributor"
   },
   "#readonly": {
     "en": "This website is currently in read‑only mode for maintenance. Please try again later.",

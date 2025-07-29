@@ -32,9 +32,9 @@
                 <%if(status=="approved"){%>● ● ●<%}%>
               </span>
               <%if(status=="available"){%><%=L("#available")%><%}%>
-              <%if(status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%}%>
-              <%if(status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#finished", 1)%><%}%>
-              <%if(status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName%></a><%=L("#approved", 1)%><%}%>
+              <%if(status=="owned"){%><%=L("#owned")%> <a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName || L("#anonymizeduser")%></a><%}%>
+              <%if(status=="finished"){%><%=L("#finished", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName || L("#anonymizeduser")%></a><%=L("#finished", 1)%><%}%>
+              <%if(status=="approved"){%><%=L("#approved", 0)%><a href="/<%-uilang%>/u<%-ownerROWID%>" class="owner"><%=ownerDisplayName || L("#anonymizeduser")%></a><%=L("#approved", 1)%><%}%>
             </span>
             <span class="menuspot">
               <span class="difficulty <%-difficulty%>">
