@@ -26,6 +26,12 @@ export class CAdder extends HTMLElement {
   #go(){
     let trackID = this.querySelector("input#trackID").value;
     if(trackID && (trackID=parseInt(trackID))){
+
+      const tab=document.querySelector(`button[data-query=available]`);
+      if(!tab.classList.contains("current")){
+        clickTab(tab, ()=>{ this.scrollIntoView({behavior: "smooth"}); });
+      }
+      
       this.querySelector("input#trackID").disabled=true;
       this.querySelector("button[type='submit']").disabled=true;
       this.querySelector("#spinner").style.display="inline-block";

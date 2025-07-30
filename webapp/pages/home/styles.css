@@ -323,3 +323,66 @@ div.sounds.loading {
   background-repeat: no-repeat;
   background-position: center 100px;
 }
+
+div.adminArea {
+  overflow-y: auto;
+  margin: -10px;
+  padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+div.adminArea > div.title {
+  display: block;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccddee;
+}
+div.adminArea > div.title span {
+  background-color: #ccddee;
+  color: #004b34;
+  padding: 6px 10px 3px 10px;
+  border-radius: 20px;
+  position: relative;
+  bottom: -9px;
+}
+
+div.adminbox {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  border: 0px;
+  box-shadow: 0px 0px 8px #aaaaaa;
+  float: left;
+  width: calc(30% - 20px);
+  margin-left: 20px;
+  box-sizing: border-box;
+  height: 7.5em;
+}
+@media (max-width: 600px) {
+  div.adminbox {
+    float: none;
+    width: auto;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+div.adminbox div.title {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #00abce;
+  padding: 17px 20px 15px 20px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 7px 7px 0px 0px;
+}
+div.adminbox span.icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #999999;
+  margin-right: 10px;
+}

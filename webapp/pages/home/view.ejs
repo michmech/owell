@@ -97,7 +97,14 @@
       <div class="sounds loading"></div>
 
       <%if(loggedIn && isAdmin){%>
-        <c-adder style="display: none"/>
+        <div class="adminArea">
+          <div class="title"><span><%=L("#administratortools")%></span></div>
+          <c-adder></c-adder>
+          <div class="adminbox">
+            <div class="title"><%=L("#monitorwhatsgoingon")%></div>
+            <span class="icon clock"></span> <a href="/<%=uilang%>/<%=L("log|log")%>"><%=L("#eventlog")%>&nbsp;»</a>
+          </div>
+        </div>
       <%}%>
 
     </main>

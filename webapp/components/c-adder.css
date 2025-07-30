@@ -1,12 +1,22 @@
 c-adder {
   display: block;
-  margin-top: -10px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
   position: relative;
   border: 0px;
   box-shadow: 0px 0px 8px #aaaaaa;
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  height: 7.5em;
+}
+@media (max-width: 600px) {
+  c-adder {
+    float: none;
+    width: auto;
+    height: auto;
+  }
 }
 
 c-adder div.title {

@@ -81,6 +81,10 @@ Ur tabhartasan
 None at the moment.
 Chan eil gin an-dràsta.
 
+#administratortools
+administrator tools
+administrator tools
+
 #sitedescription
 Gaelic community transcription project
 Pròiseact tar-sgrìobhaidh na coimhearsnachd Ghàidhlig
@@ -596,3 +600,14 @@ This will almost never be shown:
 This website is currently in read‑only mode for maintenance. Please try again later.
 This website is currently in read‑only mode for maintenance. Please try again later.
 
+
+Event log:
+----------
+
+#monitorwhatsgoingon
+Monitor what's going on
+Monitor what's going on
+
+#eventlog
+Event log
+Event log

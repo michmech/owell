@@ -5,7 +5,7 @@ window.onload = function(){
   document.querySelector("div.tabs button").click(); 
 }
 
-function clickTab(button){
+function clickTab(button, callback){
   document.querySelectorAll("div.tabs button").forEach(b => {
     b.classList.remove("current");
   });
@@ -18,9 +18,6 @@ function clickTab(button){
   div.innerHTML="";
   div.classList.add("loading");
 
-  const adder = document.querySelector("c-adder");
-  if(adder) adder.style.display = "none";
-
   fetch("/list?queryName="+queryName+"&when="+(new Date()).toISOString()).then(resp => {
     if(resp.ok){
       resp.json().then(resp => {
@@ -28,7 +25,6 @@ function clickTab(button){
         
         resp.sounds.forEach(sound => {
           const listing=document.createElement("c-listing");
-          // listing.setAttribute("class", "fade-in");
           listing.classList.add("fade-in");
           if(sound.prominent) listing.classList.add("prominent");
           listing.setAttribute("data-admin", resp.isAdmin ? "1" : "0");
@@ -40,8 +36,8 @@ function clickTab(button){
         if(resp.sounds.length==0){
           document.querySelector("div.nojoy").style.display="block";
         }
-        
-        if(adder && queryName=="available") adder.style.display = "block";
+
+        if(callback) callback();
       });
     }
   });

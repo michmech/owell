@@ -75,6 +75,10 @@
     "en": "None at the moment.",
     "gd": "Chan eil gin an‑dràsta."
   },
+  "#administratortools": {
+    "en": "administrator tools",
+    "gd": "administrator tools"
+  },
   "#sitedescription": {
     "en": "Gaelic community transcription project",
     "gd": "Pròiseact tar‑sgrìobhaidh na coimhearsnachd Ghàidhlig"
@@ -510,5 +514,13 @@
   "#readonly": {
     "en": "This website is currently in read‑only mode for maintenance. Please try again later.",
     "gd": "This website is currently in read‑only mode for maintenance. Please try again later."
+  },
+  "#monitorwhatsgoingon": {
+    "en": "Monitor what's going on",
+    "gd": "Monitor what's going on"
+  },
+  "#eventlog": {
+    "en": "Event log",
+    "gd": "Event log"
   }
 }
