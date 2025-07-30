@@ -1,9 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="ga">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="/android-chrome-512x512.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
     <title>404</title>
+    <meta property="og:title" content="404" />
+    <meta name="twitter:title" content="404" />
+
+    <link rel="stylesheet" href="/headContent/styles.css"/>
+    <style>
+      div.error {
+        max-width: 1200px;
+        margin: 25vh auto 0 auto;
+        padding: 0 25px;
+      }
+      div.error div.number {
+        font-size: 2em;
+        color: #999999;
+      }
+      div.error div.block {
+        margin-top: 1.5em;
+        line-height: 1.5em;
+      }
+      div.error div.block a {
+        color: #245583;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        padding-bottom: 1px;
+      }
+      div.error div.block a:hover {
+        color: #3c6c99;
+      }
+    </style>
   </head>
   <body>
-    <p>This page does not exist yet.</p>
-  </body>
+
+    <div class="error">
+      <div class="number">404</div>
+      <div class="block" lang="ga">
+        <div class="message"><%=L("gd", "#thispagedoesnotexist")%></div>
+        <div class="linkContainer">
+          <a href="/gd"><%=L("gd", "#homepage")%></a>
+        </div>
+      </div>
+      <div class="block" lang="en">
+        <div class="message"><%=L("en", "#thispagedoesnotexist")%></div>
+        <div class="linkContainer">
+          <a href="/en"><%=L("en", "#homepage")%></a>
+        </div>
+      </div>
+    </div>
+ </body>
 </html>

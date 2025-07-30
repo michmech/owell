@@ -620,3 +620,14 @@ Longer
 Showing $ most recent events
 Showing $ most recent events
 
+
+Our 404 error page:
+-------------------
+
+#thispagedoesnotexist
+This page does not exist.
+This page does not exist.
+
+#homepage
+Home page
+Home page

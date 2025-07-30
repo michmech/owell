@@ -52,7 +52,9 @@ const L=function(uilang, multistring, subpart){
 
 //404:
 function do404(req, res){
-  res.status(404).render("404/view.ejs", {});
+  res.status(404).render("404/view.ejs", {
+    L: L,
+  });
 }
 
 //Read-only:

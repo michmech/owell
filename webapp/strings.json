@@ -530,5 +530,13 @@
   "#showingxevents": {
     "en": "Showing $ most recent events",
     "gd": "Showing $ most recent events"
+  },
+  "#thispagedoesnotexist": {
+    "en": "This page does not exist.",
+    "gd": "This page does not exist."
+  },
+  "#homepage": {
+    "en": "Home page",
+    "gd": "Home page"
   }
 }
