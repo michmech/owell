@@ -49,6 +49,9 @@ td.when {
   padding-right: 0.5em;
   color: #333333;
 }
+td.user {
+  text-align: center;
+}
 td.code {
   padding-left: 0.5em;
   font-family: "Overpass Mono", monospace;
