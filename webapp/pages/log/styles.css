@@ -1,0 +1,58 @@
+div.title {
+  margin: 20px 0px 30px 0px;
+  line-height: 2em;
+}
+div.title span.message {
+  margin-right: 10px;
+}
+div.title a.button {
+  border-radius: 40px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  display: inline-block;
+  padding: 7px 15px 5px 15px;
+  position: relative;
+  outline-offset: 2px;
+  line-height: 1em;
+  font-size: 0.9em;
+}
+
+div.tableContainer {
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 0px -20px;
+  overflow-x: auto;
+}
+@media(max-width: 1210px){
+  div.tableContainer {
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    margin: 0px -15px;
+  }
+}
+
+
+table {
+  empty-cells: show;
+  border-spacing: 0px;
+  font-size: 0.95em;
+}
+td {
+  white-space: nowrap;
+}
+td.when {
+  font-family: "Overpass Mono", monospace;
+  font-size: 0.9em;
+  padding-right: 0.5em;
+  color: #333333;
+}
+td.code {
+  padding-left: 0.5em;
+  font-family: "Overpass Mono", monospace;
+  font-size: 0.9em;
+  color: #333333;
+}
+

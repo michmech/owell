@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+
+    <link rel="stylesheet" href="/log/styles.css"/>
+    <script src="/log/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+
+      <div class="title">
+        <span class="message"><%=L("#showingxevents", 0)%> <%=events.length%> <%=L("#showingxevents", 1)%></span>
+        <%if(hasMore){%>
+          <a class="button" href="?l=<%-limit+10%>"><%=L("#longer")%></a>  
+        <%}%>
+      </div>
+
+      <div class="tableContainer">
+        <table>
+          <tbody>
+            <%events.forEach(event => {%>
+              <tr>
+                <td class="when">
+                  <%=event.when%>
+                </td>
+                <td class="user">
+                  <%if(event.user_rowid){%>
+                    <a href="/<%-uilang%>/u<%-event.user_rowid%>">
+                      <%=users[event.user_rowid] || L("#anonymizeduser")%>
+                    </a>
+                  <%}%>
+                </td>
+                <td class="code">
+                  <%=event.event_code%>
+                  <%if(event.sound_id){%>
+                    <a href="/<%-uilang%>/<%-event.sound_id%>"><%=event.sound_id%></a>
+                  <%}%>
+                  <%=event.json_payload%>
+                </td>
+              </tr>
+            <%})%>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>

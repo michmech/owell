@@ -522,5 +522,13 @@
   "#eventlog": {
     "en": "Event log",
     "gd": "Event log"
+  },
+  "#longer": {
+    "en": "Longer",
+    "gd": "Longer"
+  },
+  "#showingxevents": {
+    "en": "Showing $ most recent events",
+    "gd": "Showing $ most recent events"
   }
 }

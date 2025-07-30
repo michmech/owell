@@ -611,3 +611,12 @@ Monitor what's going on
 #eventlog
 Event log
 Event log
+
+#longer
+Longer
+Longer
+
+#showingxevents
+Showing $ most recent events
+Showing $ most recent events
+

@@ -122,6 +122,8 @@ import page_editprofile from "./pages/editprofile/server.js";
   page_editprofile(app, L, do404, doReadOnly, __dirname);
 import page_deleteaccount from "./pages/deleteaccount/server.js";
   page_deleteaccount(app, L, do404, doReadOnly, __dirname);
+import page_log from "./pages/log/server.js";
+  page_log(app, L, do404, doReadOnly, __dirname);
 
 //Block HTTP access to server-side code:
 app.all("/*/server.js", do404);

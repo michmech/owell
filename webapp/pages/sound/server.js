@@ -165,6 +165,11 @@ export default function(app, L, do404, doReadOnly, rootdir){
       db.close();
     }
 
+    if(!trackID){
+      do404(req, res);
+      return;
+    }
+
     res.render("sound/view.ejs", {
       uilang: req.params.uilang,
       userDisplayName,
