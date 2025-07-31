@@ -101,6 +101,10 @@ function friendlifyPayload(payload){
     for(let key in payload){
       if(key=="transcript"){
         ret["wordcount"] = wordcounter.countWords(payload[key]);
+      } else if(key=="text"){
+        ret["text"] = payload[key].substring(0, Math.min(30, payload[key].length))+"..."
+      } else if(key=="words"){
+        ret["words"] = payload[key].length;
       } else {
         ret[key] = payload[key];
       }

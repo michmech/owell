@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import bodyParser from "body-parser";
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json()); // for parsing application/json
 import cookieParser from 'cookie-parser';
 app.use(cookieParser());
 import { SHA3 } from "sha3";
@@ -94,6 +95,8 @@ import api_promote from "./api/promote/server.js";
   api_promote(app, L, do404, doReadOnly, __dirname);
 import api_demote from "./api/demote/server.js";
   api_demote(app, L, do404, doReadOnly, __dirname);
+import api_asr from "./api/asr/server.js";
+  api_asr(app, L, do404, doReadOnly, __dirname);
 
 //Hook up our webpage-serving endpoints:
 import page_home from "./pages/home/server.js";
