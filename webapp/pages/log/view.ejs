@@ -14,7 +14,8 @@
         <span class="message"><%=L("#showingxevents", 0)%> <%=events.length%> <%=L("#showingxevents", 1)%></span>
         <%if(hasMore){%>
           <a class="button" href="?l=<%-limit+10%>"><%=L("#longer")%></a>  
-        <%}%>
+          <%}%>
+          <a class="button" href="javascript:location.reload()"><%=L("#reload")%></a>  
       </div>
 
       <div class="tableContainer">

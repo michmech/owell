@@ -15,6 +15,7 @@ div.title a.button {
   outline-offset: 2px;
   line-height: 1em;
   font-size: 0.9em;
+  margin-right: 7px;
 }
 
 div.tableContainer {

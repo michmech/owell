@@ -616,6 +616,10 @@ Event log
 Longer
 Longer
 
+#reload
+Reload
+Reload
+
 #showingxevents
 Showing $ most recent events
 Showing $ most recent events
