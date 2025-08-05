@@ -80,16 +80,20 @@ export class CTextarea extends HTMLElement {
     let time=0;
     before.replace(/\(([0-9]+):([0-9]+)\)/g, (s, mins, secs) => {
       time = parseInt(mins)*60 + parseInt(secs);
-    })
+    });
     return time;
   }
 
   getLatestTime(){
     const textarea=document.querySelector("textarea");
-    let time=0;
-    textarea.value.replace(/\(([0-9]+):([0-9]+)\)/g, (s, mins, secs) => {
-      time = parseInt(mins)*60 + parseInt(secs);
-    })
+    let time=-1;
+    if(textarea.value.trim()==""){
+      time = 0;
+    } else {
+      textarea.value.trim().replace(/\(([0-9]+):([0-9]+)\)$/g, (s, mins, secs) => {
+        time = parseInt(mins)*60 + parseInt(secs);
+      });
+    }
     return time;
   }
 

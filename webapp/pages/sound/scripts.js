@@ -80,15 +80,17 @@ function showASR(currentTime){
   const audio = document.querySelector("audio");
 
   startTime = textarea.getLatestTime();
-  let text = [];
-  pretranscript.words.forEach(item => {
-    if(item.start >= startTime && item.end <= currentTime){
-      text.push(item.word);
+  if(startTime > -1){
+    let text = [];
+    pretranscript.words.forEach(item => {
+      if(item.start >= startTime && item.end <= currentTime){
+        text.push(item.word);
+      }
+    });
+    text = text.join(" ");
+    if(!audio.paused){
+      textarea.suggest(text);
     }
-  });
-  text = text.join(" ");
 
-  if(!audio.paused){
-    textarea.suggest(text);
   }
 }
