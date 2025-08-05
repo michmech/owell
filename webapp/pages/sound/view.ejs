@@ -147,6 +147,19 @@
                 </span>
               </div>
             <%}%>
+            <%if(pretranscript){%>
+              <div class="asrbar">
+                <label>
+                  <input type="checkbox" id="asr" checked onchange="clickASRCheckbox()" />
+                  <span class="badge" title="<%=L("#automaticspeechrecognition")%>"><%=L("#asr")%></span>
+                  <span class="label"><%=L("#showsuggestions")%></span>
+                </label>
+                <button id="acceptSuggestion" type="button">
+                  <%=L("#acceptsuggestion")%>
+                  <span class="key">TAB</span>
+                </button>
+              </div>  
+            <%}%>
             <aside class="toolbox">
               <div class="scrollable">
                 <c-speed>

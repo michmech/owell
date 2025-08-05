@@ -104,7 +104,7 @@ form div.guidelink {
 }
 @media(max-width: 700px){
   form div.guidelink {
-    bottom: 165px;
+    bottom: 185px;
     left: 0px;
     right: 0px;
     width: auto;
@@ -419,3 +419,93 @@ div.title > div.pretitle span.difficulty.high > span.high span.icon {
 
 
 
+form div.asrbar {
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  width: calc(100% - 335px);
+  background-color: #eeeeee;
+  border-radius: 0px 0px 4px 4px;
+  padding: 10px 10px;
+  z-index: 2;
+  line-height: 1em;
+  font-size: 0.9em;
+  color: #333333;
+}
+@media(max-width: 700px){
+  form div.asrbar {
+    bottom: 127px;
+    left: 0px;
+    right: 0px;
+    width: auto;
+  }
+}
+form div.asrbar label {
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+}
+@media(max-width: 700px){
+  form div.asrbar label {
+    top: 2px;
+  }
+}
+form div.asrbar label:hover {
+  color: #000000;
+}
+form div.asrbar label span.badge {
+  font-size: 0.9em;
+  background-color: #dddddd;
+  line-height: 1em;
+  display: inline-block;
+  padding: 5px 6px 2px 6px;
+  border-radius: 4px;
+  position: relative;
+  top: -1px;
+  margin: 0px 5px;
+  font-weight: bold;
+}
+@media(max-width: 700px){
+  form div.asrbar label span.label {
+    display: none;
+  }
+}
+form div.asrbar button {
+  margin: 0px 0px 0px 10px;
+  padding: 5px 15px 3px 15px;
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  border: 1px solid #999999;
+  background-color: #f9f9f9;
+  border-radius: 20px;  
+  box-shadow: 1px 1px 0px #999999;
+  cursor: pointer;
+  float: right;
+}
+form div.asrbar button:hover {
+  color: #000000;
+}
+form div.asrbar button:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+form div.asrbar button span.key {
+  font-family: "Overpass Mono", monospace;
+  line-height: 1.25em;
+  font-size: 0.8em;
+  border: 1px solid #999999;
+  padding: 5px 5px 2px 5px;
+  border-radius: 2px;
+  text-shadow: 1px 1px 0px #ffffff;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
+}
+@media(max-width: 700px){
+  form div.asrbar button span.key {
+    display: none;
+  }
+}

@@ -547,8 +547,24 @@
     "en": "ASR",
     "gd": "ASR"
   },
+  "#automaticspeechrecognition": {
+    "en": "Automatic Speech Recognition",
+    "gd": "Automatic Speech Recognition"
+  },
   "#asravailable": {
-    "en": "Automatic Speech Recognition available",
-    "gd": "Automatic Speech Recognition available"
+    "en": "Automatic Speech Recognition is available",
+    "gd": "Automatic Speech Recognition is available"
+  },
+  "#asrnotavailable": {
+    "en": "Automatic Speech Recognition is not available yet",
+    "gd": "Automatic Speech Recognition is not available yet"
+  },
+  "#showsuggestions": {
+    "en": "Show suggestions",
+    "gd": "Show suggestions"
+  },
+  "#acceptsuggestion": {
+    "en": "Accept suggestion",
+    "gd": "Accept suggestion"
   }
 }

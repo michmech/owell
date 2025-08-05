@@ -37,21 +37,32 @@ document.addEventListener("keydown", (ev) => {
   }
   //Tab
   if(ev.key=="Tab"){
-    ev.preventDefault();
-    const audio = document.querySelector("audio");
-    audio.pause();
-    const timestamp=formatTimestamp(audio.currentTime);
-    document.querySelector("c-textarea").acceptSuggestion(timestamp);
+    if(document.querySelector("c-textarea span.suggestion")){
+      ev.preventDefault();
+      const audio = document.querySelector("audio");
+      audio.pause();
+      const timestamp=formatTimestamp(audio.currentTime);
+      document.querySelector("c-textarea").acceptSuggestion(timestamp);
+    }
   }
 });
 
 window.setTimeout(() => {
+  const butAcceptSuggestion = document.querySelector("button#acceptSuggestion");
+  if(butAcceptSuggestion){
+    butAcceptSuggestion.addEventListener("click", (ev) => {
+      const audio = document.querySelector("audio");
+      audio.pause();
+      const timestamp=formatTimestamp(audio.currentTime);
+      document.querySelector("c-textarea").acceptSuggestion(timestamp);
+    });
+  }
   document.querySelector("audio").addEventListener("timeupdate", (ev) => {
     const time=ev.target.currentTime;
     if(document.querySelector("c-textarea")){
       document.querySelector("c-textarea").hiliteSegment(time);
     }
-    if(pretranscript && document.querySelector("c-textarea")){
+    if(pretranscript && document.querySelector("c-textarea") && document.querySelector("input#asr").checked){
       showASR(time);
     }
   });
@@ -59,7 +70,7 @@ window.setTimeout(() => {
     updateDuration();
   });
   updateDuration();
-});
+}, 100);
 
 function updateDuration(){
   const input=document.querySelector("input[name=duration]");
@@ -75,10 +86,15 @@ function hideGuidelink(){
   document.querySelector("textarea").focus();
 }
 
+function clickASRCheckbox(){
+  if(!document.querySelector("input#asr").checked){
+    document.querySelectorAll("c-textarea span.suggestion").forEach(x => { x.remove(); });
+  }
+}
+
 function showASR(currentTime){
   const textarea = document.querySelector("c-textarea");
   const audio = document.querySelector("audio");
-
   startTime = textarea.getLatestTime();
   if(startTime > -1){
     let text = [];
@@ -91,6 +107,5 @@ function showASR(currentTime){
     if(!audio.paused){
       textarea.suggest(text);
     }
-
   }
 }

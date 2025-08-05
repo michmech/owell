@@ -156,7 +156,11 @@ const STRINGS = {
     "gd": "ASR"
   },
   "#asravailable": {
-    "en": "Automatic Speech Recognition available",
-    "gd": "Automatic Speech Recognition available"
+    "en": "Automatic Speech Recognition is available",
+    "gd": "Automatic Speech Recognition is available"
+  },
+  "#asrnotavailable": {
+    "en": "Automatic Speech Recognition is not available yet",
+    "gd": "Automatic Speech Recognition is not available yet"
   }
 };

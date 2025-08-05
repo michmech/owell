@@ -123,13 +123,14 @@ c-listing div.title span.asr {
   color: #666666;
   line-height: 1em;
   display: inline-block;
-  padding: 5px 6px 2px 6px;
+  padding: 5px 6px 3px 6px;
   border-radius: 4px;
   cursor: default;
+  font-weight: bold;
 }
 c-listing div.title span.asr span.icon {
   position: relative;
-  top: -2px;
+  top: -1px;
 }
 c-listing div.title span.asr:hover {
   background-color: #dddddd;

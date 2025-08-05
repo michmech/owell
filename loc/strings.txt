@@ -644,7 +644,23 @@ ASR:
 ASR
 ASR
 
+#automaticspeechrecognition
+Automatic Speech Recognition
+Automatic Speech Recognition
+
 ##asravailable
-Automatic Speech Recognition available
-Automatic Speech Recognition available
+Automatic Speech Recognition is available
+Automatic Speech Recognition is available
+
+##asrnotavailable
+Automatic Speech Recognition is not available yet
+Automatic Speech Recognition is not available yet
+
+#showsuggestions
+Show suggestions
+Show suggestions
+
+#acceptsuggestion
+Accept suggestion
+Accept suggestion
 
