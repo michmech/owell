@@ -91,6 +91,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
     let tapeID=0;
     let tapeTitle="";
     let status="";
+    let pretranscript=null;
     let transcript="";
     let owner="";
     let ownerROWID=0;
@@ -111,7 +112,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
       if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
       { //get the sound:
         const sql=`
-          select s.difficulty, s.duration, s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
+          select s.pretranscript, s.difficulty, s.duration, s.id, s.track_id, s.title, s.part_number, s.year, s.tape_id, s.tape_title, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName, s.transcript
           from sounds as s
           left outer join users as u on u.email=s.owner
           where id=$soundID`;
@@ -130,6 +131,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
           ownerDisplayName=row["ownerDisplayName"] || "";
           duration=row["duration"];
           difficulty=row["difficulty"];
+          pretranscript=row["pretranscript"];
         });
       }
       if(partNumber>0) { //get the other parts, if any:
@@ -204,6 +206,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
       fieldworkers,
       duration,
       difficulty,
+      pretranscript,
     });
   });
   

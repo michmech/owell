@@ -44,3 +44,7 @@ c-textarea pre.backdrop span.timestamp {
 c-textarea pre.backdrop span.segment.hilited {
   background-color: beige;
 }
+
+c-textarea pre.backdrop span.suggestion {
+  color: #999999;
+}

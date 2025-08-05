@@ -635,3 +635,16 @@ This page does not exist.
 #homepage
 Home page
 Home page
+
+
+ASR:
+----
+
+##asr
+ASR
+ASR
+
+##asravailable
+Automatic Speech Recognition available
+Automatic Speech Recognition available
+

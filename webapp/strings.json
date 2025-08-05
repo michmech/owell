@@ -542,5 +542,13 @@
   "#homepage": {
     "en": "Home page",
     "gd": "Home page"
+  },
+  "#asr": {
+    "en": "ASR",
+    "gd": "ASR"
+  },
+  "#asravailable": {
+    "en": "Automatic Speech Recognition available",
+    "gd": "Automatic Speech Recognition available"
   }
 }

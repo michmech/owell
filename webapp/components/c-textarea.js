@@ -84,6 +84,15 @@ export class CTextarea extends HTMLElement {
     return time;
   }
 
+  getLatestTime(){
+    const textarea=document.querySelector("textarea");
+    let time=0;
+    textarea.value.replace(/\(([0-9]+):([0-9]+)\)/g, (s, mins, secs) => {
+      time = parseInt(mins)*60 + parseInt(secs);
+    })
+    return time;
+  }
+
   hiliteSegment(time){
     let segment=null;
     this.querySelectorAll(".backdrop span.segment").forEach(span => {
@@ -91,6 +100,35 @@ export class CTextarea extends HTMLElement {
       if(time >= parseFloat(span.getAttribute("data-start-time"))) segment=span;
     });
     if(segment) segment.classList.add("hilited");
+  }
+
+  suggest(text){
+    const backdrop = this.querySelector(".backdrop");
+    backdrop.querySelectorAll("span.suggestion").forEach(span => { span.remove(); });
+    
+    const span = document.createElement("span");
+    span.classList.add("suggestion");
+    span.innerText = text;
+    
+    backdrop.appendChild(span);
+  }
+
+  acceptSuggestion(endTimestamp){
+    const span = this.querySelector(".backdrop .suggestion");
+    if(span){
+      const text = span.innerText + " " + endTimestamp + " ";
+      span.remove();
+
+      const textarea=document.querySelector("textarea");
+      textarea.focus();
+      textarea.selectionStart = textarea.value.length; //move cursor to the end, just in case
+      if(document.execCommand){ //deprecated but does not break undo
+        document.execCommand("insertText", false, text);
+      } else { //modern but breaks undo
+        textarea.value+=text;
+        this.#hilite();
+      }
+    }
   }
 
 }

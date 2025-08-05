@@ -48,6 +48,9 @@ export class CListing extends HTMLElement {
         html+=`“${sound.title}”`;
         if(sound.year) html+=` <span class="year">(${LOC("#year").toUpperCase()} ${sound.year})</span>`;
       html+=`</a>`;
+      if(sound.hasASR && sound.status!="approved" && sound.status!="finished"){
+        html+=` <span class="asr" title="${LOC("#asravailable")}"><span class="icon check"></span> ${LOC("#asr")}</span>`;
+      }
     html+=`</div>`;
 
     html+=`<div class="data">`;

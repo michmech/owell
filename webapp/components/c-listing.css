@@ -104,17 +104,35 @@ c-listing div.title {
 c-listing div.title a {
   color: inherit;
   border: 0px;
+  margin-right: 1px;
 }
 c-listing div.title a:hover {
   color: #245583;
 }
 c-listing div.title span.year {
   color: #667788;
-  margin-left: 3px;
   font-size: 0.8em;
+  margin-right: 3px;
 }
 c-listing div.title a:hover span.year {
   color: #3c6c99;
+}
+c-listing div.title span.asr {
+  font-size: 0.6em;
+  background-color: #eeeeee;
+  color: #666666;
+  line-height: 1em;
+  display: inline-block;
+  padding: 5px 6px 2px 6px;
+  border-radius: 4px;
+  cursor: default;
+}
+c-listing div.title span.asr span.icon {
+  position: relative;
+  top: -2px;
+}
+c-listing div.title span.asr:hover {
+  background-color: #dddddd;
 }
 c-listing > div.data {
   font-size: 0.9em;

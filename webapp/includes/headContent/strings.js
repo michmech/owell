@@ -150,5 +150,13 @@ const STRINGS = {
   "#anonymizeduser": {
     "en": "anonymous contributor",
     "gd": "anonymous contributor"
+  },
+  "#asr": {
+    "en": "ASR",
+    "gd": "ASR"
+  },
+  "#asravailable": {
+    "en": "Automatic Speech Recognition available",
+    "gd": "Automatic Speech Recognition available"
   }
 };

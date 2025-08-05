@@ -103,3 +103,7 @@ span.icon.triangle-exclamation {
   mask-image: url(/triangle-exclamation.svg);
   -webkit-mask-image: url(/triangle-exclamation.svg);
 }
+span.icon.check {
+  mask-image: url(/check.svg);
+  -webkit-mask-image: url(/check.svg);
+}

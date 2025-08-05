@@ -35,6 +35,14 @@ document.addEventListener("keydown", (ev) => {
     const audio=document.querySelector("audio");
     audio.currentTime = audio.currentTime+1;
   }
+  //Tab
+  if(ev.key=="Tab"){
+    ev.preventDefault();
+    const audio = document.querySelector("audio");
+    audio.pause();
+    const timestamp=formatTimestamp(audio.currentTime);
+    document.querySelector("c-textarea").acceptSuggestion(timestamp);
+  }
 });
 
 window.setTimeout(() => {
@@ -42,6 +50,9 @@ window.setTimeout(() => {
     const time=ev.target.currentTime;
     if(document.querySelector("c-textarea")){
       document.querySelector("c-textarea").hiliteSegment(time);
+    }
+    if(pretranscript && document.querySelector("c-textarea")){
+      showASR(time);
     }
   });
   document.querySelector("audio").addEventListener("durationchange", (ev) => {
@@ -62,4 +73,22 @@ function updateDuration(){
 function hideGuidelink(){
   document.querySelector("form div.guidelink").style.display="none";
   document.querySelector("textarea").focus();
+}
+
+function showASR(currentTime){
+  const textarea = document.querySelector("c-textarea");
+  const audio = document.querySelector("audio");
+
+  startTime = textarea.getLatestTime();
+  let text = [];
+  pretranscript.words.forEach(item => {
+    if(item.start >= startTime && item.end <= currentTime){
+      text.push(item.word);
+    }
+  });
+  text = text.join(" ");
+
+  if(!audio.paused){
+    textarea.suggest(text);
+  }
 }

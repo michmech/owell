@@ -25,37 +25,37 @@ export default function(app, L, do404, doReadOnly, rootdir){
       { //get list of sounds:
         let sql="";
         if(queryName=="theirs") sql=`
-          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select length(s.pretranscript) as pretranscript_length, s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           where u.rowid=$rowid
           order by s.ROWID desc`;
         if(queryName=="mine") sql=`
-          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select length(s.pretranscript) as pretranscript_length, s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           where s.owner=$email
           order by s.ROWID desc`;
         else if(queryName=="available") sql=`
-          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select length(s.pretranscript) as pretranscript_length, s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           where s.status='available'
           order by s.ROWID asc`;
         else if(queryName=="owned") sql=`
-          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select length(s.pretranscript) as pretranscript_length, s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           where s.status='owned'
           order by s.ROWID desc`;
         else if(queryName=="finished") sql=`
-          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select length(s.pretranscript) as pretranscript_length, s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           where s.status='finished'
           order by s.ROWID desc`;
         else if(queryName=="approved") sql=`
-          select s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
+          select length(s.pretranscript) as pretranscript_length, s.difficulty, s.id, s.track_id, s.title, s.year, s.part_number, s.status, s.owner, u.ROWID as ownerROWID, u.displayName as ownerDisplayName
           from sounds as s
           left outer join users as u on u.email=s.owner
           where s.status='approved'
@@ -76,6 +76,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
             fieldworkers: [],
             prominent: (row["owner"]!=null && row["owner"]==email),
             difficulty: row["difficulty"],
+            hasASR: row["pretranscript_length"]>0,
           };
           sounds.push(sound);
         });
