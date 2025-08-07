@@ -133,11 +133,11 @@ const STRINGS = {
   },
   "#promotetoadmin": {
     "en": "Promote to administrator",
-    "gd": "Promote to administrator"
+    "gd": "Àrdaich gu rianaire"
   },
   "#demotefromadmin": {
     "en": "Demote from administrator",
-    "gd": "Demote from administrator"
+    "gd": "Ìslich bho rianaire"
   },
   "#edityourprofile": {
     "en": "Edit your profile",
@@ -149,18 +149,18 @@ const STRINGS = {
   },
   "#anonymizeduser": {
     "en": "anonymous contributor",
-    "gd": "anonymous contributor"
+    "gd": "com‑pàirtiche gun urra"
   },
   "#asr": {
     "en": "ASR",
-    "gd": "ASR"
+    "gd": "ALF"
   },
   "#asravailable": {
     "en": "Automatic Speech Recognition is available",
-    "gd": "Automatic Speech Recognition is available"
+    "gd": "Gheibhear Aithneachadh Labhairt Fèin‑obrachachail"
   },
   "#asrnotavailable": {
     "en": "Automatic Speech Recognition is not available yet",
-    "gd": "Automatic Speech Recognition is not available yet"
+    "gd": "Chan fhaighear Aithneachadh Labhairt Fèin‑obrachachail fhathast"
   }
 };

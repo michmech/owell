@@ -77,7 +77,7 @@
   },
   "#administratortools": {
     "en": "administrator tools",
-    "gd": "administrator tools"
+    "gd": "innealan rianachd"
   },
   "#sitedescription": {
     "en": "Gaelic community transcription project",
@@ -453,7 +453,7 @@
   },
   "#membersince": {
     "en": "Volunteer transcriber since $",
-    "gd": "Tar‑sgrìobhadair saor‑thoileach o bha $ ann"
+    "gd": "Tar‑sgrìobhadair saor‑thoileach bho $"
   },
   "#administrator": {
     "en": "administrator",
@@ -461,11 +461,11 @@
   },
   "#promotetoadmin": {
     "en": "Promote to administrator",
-    "gd": "Promote to administrator"
+    "gd": "Àrdaich gu rianaire"
   },
   "#demotefromadmin": {
     "en": "Demote from administrator",
-    "gd": "Demote from administrator"
+    "gd": "Ìslich bho rianaire"
   },
   "#words": {
     "en": "words",
@@ -477,11 +477,11 @@
   },
   "#bio": {
     "en": "A few words about you",
-    "gd": "A few words about you"
+    "gd": "Beagan fhaclan mu do dheidhinn"
   },
   "#biolegend": {
     "en": "Maximum 500 characters. You can leave this blank.",
-    "gd": "Maximum 500 characters. You can leave this blank."
+    "gd": "500 caractar aig a' char as motha. Fàg seo bàn ma thogras tu."
   },
   "#deleteyouraccount": {
     "en": "Delete your account",
@@ -489,82 +489,82 @@
   },
   "#deleteaccountwarning1": {
     "en": "We're sorry to see you go.",
-    "gd": "We're sorry to see you go."
+    "gd": "Tha sinn duilich gu bheil thu a' falbh."
   },
   "#deleteaccountwarning2": {
     "en": "Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber.",
-    "gd": "Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber."
+    "gd": "Ma chuireas tu às an cunntas agad, cha bhi e comasach dhut a bhith a' clàradh a‑staigh agus a bhith ag obair mar tar‑sgrìobhadair saor‑thoileach."
   },
   "#deleteaccountwarning3": {
     "en": "Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead.",
-    "gd": "Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead."
+    "gd": "Bidh do chuid thar‑sgrìobhaidhean rim faighinn fhathast ach gheibhear \"com‑pàirtiche gun urra\" an onair air an son."
   },
   "#deleteaccountunderstand": {
     "en": "Yes, I want to delete my account. I understand that this cannot be undone.",
-    "gd": "Yes, I want to delete my account. I understand that this cannot be undone."
+    "gd": "Seadh, cuir às dhan chunntas agam. Tha fhios agam nach urrainn seo a fhuasgladh."
   },
   "#goodbye": {
     "en": "Good‑bye",
-    "gd": "Good‑bye"
+    "gd": "Soraidh leat."
   },
   "#anonymizeduser": {
     "en": "anonymous contributor",
-    "gd": "anonymous contributor"
+    "gd": "com‑pàirtiche gun urra"
   },
   "#readonly": {
     "en": "This website is currently in read‑only mode for maintenance. Please try again later.",
-    "gd": "This website is currently in read‑only mode for maintenance. Please try again later."
+    "gd": "Thathar ag obair air an làraich seo an dràsta agus tha e ann am modh 'leughadh a‑mhàin'. Feuch a‑rithist an ceann tacain."
   },
   "#monitorwhatsgoingon": {
     "en": "Monitor what's going on",
-    "gd": "Monitor what's going on"
+    "gd": "Cùm sùil air na tha tachairt"
   },
   "#eventlog": {
     "en": "Event log",
-    "gd": "Event log"
+    "gd": "Log tachartais"
   },
   "#longer": {
     "en": "Longer",
-    "gd": "Longer"
+    "gd": "Nas fhaide"
   },
   "#reload": {
     "en": "Reload",
-    "gd": "Reload"
+    "gd": "Ath‑luchdaich"
   },
   "#showingxevents": {
     "en": "Showing $ most recent events",
-    "gd": "Showing $ most recent events"
+    "gd": "A' taisbeanadh $ ùr‑thachartasan"
   },
   "#thispagedoesnotexist": {
     "en": "This page does not exist.",
-    "gd": "This page does not exist."
+    "gd": "Chan eil an duilleag seo ann."
   },
   "#homepage": {
     "en": "Home page",
-    "gd": "Home page"
+    "gd": "Duilleag‑dhachaigh"
   },
   "#asr": {
     "en": "ASR",
-    "gd": "ASR"
+    "gd": "ALF"
   },
   "#automaticspeechrecognition": {
     "en": "Automatic Speech Recognition",
-    "gd": "Automatic Speech Recognition"
+    "gd": "Aithneachadh Labhairt Fèin‑obrachachail"
   },
   "#asravailable": {
     "en": "Automatic Speech Recognition is available",
-    "gd": "Automatic Speech Recognition is available"
+    "gd": "Gheibhear Aithneachadh Labhairt Fèin‑obrachachail"
   },
   "#asrnotavailable": {
     "en": "Automatic Speech Recognition is not available yet",
-    "gd": "Automatic Speech Recognition is not available yet"
+    "gd": "Chan fhaighear Aithneachadh Labhairt Fèin‑obrachachail fhathast"
   },
   "#showsuggestions": {
     "en": "Show suggestions",
-    "gd": "Show suggestions"
+    "gd": "Taisbean na molaidhean"
   },
   "#acceptsuggestion": {
     "en": "Accept suggestion",
-    "gd": "Accept suggestion"
+    "gd": "Gabh ri na molaidhean"
   }
 }

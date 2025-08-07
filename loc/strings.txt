@@ -83,7 +83,7 @@ Chan eil gin an-dràsta.
 
 #administratortools
 administrator tools
-administrator tools
+innealan rianachd
 
 #sitedescription
 Gaelic community transcription project
@@ -534,7 +534,7 @@ A user's profile page:
 
 #membersince
 Volunteer transcriber since $
-Tar-sgrìobhadair saor-thoileach o bha $ ann
+Tar-sgrìobhadair saor-thoileach bho $
 
 #administrator
 administrator
@@ -542,11 +542,11 @@ rianaire
 
 ##promotetoadmin
 Promote to administrator
-Promote to administrator
+Àrdaich gu rianaire
 
 ##demotefromadmin
 Demote from administrator
-Demote from administrator
+Ìslich bho rianaire
 
 #words
 words
@@ -558,11 +558,11 @@ Atharraich a’ phròifil agad
 
 #bio
 A few words about you
-A few words about you
+Beagan fhaclan mu do dheidhinn
 
 #biolegend
 Maximum 500 characters. You can leave this blank.
-Maximum 500 characters. You can leave this blank.
+500 caractar aig a' char as motha. Fàg seo bàn ma thogras tu.
 
 ##deleteyouraccount
 Delete your account
@@ -570,27 +570,27 @@ Cuir às dhan chunntas agad
 
 #deleteaccountwarning1
 We're sorry to see you go.
-We're sorry to see you go.
+Tha sinn duilich gu bheil thu a' falbh.
 
 #deleteaccountwarning2
 Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber.
-Deleting your account means that you will no longer be able to log in and work as a volunteer transcriber.
+Ma chuireas tu às an cunntas agad, cha bhi e comasach dhut a bhith a' clàradh a-staigh agus a bhith ag obair mar tar-sgrìobhadair saor-thoileach. 
 
 #deleteaccountwarning3
 Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead.
-Any transcriptions you have made will continue to be available but will be credited to an “anonymous contributor” instead.
+Bidh do chuid thar-sgrìobhaidhean rim faighinn fhathast ach gheibhear "com-pàirtiche gun urra" an onair air an son. 
 
 #deleteaccountunderstand
 Yes, I want to delete my account. I understand that this cannot be undone.
-Yes, I want to delete my account. I understand that this cannot be undone.
+Seadh, cuir às dhan chunntas agam. Tha fhios agam nach urrainn seo a fhuasgladh. 
 
 #goodbye
 Good-bye
-Good-bye
+Soraidh leat.
 
 ##anonymizeduser
 anonymous contributor
-anonymous contributor
+com-pàirtiche gun urra
 
 
 This will almost never be shown:
@@ -598,31 +598,30 @@ This will almost never be shown:
 
 #readonly
 This website is currently in read‑only mode for maintenance. Please try again later.
-This website is currently in read‑only mode for maintenance. Please try again later.
-
+Thathar ag obair air an làraich seo an dràsta agus tha e ann am modh 'leughadh a-mhàin'. Feuch a-rithist an ceann tacain. 
 
 Event log:
 ----------
 
 #monitorwhatsgoingon
 Monitor what's going on
-Monitor what's going on
+Cùm sùil air na tha tachairt
 
 #eventlog
 Event log
-Event log
+Log tachartais
 
 #longer
 Longer
-Longer
+Nas fhaide
 
 #reload
 Reload
-Reload
+Ath-luchdaich
 
 #showingxevents
 Showing $ most recent events
-Showing $ most recent events
+A' taisbeanadh $ ùr-thachartasan 
 
 
 Our 404 error page:
@@ -630,11 +629,11 @@ Our 404 error page:
 
 #thispagedoesnotexist
 This page does not exist.
-This page does not exist.
+Chan eil an duilleag seo ann.
 
 #homepage
 Home page
-Home page
+Duilleag-dhachaigh
 
 
 ASR:
@@ -642,25 +641,24 @@ ASR:
 
 ##asr
 ASR
-ASR
+ALF
 
 #automaticspeechrecognition
 Automatic Speech Recognition
-Automatic Speech Recognition
+Aithneachadh Labhairt Fèin-obrachachail
 
 ##asravailable
 Automatic Speech Recognition is available
-Automatic Speech Recognition is available
+Gheibhear Aithneachadh Labhairt Fèin-obrachachail
 
 ##asrnotavailable
 Automatic Speech Recognition is not available yet
-Automatic Speech Recognition is not available yet
+Chan fhaighear Aithneachadh Labhairt Fèin-obrachachail fhathast
 
 #showsuggestions
 Show suggestions
-Show suggestions
+Taisbean na molaidhean
 
 #acceptsuggestion
 Accept suggestion
-Accept suggestion
-
+Gabh ri na molaidhean
