@@ -1,11 +1,11 @@
-div.title {
+main div.title {
   margin: 20px 0px 30px 0px;
   line-height: 2em;
 }
-div.title span.message {
+main div.title span.message {
   margin-right: 10px;
 }
-div.title a.button {
+main div.title a.button {
   border-radius: 40px;
   background-color: #ffffff;
   border: 1px solid #999999;
