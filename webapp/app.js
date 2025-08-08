@@ -3,8 +3,8 @@ const app=express();
 import path from "path";
 import { fileURLToPath } from 'url';
 import bodyParser from "body-parser";
-app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' })); // for parsing application/x-www-form-urlencoded
-app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json({ limit: '10mb' })); // for parsing application/json
 import cookieParser from 'cookie-parser';
 app.use(cookieParser());
 import { SHA3 } from "sha3";
