@@ -146,4 +146,5 @@ app.use(do404);
 
 //Start listening:
 app.listen(PORT);
-console.log("Process ID "+process.pid+" is now listening on port number "+PORT+".");
+console.log(`Process ID ${process.pid} is now listening on ${process.env.URLSTART}`);
+
