@@ -70,6 +70,7 @@ window.setTimeout(() => {
     updateDuration();
   });
   updateDuration();
+  toggleASRButton();
 }, 100);
 
 function updateDuration(){
@@ -87,8 +88,19 @@ function hideGuidelink(){
 }
 
 function clickASRCheckbox(){
+  toggleASRButton();
   if(!document.querySelector("input#asr").checked){
     document.querySelectorAll("c-textarea span.suggestion").forEach(x => { x.remove(); });
+  }
+}
+
+function toggleASRButton(){
+  if(document.querySelector("div.asrbar")){
+    if(document.querySelector("input#asr").checked){
+      document.querySelector("button#acceptSuggestion").disabled = false;
+    } else {
+      document.querySelector("button#acceptSuggestion").disabled = true;
+    }
   }
 }
 

@@ -491,6 +491,14 @@ form div.asrbar button:active {
   top: 1px;
   left: 1px;
 }
+form div.asrbar button:disabled {
+  color: #999999;
+  border-color: #aaaaaa;
+  box-shadow: 1px 1px 0px #cccccc;
+  top: 0px;
+  left: 0px;
+  cursor: not-allowed;
+}
 form div.asrbar button span.key {
   font-family: "Overpass Mono", monospace;
   line-height: 1.25em;

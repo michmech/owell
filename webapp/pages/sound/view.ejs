@@ -150,11 +150,11 @@
             <%if(pretranscript){%>
               <div class="asrbar">
                 <label>
-                  <input type="checkbox" id="asr" checked onchange="clickASRCheckbox()" />
+                  <input type="checkbox" id="asr" onchange="clickASRCheckbox()" />
                   <span class="badge" title="<%=L("#automaticspeechrecognition")%>"><%=L("#asr")%></span>
                   <span class="label"><%=L("#showsuggestions")%></span>
                 </label>
-                <button id="acceptSuggestion" type="button">
+                <button id="acceptSuggestion" type="button" disabled>
                   <%=L("#acceptsuggestion")%>
                   <span class="key">TAB</span>
                 </button>
