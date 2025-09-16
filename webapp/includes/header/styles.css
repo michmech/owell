@@ -93,6 +93,13 @@ header .title a {
 header .title a:hover {
   color: #eeeeee;
 }
+header .title a span.icon {
+  background-color: #ffffff;
+  width: 1.25em;
+  height: 1.25em;
+  position: relative;
+  top: -2px;
+}
 
 
 header span.uilang {

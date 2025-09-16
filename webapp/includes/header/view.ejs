@@ -20,7 +20,11 @@
       <%if(isHomepage){%>
         <h1 class="title"><a href="/<%=uilang%>"><%=L("#sitetitle").toUpperCase()%></a></h1>
       <%} else {%>
-        <div class="title"><a href="/<%=uilang%>"><%=L("#sitetitle").toUpperCase()%></a></div>
+        <%if(loggedIn){%>
+          <div class="title"><a href="/<%=uilang%>"><span class="icon angle-left"></span> <%=L("#backtohome")%></a></div>
+        <%} else {%>
+          <div class="title"><a href="/<%=uilang%>"><%=L("#sitetitle").toUpperCase()%></a></div>
+        <%}%>
       <%}%>
       <c-identity logged-in="<%=loggedIn ? 'yes' : 'no'%>" email="<%=email%>" display-name="<%=userDisplayName%>" rowid="<%=userROWID%>">
         <button class="badge">

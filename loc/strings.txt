@@ -37,6 +37,10 @@ Homepage, header, footer:
 Opening The Well
 Fosgladh an Tobair
 
+#backtohome
+Back to home
+Dhachaidh leam
+
 #siteslogan
 We are transcribing Scotland’s oral heritage
 Tha sinn a’ tar-sgrìobhadh beul-aithris na h-Alba

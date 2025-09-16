@@ -107,3 +107,7 @@ span.icon.check {
   mask-image: url(/check.svg);
   -webkit-mask-image: url(/check.svg);
 }
+span.icon.angle-left {
+  mask-image: url(/angle-left.svg);
+  -webkit-mask-image: url(/angle-left.svg);
+}
