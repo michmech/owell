@@ -1,8 +1,7 @@
 #  Stiùireadh do thar‑sgrìobhadairean 
 
 <p style="text-align: center">
-  Tá an leathanach seo idir lámha.
-  Moltar duit na doiciméid seo a leanas a léamh san idirlinn.
+  Tha an duilleag seo fhathast sa bheirt. San eadar-àm, thoir sùil air an fhiosrachadh seo.
 </p>
 
 <div class="pageshots">

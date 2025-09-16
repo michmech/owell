@@ -1,5 +1,5 @@
 # Mu dheidhinn Fosgladh an Tobair
 
 <p style="text-align: center">
-  Chan fhaighear an duilleag seo fhathast.
+  Tha an duilleag seo fhathast sa bheirt.
 </p>
