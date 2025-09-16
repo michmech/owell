@@ -141,6 +141,7 @@ app.use("/", express.static(path.join(__dirname, "pages")));
 app.use("/", express.static(path.join(__dirname, "includes")));
 app.use("/", express.static(path.join(__dirname, "icons")));
 app.use("/", express.static(path.join(__dirname, "components")));
+app.use("/", express.static(path.join(__dirname, "images")));
 app.use("/sounds/", express.static(path.join(__dirname, "sounds")));
 app.use(do404);
 

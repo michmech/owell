@@ -1,3 +1,17 @@
-# Guide for transcribers
+#  Stiùireadh do thar‑sgrìobhadairean 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis lorem. Ut pellentesque nibh neque, vel dignissim felis consequat ac. Vestibulum faucibus sem in mauris ultrices pharetra. In sed posuere nisi. In faucibus pretium lectus, eu ullamcorper nunc mattis commodo. Proin blandit dignissim risus, id laoreet ligula sagittis nec. Aenean eget arcu ac lorem efficitur tincidunt at in libero. Vivamus eget dui et diam dictum ultricies eget sit amet orci. Suspendisse commodo, metus ut dapibus aliquam, augue orci tempus libero, vitae porttitor ex mauris et eros. Maecenas malesuada leo condimentum lorem luctus, at tempor diam laoreet. Aliquam eu interdum ex. Sed aliquet nibh at tincidunt cursus. Suspendisse mollis laoreet arcu nec iaculis. Fusce facilisis justo libero, ut fermentum eros sagittis eget. Nunc eget sodales purus. 
+<p style="text-align: center">
+  Tá an leathanach seo idir lámha.
+  Moltar duit na doiciméid seo a leanas a léamh san idirlinn.
+</p>
+
+<div class="pageshots">
+  <a class="pageshot" target="_blank" href="https://docs.google.com/document/d/1j0hEIDOQwxC7jfHBfDTDLoItb7Hke9ZadmLOW2DvPuQ/">
+    <img src="/pageshot-pilot.png" alt="Opening the Well Pilot Instructions" />
+    <span class="title">Opening the Well Pilot Instructions</span>  
+  </a>
+  <a class="pageshot" target="_blank" href="https://docs.google.com/document/d/1c6dmxOArwkadFV-ZXHV-GPVeI0u47Dlp3jYnezNMARY/">
+    <img src="/pageshot-eist.png" alt="ÈIST Transcription Manual" />
+    <span class="title">ÈIST Transcription Manual</span>  
+  </a>
+</div>
