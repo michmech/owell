@@ -111,3 +111,7 @@ span.icon.angle-left {
   mask-image: url(/angle-left.svg);
   -webkit-mask-image: url(/angle-left.svg);
 }
+span.icon.award {
+  mask-image: url(/award.svg);
+  -webkit-mask-image: url(/award.svg);
+}

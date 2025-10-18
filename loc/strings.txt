@@ -670,3 +670,20 @@ Taisbean na molaidhean
 #acceptsuggestion
 Accept suggestion
 Gabh ri na molaidhean
+
+
+Hero Board:
+-----------
+
+##heroboard
+Hero Board
+Clàr nan Gaisgeach
+
+##name
+Name
+TT: Name
+
+##wordstranscribed
+Words transcribed
+TT: Words transcribed
+

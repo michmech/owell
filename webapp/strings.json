@@ -574,5 +574,17 @@
   "#acceptsuggestion": {
     "en": "Accept suggestion",
     "gd": "Gabh ri na molaidhean"
+  },
+  "#heroboard": {
+    "en": "Hero Board",
+    "gd": "Clàr nan Gaisgeach"
+  },
+  "#name": {
+    "en": "Name",
+    "gd": "TT: Name"
+  },
+  "#wordstranscribed": {
+    "en": "Words transcribed",
+    "gd": "TT: Words transcribed"
   }
 }
