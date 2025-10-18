@@ -484,6 +484,10 @@ Clàr-taice
 Give up transcribing
 Leig romhad an tàr-sgrìobhadh
 
+##takeaway
+Remove from transcriber
+TT: Remove from transcriber
+
 ##delete
 Delete
 Sguab às

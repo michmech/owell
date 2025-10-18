@@ -3,12 +3,12 @@ import {logEvent} from '../../logger.js';
 
 export default function(app, L, do404, doReadOnly, rootdir){
 
-  app.get("/giveup", function(req, res){
+  app.get("/takeaway", function(req, res){
     const email=req.cookies.email;
     const sessionKey=req.cookies.sessionkey;
     let loggedIn=false;
     let isAdmin=false;
-    let isOwner=false;
+    let isOwned=false;
     let userROWID = 0;
 
     const id = parseInt(req.query["id"]);
@@ -23,18 +23,18 @@ export default function(app, L, do404, doReadOnly, rootdir){
         stmt.all({email, sessionKey, yesterday}).map(row => { userROWID=row["rowid"]; loggedIn=true; isAdmin=(row["isAdmin"]==1) });
       }
       if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
-      { //check if the sound is owned and if the person is its owner:
-        const sql=`select * from sounds where id=$id and status='owned' and owner=$email`;
+      { //check if the sound is owned by anyone:
+        const sql=`select * from sounds where id=$id and status='owned'`;
         const stmt=db.prepare(sql);
-        stmt.all({id, email}).map(row => { isOwner=true });
+        stmt.all({id}).map(row => { isOwned=true });
       }
-      if(loggedIn && isOwner) {
+      if(loggedIn && isOwned) {
         { //update the sound:
           const sql=`update sounds set status='available', owner=NULL where id=$id`;
           const stmt=db.prepare(sql);
           stmt.run({id});
         }
-        logEvent(userROWID, id, `sound--giveup`, null);
+        logEvent(userROWID, id, `sound--takeaway`, null);
         result=true;
       }
     } catch(e){

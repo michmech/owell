@@ -411,6 +411,10 @@
     "en": "Give up transcribing",
     "gd": "Leig romhad an tàr‑sgrìobhadh"
   },
+  "#takeaway": {
+    "en": "Remove from transcriber",
+    "gd": "TT: Remove from transcriber"
+  },
   "#delete": {
     "en": "Delete",
     "gd": "Sguab às"

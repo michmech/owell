@@ -50,6 +50,7 @@
                   show-difficulty="<%-isAdmin ? 'yes' : 'no'%>"
                   x-show-history="<%-email==owner || isAdmin ? 'yes' : 'no'%>"
                   show-giveup="<%-email==owner && status=='owned' ? 'yes' : 'no'%>"
+                  show-takeaway="<%-email!=owner && status=='owned' && isAdmin ? 'yes' : 'no'%>"
                   show-delete="<%-isAdmin ? 'yes' : 'no'%>"
                 ></c-spotmenu>
               <%}%>

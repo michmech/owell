@@ -38,6 +38,7 @@ export class CListing extends HTMLElement {
           show-difficulty="${isAdmin ? 'yes' : 'no'}"
           x-show-history="${isProminent || isAdmin ? 'yes' : 'no'}"
           show-giveup="${isProminent && sound.status=='owned' ? 'yes' : 'no'}"
+          show-takeaway="${!isProminent && sound.status=='owned' && isAdmin ? 'yes' : 'no'}"
           show-delete="${isAdmin ? 'yes' : 'no'}"
         "></c-spotmenu>`;
       }

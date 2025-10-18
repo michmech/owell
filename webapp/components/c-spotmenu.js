@@ -36,6 +36,7 @@ export class CSpotmenu extends HTMLElement {
       <div class="line"><button data-difficulty="medium" class="difficulty medium"><span class="icon square"></span> ${LOC("#difficultymedium")}</button></div>
       <div class="line"><button data-difficulty="high" class="difficulty high"><span class="icon diamond"></span> ${LOC("#difficultyhigh")}</button></div>
       <div class="line"><button class="giveup"><span class="icon xmark"></span> ${LOC("#giveup")}</button></div>
+      <div class="line"><button class="takeaway"><span class="icon xmark"></span> ${LOC("#takeaway")}</button></div>
       <div class="line"><button class="delete"><span class="icon trash-can"></span> ${LOC("#delete")}</button></div>
     `;
 
@@ -47,9 +48,11 @@ export class CSpotmenu extends HTMLElement {
     });
     divMenu.querySelector(".delete").addEventListener("click", (ev)=>{ this.#delete(); });
     divMenu.querySelector(".giveup").addEventListener("click", (ev)=>{ this.#giveup(); });
+    divMenu.querySelector(".takeaway").addEventListener("click", (ev)=>{ this.#takeaway(); });
 
     if(this.getAttribute("show-difficulty")!="yes") divMenu.querySelectorAll(".difficulty").forEach(x => x.closest(".line").remove());
     if(this.getAttribute("show-giveup")!="yes") divMenu.querySelector(".giveup").closest(".line").remove();
+    if(this.getAttribute("show-takeaway")!="yes") divMenu.querySelector(".takeaway").closest(".line").remove();
     if(this.getAttribute("show-delete")!="yes") divMenu.querySelector(".delete").closest(".line").remove();
 
     this.appendChild(divMenu);
@@ -100,6 +103,25 @@ export class CSpotmenu extends HTMLElement {
   #giveup(){
     const id=this.getAttribute("sound-id");
     fetch("/giveup?id="+id).then(resp => {
+      if(resp.ok){
+        resp.json().then(result => {
+          if(result){
+            const listing=this.closest("c-listing");
+            if(listing){
+              // document.querySelector("div.tabs button.current").click(); 
+              location.reload();
+            } else {
+              location.reload();
+            }
+          }
+        });
+      }
+    });
+  }
+
+  #takeaway(){
+    const id=this.getAttribute("sound-id");
+    fetch("/takeaway?id="+id).then(resp => {
       if(resp.ok){
         resp.json().then(result => {
           if(result){

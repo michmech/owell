@@ -89,6 +89,8 @@ import api_delete from "./api/delete/server.js";
   api_delete(app, L, do404, doReadOnly, __dirname);
 import api_giveup from "./api/giveup/server.js";
   api_giveup(app, L, do404, doReadOnly, __dirname);
+import api_takeaway from "./api/takeaway/server.js";
+  api_takeaway(app, L, do404, doReadOnly, __dirname);
 import api_difficulty from "./api/difficulty/server.js";
   api_difficulty(app, L, do404, doReadOnly, __dirname);
 import api_promote from "./api/promote/server.js";
