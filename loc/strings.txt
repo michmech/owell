@@ -73,10 +73,6 @@ Faclan tar-sgrìobhte cheana
 Volunteer transcribers
 Tar-sgrìobhadairean saor-thoileach
 
-#meetthem
-Meet them
-Cuir aithne orra
-
 #yourcontributions
 Your contributions
 Ur tabhartasan
