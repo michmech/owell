@@ -73,10 +73,6 @@ Faclan tar-sgrìobhte cheana
 Volunteer transcribers
 Tar-sgrìobhadairean saor-thoileach
 
-#meetthem
-Meet them
-Cuir aithne orra
-
 #yourcontributions
 Your contributions
 Ur tabhartasan
@@ -675,14 +671,18 @@ Gabh ri na molaidhean
 Hero Board:
 -----------
 
-##heroboard
+#heroboard
 Hero Board
 Clàr nan Gaisgeach
 
-##name
+#name
 Name
 Ainm
 
-##wordstranscribed
+#wordstranscribed
 Words transcribed
 Faclan tar-sgrìobhte
+
+#remainingvolunteers
+Other volunteers (in alphabetical order)
+TT: Other volunteers (in alphabetical order)

@@ -166,17 +166,5 @@ const STRINGS = {
   "#asrnotavailable": {
     "en": "Automatic Speech Recognition is not available yet",
     "gd": "Chan fhaighear Aithneachadh Labhairt Fèin‑obrachachail fhathast"
-  },
-  "#heroboard": {
-    "en": "Hero Board",
-    "gd": "Clàr nan Gaisgeach"
-  },
-  "#name": {
-    "en": "Name",
-    "gd": "Ainm"
-  },
-  "#wordstranscribed": {
-    "en": "Words transcribed",
-    "gd": "Faclan tar‑sgrìobhte"
   }
 };

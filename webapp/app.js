@@ -99,8 +99,6 @@ import api_demote from "./api/demote/server.js";
   api_demote(app, L, do404, doReadOnly, __dirname);
 import api_asr from "./api/asr/server.js";
   api_asr(app, L, do404, doReadOnly, __dirname);
-import api_leaderboard from "./api/leaderboard/server.js";
-  api_leaderboard(app, L, do404, doReadOnly, __dirname);
 
 //Hook up our webpage-serving endpoints:
 import page_home from "./pages/home/server.js";

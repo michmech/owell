@@ -10,24 +10,64 @@
     <%-include("../../includes/header/view.ejs", this)%>
     <main>
       
-      <ol class="profiles">
-        <%profiles.forEach((profile,i) => {%><li>
-          <a class="profile" href="/<%-uilang%>/u<%-profile.rowid%>">
-            <span class="headshot"><span class="icon user"></span></span>
-            <%if(profile.isAdmin){%>
-              <span class="badge">
-                <span><%=L("#administrator")%></span>
-              </span>
-            <%}%>
-            <span class="name"><%=profile.displayName || L("#anonymizeduser")%></span>
-            <span class="stats">
-              <span class="difficulty low"><span class="icon circle"></span> <%=(profile.wordcountLow).toLocaleString("en", {useGrouping: true})%></span>
-              <span class="difficulty medium"><span class="icon square"></span> <%=(profile.wordcountMedium).toLocaleString("en", {useGrouping: true})%></span>
-              <span class="difficulty high"><span class="icon diamond"></span> <%=(profile.wordcountHigh).toLocaleString("en", {useGrouping: true})%></span>
-            </span>
-            </a>
-        </li><%});%>
-      </ol>
+      <div class="icon">
+        <span class="icon award"></span>
+      </div>
+      <h1><%=L("#heroboard")%></h1>
+
+      <div class="list">
+        <table>
+          <thead>
+            <tr>
+              <td class="position">#</td>
+              <td><%=L("#name")%></td>
+              <td colspan="3"><%=L("#wordstranscribed")%></td>
+            </tr>
+          </thead>
+          <tbody>
+            <%topProfiles.forEach((profile,i) => {%>
+              <tr>
+                <td class="position"><%=i+1%></td>
+                <td>
+                  <a class="profile" href="/<%-uilang%>/u<%-profile.rowid%>">
+                    <span class="headshot"><span class="icon user"></span></span>
+                    <span class="name"><%=profile.displayName || L("#anonymizeduser")%></span>
+                  </a>
+                </td>
+                <td class="wordcount low">
+                  <span class="icon circle"></span>
+                  <span class="label"><%=L("#difficultylow")%></span>
+                  <span class="num num<%-profile.wordcountLow%>"><%=profile.wordcountLow.toLocaleString("en", {useGrouping: true})%></span>
+                </td>
+                <td class="wordcount medium">
+                  <span class="icon square"></span>
+                  <span class="label"><%=L("#difficultymedium")%></span>
+                  <span class="num num<%-profile.wordcountMedium%>"><%=profile.wordcountMedium.toLocaleString("en", {useGrouping: true})%></span>
+                </td>
+                <td class="wordcount high">
+                  <span class="icon diamond"></span>
+                  <span class="label"><%=L("#difficultyhigh")%></span>
+                  <span class="num num<%-profile.wordcountHigh%>"><%=profile.wordcountHigh.toLocaleString("en", {useGrouping: true})%></span>
+                </td>
+              </tr>
+            <%})%>
+          </tbody>
+        </table>
+      </div>
+
+      <%if(remainingProfiles.length>0){%>
+        <h2><%=L("#remainingvolunteers")%></h2>
+        <ul class="remaining">
+          <%remainingProfiles.forEach((profile,i) => {%>
+            <li>
+              <a class="profile" href="/<%-uilang%>/u<%-profile.rowid%>">
+                <span class="headshot"><span class="icon user"></span></span>
+                <span class="name"><%=profile.displayName || L("#anonymizeduser")%></span>
+              </a>
+            </li>
+          <%});%>
+        </ul>
+      <%}%>
 
     </main>
     <%-include("../../includes/footer/view.ejs", this)%>

@@ -582,5 +582,9 @@
   "#wordstranscribed": {
     "en": "Words transcribed",
     "gd": "Faclan tar‑sgrìobhte"
+  },
+  "#remainingvolunteers": {
+    "en": "Other volunteers (in alphabetical order)",
+    "gd": "TT: Other volunteers (in alphabetical order)"
   }
 }

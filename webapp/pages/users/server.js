@@ -1,5 +1,8 @@
 import sqlite from "better-sqlite3";
 
+const removeAccents = str =>
+  str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
 export default function(app, L, do404, doReadOnly, rootdir){
 
   app.get("/:uilang(gd|en)/u", function(req, res){
@@ -10,7 +13,9 @@ export default function(app, L, do404, doReadOnly, rootdir){
     let loggedIn=false;
     let isAdmin=false;
 
-    const profiles=[];
+    const topProfiles=[];
+    const topProfileIDs=[];
+    const remainingProfiles=[];
 
     const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{
@@ -21,9 +26,9 @@ export default function(app, L, do404, doReadOnly, rootdir){
         stmt.all({email, sessionKey, yesterday}).map(row => { loggedIn=true; isAdmin=(row["isAdmin"]==1); userDisplayName=row["displayName"]; userROWID=row["rowid"];  });
       }
       if(process.env.READONLY==1){ loggedIn=false; isAdmin=false; }
-      { //load the profiles:
+      { //load the top profiles:
         const sql=`
-          select u.rowid, u.email, u.displayName, u.isAdmin
+          select u.rowid, u.email, u.displayName
           , sum(s.wordcount) filter(where s.difficulty='low') as wordcountLow
           , sum(s.wordcount) filter(where s.difficulty='medium') as wordcountMedium
           , sum(s.wordcount) filter(where s.difficulty='high') as wordcountHigh
@@ -35,19 +40,44 @@ export default function(app, L, do404, doReadOnly, rootdir){
           from users as u
           left outer join sounds as s on s.owner=u.email and s.status='approved'
           group by u.rowid
+          having score > 0
           order by score desc, u.rowid asc
+          limit 10
         `;
         const stmt=db.prepare(sql);
         stmt.all().map(row => {
-          profiles.push({
+          topProfileIDs.push(row.rowid)
+          topProfiles.push({
             rowid: row.rowid,
             email: row.email,
             displayName: row.displayName,
-            isAdmin: (row["isAdmin"]==1),
             wordcountLow: row.wordcountLow || 0,
             wordcountMedium: row.wordcountMedium || 0,
             wordcountHigh: row.wordcountHigh || 0,
           });
+        });
+      }
+      { //load remaining profiles:
+        const sql=`
+          select u.rowid, u.email, u.displayName
+          from users as u
+        `;
+        const stmt=db.prepare(sql);
+        stmt.all().map(row => {
+          if(topProfileIDs.indexOf(row.rowid) == -1){
+            remainingProfiles.push({
+              rowid: row.rowid,
+              email: row.email,
+              displayName: row.displayName,
+            });
+          }
+        });
+        remainingProfiles.sort((a,b) => {
+          const aSortkey = removeAccents(a.displayName);
+          const bSortkey = removeAccents(b.displayName);
+          if(aSortkey == "" || aSortkey>bSortkey) return +1;
+          if(bSortkey == "" || bSortkey>aSortkey) return -1;
+          return 0;
         });
       }
       
@@ -75,7 +105,8 @@ export default function(app, L, do404, doReadOnly, rootdir){
       },
       isHomepage: false,
 
-      profiles,
+      topProfiles,
+      remainingProfiles,
     });
   });
   

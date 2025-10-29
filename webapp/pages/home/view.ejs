@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="/c-adder.css"/>
     <script type="module" src="/c-adder.js"></script>
 
-    <link rel="stylesheet" href="/c-leaderboard.css"/>
-    <script type="module" src="/c-leaderboard.js"></script>
-
     <link rel="stylesheet" href="/home/styles.css"/>
     <script src="/home/scripts.js"></script>
   </head>
@@ -60,7 +57,10 @@
           <span class="icon users"></span>
           <div class="number"><%=stats.users.toLocaleString("en", {useGrouping: true})%></div>
           <div class="legend"><%=L("#numberofvolunteertranscribers")%></div>
-          <a href="/<%-uilang%>/u"><%=L("#meetthem")%></a>
+          <div class="link">
+            <span class="icon award"></span>
+            <a href="/<%-uilang%>/u"><%=L("#heroboard")%>&nbsp;»</a>
+          </div>
         </div>
       </div>
 
@@ -109,8 +109,6 @@
           </div>
         </div>
       <%}%>
-
-      <c-leaderboard></c-leaderboard>
 
     </main>
     <%-include("../../includes/footer/view.ejs", this)%>
