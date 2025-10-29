@@ -123,6 +123,8 @@ import page_passwordreset2 from "./pages/passwordreset2/server.js";
   page_passwordreset2(app, L, do404, doReadOnly, __dirname);
 import page_user from "./pages/user/server.js";
   page_user(app, L, do404, doReadOnly, __dirname);
+import page_users from "./pages/users/server.js";
+  page_users(app, L, do404, doReadOnly, __dirname);
 import page_info from "./pages/info/server.js";
   page_info(app, L, do404, doReadOnly, __dirname);
 import page_editprofile from "./pages/editprofile/server.js";

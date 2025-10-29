@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="<%=uilang%>">
+  <head>
+    <%-include("../../includes/headContent/view.ejs", this)%>
+
+    <link rel="stylesheet" href="/users/styles.css"/>
+    <script src="/users/scripts.js"></script>
+  </head>
+  <body>
+    <%-include("../../includes/header/view.ejs", this)%>
+    <main>
+      
+      <ol class="profiles">
+        <%profiles.forEach((profile,i) => {%><li>
+          <a class="profile" href="/<%-uilang%>/u<%-profile.rowid%>">
+            <span class="headshot"><span class="icon user"></span></span>
+            <%if(profile.isAdmin){%>
+              <span class="badge">
+                <span><%=L("#administrator")%></span>
+              </span>
+            <%}%>
+            <span class="name"><%=profile.displayName || L("#anonymizeduser")%></span>
+            <span class="stats">
+              <span class="difficulty low"><span class="icon circle"></span> <%=(profile.wordcountLow).toLocaleString("en", {useGrouping: true})%></span>
+              <span class="difficulty medium"><span class="icon square"></span> <%=(profile.wordcountMedium).toLocaleString("en", {useGrouping: true})%></span>
+              <span class="difficulty high"><span class="icon diamond"></span> <%=(profile.wordcountHigh).toLocaleString("en", {useGrouping: true})%></span>
+            </span>
+            </a>
+        </li><%});%>
+      </ol>
+
+    </main>
+    <%-include("../../includes/footer/view.ejs", this)%>
+  </body>
+</html>
