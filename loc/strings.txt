@@ -105,6 +105,14 @@ So-ruigsinneachd
 Guide for transcribers
 Stiùireadh do thar-sgrìobhadairean
 
+#licensinginfo
+Licensing
+TT: Fiosrachadh mu cheadachd
+
+#techrequirements
+Minimum technical requirements
+TT: Riatanasan teicnigeach bunaiteach
+
 #unofed
 The University of Edinburgh
 Oilthigh Dhùn Èideann
@@ -335,8 +343,15 @@ Tha an clàr seo ga thar-sgrìobhadh aig cuideigin eile.
 
 #trackwaitingforapproval
 This track has recently been transcribed by a volunteer transcriber and is awaiting approval.
-Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh. 
+Chaidh an clàr seo a thar-sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh.
 
+
+When an audio track is finished and approved (messages shown to not-logged-in users and logged-in non-admins):
+--------------------------------------------------------------------------------------------------------------
+
+#licensedunder
+This transcription is licensed under $.
+TT: This transcription is licensed under $.
 
 Adding and deleting tracks:
 ---------------------------
@@ -410,7 +425,15 @@ Tagh facal-faire dhut fhèin. Cleachdaidh tu sin airson logadh-staigh.
 
 #passwordmustnotbeblank
 Your password must not be empty.
-Chan fhaod t’ fhacal-faire a bhith bàn. 
+Chan fhaod t’ fhacal-faire a bhith bàn.
+
+#licensingagreement
+I agree that transcriptions I make on this website will be publicly available under the $ licence.
+TT: I agree that transcriptions I make on this website will be publicly available under the $ licence.
+
+#whatdoesthismean
+What does this mean?
+TT: What does this mean?
 
 #register
 Register

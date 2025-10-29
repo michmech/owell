@@ -99,6 +99,14 @@
     "en": "Guide for transcribers",
     "gd": "Stiùireadh do thar‑sgrìobhadairean"
   },
+  "#licensinginfo": {
+    "en": "Licensing",
+    "gd": "TT: Fiosrachadh mu cheadachd"
+  },
+  "#techrequirements": {
+    "en": "Minimum technical requirements",
+    "gd": "TT: Riatanasan teicnigeach bunaiteach"
+  },
   "#unofed": {
     "en": "The University of Edinburgh",
     "gd": "Oilthigh Dhùn Èideann"
@@ -283,6 +291,10 @@
     "en": "This track has recently been transcribed by a volunteer transcriber and is awaiting approval.",
     "gd": "Chaidh an clàr seo a thar‑sgrìobhadh aig cuideigin o chionn ghoirid agus tha e a’ feitheamh ri a cheadachadh."
   },
+  "#licensedunder": {
+    "en": "This transcription is licensed under $.",
+    "gd": "TT: This transcription is licensed under $."
+  },
   "#addanewtrack": {
     "en": "Add a track from Tobar an Dualchais",
     "gd": "Tog clàr bho Thobar an Dualchais"
@@ -350,6 +362,14 @@
   "#passwordmustnotbeblank": {
     "en": "Your password must not be empty.",
     "gd": "Chan fhaod t’ fhacal‑faire a bhith bàn."
+  },
+  "#licensingagreement": {
+    "en": "I agree that transcriptions I make on this website will be publicly available under the $ licence.",
+    "gd": "TT: I agree that transcriptions I make on this website will be publicly available under the $ licence."
+  },
+  "#whatdoesthismean": {
+    "en": "What does this mean?",
+    "gd": "TT: What does this mean?"
   },
   "#register": {
     "en": "Register",

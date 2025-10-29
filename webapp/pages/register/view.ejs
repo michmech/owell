@@ -25,7 +25,7 @@
               <%=L("#signupblurb2")%>
               <span class="guidelink">
                 <span class="icon circle-info"></span>
-                <a class="cta" href="/<%=uilang%>/<%-L("treoir|guide")%>"><%=L("#guidefortranscribers")%>&nbsp;»</a>
+                <a class="cta" href="/<%=uilang%>/<%-L("stiuireadh|guide")%>"><%=L("#guidefortranscribers")%>&nbsp;»</a>
               </span>
             </p>
             <p>
@@ -35,31 +35,41 @@
           <div class="right">
             <form method="post" action="">
               <div class="line">
-                <label>
+                <label class="block">
                   <span class="label"><%=L("#displayname")%></span>
-                  <input name="displayName" maxlength="50" value="<%=displayName%>"/>
+                  <input class="textbox" name="displayName" maxlength="50" value="<%=displayName%>"/>
                 </label>
                 <div class="legend">
                   <%=L("#displaynamelegend")%>
                 </div>
               </div>
               <div class="line">
-                <label>
+                <label class="block">
                   <span class="label"><%=L("#emailaddress")%></span>
-                  <input name="email" value="<%=email%>"/>
+                  <input class="textbox" name="email" value="<%=email%>"/>
                 </label>
                 <div class="legend">
                   <%=L("#emaillegend")%>
                 </div>
               </div>
               <div class="line">
-                <label>
+                <label class="block">
                   <span class="label"><%=L("#password")%></span>
-                  <input name="password" type="password" value="<%=password%>" autocomplete="new-password"/>
+                  <input class="textbox" name="password" type="password" value="<%=password%>" autocomplete="new-password"/>
                 </label>
                 <div class="legend">
                   <%=L("#passwordlegend")%>
                 </div>
+              </div>
+              <div class="line licensing">
+                <label class="inline">
+                  <input type="checkbox" checked name="licence"/>
+                  <span class="licensingIcons">
+                    <span class="icon creative-commons"></span><span class="icon creative-commons-by"></span>
+                  </span>
+                  <%=L("#licensingagreement", 0)%><span class="licenceName">CC BY 4.0</span><%=L("#licensingagreement", 1)%>
+                </label>
+                <a href="/<%-uilang%>/<%-L("ceadachd|licensing")%>"><%=L("#whatdoesthismean")%></a>
               </div>
               <div class="line doubleSpaceBefore">
                 <button type="submit"><%=L("#register")%></button>

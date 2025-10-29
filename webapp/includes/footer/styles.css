@@ -53,30 +53,30 @@ footer div.title {
   font-size: 1.1em;
 }
 footer div.subtitle {
-  margin-top: 5px;
+  margin-top: .65em;
 }
-footer div.subtitle span.divider {
+footer span.divider {
   color: #dddddd;
   margin: 0px 5px;
 }
 @media (max-width: 1100px) {
-  footer div.subtitle span.links {
+  footer span.links {
     display: block;
     margin-top: 0.5em;
   }
-  footer div.subtitle span.link {
+  footer span.link {
     display: block;
     line-height: 2em;
   }
-  footer div.subtitle span.divider {
+  footer span.divider {
     display: none;
   }
-  footer div.subtitle span.link a {
+  footer span.link a {
   }
 }
 
 footer div.guidelink {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 footer div.guidelink span.icon {
   background-color: #ffffff;

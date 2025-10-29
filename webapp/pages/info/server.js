@@ -17,8 +17,16 @@ export default function(app, L, do404, doReadOnly, rootdir){
     go(req, res, L, "accessibility.md", L(req.params.uilang, "#accessibility"), {gd: "/gd/so-ruigsinneachd", en: "/en/accessibility"})
   });
   
-  app.get("/:uilang(gd|en)/(treoir|guide)", function(req, res){
-    go(req, res, L, "guide.md", L(req.params.uilang, "#guidefortranscribers"), {gd: "/gd/treoir", en: "/en/guide"}, "circle-info")
+  app.get("/:uilang(gd|en)/(stiuireadh|guide)", function(req, res){
+    go(req, res, L, "guide.md", L(req.params.uilang, "#guidefortranscribers"), {gd: "/gd/stiuireadh", en: "/en/guide"}, "circle-info")
+  });
+  
+  app.get("/:uilang(gd|en)/(ceadachd|licensing)", function(req, res){
+    go(req, res, L, "licensing.md", L(req.params.uilang, "#licensinginfo"), {gd: "/gd/ceadachd", en: "/en/licensing"})
+  });
+  
+  app.get("/:uilang(gd|en)/(teic|tech)", function(req, res){
+    go(req, res, L, "tech.md", L(req.params.uilang, "#techrequirements"), {gd: "/gd/teic", en: "/en/tech"})
   });
   
 }

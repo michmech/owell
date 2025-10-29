@@ -39,7 +39,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
         loggedIn,
         email,
   
-        L: multistring => L(req.params.uilang, multistring),
+        L: (multistring, subpart) => L(req.params.uilang, multistring, subpart),
         pageTitle: L(req.params.uilang, "#sitetitle"),
         pageDescription: L(req.params.uilang, "#sitedescription"),
         pageUrls: {

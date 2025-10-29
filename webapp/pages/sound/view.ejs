@@ -132,6 +132,13 @@
                 </li>
               </ul>
             </div>
+            <div class="submission licensing">
+              <span class="licensingIcons">
+                <span class="icon creative-commons"></span><span class="icon creative-commons-by"></span>
+              </span>
+              <%=L("#licensedunder", 0)%><span class="licenceName">CC BY 4.0</span><%=L("#licensedunder", 1)%>
+              <a href="/<%-uilang%>/<%-L("ceadachd|licensing")%>"><%=L("#moreinfo")%></a>
+            </div>
         </aside>
       <%} else if( (status=="owned" && loggedIn && email==owner) || (status=="finished" && loggedIn && isAdmin) || (status=="approved" && loggedIn && isAdmin) ){%>
           <form method="post" action="">

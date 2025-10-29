@@ -26,15 +26,23 @@ h1 {
   line-height: 1.5em;
 }
 
-label {
+label.block {
   display: block;
   position: relative;
   padding-left: 200px;
 }
 @media (max-width: 600px) {
-  label {
+  label.block {
     padding-left: 0px;
   }
+}
+
+label.inline {
+  cursor: pointer;
+  color: #333333;
+} 
+label.inline:hover {
+  color: #000000;
 }
 
 label span.label {
@@ -53,7 +61,7 @@ label span.label {
   }
 }
 
-label input {
+label input.textbox {
   box-sizing: border-box;
   padding: 6px 8px;
   border: 1px solid #cccccc;
@@ -79,16 +87,20 @@ form div.line.spaceBefore {
   margin-top: 20px;
 }
 form div.line.doubleSpaceBefore {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-form div.line:not(:has(label)) {
+form div.line:not(:has(label.block)) {
   padding-left: 202px;
 }
 @media (max-width: 600px) {
-  form div.line:not(:has(label)) {
+  form div.line:not(:has(label.block)) {
     padding-left: 0px;
     text-align: center;
+  }
+  form div.line.licensing {
+    padding-left: 0px;
+    text-align: left !important;
   }
 }
 
@@ -185,4 +197,20 @@ span.guidelink span.icon {
   width: 1.5em;
   height: 1.5em;
   margin-right: 0.25em;
+}
+
+span.licensingIcons {
+  position: relative;
+  top: -2px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+span.licensingIcons span.icon {
+  width: 1.35em;
+  height: 1.35em;
+}
+span.licenceName {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 0.95em;
 }

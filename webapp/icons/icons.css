@@ -123,3 +123,11 @@ span.icon.thumbs-down {
   mask-image: url(/thumbs-down.svg);
   -webkit-mask-image: url(/thumbs-down.svg);
 }
+span.icon.creative-commons {
+  mask-image: url(/creative-commons.svg);
+  -webkit-mask-image: url(/creative-commons.svg);
+}
+span.icon.creative-commons-by {
+  mask-image: url(/creative-commons-by.svg);
+  -webkit-mask-image: url(/creative-commons-by.svg);
+}

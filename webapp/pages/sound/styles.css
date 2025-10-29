@@ -517,3 +517,22 @@ form div.asrbar button span.key {
     display: none;
   }
 }
+
+div.submission.licensing {
+  color: #333333;
+}
+span.licensingIcons {
+  position: relative;
+  top: -2px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+span.licensingIcons span.icon {
+  width: 1.35em;
+  height: 1.35em;
+}
+span.licenceName {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 0.95em;
+}
