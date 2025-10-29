@@ -482,7 +482,7 @@ Leig romhad an tàr-sgrìobhadh
 
 ##takeaway
 Remove from transcriber
-TT: Remove from transcriber
+Tog an clàr air falbh
 
 ##delete
 Delete
@@ -677,9 +677,8 @@ Clàr nan Gaisgeach
 
 ##name
 Name
-TT: Name
+Ainm
 
 ##wordstranscribed
 Words transcribed
-TT: Words transcribed
-
+Faclan tar-sgrìobhte

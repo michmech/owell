@@ -121,7 +121,7 @@ const STRINGS = {
   },
   "#takeaway": {
     "en": "Remove from transcriber",
-    "gd": "TT: Remove from transcriber"
+    "gd": "Tog an clàr air falbh"
   },
   "#delete": {
     "en": "Delete",
@@ -173,10 +173,10 @@ const STRINGS = {
   },
   "#name": {
     "en": "Name",
-    "gd": "TT: Name"
+    "gd": "Ainm"
   },
   "#wordstranscribed": {
     "en": "Words transcribed",
-    "gd": "TT: Words transcribed"
+    "gd": "Faclan tar‑sgrìobhte"
   }
 };
