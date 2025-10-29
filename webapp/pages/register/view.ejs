@@ -3,6 +3,7 @@
   <head>
     <%-include("../../includes/headContent/view.ejs", this)%>
     <link rel="stylesheet" href="/register/styles.css"/>
+    <script src="/register/scripts.js"></script>
   </head>
   <body>
     <%-include("../../includes/header/view.ejs", this)%>
@@ -63,7 +64,7 @@
               </div>
               <div class="line licensing">
                 <label class="inline">
-                  <input type="checkbox" checked name="licence"/>
+                  <input type="checkbox" checked name="licence" id="lic"/>
                   <span class="licensingIcons">
                     <span class="icon creative-commons"></span><span class="icon creative-commons-by"></span>
                   </span>

@@ -214,3 +214,7 @@ span.licenceName {
   font-weight: bold;
   font-size: 0.95em;
 }
+button:disabled {
+  color: #999999;
+  cursor: not-allowed;
+}
