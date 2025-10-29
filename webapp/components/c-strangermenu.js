@@ -34,12 +34,12 @@ export class CStrangermenu extends HTMLElement {
     divMenu.classList.add("menu");
     if(this.getAttribute("is-admin")=="yes"){
       divMenu.innerHTML=`
-        <div class="line"><button class="demotefromadmin"><span class="icon xmark"></span> ${LOC("#demotefromadmin")}</button></div>
+        <div class="line"><button class="demotefromadmin"><span class="icon thumbs-down"></span> ${LOC("#demotefromadmin")}</button></div>
       `;
       divMenu.querySelector("button.demotefromadmin").addEventListener("click", (ev)=>{ this.#demote(); });
     } else {
       divMenu.innerHTML=`
-        <div class="line"><button class="promotetoadmin"><span class="icon circle-check"></span> ${LOC("#promotetoadmin")}</button></div>
+        <div class="line"><button class="promotetoadmin"><span class="icon thumbs-up"></span> ${LOC("#promotetoadmin")}</button></div>
       `;
       divMenu.querySelector("button.promotetoadmin").addEventListener("click", (ev)=>{ this.#promote(); });
     }

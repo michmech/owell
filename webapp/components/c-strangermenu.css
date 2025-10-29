@@ -81,5 +81,9 @@ c-strangermenu div.menu div.line:has(*:hover) {
 c-strangermenu div.menu div.line > * > span.icon {
   background-color: #999999;
   margin-right: 10px;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  top: -1px;
 }
 

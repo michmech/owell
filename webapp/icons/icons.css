@@ -115,3 +115,11 @@ span.icon.award {
   mask-image: url(/award.svg);
   -webkit-mask-image: url(/award.svg);
 }
+span.icon.thumbs-up {
+  mask-image: url(/thumbs-up.svg);
+  -webkit-mask-image: url(/thumbs-up.svg);
+}
+span.icon.thumbs-down {
+  mask-image: url(/thumbs-down.svg);
+  -webkit-mask-image: url(/thumbs-down.svg);
+}
