@@ -87,7 +87,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
       const db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
       try{
         { //check if this email is already taken:
-          const sql=`select email from users where lower(email)=lower($email)`;
+          const sql=`select email from users where lower(email)=lower($email) and registrationCompleted=1`;
           const stmt=db.prepare(sql);
           stmt.all({email}).map(row => { registrationFailed = "#emailalreadytaken"; });
         }
