@@ -39,6 +39,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
             end) as score
           from users as u
           left outer join sounds as s on s.owner=u.email and s.status='approved'
+          where u.registrationCompleted=1
           group by u.rowid
           having score > 0
           order by score desc, u.rowid asc
@@ -61,6 +62,7 @@ export default function(app, L, do404, doReadOnly, rootdir){
         const sql=`
           select u.rowid, u.email, u.displayName
           from users as u
+          where u.registrationCompleted=1
         `;
         const stmt=db.prepare(sql);
         stmt.all().map(row => {
