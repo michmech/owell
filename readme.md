@@ -21,16 +21,18 @@ Gotchas to be aware of:
 
 - Inside `databases/`, the file `database.sqlite` is where all the "live" data is, including all user accounts and all the transcriptions that users have submitted. When running in production, you should never overwrite this file and you shoud back it up regularly. If ever you need to touch this file while running in production, put the website into read-only mode by setting the environment variable `READONLY` to `1`, download the file, do what you need to do, re-upload the file, and then set `READONLY` back to `0`. 
 
-- The website needs to be able to send out e-mails when new users sign up and when existing users request password resets. The website uses [Nodemailer](https://nodemailer.com/) for that and expects to be able to send an e-mail simply by dropping it into a directory named `/usr/sbin/sendmail` on the server. Have a look at these two files to see how it's done:
+- The website needs to be able to send out e-mails when new users sign up and when existing users request password resets.
 
-  - `webapp/pages/register/server.js`
-  - `webapp/pages/passwordreset/server.js`
+  - The website uses [Nodemailer](https://nodemailer.com/) for that and expects to be able to send an e-mail simply by dropping it into a directory named `/usr/sbin/sendmail` on the server. Have a look at these two files to see how it's done:
 
-- When sending an e-mail, the website takes the "from" address from the environment variable `SENDEREMAIL`.
+    - `webapp/pages/register/server.js`
+    - `webapp/pages/passwordreset/server.js`
+
+  - When sending an e-mail, the website takes the "from" address from the environment variable `SENDEREMAIL`.
 
 - The website talks to [Tobar an Dualchais](https://www.tobarandualchais.co.uk/) API to obtain data about sound recordings, using credentials it finds in the environment variables `TADAPIUSR` and `TADAPIPWD`.
 
-- The wesite caches sound files in the directory `webapp/sounds/`. Make sure the website has write access to that directory.
+- The website caches sound files in the directory `webapp/sounds/`. Make sure the website has write access to that directory.
 
 - The website provides an API which an external script (running in the University of Edinburgh) uses to submit ASR (Automatic Speech Recorgnition) pre-transcrips to Opening the Well. Read more about that API [here](docs/asr-api.md). The password needed to access the API comes from the environment variable `ASRAPIPWD`.
 
