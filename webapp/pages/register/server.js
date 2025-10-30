@@ -179,7 +179,7 @@ function sendmail(to, path, L, uilang){
     path: '/usr/sbin/sendmail'
   });
   transporter.sendMail({
-    from: `"${L("#sitetitle")}" <process.env.SENDEREMAIL>`,
+    from: `"${L("#sitetitle")}" <${process.env.SENDEREMAIL}>`,
     to: to,
     subject: L("#emailwelcome"),
     html: html,
