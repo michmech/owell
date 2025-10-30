@@ -107,11 +107,11 @@ Stiùireadh do thar-sgrìobhadairean
 
 #licensinginfo
 Licensing
-TT: Fiosrachadh mu cheadachd
+Ceadachd
 
 #techrequirements
 Minimum technical requirements
-TT: Riatanasan teicnigeach bunaiteach
+Riatanasan teicnigeach bunaiteach
 
 #unofed
 The University of Edinburgh
@@ -351,7 +351,7 @@ When an audio track is finished and approved (messages shown to not-logged-in us
 
 #licensedunder
 This transcription is licensed under $.
-TT: This transcription is licensed under $.
+Tha an tar-sgrìobhadh seo fo cheadachd $.
 
 Adding and deleting tracks:
 ---------------------------
@@ -429,11 +429,11 @@ Chan fhaod t’ fhacal-faire a bhith bàn.
 
 #licensingagreement
 I agree that transcriptions I make on this website will be publicly available under the $ licence.
-TT: I agree that transcriptions I make on this website will be publicly available under the $ licence.
+Tha mi ag aontachadh gum bi na tar-sgrìobhaidhean a nì mi air an làraich seo rim faighinn gu poblach fon cheadachd $.
 
 #whatdoesthismean
 What does this mean?
-TT: What does this mean?
+Dè tha seo a' ciallachadh?
 
 #register
 Register
@@ -708,4 +708,4 @@ Faclan tar-sgrìobhte
 
 #remainingvolunteers
 Other volunteers (in alphabetical order)
-TT: Other volunteers (in alphabetical order)
+Saor-thoilich eile (a-rèir na h-aibidile)

@@ -101,11 +101,11 @@
   },
   "#licensinginfo": {
     "en": "Licensing",
-    "gd": "TT: Fiosrachadh mu cheadachd"
+    "gd": "Ceadachd"
   },
   "#techrequirements": {
     "en": "Minimum technical requirements",
-    "gd": "TT: Riatanasan teicnigeach bunaiteach"
+    "gd": "Riatanasan teicnigeach bunaiteach"
   },
   "#unofed": {
     "en": "The University of Edinburgh",
@@ -293,7 +293,7 @@
   },
   "#licensedunder": {
     "en": "This transcription is licensed under $.",
-    "gd": "TT: This transcription is licensed under $."
+    "gd": "Tha an tar‑sgrìobhadh seo fo cheadachd $."
   },
   "#addanewtrack": {
     "en": "Add a track from Tobar an Dualchais",
@@ -365,11 +365,11 @@
   },
   "#licensingagreement": {
     "en": "I agree that transcriptions I make on this website will be publicly available under the $ licence.",
-    "gd": "TT: I agree that transcriptions I make on this website will be publicly available under the $ licence."
+    "gd": "Tha mi ag aontachadh gum bi na tar‑sgrìobhaidhean a nì mi air an làraich seo rim faighinn gu poblach fon cheadachd $."
   },
   "#whatdoesthismean": {
     "en": "What does this mean?",
-    "gd": "TT: What does this mean?"
+    "gd": "Dè tha seo a' ciallachadh?"
   },
   "#register": {
     "en": "Register",
@@ -602,9 +602,5 @@
   "#wordstranscribed": {
     "en": "Words transcribed",
     "gd": "Faclan tar‑sgrìobhte"
-  },
-  "#remainingvolunteers": {
-    "en": "Other volunteers (in alphabetical order)",
-    "gd": "TT: Other volunteers (in alphabetical order)"
   }
 }
