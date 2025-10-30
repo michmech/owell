@@ -2,7 +2,7 @@
 
 This repository contains the source code for [Opening the Well](https://fosgladh.tobarandualchais.co.uk), a Scottish Gaelic community transcription website.
 
-## Hello future maintainer, this is that you need to know
+## Hello future maintainer, this is what you need to know
 
 The website is written in frameworkless Node.js and can be found in the directory `webapp/`. To run it locally on your dev machine:
 
