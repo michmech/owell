@@ -602,5 +602,9 @@
   "#wordstranscribed": {
     "en": "Words transcribed",
     "gd": "Faclan tar‑sgrìobhte"
+  },
+  "#remainingvolunteers": {
+    "en": "Other volunteers (in alphabetical order)",
+    "gd": "Saor‑thoilich eile (a‑rèir na h‑aibidile)"
   }
 }
