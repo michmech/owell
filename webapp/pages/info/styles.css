@@ -66,11 +66,14 @@ main a:hover  {
   color: #3c6c99;
 }
 main code {
-  font-size: 0.85em;
+  font-size: 0.75em;
   background-color: #eeeeee;
   padding: 1px 4px 1px 4px;
   border-radius: 4px;
   margin: 0px 2px;
+  border: 1px solid #666666;
+  position: relative;
+  top: -1px;
 }
 main a:has(code) {
   border-bottom: 0px;
@@ -102,16 +105,22 @@ main ul {
   padding-left: 1em;
 }
 main figure {
-  width: 100%;
-  margin: 1.25em 0 1em 0;
+  display: block;
+  margin: 1.25em auto 1em auto;
+  text-align: center;
+  width: 80%;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 }
 main figure img {
   width: 100%;
-  border: 2px solid #cccccc;
+  border: 2px solid #ffffff;
   border-radius: 4px;
+  box-shadow: 0px 0px 4px #666666;
 }
 main figure figcaption {
-  margin-top: -5px;
+  margin-top: 5px;
   font-size: 0.9em;
   color: #999999;
 }
