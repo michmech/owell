@@ -113,6 +113,10 @@ Ceadachd
 Minimum technical requirements
 Riatanasan teicnigeach bunaiteach
 
+#takedownpolicy
+Takedown policy
+Poileasaidh toirt-sìos
+
 #unofed
 The University of Edinburgh
 Oilthigh Dhùn Èideann

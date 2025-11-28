@@ -29,6 +29,10 @@ export default function(app, L, do404, doReadOnly, rootdir){
     go(req, res, L, "tech.md", L(req.params.uilang, "#techrequirements"), {gd: "/gd/teic", en: "/en/tech"})
   });
   
+  app.get("/:uilang(gd|en)/(toirt-sios|takedown)", function(req, res){
+    go(req, res, L, "takedown.md", L(req.params.uilang, "#takedownpolicy"), {gd: "/gd/toirt-sios", en: "/en/takedown"})
+  });
+  
 }
 
 function go(req, res, L, markdownFileName, pageTitle, pageUrls, icon){
