@@ -111,7 +111,7 @@ Ceadachd
 
 #techrequirements
 Minimum technical requirements
-Riatanasan teicnigeach bunaiteach
+Na feumalachdan teicnigeach as ìsle
 
 #takedownpolicy
 Takedown policy

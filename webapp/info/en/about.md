@@ -10,9 +10,20 @@ Inspired by Ireland’s [Meitheal Dúchas.ie](https://www.duchas.ie/en/meitheal)
 
 ## Team
 
-- **Prof William Lamb**: principal investigator
-- **Michal Měchura**: website developer ([source code](https://github.com/michmech/owell))
-- **Chris Wright**: cataloguer
-- **Flòraidh Forrest**: manager, Tobar an Dualchais/Kist o Riches
-- **Ondřej Klejch**: ASR engineer
+- **Prof William Lamb**: Principal Investigator, University of Edinburgh (UoE)
+- **Dr Michal Měchura**: Website Developer ([source code](https://github.com/michmech/owell))
+- **Dr Bea Alex**: Co-Investigator, UoE
+- **Prof Peter Bell**: Co-Investigator, UoE
+- **Rachel Hosker**: Co-Investigator, UoE
+- **Dr Kirsty Stewart**: Co-Investigator, UoE
+- **Prof Roibeard Ó Maolalaigh**: Co-I, University of Glasgow
+- **Dr Alison Diack**: Transcriber, DASG, University of Glasgow
+- **Cailean Gordon**: Lead transcriber, Tobar an Dualchais/Kist o Riches (TAD)
+- **Chris Wright**: Cataloguer, TAD
+- **Flòraidh Forrest**: Manager, TAD
+- **Lily Mellon**: Copyright and Permissions Administrator, UoE
+- **Dr Ondřej Klejch**: ASR engineer, UoE
 
+## Funder
+
+Opening the Well is part of the ÈIST research project, which is funded by the Scottish Government.
