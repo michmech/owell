@@ -50,9 +50,9 @@ export default function(app, L, do404, doReadOnly, rootdir){
           if(transcript==undefined) logEvent(userROWID, soundID, `sound__status--set`, {status, owner: userROWID});
         } else if(status=="finished") {
           {
-            const sql=`update sounds set status=$status, owner=$email where id=$soundID`;
+            const sql=`update sounds set status=$status where id=$soundID`;
             const stmt=db.prepare(sql);
-            stmt.run({soundID, email, status});
+            stmt.run({soundID, status});
           }
           if(transcript==undefined) logEvent(userROWID, soundID, `sound__status--set`, {status});
         } else if(status=="approved") {
