@@ -85,6 +85,11 @@ footer div.guidelink span.icon {
   margin-right: 0.5em;
 }
 footer div.guidelink a {}
+footer div.guidelink span.link span.icon {
+  width: 1em;
+  height: 1em;
+  margin-left: 0.35em;
+}
 
 footer div.icons {
   margin-top: 50px;

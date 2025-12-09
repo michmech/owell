@@ -105,6 +105,10 @@ So-ruigsinneachd
 Guide for transcribers
 Stiùireadh do thar-sgrìobhadairean
 
+#eistmanual
+ÈIST Transcription Manual
+Leabhar-làimhe Tar-sgrìobhaidh ÈIST
+
 #licensinginfo
 Licensing
 Ceadachd
