@@ -67,6 +67,11 @@ footer span.divider {
   footer span.link {
     display: block;
     line-height: 2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  footer div.guidelink {
+    margin-top: 20px;
   }
   footer span.divider {
     display: none;
