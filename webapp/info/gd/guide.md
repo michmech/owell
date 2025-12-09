@@ -44,7 +44,7 @@ Rè na cluiche, chì thu gu bheil an earrann a tha ga cluich an-dràsta air a so
 
 Tha dà adhbhar aig na tar-sgrìobhaidhean agad. Air aon làimh, cuidichidh iad daoine gus na clàraidhean air prìomh làrach [Tobar an Dualchais](https://www.tobarandualchais.co.uk/?l=gd) a thuigsinn 's a mhealtainn. Air an làimh eile, thèid an cleachdadh gus teicneòlas cànain Gàidhlig a thrèanadh, leithid aithneachadh labhairte fèin-ghluasadach. Air sgàth seo, tha e cudromach faclan nan luchd-labhairt a thar-sgrìobhadh dìreach mar a chluinneas tu iad, gun mhearachdan gràmair a cheartachadh agus gun fhaclan dualchainnteach a "àbhaisteachadh".
 
-Tha sinn a' tuigsinn gu bheil seo uaireannan nas fhasa ri a ràdh na ri a dhèanamh. Mar sin, tha sinn air stiùireadh-stoidhle mionaideach a chur ri chèile a dh'fhaodas tu rannsachadh nuair a bhios teagamh ort: [Leabhar-làimhe Tar-sgrìobhaidh ÈIST](https://docs.google.com/document/d/1c6dmxOArwkadFV-ZXHV-GPVeI0u47Dlp3jYnezNMARY/).
+Tha sinn a' tuigsinn gu bheil seo uaireannan nas fhasa ri a ràdh na ri a dhèanamh. Mar sin, tha sinn air stiùireadh-stoidhle mionaideach a chur ri chèile a dh'fhaodas tu rannsachadh nuair a bhios teagamh ort: [Leabhar-làimhe Tar-sgrìobhaidh ÈIST](https://docs.google.com/document/d/1c6dmxOArwkadFV-ZXHV-GPVeI0u47Dlp3jYnezNMARY/edit?usp=sharing).
 
 San fharsaingeachd, 's e deagh bheachd a th' ann gun a bhith a' gabhail cus dragh mu na puingean as mionaidiche a thaobh litreachadh is puingeachadh. Thèid a h-uile tar-sgrìobhadh le saor-thoilich dhe do leithid-sa a sgrùdadh agus, ma bhios feum ann, a cheartachadh le tàr-sgrìobhairean proifeiseanta. 'S e an obair a th' agad-sa ach a bhith a' sgìobhadh sìos na tha thu a' creidsinn a thu a' cluinntinn.
 

@@ -43,7 +43,7 @@ During playback, you will see that the segment currently being played is highlig
 
 The transcriptions you are producing will have a dual purpose. On one hand, they will help people understand and enjoy the recordings on the main [Tobar an Dualchais](https://www.tobarandualchais.co.uk/?l=en) website. On the other hand, they will be used to train Gaelic language technology such as automatic speech recognition. Because of this, it is important to transcribe the words of the speakers exactly how you hear them, without correcting grammatical errors and without “overstandardising” dialectal words.
 
-We understand that this is sometimes easier said than done, so we have put together a detailed styleguide which you can consult when in doubt: [ÈIST Transcription Manual](https://docs.google.com/document/d/1c6dmxOArwkadFV-ZXHV-GPVeI0u47Dlp3jYnezNMARY/).
+We understand that this is sometimes easier said than done, so we have put together a detailed styleguide which you can consult when in doubt: [ÈIST Transcription Manual](https://docs.google.com/document/d/1c6dmxOArwkadFV-ZXHV-GPVeI0u47Dlp3jYnezNMARY/edit?usp=sharing).
 
 In general, it is a good idea not to worry too much about the finer points of spelling and punctuation. All transcriptions by volunteers such as youself will be checked and if necessary corrected by professional linguists. Your role is to write down as honestly as posssible what you believe you hear.
 
