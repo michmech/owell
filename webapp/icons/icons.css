@@ -131,3 +131,7 @@ span.icon.creative-commons-by {
   mask-image: url(/creative-commons-by.svg);
   -webkit-mask-image: url(/creative-commons-by.svg);
 }
+span.icon.envelope {
+  mask-image: url(/envelope.svg);
+  -webkit-mask-image: url(/envelope.svg);
+}

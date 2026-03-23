@@ -33,7 +33,7 @@
           <h1>
             <span class="name"><%=profile.displayName  || L("#anonymizeduser")%></span>
             <%if(loggedIn && profile.email==email){%><c-usermenu></c-usermenu><%}%>
-            <%if(loggedIn && profile.email!=email && isAdmin){%><c-strangermenu user-rowid="<%=profile.rowid%>" is-admin="<%=profile.isAdmin?'yes':'no'%>"></c-strangermenu><%}%>
+            <%if(loggedIn && profile.email!=email && isAdmin){%><c-strangermenu user-rowid="<%=profile.rowid%>" is-admin="<%=profile.isAdmin?'yes':'no'%>" email="<%=profile.email%>"></c-strangermenu><%}%>
           </h1>
           <div class="tagline"><%=L("#membersince", 0)%><%=(new Date(profile.registeredWhen)).toLocaleDateString(uilang, {month: "long", year: "numeric"})%><%=L("#membersince", 1)%></div>
         </div>

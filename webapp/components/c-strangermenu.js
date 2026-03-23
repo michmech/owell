@@ -33,15 +33,20 @@ export class CStrangermenu extends HTMLElement {
     const divMenu = document.createElement("div");
     divMenu.classList.add("menu");
     if(this.getAttribute("is-admin")=="yes"){
-      divMenu.innerHTML=`
+      divMenu.innerHTML+=`
         <div class="line"><button class="demotefromadmin"><span class="icon thumbs-down"></span> ${LOC("#demotefromadmin")}</button></div>
       `;
       divMenu.querySelector("button.demotefromadmin").addEventListener("click", (ev)=>{ this.#demote(); });
     } else {
-      divMenu.innerHTML=`
+      divMenu.innerHTML+=`
         <div class="line"><button class="promotetoadmin"><span class="icon thumbs-up"></span> ${LOC("#promotetoadmin")}</button></div>
       `;
       divMenu.querySelector("button.promotetoadmin").addEventListener("click", (ev)=>{ this.#promote(); });
+    }
+    if(this.getAttribute("email")){
+      divMenu.innerHTML+=`
+        <div class="line"><a class="email" href="mailto:${this.getAttribute("email")}"><span class="icon envelope"></span> ${this.getAttribute("email")}</button></div>
+      `;
     }
     this.appendChild(divMenu);
   }
