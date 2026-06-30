@@ -78,6 +78,7 @@ Response codes:
 Response body:
 ```
 Replace `yourpassword` with the password you have been given.
+```
 
 Response codes:
 - 401 Unauthorized (if the password is wrong)
