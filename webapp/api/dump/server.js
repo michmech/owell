@@ -2,6 +2,9 @@ import sqlite from "better-sqlite3";
 
 export default function(app, L, do404, doReadOnly, rootdir){
   app.get("/dump", function(req, res){
+    const pwd = req.header("password");
+    if(pwd!=process.env.ASRAPIPWD) { res.status(401).end(); return; } //Unauthorized
+
     const sounds=[];
     let db=new sqlite("../databases/database.sqlite", {fileMustExist: true});
     try{

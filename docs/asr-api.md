@@ -11,6 +11,7 @@ To get a list of sound files that do not have an ASR pre-transcript yet:
 GET https://fosgladh.tobarandualchais.co.uk/asr
 HEADER password: yourpassword
 ```
+
 Replace `yourpassword` with the password you have been given.
 
 Response codes:
@@ -58,4 +59,40 @@ Response codes:
 
 There is no response body. If you get 200 OK, the pre-transcript has been accepted, thank you.
 
-Yes you can submit a pre-transcript repeatedly for the same soundfile (the same ID), this won't break anything, The last one wins.
+Yes you can submit a pre-transcript repeatedly for the same soundfile (the same ID), this won't break anything, the last one wins.
+
+
+## Obtaining a dump of all finished and approved transcripts
+
+```
+GET https://fosgladh.tobarandualchais.co.uk/dump
+HEADER password: yourpassword
+```
+
+Replace `yourpassword` with the password you have been given.
+
+Response codes:
+- 401 Unauthorized (if the password is wrong)
+- 200 OK
+
+Response body:
+```
+Replace `yourpassword` with the password you have been given.
+
+Response codes:
+- 401 Unauthorized (if the password is wrong)
+- 200 OK
+
+Response body:
+```
+[
+  {
+    "id": 9209,
+    "difficulty": "high",
+    "soundfile": "https://fosgladh.tobarandualchais.co.uk/getsoundfile?id=9209",
+    "title": "Bla bla bla",
+    "transcript": "Bla bla bla bla..."
+  },
+  ...
+]
+```
