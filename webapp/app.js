@@ -101,6 +101,8 @@ import api_asr from "./api/asr/server.js";
   api_asr(app, L, do404, doReadOnly, __dirname);
 import api_dump from "./api/dump/server.js";
   api_dump(app, L, do404, doReadOnly, __dirname);
+import api_stats from "./api/stats/server.js";
+  api_stats(app, L, do404, doReadOnly, __dirname);
 
 //Hook up our webpage-serving endpoints:
 import page_home from "./pages/home/server.js";
